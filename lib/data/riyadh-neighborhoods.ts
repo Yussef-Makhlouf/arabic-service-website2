@@ -87,7 +87,8 @@ export const getNeighborhoods = (): Neighborhood[] => {
 
         names.forEach((name) => {
             // Create slight variations to make content less repetitive for SEO
-            const variation = Math.floor(Math.random() * 3)
+            // Deterministic variation based on name length to avoid hydration mismatch
+            const variation = (name.length + regionKey.length) % 3
             let customProblem = stats.problem
 
             if (variation === 1) customProblem = `مشاكل ${name}: ` + stats.problem
