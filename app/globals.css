@@ -1,0 +1,171 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* 
+  Theme Extraction from Hero Section
+  Background: Deep Navy (#181d2b)
+  Card/Overlay: Lighter Navy (#17264f)
+  Primary Accent: Pink/Purple Gradient base (#d26ad1)
+  Secondary Accent: Muted Purple (#af7ae7)
+  Text: White/Grey
+*/
+:root {
+  /* Enforce Dark Theme Variables by default */
+  --background: #181d2b;
+  --foreground: #ffffff;
+
+  --card: #17264f;
+  --card-foreground: #ffffff;
+
+  --popover: #17264f;
+  --popover-foreground: #ffffff;
+
+  --primary: #d26ad1;
+  --primary-foreground: #ffffff;
+
+  --secondary: #af7ae7;
+  --secondary-foreground: #181d2b;
+
+  --muted: #1e3a8a;
+  /* Slightly different blue for variation */
+  --muted-foreground: #cbd5e1;
+
+  --accent: #d26ad1;
+  --accent-foreground: #ffffff;
+
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: #ffffff;
+
+  --border: #2e3b5e;
+  --input: #17264f;
+  --ring: #d26ad1;
+
+  --radius: 0.5rem;
+
+  --sidebar: #181d2b;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #d26ad1;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #17264f;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #2e3b5e;
+  --sidebar-ring: #d26ad1;
+
+  /* Trust colors */
+  --success: #22c55e;
+  --warning: #eab308;
+
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-section: 5rem;
+  --space-section-mobile: 3rem;
+}
+
+/* Ensure .dark class uses the same variables (monotheme) */
+.dark {
+  --background: #181d2b;
+  --foreground: #ffffff;
+  --card: #17264f;
+  --card-foreground: #ffffff;
+  --popover: #17264f;
+  --popover-foreground: #ffffff;
+  --primary: #d26ad1;
+  --primary-foreground: #ffffff;
+  --secondary: #af7ae7;
+  --secondary-foreground: #181d2b;
+  --muted: #1e3a8a;
+  --muted-foreground: #cbd5e1;
+  --accent: #d26ad1;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: #ffffff;
+  --border: #2e3b5e;
+  --input: #17264f;
+  --ring: #d26ad1;
+  --sidebar: #181d2b;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #d26ad1;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #17264f;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #2e3b5e;
+  --sidebar-ring: #d26ad1;
+}
+
+@theme inline {
+  /* Arabic fonts configuration */
+  --font-sans: var(--font-cairo), "Cairo", sans-serif;
+  --font-heading: var(--font-noto-kufi), "Noto Kufi Arabic", sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Global subtle gradient background for depth */
+    background: linear-gradient(180deg, var(--background) 0%, #11141e 100%);
+    min-height: 100vh;
+  }
+
+  /* Enhanced typography */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+
+  p {
+    line-height: 1.8;
+    text-wrap: pretty;
+  }
+}
