@@ -13,6 +13,8 @@ import { ComparisonTable } from "@/components/homepage/comparison-table"
 import { CitiesDeepSEO } from "@/components/homepage/cities-deep-seo"
 import { BlogPreview } from "@/components/homepage/blog-preview"
 import { FaqSection } from "@/components/homepage/faq-section"
+import { FoamInsulationSection } from "@/components/homepage/foam-insulation-section"
+import { FeaturedLocationCard } from "@/components/homepage/featured-location-card"
 // import { FAQSection } from "@/components/homepage/faq-section"
 // import { FAQSection } from "@/components/homepage/faq-section"
 
@@ -32,6 +34,9 @@ export default function HomePage() {
         {/* 3. Services Overview - Visual service cards */}
         <ServicesOverview />
 
+        {/* Foam Insulation Section - Educational content */}
+        <FoamInsulationSection />
+
         {/* 4. Comparison Table - Help decision making */}
         <section id="comparison-table">
           <ComparisonTable />
@@ -41,6 +46,9 @@ export default function HomePage() {
         <section id="decision-helper">
           <ServiceDecisionHelper />
         </section>
+
+        {/* Featured Location - Focus on specific area */}
+        <FeaturedLocationCard />
 
         {/* 6. Cities & Neighborhoods - Local SEO */}
         <section id="cities">
@@ -69,7 +77,7 @@ export default function HomePage() {
       </main>
       <Footer />
       <FloatingActions />
-  
+
     </>
   )
 }
