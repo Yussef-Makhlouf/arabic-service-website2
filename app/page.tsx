@@ -15,8 +15,8 @@ import { BlogPreview } from "@/components/homepage/blog-preview"
 import { FaqSection } from "@/components/homepage/faq-section"
 import { FoamInsulationSection } from "@/components/homepage/foam-insulation-section"
 import { FeaturedLocationCard } from "@/components/homepage/featured-location-card"
-// import { FAQSection } from "@/components/homepage/faq-section"
-// import { FAQSection } from "@/components/homepage/faq-section"
+import { EliteInsulationServicesTable } from "@/components/homepage/EliteInsulationServicesTable"
+import { EliteInsulationSolutionsTable } from "@/components/homepage/EliteInsulationSolutionsTable"
 
 export default function HomePage() {
   return (
@@ -69,6 +69,12 @@ export default function HomePage() {
         <section id="faq">
           <FaqSection />
         </section>
+
+        {/* New Services Table 1 */}
+        <EliteInsulationServicesTable />
+
+        {/* New Solutions Table 2 */}
+        <EliteInsulationSolutionsTable />
 
         {/* 10. Final CTA - Conversion */}
         <section id="cta">
