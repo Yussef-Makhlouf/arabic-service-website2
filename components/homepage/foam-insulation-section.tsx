@@ -79,8 +79,8 @@ export function FoamInsulationSection() {
             <div className="bg-slate-50 dark:bg-slate-900/50 py-20">
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="text-center mb-12">
-                        <h3 className="text-3xl font-bold mb-4">لماذا عزل الفوم هو الخيار الأذكى؟</h3>
-                        <p className="text-muted-foreground max-w-2xl mx-auto">
+                        <h3 className="text-3xl font-bold mb-4 text-[#181d2b]">لماذا عزل الفوم هو الخيار الأذكى؟</h3>
+                        <p className=" max-w-2xl mx-auto text-[#181d2b]">
                             يجمع عزل الفوم بين مزايا متعددة تجعل منه استثماراً رابحاً على المدى الطويل، متفوقاً على أنظمة العزل التقليدية في الكفاءة والسرعة والتكلفة.
                         </p>
                     </div>
@@ -262,11 +262,11 @@ export function FoamInsulationSection() {
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="flex flex-col md:flex-row items-start gap-8">
                         <div className="md:w-1/3">
-                            <h3 className="text-3xl font-bold mb-4 flex items-center gap-3">
+                            <h3 className="text-3xl font-bold mb-4 flex items-center gap-3 text-[#181d2b]">
                                 <AlertTriangle className="h-10 w-10 text-red-600" />
                                 أخطاء شائعة يجب تجنبها
                             </h3>
-                            <p className="text-muted-foreground text-lg">
+                            <p className="text-[#181d2b] text-lg ">
                                 ليس كل عزل فوم هو عزل جيد. جودة التنفيذ هي العامل الحاسم. احذر من الشركات التي ترتكب هذه الأخطاء القاتلة التي قد تكلفك الكثير لاحقاً.
                             </p>
                         </div>
@@ -308,40 +308,40 @@ export function FoamInsulationSection() {
             <div className="container mx-auto py-20 px-4 md:px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     <div className="order-2 lg:order-1 grid grid-cols-2 gap-4">
-                        <Card className="bg-blue-50 dark:bg-blue-950/20 border-none">
+                        <Card className="bg-blue-50 text-[#181d2b] border-none">
                             <CardHeader>
                                 <Sun className="h-8 w-8 text-orange-500 mb-2" />
                                 <CardTitle className="text-lg">صيف حارق</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-sm text-muted-foreground">يقاوم درجات حرارة تصل للغليان ويحفظ برودة المنزل.</p>
+                                <p className="text-sm text-[#181d2b]">يقاوم درجات حرارة تصل للغليان ويحفظ برودة المنزل.</p>
                             </CardContent>
                         </Card>
-                        <Card className="bg-blue-50 dark:bg-blue-950/20 border-none">
+                        <Card className="bg-blue-50 text-[#181d2b] border-none">
                             <CardHeader>
                                 <Umbrella className="h-8 w-8 text-blue-500 mb-2" />
                                 <CardTitle className="text-lg">أمطار مفاجئة</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-sm text-muted-foreground">يحمي من تسربات السيول والأمطار الغزيرة المفاجئة.</p>
+                                <p className="text-sm text-[#181d2b]">يحمي من تسربات السيول والأمطار الغزيرة المفاجئة.</p>
                             </CardContent>
                         </Card>
-                        <Card className="bg-blue-50 dark:bg-blue-950/20 border-none">
+                        <Card className="bg-blue-50 text-[#181d2b] border-none">
                             <CardHeader>
                                 <ShieldCheck className="h-8 w-8 text-green-500 mb-2" />
                                 <CardTitle className="text-lg">لوائح البناء</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-sm text-muted-foreground">مطابق لكود البناء السعودي وشرط أساسي لشركة الكهرباء.</p>
+                                <p className="text-sm text-[#181d2b]">مطابق لكود البناء السعودي وشرط أساسي لشركة الكهرباء.</p>
                             </CardContent>
                         </Card>
-                        <Card className="bg-blue-50 dark:bg-blue-950/20 border-none">
+                        <Card className="bg-blue-50 text-[#181d2b] border-none">
                             <CardHeader>
                                 <Wrench className="h-8 w-8 text-slate-500 mb-2" />
                                 <CardTitle className="text-lg">صيانة قليلة</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p className="text-sm text-muted-foreground">تحمل الظروف الصحراوية القاسية والغبار لسنوات طويلة.</p>
+                                <p className="text-sm text-[#181d2b]">تحمل الظروف الصحراوية القاسية والغبار لسنوات طويلة.</p>
                             </CardContent>
                         </Card>
                     </div>
