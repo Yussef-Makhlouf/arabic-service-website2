@@ -6,7 +6,7 @@ import { Droplets, Flame, Building, Search, Container } from "lucide-react"
 const services = [
   { id: "waterproofing", name: "العزل المائي", icon: Droplets },
   { id: "foam-insulation", name: "عزل الفوم", icon: Flame },
-  { id: "cement-insulation", name: "العزل الأسمنتي", icon: Building },
+
   { id: "leak-detection", name: "كشف التسربات", icon: Search },
   { id: "tank-insulation", name: "عزل الخزانات", icon: Container },
 ]
@@ -69,11 +69,10 @@ export function ServicesTableOfContents() {
                 <button
                   key={service.id}
                   onClick={() => scrollToSection(service.id)}
-                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${
-                    isActive
+                  className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all ${isActive
                       ? "bg-primary text-primary-foreground"
                       : "bg-background text-foreground hover:bg-primary/10"
-                  }`}
+                    }`}
                 >
                   <Icon className="h-4 w-4" />
                   <span>{service.name}</span>
