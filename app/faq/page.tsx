@@ -406,14 +406,14 @@ export default function FAQPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                   <a
-                    href="tel:+966XXXXXXXXX"
+                    href="tel:+966507067378"
                     className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
                   >
                     <Phone className="w-5 h-5" />
                     اتصل بنا الآن
                   </a>
                   <a
-                    href="https://wa.me/966XXXXXXXXX"
+                    href="https://wa.me/966507067378"
                     className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#25D366]/90 transition-colors"
                   >
                     <Mail className="w-5 h-5" />
