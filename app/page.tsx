@@ -57,9 +57,7 @@ export default function HomePage() {
         </section>
 
         {/* 7. Testimonials - Social Proof */}
-        <section id="testimonials">
-          <TestimonialsSection />
-        </section>
+
 
         {/* 8. Pricing Education - Transparency */}
         <section id="pricing">
@@ -71,10 +69,7 @@ export default function HomePage() {
           <BlogPreview />
         </section>
 
-        {/* 9. FAQ - Answer objections */}
-        <section id="faq">
-          <FaqSection />
-        </section>
+   
 
         {/* New Services Table 1 */}
         <EliteInsulationServicesTable />
@@ -86,6 +81,14 @@ export default function HomePage() {
         <section id="cta">
           <EmergencyServiceSection />
         </section>
+             {/* 9. FAQ - Answer objections */}
+        <section id="faq">
+          <FaqSection />
+        </section>
+                <section id="testimonials">
+          <TestimonialsSection />
+        </section>
+
       </main>
       <Footer />
       <FloatingActions />
