@@ -17,6 +17,7 @@ import { FoamInsulationSection } from "@/components/homepage/foam-insulation-sec
 import { FeaturedLocationCard } from "@/components/homepage/featured-location-card"
 import { EliteInsulationServicesTable } from "@/components/homepage/EliteInsulationServicesTable"
 import { EliteInsulationSolutionsTable } from "@/components/homepage/EliteInsulationSolutionsTable"
+import { TestimonialsSection } from "@/components/homepage/testimonials-section"
 
 export default function HomePage() {
   return (
@@ -55,7 +56,12 @@ export default function HomePage() {
           <CitiesDeepSEO />
         </section>
 
-        {/* 7. Pricing Education - Transparency */}
+        {/* 7. Testimonials - Social Proof */}
+        <section id="testimonials">
+          <TestimonialsSection />
+        </section>
+
+        {/* 8. Pricing Education - Transparency */}
         <section id="pricing">
           <PricingTransparencySection />
         </section>

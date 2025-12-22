@@ -35,8 +35,8 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3">
             <img src="/logo.png" alt="شركة العزل المتقدم" className="h-10 w-10 sm:h-11 sm:w-11 lg:h-12 lg:w-12 object-contain" />
             <div className="flex flex-col">
-              <span className="font-heading text-xl font-bold text-foreground leading-tight">شركة النخبه لعزل  الفوم بورسلين بالرياض</span>
-              <span className="text-xs text-muted-foreground">الرياض • الخرج</span>
+              <span className="font-heading text-xl font-bold text-foreground leading-tight">شركة النخبه لعزل الفوم بالرياض</span>
+              <span className="text-xs text-muted-foreground">الرياض</span>
             </div>
           </Link>
 
