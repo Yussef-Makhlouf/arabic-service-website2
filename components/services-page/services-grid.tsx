@@ -40,14 +40,14 @@ const services = [
 
 export function ServicesGrid() {
   return (
-    <section className="py-16 md:py-24">
-      <div className="container px-4">
+    <section className="py-16 md:py-24 ">
+      <div className="container px-4 mx-auto">
         <SectionHeader
           title="اختر الخدمة المناسبة لاحتياجاتك"
           subtitle="نقدم 5 خدمات متخصصة تغطي جميع احتياجات العزل. اضغط على أي خدمة للتفاصيل الكاملة."
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {services.map((service) => (
             <Card
               key={service.id}

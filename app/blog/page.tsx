@@ -27,14 +27,14 @@ export default function BlogPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-background pb-20">
+      <main className="min-h-screen bg-background pb-20 mx-auto">
         <PageHeader
           title="المدونة والمقالات"
           description="نشارككم أحدث الخبرات والنصائح في مجال العزل والبناء لضمان أفضل حماية لمنزلكم."
           badge="المعرفـة"
         />
 
-        <div className="container px-4 py-12">
+        <div className="container px-4 py-12 mx-auto  ">
           {/* Category Filter - Centered & Functional */}
           <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
             {categories.map((cat) => (

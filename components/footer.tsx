@@ -11,7 +11,7 @@ export function Footer() {
   const links = [
     { name: "الرئيسية", href: "/" },
     { name: "جميع الخدمات", href: "/services" },
-    { name: "من نحن", href: "/#about" },
+    { name: "من نحن", href: "/about" },
     { name: "المدونة", href: "/blog" },
     { name: "الأسئلة الشائعة", href: "/faq" },
   ]

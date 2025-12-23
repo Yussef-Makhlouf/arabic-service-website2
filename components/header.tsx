@@ -12,7 +12,7 @@ export function Header() {
 
   const navigation = [
     { name: "الرئيسية", href: "/" },
-    { name: "من نحن", href: "/#about" },
+    { name: "من نحن", href: "/about" },
   ]
 
   const services = [
