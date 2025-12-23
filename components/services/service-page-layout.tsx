@@ -14,6 +14,7 @@ import {
   HelpCircle,
   Info,
 } from "lucide-react"
+import { Rating } from "@/components/ui/rating"
 
 export type SectionType = "text-image" | "features-grid" | "process-timeline" | "faq-accordion" | "benefits-grid"
 
@@ -154,6 +155,19 @@ export function ServicePageLayout({ data }: { data: ServicePageData }) {
           <SectionRenderer key={index} section={section} index={index} />
         ))}
       </div>
+
+      {/* Rating Section */}
+      <section className="py-12 bg-background border-t">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto flex justify-center">
+            <Rating
+              rating={4.9}
+              totalReviews={1250}
+              className="w-full max-w-md bg-muted/20 border-border/50"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Other Services Link */}
       <section className="py-16 bg-muted/30 border-y">

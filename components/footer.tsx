@@ -128,7 +128,7 @@ export function Footer() {
                 © {new Date().getFullYear()} شركة النخبه لعزل الاسطح . جميع الحقوق محفوظة.
               </p>
               <p className="text-xl font-medium text-muted-foreground/80">
-                تصميم و تطوير بواسطة <span className="text-primary/80 text-xl font-medium">Ahmed Adel</span>
+                تصميم و تطوير بواسطة <span className="text-primary/80 text-xl font-medium">Ahmed Adham</span>
               </p>
             </div>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
