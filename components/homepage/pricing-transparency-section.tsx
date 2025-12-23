@@ -30,12 +30,7 @@ export function PricingTransparencySection() {
   ]
 
   const priceRanges = [
-    {
-      type: "العزل الأسمنتي",
-      range: "50-70 ريال/م²",
-      best: "الميزانيات المحدودة",
-      note: "مناسب للعزل الأساسي والمشاريع الصغيرة",
-    },
+
     {
       type: "العزل المائي بالبيتومين",
       range: "80-110 ريال/م²",
@@ -88,13 +83,12 @@ export function PricingTransparencySection() {
                 <h4 className="font-bold text-foreground mb-2">{factor.title}</h4>
                 <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{factor.description}</p>
                 <span
-                  className={`inline-block px-2 py-1 rounded-full text-xs font-bold ${
-                    factor.impact === "عالي جداً" || factor.impact === "عالي"
+                  className={`inline-block px-2 py-1 rounded-full text-xs font-bold ${factor.impact === "عالي جداً" || factor.impact === "عالي"
                       ? "bg-destructive/10 text-destructive"
                       : factor.impact === "متوسط"
                         ? "bg-warning/10 text-warning"
                         : "bg-success/10 text-success"
-                  }`}
+                    }`}
                 >
                   تأثير {factor.impact}
                 </span>
@@ -110,11 +104,10 @@ export function PricingTransparencySection() {
             {priceRanges.map((item, index) => (
               <div
                 key={index}
-                className={`p-6 rounded-xl border-2 transition-all ${
-                  item.recommended
+                className={`p-6 rounded-xl border-2 transition-all ${item.recommended
                     ? "bg-primary/5 border-primary shadow-lg"
                     : "bg-background border-border hover:border-primary/30"
-                }`}
+                  }`}
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   <div className="flex-1">

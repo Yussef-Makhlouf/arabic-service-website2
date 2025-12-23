@@ -26,7 +26,7 @@ export function BlogPreview() {
             <Card key={post.id} className="overflow-hidden hover:shadow-xl transition-all group">
               <div className="relative h-56 overflow-hidden">
                 <Image
-                  src={`/placeholder.svg?height=300&width=500&query=${encodeURIComponent(post.imageQuery)}`}
+                  src={post.image || `/placeholder.svg?height=300&width=500&query=${encodeURIComponent(post.imageQuery)}`}
                   alt={post.title}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"

@@ -30,17 +30,7 @@ export function ComparisonDecisionSection() {
       features: ["عزل مائي قوي وموثوق", "مقاومة عالية للتسربات", "تكلفة معتدلة", "يحتاج صيانة دورية"],
       color: "bg-muted border-border",
     },
-    {
-      type: "العزل الأسمنتي",
-      recommended: false,
-      bestFor: ["الأسطح الخرسانية", "الحمامات والمطابخ", "المباني القديمة"],
-      climate: "مناسب لجميع المناخات",
-      costRange: 2,
-      lifespan: "8-12 سنة",
-      maintenance: "مرتفع",
-      features: ["تكلفة اقتصادية", "سهل التطبيق", "يمكن الدهان فوقه", "يحتاج تجديد دوري"],
-      color: "bg-muted border-border",
-    },
+
   ]
 
   return (

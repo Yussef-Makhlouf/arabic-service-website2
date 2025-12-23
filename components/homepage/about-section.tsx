@@ -19,7 +19,7 @@ export function AboutSection() {
     { value: "10", label: "سنوات ضمان" },
     { value: "24/7", label: "دعم فني" },
   ]
-
+ 
   return (
     <section id="about" className="py-20 bg-secondary/20 overflow-hidden">
       <div className="container mx-auto px-4">
