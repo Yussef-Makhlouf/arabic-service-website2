@@ -25,7 +25,7 @@ export default function AboutPage() {
                                     من نحن
                                 </h1>
                                 <p className="text-xl text-muted-foreground leading-loose max-w-[600px] text-justify">
-                                    نحن شركة النخبة، رواد خدمات العزل بالرياض والمملكة. نجمع بين الخبرة العريقة والتقنيات الحديثة لنقدم حلولاً جذرية لمشاكل التسربات والعزل، نحمي منزلك ونوفر طاقتك.
+                                    شركة النخبة لعزل الفوم بالرياض هي وجهتك الأولى لحلول العزل المائي والحراري المتكاملة، كشف التسربات، ورش الفوم البولي يوريثان عالي الكثافة. نمتلك خبرة تمتد لأكثر من 10 سنوات في السوق السعودي، ونقدم خدماتنا للمباني السكنية، التجارية، والصناعية بجودة لا تُضاهى وضمان يصل إلى 15 عامًا.
                                 </p>
                                 <div className="flex flex-wrap gap-4 pt-4">
                                     <Button size="lg" asChild className="font-bold text-lg px-8 py-6 h-auto">
@@ -40,7 +40,7 @@ export default function AboutPage() {
                                 <div className="relative aspect-video overflow-hidden rounded-3xl shadow-2xl border-4 border-background transform rotate-2 hover:rotate-0 transition-transform duration-500">
                                     <Image
                                         src="/cover1.png"
-                                        alt="فريق عمل شركة النخبة"
+                                        alt="فريق عمل شركة النخبة لعزل الفوم في الرياض"
                                         fill
                                         className="object-cover"
                                         priority
@@ -63,7 +63,7 @@ export default function AboutPage() {
                                     <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-xl mt-12 transform hover:-translate-y-2 transition-transform duration-300">
                                         <Image
                                             src="/professional-roof-insulation-work-in-saudi-arabia.jpg"
-                                            alt="تنفيذ عزل الأسطح"
+                                            alt="عزل أسطح مائي وحراري في الرياض باستخدام فوم البولي يوريثان"
                                             fill
                                             className="object-cover"
                                         />
@@ -71,7 +71,7 @@ export default function AboutPage() {
                                     <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
                                         <Image
                                             src="/polyurethane-foam-insulation-application.jpg"
-                                            alt="رش الفوم العازل"
+                                            alt="رش فوم عازل على الأسطح في السعودية"
                                             fill
                                             className="object-cover"
                                         />
@@ -88,18 +88,18 @@ export default function AboutPage() {
                                 </h2>
                                 <div className="space-y-6 text-lg text-muted-foreground leading-loose text-justify">
                                     <p>
-                                        تأسست شركة النخبة في قلب الرياض، بهدف سد الفجوة في سوق خدمات العزل من خلال تقديم جودة لا تضاهى واحترافية عالية. بدأنا بمشروع صغير، واليوم نفخر بكوننا الخيار الأول لألاف العملاء في المملكة.
+                                        تأسست شركة النخبة في الرياض عام 2014 بهدف تقديم حلول عزل متقدمة تُواكب التحديات المناخية في المملكة العربية السعودية، حيث ترتفع درجات الحرارة صيفًا وتتعرض الأسطح والخزانات للمشاكل الناتجة عن الرطوبة والتسربات. بدأنا كفريق صغير من الفنيين المتخصصين، وسرعان ما تطورنا لنصبح واحدة من أبرز شركات العزل المعتمدة في الرياض والمنطقة الوسطى، بفضل التزامنا بمعايير الجودة العالمية ورضا عملائنا.
                                     </p>
                                     <p>
-                                        نحن لا نقدم مجرد خدمة عزل، بل نقدم راحة بال. نستخدم أفضل المواد المعتمدة عالمياً (مثل الفوم بولي يوريثان) ونوظف أحدث تقنيات كشف التسربات لضمان نتائج تدوم طويلاً.
+                                        اليوم، نُجري مئات المشاريع سنويًا، من عزل الأسطح والخزانات إلى عزل الحمامات والمطابخ، باستخدام أحدث تقنيات رش الفوم البولي يوريثان (Polyurethane Foam) الذي يُعد الأفضل عالميًا في العزل الحراري والمائي. كما نُجهّز فرقنا بأجهزة كشف تسربات حديثة تعمل بتقنية الأشعة تحت الحمراء والضغط الهوائي، مما يضمن تحديد نقطة التسرب بدقة دون تكسير أو أضرار.
                                     </p>
                                 </div>
                                 <ul className="grid sm:grid-cols-2 gap-4 pt-4">
                                     {[
-                                        "فريق فني معتمد وذو خبرة",
-                                        "عزل مطابق للمواصفات",
-                                        "ضمان شامل يصل إلى 15 عاماً",
-                                        "سرعة وتنظيم في العمل"
+                                        "فريق فني معتمد وذو خبرة تزيد عن 10 سنوات",
+                                        "عزل مطابق للمواصفات السعودية والدولية (SASO، ASTM)",
+                                        "ضمان شامل يصل إلى 15 عاماً ضد التشقق والانفصال",
+                                        "سرعة تنفيذ مع التزام تام بالمواعيد"
                                     ].map((item, index) => (
                                         <li key={index} className="flex items-center gap-3 bg-muted/50 p-3 rounded-lg">
                                             <CheckCircle className="w-5 h-5 text-green-500 shrink-0" />
@@ -117,7 +117,7 @@ export default function AboutPage() {
                     <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
                         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-heading">مبادئنا الراسخة</h2>
-                            <p className="text-muted-foreground text-lg">الأسس التي نبني عليها نجاحنا وثقتكم بنا</p>
+                            <p className="text-muted-foreground text-lg">الأسس التي نبني عليها نجاحنا وثقتكم بنا في مجال العزل وكشف التسربات</p>
                         </div>
 
                         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -127,7 +127,7 @@ export default function AboutPage() {
                                 </div>
                                 <h3 className="text-2xl font-bold mb-4 font-heading text-primary">رؤيتنا</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    أن نكون النموذج الرائد في مجال العزل وحلول المباني في المملكة، ونساهم في تحقيق كفاءة الطاقة واستدامة المباني وفق رؤية 2030.
+                                    أن نكون الشركة الرائدة في مجال العزل وحلول الحماية البنائية في المملكة العربية السعودية، ونسهم فعّالًا في دعم رؤية 2030 من خلال تعزيز كفاءة الطاقة، تقليل الاستهلاك، ورفع جودة الحياة عبر مبانٍ آمنة ومعزولة تحمي السكان من التحديات المناخية والبنائية.
                                 </p>
                             </div>
                             <div className="bg-background rounded-3xl p-10 shadow-sm border border-border hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
@@ -136,7 +136,7 @@ export default function AboutPage() {
                                 </div>
                                 <h3 className="text-2xl font-bold mb-4 font-heading text-primary">رسالتنا</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    تقديم خدمات عزل وكشف تسربات بمستوى عالمي، مع التركيز على رضا العميل، الجودة المتناهية، والتطوير المستمر لكوادرنا وتقنياتنا.
+                                    نلتزم بتقديم حلول عزل مائي وحراري متكاملة تلبي أعلى معايير الجودة، باستخدام مواد معتمدة وآمنة، وتقنيات حديثة، وفريق فني مؤهل. هدفنا ليس إنجاز المهمة فقط، بل بناء علاقة ثقة طويلة الأمد مع كل عميل من خلال الشفافية، الأمانة، والنتائج الملموسة التي تدوم لسنوات.
                                 </p>
                             </div>
                             <div className="bg-background rounded-3xl p-10 shadow-sm border border-border hover:shadow-xl hover:-translate-y-1 transition-all duration-300 md:col-span-2 lg:col-span-1">
@@ -145,7 +145,7 @@ export default function AboutPage() {
                                 </div>
                                 <h3 className="text-2xl font-bold mb-4 font-heading text-primary">قيمنا</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    الشفافية في التعامل، الأمانة في التنفيذ، والالتزام بالمواعيد هي الركائز الأساسية التي نبني عليها علاقتنا مع كل عميل.
+                                    في شركة النخبة، نؤمن أن النجاح لا يُقاس بالربح فقط، بل بمستوى رضا العميل. لذلك نعتمد على قيم الشفافية الكاملة في التسعير، الأمانة الفنية في التنفيذ، الالتزام الصارم بالمواعيد، والاحترافية في التعامل. هذه ليست مجرد شعارات، بل ممارسات يومية يراها العميل في كل مرحلة من مراحل الخدمة.
                                 </p>
                             </div>
                         </div>
@@ -156,7 +156,7 @@ export default function AboutPage() {
                 <section className="relative py-32 bg-primary overflow-hidden">
                     <Image
                         src="/roof6.png"
-                        alt="خلفية عزل"
+                        alt="عزل فوم احترافي على الأسطح في الرياض"
                         fill
                         className="object-cover opacity-10 mix-blend-overlay"
                     />
@@ -165,7 +165,7 @@ export default function AboutPage() {
                             هل تبحث عن حل نهائي لمشاكل العزل؟
                         </h2>
                         <p className="mx-auto max-w-2xl text-xl text-primary-foreground/90 mb-10 leading-relaxed">
-                            دعنا نتولى الأمر. فريقنا جاهز لتقديم استشارة مجانية وفحص شامل لعقارك بأحدث الأجهزة.
+                            سواء كنت تعاني من تسربات في الخزان العلوي، ارتفاع فاتورة الكهرباء بسبب تسرب الحرارة، أو تشققات في السطح، فإن فريق شركة النخبة جاهز لتقديم استشارة مجانية، فحص شامل باستخدام أحدث الأجهزة، وعرض سعر دقيق دون مفاجآت.
                         </p>
                         <Button size="lg" variant="secondary" asChild className="font-bold text-xl px-10 py-6 h-auto shadow-2xl hover:scale-105 transition-transform">
                             <a href="tel:+966507067378">اتصل بنا الآن</a>
@@ -178,10 +178,10 @@ export default function AboutPage() {
                     <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
                         <div className="flex flex-col items-center justify-center text-center space-y-6 mb-20">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-heading">
-                                لماذا يختار العملاء شركة النخبة؟
+                                لماذا يختار العملاء شركة النخبة لعزل الفوم؟
                             </h2>
                             <p className="max-w-[800px] text-muted-foreground text-lg">
-                                نحن نقدم أكثر من مجرد خدمة، نحن نقدم شراكة طويلة الأمد لحماية ممتلكاتك.
+                                لأننا لا نكتفي برش الفوم – نضمن لك نظام عزل متكامل يحمي ممتلكاتك من الداخل والخارج، ويتماشى مع أعلى معايير السلامة والكفاءة في المملكة.
                             </p>
                         </div>
 
@@ -189,7 +189,7 @@ export default function AboutPage() {
                             <div className="relative aspect-square lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-border">
                                 <Image
                                     src="/roof7.png"
-                                    alt="جودة التنفيذ"
+                                    alt="فريق النخبة أثناء تنفيذ عزل فوم احترافي على سطح منزل في الرياض"
                                     fill
                                     className="object-cover hover:scale-105 transition-transform duration-700"
                                 />
@@ -200,10 +200,22 @@ export default function AboutPage() {
 
                             <div className="grid gap-8 sm:grid-cols-2">
                                 {[
-                                    { title: "سرعة الاستجابة", desc: "نصلك في أسرع وقت ممكن لحل مشكلتك الطارئة." },
-                                    { title: "أحدث المعدات", desc: "نستخدم سيارات مجهزة ومكائن رش فوم أمريكية حديثة." },
-                                    { title: "أسعار تنافسية", desc: "نقدم أفضل قيمة مقابل سعر مع عروض وخصومات مستمرة." },
-                                    { title: "دعم فني مستمر", desc: "فريقنا معك حتى بعد انتهاء الخدمة لضمان رضاك التام." }
+                                    { 
+                                        title: "سرعة الاستجابة", 
+                                        desc: "نصل إليك في نفس اليوم في معظم مناطق الرياض، مع فريق جاهز لفحص المشكلة وتقديم حل فوري، خاصة في حالات الطوارئ مثل التسربات المفاجئة." 
+                                    },
+                                    { 
+                                        title: "أحدث المعدات", 
+                                        desc: "نستخدم معدات رش فوم أمريكية من نوع Graco، وأجهزة كشف تسربات حرارية (Thermal Imaging) لتحديد المشكلات دون تكسير الجدران أو الأسطح." 
+                                    },
+                                    { 
+                                        title: "أسعار تنافسية", 
+                                        desc: "نقدم عروضًا مميزة للمشاريع السكنية والتجارية، مع خصومات تصل إلى 20% للعملاء الجدد، وبدون أي رسوم مخفية." 
+                                    },
+                                    { 
+                                        title: "دعم فني مستمر", 
+                                        desc: "لا تنتهي علاقتنا بعد انتهاء المشروع. فريق الدعم الفني متاح طوال أيام الأسبوع للرد على أي استفسار أو متابعة ما بعد الضمان." 
+                                    }
                                 ].map((feature, i) => (
                                     <div key={i} className="bg-card p-8 rounded-2xl border border-border hover:border-primary/50 transition-colors shadow-sm">
                                         <h4 className="font-bold text-xl mb-3 text-primary">{feature.title}</h4>
@@ -211,6 +223,71 @@ export default function AboutPage() {
                                     </div>
                                 ))}
                             </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Additional SEO-Rich Section: Services Overview */}
+                <section className="py-24 bg-background">
+                    <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-heading text-primary mb-4">
+                                خدماتنا الأساسية
+                            </h2>
+                            <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+                                نقدم حلولًا شاملة تغطي جميع احتياجات العزل في المملكة، من الأسطح إلى الخزانات، باستخدام مواد معتمدة وفقًا لمعايير SASO.
+                            </p>
+                        </div>
+                        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                            {[
+                                {
+                                    title: "عزل الأسطح بالفوم",
+                                    desc: "نستخدم رغوة البولي يوريثان العازلة التي تُشكل طبقة متجانسة بدون فواصل، تحمي من الحرارة بنسبة تصل إلى 80% وتمنع تسرب المياه تمامًا."
+                                },
+                                {
+                                    title: "عزل الخزانات",
+                                    desc: "عزل خزانات المياه العلوية والسفلى بمادة فوم مقاومة للبكتيريا، آمنة للصحة، وتدوم لأكثر من 15 سنة دون صيانة."
+                                },
+                                {
+                                    title: "كشف التسربات بدون تكسير",
+                                    desc: "باستخدام أجهزة الكشف بالأشعة تحت الحمراء والضغط الهوائي، نحدد مكان التسرب بدقة مطلقة دون إتلاف الأرضيات أو الجدران."
+                                },
+                                {
+                                    title: "عزل الحمامات والمطابخ",
+                                    desc: "حماية جدران وأرضيات الحمامات من الرطوبة والتسربات باستخدام طبقات عازلة مرنة ومقاومة للعفن."
+                                },
+                                {
+                                    title: "التشطيبات العلوية (الكواتر)",
+                                    desc: "نضيف طبقة واقية فوق الفوم بدرجة حرارة منخفضة الانعكاس (Cool Roof) لزيادة كفاءة العزل وحماية الفوم من الأشعة فوق البنفسجية."
+                                },
+                                {
+                                    title: "الصيانة الدورية",
+                                    desc: "خدمات فحص وصيانة سنوية لضمان استمرارية كفاءة نظام العزل وتجنب المشكلات المستقبلية."
+                                }
+                            ].map((service, i) => (
+                                <div key={i} className="p-6 bg-card rounded-xl border border-border hover:shadow-md transition-shadow">
+                                    <h3 className="text-xl font-bold mb-3 text-foreground">{service.title}</h3>
+                                    <p className="text-muted-foreground">{service.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Final CTA */}
+                <section className="py-20 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
+                    <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl text-center">
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6 font-heading">استعد لتجربة عزل لا تُضاهى</h2>
+                        <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+                            اختر شركة النخبة لعزل الفوم في الرياض لتستمتع بمنزل بارد صيفًا، دافئ شتاءً، وخالٍ من التسربات – مع ضمان قانوني موثق.
+                        </p>
+                        <div className="flex flex-col sm:flex-row justify-center gap-4">
+                            <Button size="lg" variant="secondary" asChild className="font-bold text-lg px-8 py-6 h-auto">
+                                <a href="tel:+966507067378">اتصل الآن: 050 706 7378</a>
+                            </Button>
+                            <Button size="lg" variant="outline" asChild className="font-bold text-lg px-8 py-6 h-auto bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                                <Link href="/services">عرض جميع الخدمات</Link>
+                            </Button>
                         </div>
                     </div>
                 </section>

@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Cairo, Noto_Kufi_Arabic } from "next/font/google"
+import { Cairo, Noto_Kufi_Arabic, Amiri, Tajawal } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
@@ -13,6 +13,20 @@ const cairo = Cairo({
 const notoKufi = Noto_Kufi_Arabic({
   subsets: ["arabic"],
   variable: "--font-noto-kufi",
+  display: "swap",
+})
+
+const amiri = Amiri({
+  subsets: ["arabic"],
+  weight: ["400", "700"],
+  variable: "--font-amiri",
+  display: "swap",
+})
+
+const tajawal = Tajawal({
+  subsets: ["arabic"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-tajawal",
   display: "swap",
 })
 
@@ -47,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ar" dir="rtl" className={`${cairo.variable} ${notoKufi.variable}`}>
+    <html lang="ar" dir="rtl" className={`${cairo.variable} ${notoKufi.variable} ${amiri.variable} ${tajawal.variable}`}>
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />
