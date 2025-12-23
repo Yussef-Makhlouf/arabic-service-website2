@@ -123,9 +123,14 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-border mt-10 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} شركة العزل المتقدم. جميع الحقوق محفوظة.
-            </p>
+            <div className="flex flex-col gap-1">
+              <p className="text-sm text-muted-foreground">
+                © {new Date().getFullYear()} شركة النخبه لعزل الاسطح . جميع الحقوق محفوظة.
+              </p>
+              <p className="text-xs text-muted-foreground/80">
+                تصميم و تطوير بواسطة <span className="text-primary/80">Ahmed Adel</span>
+              </p>
+            </div>
             <div className="flex items-center gap-6 text-sm text-muted-foreground">
               <span>معتمدون من SASO</span>
               <span>•</span>
