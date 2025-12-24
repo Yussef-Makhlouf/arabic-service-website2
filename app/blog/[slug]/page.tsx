@@ -12,6 +12,7 @@ import { blogPosts, getBlogPostBySlug, getRelatedPosts } from "@/lib/blog-data"
 import { BlogCard } from "@/components/blog/blog-card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { TableRenderer } from "@/components/blog/table-renderer"
+import { Rating } from "@/components/ui/rating"
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>
@@ -469,6 +470,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {sections.map((section, index) => (
               <SectionRenderer key={section.id} section={section} index={index} />
             ))}
+
+            {/* Rating Component */}
+            <div className="mt-16 mb-8 flex justify-center">
+              <Rating
+                rating={4.8}
+                totalReviews={850}
+                className="w-full max-w-md bg-muted/10 border-border/60"
+              />
+            </div>
           </article>
 
           {/* Table of Contents */}
