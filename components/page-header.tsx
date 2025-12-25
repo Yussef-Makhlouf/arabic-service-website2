@@ -11,7 +11,7 @@ interface PageHeaderProps {
 
 export function PageHeader({ title, description, badge, className, children }: PageHeaderProps) {
     return (
-        <section className={cn("relative py-24 md:py-32 overflow-hidden bg-background border-b", className)}>
+        <section className={cn("relative py-16 md:py-32 overflow-hidden bg-background border-b", className)}>
             {/* Subtle Background Pattern */}
             <div className="absolute inset-0 opacity-[0.05] pointer-events-none bg-[radial-gradient(var(--secondary)_1px,transparent_1px)] [background-size:16px_16px]" />
 
@@ -28,7 +28,7 @@ export function PageHeader({ title, description, badge, className, children }: P
                     </div>
                 )}
 
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground text-balance leading-tight">
+                <h1 className="text-3xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-foreground text-balance leading-tight">
                     {title}
                 </h1>
 

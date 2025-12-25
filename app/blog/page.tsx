@@ -34,9 +34,9 @@ export default function BlogPage() {
           badge="المعرفـة"
         />
 
-        <div className="container px-4 py-12 mx-auto  ">
+        <div className="container px-4 py-8 md:py-12 mx-auto">
           {/* Category Filter - Centered & Functional */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
+          <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 mb-8 md:mb-16">
             {categories.map((cat) => (
               <Button
                 key={cat}
@@ -55,7 +55,7 @@ export default function BlogPage() {
 
           {/* Posts Grid - Centered & Responsive */}
           {filteredPosts.length > 0 ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-7xl mx-auto justify-items-center">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8 md:gap-y-12 max-w-7xl mx-auto justify-items-center">
               {filteredPosts.map((post) => (
                 <BlogCard key={post.id} post={post} className="w-full max-w-[400px]" />
               ))}

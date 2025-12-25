@@ -144,11 +144,20 @@
     @apply border-border outline-ring/50;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
     /* Global subtle gradient background for depth */
     background: linear-gradient(180deg, var(--background) 0%, #11141e 100%);
     min-height: 100vh;
+  }
+
+  /* Scroll margin for anchor links */
+  [id] {
+    scroll-margin-top: 6rem;
   }
 
   /* Enhanced typography */

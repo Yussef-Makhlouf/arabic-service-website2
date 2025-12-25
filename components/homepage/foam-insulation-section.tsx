@@ -16,14 +16,14 @@ export function FoamInsulationSection() {
                         الخيار الأول في المملكة للعزل المعتمد
                     </div>
 
-                    <h2 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
+                    <h2 className="text-2xl md:text-5xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
                         عزل الفوم (البولي يوريثان) <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-500 to-blue-600">
                             الدرع الأول لحماية منزلك
                         </span>
                     </h2>
 
-                    <p className="max-w-3xl mx-auto text-xl md:text-2xl text-muted-foreground leading-relaxed mb-10">
+                    <p className="max-w-3xl mx-auto text-lg md:text-2xl text-muted-foreground leading-relaxed mb-10">
                         الحل الأمثل في السعودية لعزل حراري ومائي في طبقة واحدة. معتمد من شركة الكهرباء، يقلل فاتورتك حتى 40%، ويحميك من التسربات مدى الحياة.
                     </p>
 

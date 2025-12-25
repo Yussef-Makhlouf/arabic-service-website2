@@ -6,47 +6,63 @@ interface RatingProps {
     totalReviews: number
     className?: string
     label?: string
+    businessName?: string
+    maxRating?: number
+    showFormattedCount?: boolean
 }
+
+// Utility function to format large numbers
+const formatLargeNumber = (num: number): string => {
+    if (num >= 1000000) return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
+    if (num >= 1000) return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
+    return num.toString();
+};
 
 export function Rating({
     rating,
     totalReviews,
     className,
-    label = "Customer Reviews"
+    label = "تقييمات عملائنا",
+    businessName = "Our Service",
+    maxRating = 5,
+    showFormattedCount = true
 }: RatingProps) {
-    // Ensure rating is between 0 and 5
-    const clampedRating = Math.max(0, Math.min(5, rating))
+    // Ensure rating is between 0 and maxRating
+    const clampedRating = Math.max(0, Math.min(maxRating, rating));
+    const normalizedRating = (clampedRating / maxRating) * 5; // Normalize to 5-point scale for schema
 
-    // Create array of 5 items for rendering
-    const stars = Array.from({ length: 5 }, (_, i) => i + 1)
+    // Create array of stars based on maxRating
+    const stars = Array.from({ length: maxRating }, (_, i) => i + 1);
+
+    // Format the review count for display
+    const displayReviewCount = showFormattedCount && totalReviews > 999
+        ? formatLargeNumber(totalReviews)
+        : totalReviews.toLocaleString();
 
     return (
         <div className={cn(
-            "flex flex-col items-center justify-center p-6 bg-white border border-border rounded-2xl shadow-sm hover:shadow-md transition-shadow",
+            "flex flex-col items-center justify-center p-3 bg-white border border-border rounded-xl md:rounded-2xl shadow-sm hover:shadow-md transition-shadow",
             className
-        )}>
+        )}
+            role="region"
+            aria-labelledby="rating-title">
             {/* Label */}
-            <h3 className="text-xl font-bold text-foreground mb-4 font-heading">
+            <h3 id="rating-title" className="text-sm md:text-base font-bold text-foreground mb-2 md:mb-4 font-heading">
                 {label}
             </h3>
 
             {/* Stars Container */}
-            <div className="flex items-center gap-1 mb-3 relative">
+            <div className="flex items-center gap-0.5 md:gap-1 mb-2 md:mb-3" aria-label={`${clampedRating} out of ${maxRating} stars rating`}>
                 {stars.map((starIndex) => {
-                    // Calculate fill percentage for this star
-                    // e.g. rating 4.7
-                    // star 1: 4.7 >= 1 -> 100%
-                    // star 4: 4.7 >= 4 -> 100%
-                    // star 5: 4.7 - 4 = 0.7 -> 70%
-                    let fillPercentage = 0
+                    let fillPercentage = 0;
                     if (clampedRating >= starIndex) {
-                        fillPercentage = 100
+                        fillPercentage = 100;
                     } else if (clampedRating > starIndex - 1) {
-                        fillPercentage = (clampedRating - (starIndex - 1)) * 100
+                        fillPercentage = (clampedRating - (starIndex - 1)) * 100;
                     }
 
                     return (
-                        <div key={starIndex} className="relative w-8 h-8">
+                        <div key={starIndex} className="relative w-6 h-6 md:w-8 md:h-8" aria-hidden="true">
                             {/* Background Star (Gray/Empty) */}
                             <Star
                                 className="absolute inset-0 w-full h-full text-muted stroke-[1.5px]"
@@ -59,43 +75,55 @@ export function Rating({
                                 style={{ width: `${fillPercentage}%` }}
                             >
                                 <Star
-                                    className="w-8 h-8 text-yellow-400 fill-yellow-400 stroke-yellow-400"
+                                    className="w-6 h-6 md:w-8 md:h-8 text-yellow-400 fill-yellow-400 stroke-yellow-400"
                                 />
                             </div>
                         </div>
-                    )
+                    );
                 })}
             </div>
 
             {/* Rating Text */}
-            <div className="flex items-center gap-2 text-muted-foreground font-medium">
-                <span className="text-2xl font-bold text-foreground">{clampedRating.toFixed(1)}</span>
-                <span className="text-sm">/ 5.0</span>
+            <div className="flex items-center gap-1.5 md:gap-2 text-muted-foreground font-medium">
+                <span className="text-xl md:text-2xl font-bold text-foreground">{clampedRating.toFixed(1)}</span>
+                <span className="text-xs md:text-sm">/ {maxRating}.0</span>
             </div>
 
-            {/* Review Count logic for structured data later or just display */}
-            <div className="mt-2 text-sm text-muted-foreground flex items-center gap-1">
-                <User className="w-4 h-4" />
-                <span>based on {totalReviews.toLocaleString()} reviews</span>
+            {/* Review Count */}
+            <div className="mt-1.5 md:mt-2 text-xs md:text-sm text-muted-foreground flex items-center gap-1">
+                <User className="w-3.5 h-3.5 md:w-4 md:h-4" aria-hidden="true" />
+                <span>Based on {displayReviewCount}+ reviews</span>
             </div>
 
-            {/* Schema.org Microdata for SEO */}
+            {/* Schema.org Structured Data for SEO */}
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
-                        "@context": "https://schema.org/",
+                        "@context": "https://schema.org",
                         "@type": "AggregateRating",
-                        "ratingValue": clampedRating,
+                        "ratingValue": normalizedRating,
                         "bestRating": "5",
+                        "worstRating": "1",
                         "ratingCount": totalReviews,
+                        "reviewCount": totalReviews,
                         "itemReviewed": {
-                            "@type": "LocalBusiness",
-                            "name": "Service Provider" // Ideally dynamic
+                            "@type": "Service",
+                            "name": businessName,
+                            "aggregateRating": {
+                                "@type": "AggregateRating",
+                                "ratingValue": normalizedRating,
+                                "bestRating": "5",
+                                "ratingCount": totalReviews
+                            }
+                        },
+                        "author": {
+                            "@type": "Organization",
+                            "name": businessName
                         }
                     }),
                 }}
             />
         </div>
-    )
+    );
 }

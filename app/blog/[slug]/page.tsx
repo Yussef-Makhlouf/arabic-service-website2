@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, ChevronLeft, ArrowRight, Menu, ShieldCheck, Lightbulb, CheckCircle2, AlertTriangle, Star, Phone, MessageCircle, ThermometerSun, Layers } from "lucide-react"
 import { blogPosts, getBlogPostBySlug, getRelatedPosts } from "@/lib/blog-data"
 import { BlogCard } from "@/components/blog/blog-card"
+import { MobileTableOfContents } from "@/components/blog/mobile-toc"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { TableRenderer } from "@/components/blog/table-renderer"
 import { Rating } from "@/components/ui/rating"
@@ -49,80 +50,75 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 // --- Components ---
 
 function TableOfContents({ sections }: { sections: Section[] }) {
+  if (sections.length === 0) return null;
   return (
-    <div className="sticky top-24 z-10 hidden lg:block space-y-8">
-      <div className="bg-white rounded-[2rem] border border-[#F0F0F0] shadow-[0_4px_12px_rgba(0,0,0,0.05)] overflow-hidden p-2">
-        <div className="bg-[#F0F0F0] rounded-2xl p-4 mb-2">
-          <h3 className="font-bold text-[#4B0082] flex items-center gap-2 font-tajawal text-lg">
+    <aside className="sticky top-24 z-10 hidden lg:block space-y-6">
+      <nav className="bg-white rounded-2xl border border-[#F0F0F0] shadow-[0_4px_12px_rgba(0,0,0,0.05)] overflow-hidden">
+        <div className="bg-[#F0F0F0] rounded-t-2xl p-4">
+          <h3 className="font-bold text-[#4B0082] flex items-center gap-2 font-tajawal text-base">
             <Menu className="w-5 h-5 text-[#3498DB]" />
             فهرس المحتوى
           </h3>
         </div>
-        <nav className="p-1 space-y-1">
+        <div className="p-2 space-y-1 max-h-[50vh] overflow-y-auto">
           {sections.map((section, idx) => (
             <a
               key={idx}
               href={`#${section.id}`}
-              className="group flex items-center justify-between px-4 py-3 text-sm font-bold text-[#666666] hover:text-[#4B0082] hover:bg-[#F0F0F0] rounded-xl transition-all font-tajawal"
+              className="group flex items-center justify-between px-3 py-2.5 text-sm font-medium text-[#666666] hover:text-[#4B0082] hover:bg-[#F0F0F0] rounded-lg transition-all font-tajawal"
             >
-              <span>{section.title}</span>
-              <ChevronLeft className="w-4 h-4 text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <span className="line-clamp-2">{section.title}</span>
+              <ChevronLeft className="w-4 h-4 text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
             </a>
           ))}
-        </nav>
-      </div>
+        </div>
+      </nav>
 
       {/* Trust Badge Widget */}
-      <div className="bg-gradient-to-br from-[#2C3E50] to-[#1a252f] rounded-[2.5rem] p-8 text-white text-center shadow-xl relative overflow-hidden group">
+      <div className="bg-gradient-to-br from-[#2C3E50] to-[#1a252f] rounded-2xl p-6 text-white text-center shadow-xl relative overflow-hidden group">
         <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-3xl transition-transform group-hover:scale-150 duration-700" />
-        <ShieldCheck className="w-14 h-14 mx-auto mb-6 text-[#1ABC9C]" />
-        <h4 className="font-bold text-xl mb-3 font-amiri">ضمان ذهبي شامل</h4>
-        <p className="text-sm text-slate-300 mb-8 leading-relaxed font-tajawal">نضمن لك جودة العمل والمواد المستخدمة لمدة تصل إلى 15 عاماً مع شهادة معتمدة.</p>
-        <Button size="lg" className="w-full bg-[#1ABC9C] hover:bg-[#16a085] text-white border-none font-bold rounded-xl h-12 shadow-lg font-tajawal">
+        <ShieldCheck className="w-12 h-12 mx-auto mb-4 text-[#1ABC9C]" />
+        <h4 className="font-bold text-lg mb-2 font-amiri">ضمان ذهبي شامل</h4>
+        <p className="text-xs text-slate-300 mb-6 leading-relaxed font-tajawal">نضمن لك جودة العمل والمواد المستخدمة لمدة تصل إلى 15 عاماً.</p>
+        <Button size="default" className="w-full bg-[#1ABC9C] hover:bg-[#16a085] text-white border-none font-bold rounded-xl h-10 shadow-lg font-tajawal text-sm">
           اطلب الضمان الآن
         </Button>
       </div>
-    </div>
+    </aside>
   )
 }
 
 function BubbleSection({ number, title, children, isCompany = false }: { number: string, title: string, children: React.ReactNode, isCompany?: boolean }) {
   return (
-    <section className="scroll-mt-32 group mb-12">
-      {/* 
-        Layout:
-        1. Rounded Rectangle Container (bg-[#F0F0F0])
-        2. Title inside the container (Dark Purple)
-        3. Content inside
-      */}
-      <div className="bg-[#F0F0F0] rounded-[16px] p-8 md:p-10 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-[#E0E0E0] relative transition-transform hover:-translate-y-1 duration-300">
+    <section className="scroll-mt-24 group mb-8 md:mb-12">
+      <div className="bg-[#F0F0F0] rounded-xl md:rounded-2xl p-4 md:p-8 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-[#E0E0E0] relative transition-transform hover:-translate-y-1 duration-300">
 
-        {/* Company Badge / Icon if needed */}
+        {/* Company Badge */}
         {isCompany && (
-          <div className="absolute top-8 left-8 hidden md:flex items-center gap-2">
-            <div className="bg-white p-2 rounded-full shadow-sm text-[#F1C40F]"><Star className="w-5 h-5 fill-current" /></div>
+          <div className="absolute top-4 left-4 md:top-8 md:left-8 hidden md:flex items-center gap-2">
+            <div className="bg-white p-2 rounded-full shadow-sm text-[#F1C40F]"><Star className="w-4 h-4 md:w-5 md:h-5 fill-current" /></div>
           </div>
         )}
 
         {/* Title */}
-        <h2 className="text-2xl md:text-[22pt] font-bold text-[#4B0082] mb-6 font-noto-kufi border-b border-[#E0E0E0] pb-4 flex items-center gap-3">
-          <span className="text-[#3498DB] font-tajawal text-xl bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-sm">{number}</span>
-          {title}
+        <h2 className="text-lg md:text-xl lg:text-2xl font-bold text-[#4B0082] mb-4 md:mb-6 font-noto-kufi border-b border-[#E0E0E0] pb-3 md:pb-4 flex items-center gap-2 md:gap-3">
+          <span className="text-[#3498DB] font-tajawal text-base md:text-lg bg-white w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center shadow-sm shrink-0">{number}</span>
+          <span className="flex-1">{title}</span>
         </h2>
 
         {/* Content */}
-        <div className="text-[#333333] font-tajawal text-[16pt] leading-[1.6] space-y-6">
+        <div className="text-[#333333] font-tajawal text-sm md:text-base leading-[1.8] space-y-4 md:space-y-6">
           {children}
         </div>
 
         {/* Company CTA Button */}
         {isCompany && (
-          <div className="mt-8 pt-6 border-t border-[#E0E0E0] flex flex-wrap gap-4">
-            <Button className="bg-[#3498DB] hover:bg-[#2980b9] text-white font-bold h-12 px-8 rounded-xl font-tajawal flex-1 md:flex-none">
+          <div className="mt-6 md:mt-8 pt-4 md:pt-6 border-t border-[#E0E0E0] flex flex-col sm:flex-row gap-3">
+            <Button className="bg-[#3498DB] hover:bg-[#2980b9] text-white font-bold h-10 md:h-12 px-6 rounded-xl font-tajawal w-full sm:w-auto text-sm md:text-base">
               <Phone className="w-4 h-4 ml-2" />
               اتصل الآن
             </Button>
-            <Button variant="outline" className="border-[#3498DB] text-[#3498DB] hover:bg-[#3498DB]/5 font-bold h-12 px-8 rounded-xl font-tajawal flex-1 md:flex-none">
+            <Button variant="outline" className="border-[#3498DB] text-[#3498DB] hover:bg-[#3498DB]/5 font-bold h-10 md:h-12 px-6 rounded-xl font-tajawal w-full sm:w-auto text-sm md:text-base">
               <MessageCircle className="w-4 h-4 ml-2" />
               واتساب
             </Button>
@@ -136,10 +132,10 @@ function BubbleSection({ number, title, children, isCompany = false }: { number:
 function CTABlock({ variant = "primary" }: { variant?: "primary" | "secondary" | "inline" }) {
   if (variant === "secondary") {
     return (
-      <div className="my-16 bg-[#2C3E50] rounded-[16px] p-10 md:p-16 text-white text-center shadow-xl relative overflow-hidden">
+      <div className="my-10 md:my-16 bg-[#2C3E50] rounded-[16px] p-6 md:p-16 text-white text-center shadow-xl relative overflow-hidden">
         <div className="relative z-10 max-w-3xl mx-auto">
           <Badge className="mb-6 bg-[#3498DB]/20 hover:bg-[#3498DB]/30 text-[#3498DB] border-none px-4 py-2 font-tajawal">خيارك الأمثل</Badge>
-          <h3 className="text-3xl md:text-5xl font-bold mb-6 leading-tight font-amiri">جاهز لتحويل منزلك لمكان أكثر راحة؟</h3>
+          <h3 className="text-2xl md:text-5xl font-bold mb-6 leading-tight font-amiri">جاهز لتحويل منزلك لمكان أكثر راحة؟</h3>
           <p className="text-gray-300 mb-10 text-xl leading-relaxed font-tajawal">لا تتردد في طلب استشارة مجانية. فريقنا الهندسي بانتظارك.</p>
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
             <Button size="lg" className="bg-[#3498DB] text-white hover:bg-[#2980b9] font-bold h-16 px-10 text-xl rounded-xl shadow-xl font-tajawal">
@@ -202,7 +198,7 @@ function SectionRenderer({ section, index }: { section: Section, index: number }
           <span className="inline-block py-2 px-6 rounded-full bg-[#E8F6F3] text-[#1ABC9C] font-bold text-sm mb-4 font-tajawal">
             {section.type === "faq" ? "الأسئلة الشائعة" : "مشاكل وحلول"}
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#4B0082] font-amiri">{section.title}</h2>
+          <h2 className="text-xl md:text-4xl font-bold text-[#4B0082] font-amiri">{section.title}</h2>
         </div>
 
         <Accordion type="single" collapsible className="w-full grid gap-4 max-w-4xl mx-auto font-tajawal">
@@ -324,7 +320,7 @@ function FeatureList({ title, items, color = "blue" }: { title: string, items: s
   const Icon = color === "green" ? CheckCircle2 : color === "red" ? AlertTriangle : Star;
 
   return (
-    <div className="bg-[#F0F0F0] rounded-[16px] p-8 md:p-10 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-[#E0E0E0] hover:shadow-lg transition-all">
+    <div className="bg-[#F0F0F0] rounded-[16px] p-5 md:p-10 shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-[#E0E0E0] hover:shadow-lg transition-all">
       <h3 className="text-2xl font-bold mb-6 text-[#4B0082] flex items-center gap-3 font-noto-kufi">
         <span className={`w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm ${iconColor}`}>
           <Icon className="w-5 h-5" />
@@ -335,7 +331,7 @@ function FeatureList({ title, items, color = "blue" }: { title: string, items: s
         {items.map((item, i) => (
           <li key={i} className="flex items-start gap-3 text-[#333333]">
             <div className={`mt-2.5 w-1.5 h-1.5 rounded-full ${color === 'green' ? 'bg-[#1ABC9C]' : 'bg-[#E74C3C]'} shrink-0`} />
-            <span className="font-medium leading-loose text-lg font-tajawal">{item}</span>
+            <span className="font-medium leading-loose text-base md:text-lg font-tajawal">{item}</span>
           </li>
         ))}
       </ul>
@@ -408,34 +404,34 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <main className="min-h-screen bg-background pb-20">
 
         {/* Article Header */}
-        <header className="py-20 md:py-32 bg-background relative overflow-hidden">
+        <header className="py-8 md:py-16 lg:py-24 bg-background relative overflow-hidden">
           {/* Subtle Background Pattern */}
           <div className="absolute top-0 left-0 w-full h-full opacity-[0.03] pointer-events-none bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px]" />
 
-          <div className="container px-4 max-w-4xl mx-auto text-center space-y-8 relative z-10">
-            <div className="flex items-center justify-center gap-2">
-              <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors flex items-center text-sm gap-1 bg-muted/50 px-3 py-1 rounded-full">
+          <div className="container px-4 max-w-4xl mx-auto text-center space-y-4 md:space-y-6 relative z-10">
+            <div className="flex items-center justify-center gap-2 flex-wrap">
+              <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors flex items-center text-xs md:text-sm gap-1 bg-muted/50 px-2 md:px-3 py-1 rounded-full">
                 المدونة
                 <ChevronLeft className="w-3 h-3" />
               </Link>
-              <span className="text-muted-foreground text-sm">/</span>
-              <Badge variant="outline" className="text-primary border-primary/20 bg-primary/5">
+              <span className="text-muted-foreground text-xs md:text-sm">/</span>
+              <Badge variant="outline" className="text-primary border-primary/20 bg-primary/5 text-xs md:text-sm">
                 {post.category}
               </Badge>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold leading-[1.2] tracking-tight text-balance text-foreground">
+            <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-balance text-foreground px-2">
               {post.title}
             </h1>
 
-            <div className="flex flex-wrap items-center justify-center gap-6 text-muted-foreground text-sm md:text-base border-t border-dashed border-border/60 py-8 w-full max-w-2xl mx-auto">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-primary" />
+            <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6 text-muted-foreground text-xs md:text-sm border-t border-dashed border-border/60 pt-4 md:pt-6 w-full max-w-2xl mx-auto">
+              <div className="flex items-center gap-1.5 md:gap-2">
+                <Calendar className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
                 <span>{new Date(post.date).toLocaleDateString("ar-SA", { dateStyle: "long" })}</span>
               </div>
-              <span className="text-border hidden sm:block">•</span>
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-primary" />
+              <span className="text-border">•</span>
+              <div className="flex items-center gap-1.5 md:gap-2">
+                <Clock className="w-3.5 h-3.5 md:w-4 md:h-4 text-primary" />
                 <span>{post.readTime}</span>
               </div>
             </div>
@@ -443,8 +439,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </header>
 
         {/* Featured Image */}
-        <div className="container px-4 max-w-5xl mx-auto mb-20">
-          <div className="relative aspect-[21/9] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-black/5">
+        <div className="container px-3 md:px-4 max-w-5xl mx-auto mb-8 md:mb-16">
+          <div className="relative aspect-[16/10] md:aspect-[16/9] lg:aspect-[21/9] rounded-xl md:rounded-2xl lg:rounded-3xl overflow-hidden shadow-xl md:shadow-2xl ring-1 ring-black/5">
             <Image
               src={post.image}
               alt={post.title}
@@ -456,17 +452,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </div>
 
         {/* Article Content */}
-        <div className="container px-4 max-w-7xl mx-auto grid lg:grid-cols-[1fr_280px] gap-12">
-          <article className="max-w-3xl mx-auto lg:max-w-none">
+        <div className="container px-3 md:px-4 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-6 lg:gap-10">
+          <article className="max-w-3xl mx-auto lg:max-w-none order-2 lg:order-1">
             {/* Excerpt */}
-            <div className="mb-16">
-              <p className="text-2xl md:text-3xl font-medium leading-relaxed text-foreground/90 text-center text-balance">
+            <div className="mb-8 md:mb-12">
+              <p className="text-base md:text-xl lg:text-2xl font-medium leading-relaxed text-foreground/90 text-center text-balance px-2">
                 {post.excerpt}
               </p>
-              <div className="h-1 w-24 bg-primary/20 mx-auto mt-8 rounded-full" />
+              <div className="h-1 w-16 md:w-24 bg-primary/20 mx-auto mt-4 md:mt-6 rounded-full" />
             </div>
 
             {/* Main Content */}
+            <MobileTableOfContents sections={sections.filter(s => s.type === "text" || s.type === "pros_cons" || s.type === "faq" || s.type === "problems")} />
             {sections.map((section, index) => (
               <SectionRenderer key={section.id} section={section} index={index} />
             ))}
@@ -474,30 +471,33 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             {/* Rating Component */}
             <div className="mt-16 mb-8 flex justify-center">
               <Rating
-                rating={4.8}
-                totalReviews={850}
+                rating={5.0}
+                totalReviews={20000}
                 className="w-full max-w-md bg-muted/10 border-border/60"
               />
             </div>
           </article>
 
-          {/* Table of Contents */}
-          <TableOfContents sections={sections.filter(s => s.type === "text" || s.type === "pros_cons" || s.type === "faq" || s.type === "problems")} />
+          {/* Table of Contents - Sidebar */}
+          <div className="order-1 lg:order-2">
+            <TableOfContents sections={sections.filter(s => s.type === "text" || s.type === "pros_cons" || s.type === "faq" || s.type === "problems")} />
+          </div>
         </div>
 
         {/* Related Posts */}
         {relatedPosts.length > 0 && (
-          <section className="mt-24 pt-24 border-t container px-4 max-w-7xl mx-auto">
-            <div className="flex items-center justify-between mb-12">
-              <h2 className="text-3xl font-bold">اقرأ أيضاً</h2>
-              <Button variant="ghost" asChild className="gap-2">
+          <section className="mt-8 md:mt-16 pt-6 md:pt-12 border-t container px-3 md:px-4 max-w-7xl mx-auto pb-8">
+            <div className="flex items-center justify-between gap-3 mb-4 md:mb-8">
+              <h2 className="text-lg md:text-2xl font-bold">اقرأ أيضاً</h2>
+              <Button variant="ghost" size="sm" asChild className="gap-1 text-xs md:text-sm shrink-0">
                 <Link href="/blog">
-                  عرض جميع المقالات
-                  <ArrowRight className="w-4 h-4" />
+                  <span className="hidden sm:inline">عرض جميع المقالات</span>
+                  <span className="sm:hidden">المزيد</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </Button>
             </div>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
               {relatedPosts.map((relatedPost) => (
                 <BlogCard key={relatedPost.id} post={relatedPost} />
               ))}

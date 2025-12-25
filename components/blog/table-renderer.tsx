@@ -8,12 +8,12 @@ export function TableRenderer({ rows }: { rows: string[] }) {
     const bodyRows = rows.slice(2).map(row => row.replace(/^\||\|$/g, '').split('|').map(c => c.trim()));
 
     return (
-        <div className="overflow-x-auto my-8 rounded-xl border border-[#E0E0E0] shadow-sm">
-            <table className="w-full text-right border-collapse bg-white">
+        <div className="overflow-x-auto my-4 md:my-8 rounded-lg md:rounded-xl border border-[#E0E0E0] shadow-sm -mx-1 md:mx-0" style={{ WebkitOverflowScrolling: 'touch' }}>
+            <table className="w-full text-right border-collapse bg-white min-w-[400px]">
                 <thead>
                     <tr className="bg-[#4B0082] text-white">
                         {headerRow.map((cell, i) => (
-                            <th key={i} className="p-4 font-bold font-tajawal text-sm md:text-base border-b border-[#3498DB]/30 whitespace-nowrap">
+                            <th key={i} className="p-2.5 md:p-4 font-bold font-tajawal text-xs md:text-sm border-b border-[#3498DB]/30 whitespace-nowrap">
                                 {cell}
                             </th>
                         ))}
@@ -23,7 +23,7 @@ export function TableRenderer({ rows }: { rows: string[] }) {
                     {bodyRows.map((row, i) => (
                         <tr key={i} className="hover:bg-[#F9F9F9] transition-colors odd:bg-white even:bg-[#F8F9FA]">
                             {row.map((cell, j) => (
-                                <td key={j} className="p-4 text-[#333333] font-medium font-tajawal text-sm md:text-base">
+                                <td key={j} className="p-2.5 md:p-4 text-[#333333] font-medium font-tajawal text-xs md:text-sm">
                                     {cell}
                                 </td>
                             ))}

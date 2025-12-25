@@ -11,7 +11,7 @@ export function HeroSection() {
       <div className="container mx-auto z-10 text-center space-y-12">
         {/* Main Headings */}
         <div className="space-y-6 max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+          <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
             <span className="text-foreground">ثورة في عالم </span>
             <span className="text-primary block mt-2 md:inline md:mt-0">عزل الأسطح</span>
           </h1>
