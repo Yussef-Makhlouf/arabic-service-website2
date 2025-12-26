@@ -92,7 +92,7 @@ export function ServicePageLayout({ data }: { data: ServicePageData }) {
               <Button size="lg" variant="secondary" className="gap-2 text-lg h-14 px-8 shadow-lg hover:shadow-xl transition-all" asChild>
                 <a href="tel:+966507067378">
                   <Phone className="h-5 w-5" />
-                  اتصل للحصول على عرض سعر
+                  اتصل للحصول على عرض سعر- 507067378
                 </a>
               </Button>
               <Button

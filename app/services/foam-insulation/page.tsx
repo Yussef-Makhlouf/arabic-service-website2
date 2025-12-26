@@ -141,7 +141,7 @@ const breadcrumbSchema = {
 export default function FoamInsulationPage() {
   const pageData = {
     icon: Wind,
-    title: "عزل فوم للأسطح",
+    title: "شركة عزل فوم بالرياض",
     subtitle: "عزل حراري ومائي متطور بتقنية البولي يوريثان - وفّر حتى 40% من فاتورة الكهرباء",
     breadcrumb: "خدماتنا / عزل فوم",
 
