@@ -4,58 +4,60 @@
 @custom-variant dark (&:is(.dark *));
 
 /* 
-  Theme Extraction from Hero Section
-  Background: Deep Navy (#181d2b)
-  Card/Overlay: Lighter Navy (#17264f)
-  Primary Accent: Pink/Purple Gradient base (#d26ad1)
-  Secondary Accent: Muted Purple (#af7ae7)
-  Text: White/Grey
+  Custom Light Theme - Soft Lavender Palette
+  Based on: #58468a (Deep Purple), #455172 (Slate Blue), #af7ae7 (Lavender)
+  Uses lighter, eye-friendly shades with tinted backgrounds
 */
 :root {
-  /* Enforce Dark Theme Variables by default */
-  --background: #181d2b;
-  --foreground: #ffffff;
+  /* Light Theme - Soft Lavender Tint */
+  --background: #F5F3FA;
+  /* Soft lavender background */
+  --foreground: #455172;
+  /* Slate blue for text */
 
-  --card: #17264f;
-  --card-foreground: #ffffff;
+  --card: #FFFFFF;
+  --card-foreground: #455172;
 
-  --popover: #17264f;
-  --popover-foreground: #ffffff;
+  --popover: #FFFFFF;
+  --popover-foreground: #455172;
 
-  --primary: #d26ad1;
-  --primary-foreground: #ffffff;
+  --primary: #af7ae7;
+  /* Lavender - Main accent */
+  --primary-foreground: #FFFFFF;
 
-  --secondary: #af7ae7;
-  --secondary-foreground: #181d2b;
+  --secondary: #58468a;
+  /* Deep purple - Strong accent */
+  --secondary-foreground: #FFFFFF;
 
-  --muted: #1e3a8a;
-  /* Slightly different blue for variation */
-  --muted-foreground: #cbd5e1;
+  --muted: #EDE9F5;
+  /* Very light purple for muted areas */
+  --muted-foreground: #6B7280;
 
-  --accent: #d26ad1;
-  --accent-foreground: #ffffff;
+  --accent: #af7ae7;
+  --accent-foreground: #FFFFFF;
 
-  --destructive: oklch(0.55 0.22 25);
-  --destructive-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #FFFFFF;
 
-  --border: #2e3b5e;
-  --input: #17264f;
-  --ring: #d26ad1;
+  --border: #DDD8EB;
+  /* Light purple-gray border */
+  --input: #FFFFFF;
+  --ring: #af7ae7;
 
-  --radius: 0.5rem;
+  --radius: 0.75rem;
 
-  --sidebar: #181d2b;
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #d26ad1;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #17264f;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #2e3b5e;
-  --sidebar-ring: #d26ad1;
+  --sidebar: #58468a;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #af7ae7;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #6B5A9E;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #6B5A9E;
+  --sidebar-ring: #af7ae7;
 
   /* Trust colors */
-  --success: #22c55e;
-  --warning: #eab308;
+  --success: #10b981;
+  --warning: #f59e0b;
 
   /* Spacing Scale */
   --space-xs: 0.5rem;
@@ -68,35 +70,35 @@
   --space-section-mobile: 3rem;
 }
 
-/* Ensure .dark class uses the same variables (monotheme) */
+/* Dark mode uses the same light theme (monotheme) */
 .dark {
-  --background: #181d2b;
-  --foreground: #ffffff;
-  --card: #17264f;
-  --card-foreground: #ffffff;
-  --popover: #17264f;
-  --popover-foreground: #ffffff;
-  --primary: #d26ad1;
-  --primary-foreground: #ffffff;
-  --secondary: #af7ae7;
-  --secondary-foreground: #181d2b;
-  --muted: #1e3a8a;
-  --muted-foreground: #cbd5e1;
-  --accent: #d26ad1;
-  --accent-foreground: #ffffff;
-  --destructive: oklch(0.55 0.22 25);
-  --destructive-foreground: #ffffff;
-  --border: #2e3b5e;
-  --input: #17264f;
-  --ring: #d26ad1;
-  --sidebar: #181d2b;
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #d26ad1;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #17264f;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #2e3b5e;
-  --sidebar-ring: #d26ad1;
+  --background: #F5F3FA;
+  --foreground: #455172;
+  --card: #FFFFFF;
+  --card-foreground: #455172;
+  --popover: #FFFFFF;
+  --popover-foreground: #455172;
+  --primary: #af7ae7;
+  --primary-foreground: #FFFFFF;
+  --secondary: #58468a;
+  --secondary-foreground: #FFFFFF;
+  --muted: #EDE9F5;
+  --muted-foreground: #6B7280;
+  --accent: #af7ae7;
+  --accent-foreground: #FFFFFF;
+  --destructive: #ef4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #DDD8EB;
+  --input: #FFFFFF;
+  --ring: #af7ae7;
+  --sidebar: #58468a;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #af7ae7;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #6B5A9E;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #6B5A9E;
+  --sidebar-ring: #af7ae7;
 }
 
 @theme inline {
@@ -150,8 +152,7 @@
 
   body {
     @apply bg-background text-foreground;
-    /* Global subtle gradient background for depth */
-    background: linear-gradient(180deg, var(--background) 0%, #11141e 100%);
+    background: var(--background);
     min-height: 100vh;
   }
 

@@ -107,14 +107,14 @@ export function HeroSection() {
 function FeatureCard({ icon, title, subtitle, delay }: { icon: React.ReactNode, title: string, subtitle: string, delay?: number }) {
   return (
     <div
-      className="bg-[#17264f]/80 backdrop-blur-md border border-white/5 p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-primary/50 hover:bg-[#1f305f] transition-all duration-300 group cursor-default hover:-translate-y-2"
+      className="bg-card backdrop-blur-sm border border-border p-6 rounded-2xl flex flex-col items-center justify-center gap-3 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 group cursor-default hover:-translate-y-2"
       style={{ animationDelay: `${delay}ms` }}
     >
-      <div className="p-3 bg-white/5 rounded-xl group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+      <div className="p-3 bg-primary/10 rounded-xl group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-300">
         {icon}
       </div>
       <div className="text-center">
-        <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">{title}</h3>
+        <h3 className="text-lg font-bold text-secondary group-hover:text-primary transition-colors">{title}</h3>
         <p className="text-sm text-muted-foreground mt-1">{subtitle}</p>
       </div>
     </div>

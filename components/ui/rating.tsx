@@ -41,7 +41,7 @@ export function Rating({
 
     return (
         <div className={cn(
-            "flex flex-col items-center justify-center p-3 bg-white border border-border rounded-xl md:rounded-2xl shadow-sm hover:shadow-md transition-shadow",
+            "flex flex-col items-center justify-center p-3 bg-card border border-border rounded-xl md:rounded-2xl shadow-sm hover:shadow-md transition-shadow",
             className
         )}
             role="region"

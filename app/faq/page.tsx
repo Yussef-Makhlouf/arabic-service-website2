@@ -356,7 +356,7 @@ export default function FAQPage() {
 
         {/* FAQ Categories */}
         <section className="py-16">
-          <div className="container px-4">
+          <div className="container px-4 mx-auto">
             <div className="max-w-4xl mx-auto space-y-12">
               {faqCategories.map((category, categoryIndex) => (
                 <div key={categoryIndex} className="space-y-6">
