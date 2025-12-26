@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react"
+import { Phone, Mail, MapPin, MessageCircle, ChevronLeft } from "lucide-react"
 
 export function Footer() {
   const services = [
@@ -16,18 +16,6 @@ export function Footer() {
     { name: "الأسئلة الشائعة", href: "/faq" },
   ]
 
-  const areas = [
-    "الرياض",
-    "شمال الرياض",
-    "جنوب الرياض",
-    "شرق الرياض",
-    "غرب الرياض",
-    "الخرج",
-    "النرجس",
-    "الملقا",
-    "حطين",
-    "العليا",
-  ]
 
   return (
     <footer className="bg-card text-card-foreground border-t border-border">
@@ -108,49 +96,75 @@ export function Footer() {
           </div>
 
           {/* Service Areas */}
-          <div>
-            <h3 className="font-heading text-lg font-bold mb-4 flex items-center gap-2">
+          <div className="lg:col-span-1">
+            <h3 className="font-heading text-lg font-bold mb-4 flex items-center gap-2 text-primary">
               <span className="w-1 h-6 bg-primary rounded-full"></span>
               تغطية شاملة
             </h3>
-            <div className="space-y-4">
-              <p className="text-sm text-muted-foreground leading-relaxed bg-primary/5 p-3 rounded-lg border border-primary/10">
-                نغطي كافة أحياء الرياض والخرج والمناطق المجاورة. فريقنا جاهز لخدمتكم لتقديم أفضل حلول العزل المائي
-                والحراري وكشف التسربات بأعلى معايير الجودة والضمان.
+            <div className="space-y-6">
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                نقدم خدمات <span className="font-bold text-foreground">عزل اسطح بالرياض</span> و<span className="font-bold text-foreground">عزل اسطح بالخرج</span> وجميع محافظات ومدن منطقة الرياض بما فيها شمال الرياض من خلال أفضل <span className="font-bold text-foreground">شركات عزل خزانات شمال الرياض</span>.
               </p>
-              <ul className="grid grid-cols-2 gap-2">
-                {areas.map((area) => (
-                  <li
-                    key={area}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
-                  >
-                    <span className="w-1 h-1 bg-primary/40 rounded-full" />
-                    {area}
-                  </li>
+
+              <div className="grid grid-cols-2 gap-x-8 gap-y-3">
+                {[
+                  "الرياض", "الخرج",
+                  "شمال الرياض", "الدرعية",
+                  "الدوادمي", "المجمعة",
+                  "القويعية", "وادي الدواسر",
+                  "الأفلاج", "الزلفي",
+                  "شقراء", "حريملاء"
+                ].map((city) => (
+                  <div key={city} className="flex items-center justify-between text-sm group cursor-default">
+                    <span className="text-muted-foreground group-hover:text-primary transition-colors">{city}</span>
+                    <ChevronLeft className="w-4 h-4 text-primary/40 group-hover:text-primary transition-all ltr:rotate-180" />
+                  </div>
                 ))}
-              </ul>
+              </div>
+
+              <div className="flex flex-wrap gap-x-4 gap-y-2 text-[13px] text-muted-foreground/70 border-t border-border/50 pt-4">
+                {["المزاحمية", "رماح", "ثادق", "حوطة بني تميم", "عفيف", "السليل", "الغاط", "الحريق", "ضرماء"].map((city) => (
+                  <span key={city} className="hover:text-primary transition-colors">{city}</span>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-border mt-8 md:mt-10 pt-6 md:pt-8">
-          <div className="flex flex-col items-center gap-4 text-center md:text-right">
-            <div className="flex flex-col gap-1">
-              <p className="text-xs md:text-sm text-muted-foreground">
-                © {new Date().getFullYear()} شركة النخبه لعزل الاسطح . جميع الحقوق محفوظة.
-              </p>
-              <p className="text-sm md:text-base font-medium text-muted-foreground/80">
-                تصميم و تطوير بواسطة <span className="text-primary/80 font-medium">Ahmed Adham</span>
-              </p>
-            </div>
-            <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6 text-xs md:text-sm text-muted-foreground">
-              <span>معتمدون من SASO</span>
-              <span className="hidden sm:inline">•</span>
-              <span>ضمان 10 سنوات</span>
-              <span className="hidden sm:inline">•</span>
-              <span>خبرة 15+ عاماً</span>
-            </div>
+        {/* Stats Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 pt-12 border-t border-border/50">
+          <div className="flex flex-col items-center p-6 bg-muted/30 rounded-2xl border border-border/50 text-center">
+            <span className="text-2xl font-bold text-primary mb-1">20+</span>
+            <span className="text-sm text-muted-foreground">محافظة ومدينة</span>
+          </div>
+          <div className="flex flex-col items-center p-6 bg-muted/30 rounded-2xl border border-border/50 text-center">
+            <span className="text-2xl font-bold text-primary mb-1">24/7</span>
+            <span className="text-sm text-muted-foreground">خدمة على مدار الساعة</span>
+          </div>
+          <div className="flex flex-col items-center p-6 bg-muted/30 rounded-2xl border border-border/50 text-center">
+            <span className="text-2xl font-bold text-primary mb-1">100%</span>
+            <span className="text-sm text-muted-foreground">تغطية شاملة</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-border mt-8 md:mt-10 pt-6 md:pt-8">
+        <div className="flex flex-col items-center gap-4 text-center md:text-right">
+          <div className="flex flex-col gap-1">
+            <p className="text-xs md:text-sm text-muted-foreground">
+              © {new Date().getFullYear()} شركة النخبه لعزل الاسطح . جميع الحقوق محفوظة.
+            </p>
+            <p className="text-sm md:text-base font-medium text-muted-foreground/80">
+              تصميم و تطوير بواسطة <span className="text-primary/80 font-medium">Ahmed Adham</span>
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6 text-xs md:text-sm text-muted-foreground">
+            <span>معتمدون من SASO</span>
+            <span className="hidden sm:inline">•</span>
+            <span>ضمان 10 سنوات</span>
+            <span className="hidden sm:inline">•</span>
+            <span>خبرة 15+ عاماً</span>
           </div>
         </div>
       </div>

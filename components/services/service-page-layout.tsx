@@ -15,6 +15,7 @@ import {
   Info,
 } from "lucide-react"
 import { Rating } from "@/components/ui/rating"
+import { ServiceAreas } from "@/components/services/service-areas"
 
 export type SectionType = "text-image" | "features-grid" | "process-timeline" | "faq-accordion" | "benefits-grid"
 
@@ -149,12 +150,14 @@ export function ServicePageLayout({ data }: { data: ServicePageData }) {
         </div>
       </section>
 
-      {/* Dynamic Content Sections */}
       <div className="bg-background">
         {data.sections.map((section, index) => (
           <SectionRenderer key={index} section={section} index={index} />
         ))}
       </div>
+
+      {/* Service Areas Section */}
+      <ServiceAreas serviceName={data.title} />
 
       {/* Rating Section */}
       <section className="py-12 bg-background border-t">

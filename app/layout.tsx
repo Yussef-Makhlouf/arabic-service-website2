@@ -16,12 +16,12 @@ const notoKufi = Noto_Kufi_Arabic({
   display: "swap",
 })
 
-const amiri = Amiri({
-  subsets: ["arabic"],
-  weight: ["400", "700"],
-  variable: "--font-amiri",
-  display: "swap",
-})
+// const amiri = Amiri({
+//   subsets: ["arabic"],
+//   weight: ["400", "700"],
+//   variable: "--font-amiri",
+//   display: "swap",
+// })
 
 const tajawal = Tajawal({
   subsets: ["arabic"],
@@ -61,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ar" dir="rtl" className={`${cairo.variable} ${notoKufi.variable} ${amiri.variable} ${tajawal.variable}`}>
+    <html lang="ar" dir="rtl" className={`${cairo.variable} ${notoKufi.variable} ${tajawal.variable}`}>
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />
