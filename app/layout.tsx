@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/logo.png",
+        url: "/logo2.png",
         width: 1200,
         height: 630,
         alt: "شركة عزل اسطح بالرياض والخرج",
@@ -100,7 +100,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "شركة عزل اسطح بالرياض والخرج | ضمان 15 سنة",
     description: "أفضل شركة عزل اسطح بالرياض - عزل فوم، عزل مائي، كشف تسربات. ضمان 15 سنة. اتصل: 0507067378",
-    images: ["/logo.png"],
+    images: ["/logo2.png"],
   },
   robots: {
     index: true,
@@ -116,19 +116,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/logo.png",
+        url: "/logo2.png",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/logo.png",
+        url: "/logo2.png",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/logo.png",
+        url: "/logo2.png",
         type: "image/png",
       },
     ],
-    apple: "/logo.png",
+    apple: "/logo2.png",
   },
   verification: {
     google: "google-site-verification-code",
@@ -146,11 +146,11 @@ const organizationSchema = {
   url: "https://tebaservices.com",
   logo: {
     "@type": "ImageObject",
-    url: "https://tebaservices.com/logo.png",
+    url: "https://tebaservices.com/logo2.png",
     width: 512,
     height: 512,
   },
-  image: "https://tebaservices.com/logo.png",
+  image: "https://tebaservices.com/logo2.png",
   description: "شركة متخصصة في عزل الأسطح والخزانات بالرياض والخرج. خبرة أكثر من 15 عاماً في مجال العزل المائي والحراري وكشف تسربات المياه.",
   foundingDate: "2009",
   founder: {
@@ -270,7 +270,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": "https://tebaservices.com/#localbusiness",
   name: "شركة عزل اسطح بالرياض والخرج",
-  image: "https://tebaservices.com/logo.png",
+  image: "https://tebaservices.com/logo2.png",
   url: "https://tebaservices.com",
   telephone: "+966507067378",
   priceRange: "$$",

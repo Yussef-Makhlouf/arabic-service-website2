@@ -90,7 +90,7 @@ const breadcrumbSchema = {
 export default function LeakDetectionPage() {
   const pageData = {
     icon: Search,
-    title: "كشف تسربات المياه",
+    title: "شركة كشف تسريبات المياه بالرياض والخرج",
     subtitle: "تقنيات حديثة للكشف الدقيق عن التسربات بدون تكسير - خدمة 24 ساعة",
     breadcrumb: "خدماتنا / كشف تسربات المياه",
 
@@ -219,8 +219,21 @@ export default function LeakDetectionPage() {
 **س: هل الخدمة متاحة في أوقات الطوارئ؟**
 ج: نعم، نوفر خدمة طوارئ 24 ساعة/7 أيام. نستجيب للطوارئ خلال 2-4 ساعات. رقم الطوارئ متاح دائماً.`,
       },
-    ],
+      {
+        title: "Integrated Solutions: Leak Detection & Foam Insulation",
+        image: "/leak-detection-thermal-camera.jpg",
+        content: `We go beyond being just a top choice for **Water leakage detection in Riyadh**; we offer comprehensive preventive solutions. After completing **Water leak detection in Riyadh** and fixing any issues, we strongly recommend protecting your property with advanced insulation. As a leading **Foam insulation company in Riyadh**, we guarantee double protection for your surfaces, significantly reducing the likelihood of future leaks.
 
+Our services cover a thorough inspection of your entire home, starting with expert **Bathroom leak detection** without causing damage, to **Roof leak detection** that safeguards your ceilings from rain. We also provide **Water tank leak detection** to ensure the safety of your drinking water and **Swimming pool leak detection** to maintain water levels and purity. By utilizing cutting-edge technology like **Hydrogen leak detection**, we can identify the most minute leaks invisible to the naked eye, making us your all-in-one destination for property maintenance in Saudi Arabia.`,
+      },
+      {
+        title: "الحلول الشاملة لكشف التسربات وحماية منزلك",
+        image: "/leak-detection-thermal-camera.jpg",
+        content: `نقدم في شركتنا منظومة متكاملة لخدمات **كشف تسربات المياه بالرياض**، حيث ندرك أن التسربات قد تحدث في أي مكان، من الأسقف العالية إلى الأساسات العميقة. فريقنا المتخصص يستخدم تقنيات متطورة مثل **كشف التسربات بالهيدروجين** لتحديد أصغر الثقوب بدقة متناهية دون الحاجة إلى تكسير أو تخريب.
+
+تشمل خدماتنا فحصاً دقيقاً لجميع مرافق المنزل. نبدأ بخدمة **كشف تسريبات الحمامات** والمطابخ، حيث تكثر التمديدات المخفية، وننتقل إلى **كشف تسريبات الأسطح** لضمان سلامة العزل المائي والحراري. كما نولي اهتماماً خاصاً لمصادر المياه الرئيسية من خلال **كشف تسريبات الخزانات** لضمان نقاء المياه وعدم هدرها، بالإضافة إلى خدمة **كشف تسريبات المسابح** للحفاظ على مستوى المياه وبنيتها الإنشائية. هدفنا ليس فقط إصلاح المشكلة الحالية، بل توفير حماية وقائية طويلة الأمد لمنزلك، معززة بخبرتنا كأفضل **شركة عزل الفوم بالرياض** لتقديم حلول عزل تمنع تكرار المشكلة مستقبلاً. نستخدم أحدث أجهزة الاستماع الأرضي والذبذبات لتحديد موقع الخلل بدقة السنتيمتر، مما يوفر عليك تكاليف التكسير العشوائي ويعيد لمنزلك استقراره في وقت قياسي.`,
+      },
+    ],
     ctaSection: {
       title: "لا تنتظر حتى تتفاقم المشكلة",
       description:

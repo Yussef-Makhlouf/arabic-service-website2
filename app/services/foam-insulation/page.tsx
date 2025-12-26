@@ -309,6 +309,20 @@ export default function FoamInsulationPage() {
 
 لا تتردد في حماية منزلك بأحدث تقنيات العزل في العالم.`,
       },
+      {
+        title: "Foam Insulation & Leak Detection: Complete Home Protection",
+        image: "/polyurethane-foam-insulation-application.jpg",
+        content: `As a premier **Foam insulation company in Riyadh**, we understand that thermal and water insulation is the most critical step for protecting buildings in Saudi Arabia. However, before applying insulation, it is essential to ensure the surface is sound and free from hidden leaks. That is why we collaborate with experts from a **Water leakage detection company in Riyadh** to ensure your surfaces are free from moisture that could compromise foam efficiency.
+
+Choosing our services means receiving an integrated solution that begins with a precise inspection and ends with a durable polyurethane insulation layer. Whether you need **Water leak detection in Riyadh** for a large complex or a private villa, combining our insulation expertise with modern detection techniques guarantees optimal results. We utilize advanced **Roof leak detection** methods before insulation and offer **Bathroom leak detection** and **Water tank leak detection** to ensure your home is fully protected inside and out, using **Hydrogen leak detection** and **Swimming pool leak detection** wherever necessary.`,
+      },
+      {
+        title: "التكامل بين عزل الفوم وكشف التسربات للحماية القصوى",
+        image: "/roof-insulation-saudi-arabia.jpg",
+        content: `تعتبر **شركة عزل الفوم بالرياض** خيارك الأول لحماية منزلك من درجات الحرارة المرتفعة وتسربات المياه في آن واحد. ولكن، لضمان فعالية العزل بنسبة 100%، نوصي دائماً بإجراء فحص شامل للمبنى للتأكد من خلوه من أي تسربات خفية قد تؤثر على جودة الفوم مستقبلاً. هنا يأتي دور شريكنا الاستراتيجي كأفضل **شركة كشف تسريبات المياه بالرياض**، حيث نجمع بين الخبرة في العزل والدقة في الكشف باستخدام أحدث التقنيات.
+
+عزل الفوم لا يكتمل إلا بسطح سليم وجاف تماماً. وجود تسربات غير مكتشفة، سواء في الأسطح أو التمديدات الداخلية، قد يؤدي إلى احتباس الرطوبة تحت طبقة الفوم، مما قد يسبب مشاكل هيكلية لاحقاً. لذلك، توفر خدماتنا المتكاملة حلولاً جذرية تبدأ بالكشف الدقيق عن أي مصادر للرطوبة ومعالجتها، ثم تطبيق طبقة عزل الفوم بولي يوريثان عالية الجودة. هذا التكامل يضمن لك بيئة منزلية صحية، توفيراً هائلاً في الطاقة، وراحة بال تدوم لعقود، مع ضمانات شاملة موثقة. كما نضمن لك استخدام مواد صديقة للبيئة ومعتمدة عالمياً، مما يعزز من كفاءة منزلك ويقلل من فاتورة الكهرباء بشكل ملحوظ.`,
+      },
     ],
 
     ctaSection: {
