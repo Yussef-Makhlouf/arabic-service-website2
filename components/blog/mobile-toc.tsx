@@ -1,7 +1,7 @@
 "use client"
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Menu } from "lucide-react"
+import { Menu, ChevronLeft } from "lucide-react"
 
 interface Section {
     id: string;
@@ -22,25 +22,29 @@ export function MobileTableOfContents({ sections }: { sections: Section[] }) {
     };
 
     return (
-        <div className="lg:hidden mb-6">
+        <div className="lg:hidden mb-12">
             <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="toc" className="bg-white border border-[#F0F0F0] rounded-xl shadow-sm overflow-hidden">
-                    <AccordionTrigger className="text-[#4B0082] font-bold font-tajawal hover:no-underline px-4 py-3">
-                        <span className="flex items-center gap-2 text-sm">
-                            <Menu className="w-4 h-4 text-[#3498DB]" />
-                            فهرس المحتوى ({sections.length})
+                <AccordionItem value="toc" className="bg-slate-50 border border-slate-100 rounded-[24px] overflow-hidden shadow-sm">
+                    <AccordionTrigger className="text-slate-900 font-bold font-tajawal hover:no-underline px-6 py-5 data-[state=open]:bg-slate-100/50 transition-colors">
+                        <span className="flex items-center gap-3 text-base">
+                            <Menu className="w-5 h-5 text-[#3498DB]" />
+                            فهرس المحتوى
+                            <span className="bg-[#3498DB]/10 text-[#3498DB] text-xs px-2 py-0.5 rounded-full mr-1">
+                                {sections.length}
+                            </span>
                         </span>
                     </AccordionTrigger>
-                    <AccordionContent className="px-2 pb-3">
-                        <nav className="flex flex-col space-y-1 max-h-[40vh] overflow-y-auto">
+                    <AccordionContent className="px-3 pb-4 pt-1 bg-white/50">
+                        <nav className="flex flex-col space-y-1 max-h-[50vh] overflow-y-auto custom-scrollbar p-1">
                             {sections.map((section, idx) => (
                                 <a
                                     key={idx}
                                     href={`#${section.id}`}
                                     onClick={(e) => handleClick(e, section.id)}
-                                    className="text-sm font-medium text-[#666666] hover:text-[#4B0082] py-2 px-3 rounded-lg hover:bg-[#F0F0F0] transition-colors font-tajawal text-right active:bg-[#E0E0E0]"
+                                    className="group flex items-center justify-between text-sm md:text-base font-medium text-slate-600 hover:text-[#3498DB] py-3.5 px-4 rounded-xl hover:bg-slate-100 transition-all font-tajawal text-right active:scale-[0.98]"
                                 >
-                                    {section.title}
+                                    <span className="line-clamp-1">{section.title}</span>
+                                    <ChevronLeft className="w-4 h-4 opacity-40 group-hover:opacity-100 transition-opacity" />
                                 </a>
                             ))}
                         </nav>
