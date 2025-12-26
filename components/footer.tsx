@@ -13,7 +13,7 @@ export function Footer() {
     { name: "جميع الخدمات", href: "/services" },
     { name: "من نحن", href: "/about" },
     { name: "المدونة", href: "/blog" },
-    { name: "الأسئلة الشائعة", href: "/faq" },
+    { name: "سياسة الخصوصية", href: "/privacy" },
   ]
 
 

@@ -25,7 +25,8 @@ export function Header() {
     { name: "الأحياء والمناطق", href: "/#cities" },
     { name: "المدونة", href: "/blog" },
     { name: "الأسئلة الشائعة", href: "/faq" },
-    { name: " أتصل بنا", href: "/contact" },
+    { name: "اتصل بنا", href: "/contact" },
+    { name: "سياسة الخصوصية", href: "/privacy" },
   ]
 
   return (
