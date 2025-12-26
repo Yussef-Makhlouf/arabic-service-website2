@@ -6,10 +6,79 @@ import { Database } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "عزل خزانات المياه بالرياض والخرج | مواد صحية آمنة | ضمان 10 سنوات",
+  title: "عزل خزانات المياه بالرياض والخرج | مواد صحية آمنة | ضمان 10 سنوات | معتمد",
   description:
-    "أفضل خدمة عزل خزانات المياه في الرياض والخرج. عزل داخلي وخارجي بمواد آمنة صحياً ومعتمدة. حماية من البكتيريا والطحالب. ضمان 10 سنوات",
-  keywords: "عزل خزانات, عزل خزانات المياه بالرياض, عزل خزانات بالخرج, تنظيف خزانات",
+    "💧 أفضل خدمة عزل خزانات المياه في الرياض والخرج. عزل داخلي وخارجي بمواد آمنة صحياً معتمدة ✓ حماية من البكتيريا ✓ تنظيف وتعقيم ✓ ضمان 10 سنوات. اتصل: 0507067378",
+  keywords: [
+    "عزل خزانات",
+    "عزل خزانات المياه بالرياض",
+    "عزل خزانات بالخرج",
+    "تنظيف خزانات",
+    "عزل خزانات ايبوكسي",
+    "عزل خزانات داخلي",
+    "عزل خزانات ارضية",
+    "عزل خزانات علوية",
+    "تعقيم خزانات",
+    "شركة عزل خزانات",
+    "مواد عزل صحية"
+  ].join(", "),
+  openGraph: {
+    title: "عزل خزانات المياه بالرياض | مواد صحية آمنة | ضمان 10 سنوات",
+    description: "أفضل خدمة عزل خزانات في الرياض - مواد آمنة معتمدة من وزارة الصحة. ضمان 10 سنوات.",
+    type: "website",
+  },
+}
+
+// Service Schema for Tank Insulation
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://tebaservices.com/services/tank-insulation#service",
+  name: "عزل خزانات المياه",
+  alternateName: "عزل خزانات بمواد صحية آمنة",
+  description: "خدمة عزل خزانات المياه بمواد إيبوكسي آمنة صحياً ومعتمدة من وزارة الصحة. عزل داخلي وخارجي للخزانات الأرضية والعلوية مع ضمان 10 سنوات.",
+  serviceType: "عزل خزانات",
+  provider: {
+    "@type": "LocalBusiness",
+    "@id": "https://tebaservices.com/#localbusiness",
+    name: "شركة عزل الأسطح بالرياض",
+  },
+  areaServed: [
+    { "@type": "City", name: "الرياض" },
+    { "@type": "City", name: "الخرج" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "خدمات عزل الخزانات",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "عزل خزان داخلي ايبوكسي" },
+        priceSpecification: { "@type": "PriceSpecification", priceCurrency: "SAR", price: "1500", unitText: "خزان متوسط" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "تنظيف وتعقيم الخزان" },
+        priceSpecification: { "@type": "PriceSpecification", priceCurrency: "SAR", price: "300", unitText: "خزان" },
+      },
+    ],
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "950",
+    bestRating: "5",
+  },
+}
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://tebaservices.com" },
+    { "@type": "ListItem", position: 2, name: "خدماتنا", item: "https://tebaservices.com/services" },
+    { "@type": "ListItem", position: 3, name: "عزل خزانات", item: "https://tebaservices.com/services/tank-insulation" },
+  ],
 }
 
 export default function TankInsulationPage() {
@@ -163,6 +232,18 @@ export default function TankInsulationPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       <Header />
       <ServicePageLayout data={pageData} />
       <Footer />

@@ -19,9 +19,9 @@ export function AboutSection() {
     { value: "10", label: "سنوات ضمان" },
     { value: "24/7", label: "دعم فني" },
   ]
- 
+
   return (
-    <section id="about" className="py-20 bg-secondary/20 overflow-hidden">
+    <section id="about" className="py-20 bg-muted overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -62,7 +62,7 @@ export function AboutSection() {
                 </div>
               </div>
 
-              
+
 
               {/* Decorative Elements */}
               <div className="absolute -z-10 -top-8 -right-8 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
@@ -101,7 +101,7 @@ export function AboutSection() {
                 {features.map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-3 p-3 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors"
+                    className="flex items-center gap-3 p-3 rounded-lg bg-primary/5 hover:bg-primary/10 transition-colors"
                   >
                     <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <item.icon className="w-4 h-4 text-primary" />
@@ -114,7 +114,7 @@ export function AboutSection() {
           </div>
         </div>
 
-    
+
       </div>
     </section>
   )

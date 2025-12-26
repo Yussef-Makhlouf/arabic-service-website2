@@ -33,8 +33,77 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
 
   return {
-    title: `${post.title} | المدونة`,
+    title: `${post.title} | مدونة عزل الأسطح`,
     description: post.excerpt,
+    keywords: [
+      post.category,
+      "عزل اسطح",
+      "عزل فوم",
+      "عزل مائي",
+      "كشف تسربات",
+      "الرياض",
+      "الخرج",
+    ].join(", "),
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+      publishedTime: post.date,
+      authors: ["شركة عزل الأسطح"],
+      images: [post.image],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image],
+    },
+  }
+}
+
+// Function to generate Article schema
+function generateArticleSchema(post: NonNullable<ReturnType<typeof getBlogPostBySlug>>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `https://tebaservices.com/blog/${post.slug}#article`,
+    headline: post.title,
+    description: post.excerpt,
+    image: `https://tebaservices.com${post.image}`,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      "@type": "Organization",
+      name: "شركة عزل الأسطح",
+      url: "https://tebaservices.com",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "شركة عزل الأسطح",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://tebaservices.com/logo.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://tebaservices.com/blog/${post.slug}`,
+    },
+    articleSection: post.category,
+    wordCount: post.content.split(/\s+/).length,
+    inLanguage: "ar-SA",
+  }
+}
+
+function generateBreadcrumbSchema(post: NonNullable<ReturnType<typeof getBlogPostBySlug>>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://tebaservices.com" },
+      { "@type": "ListItem", position: 2, name: "المدونة", item: "https://tebaservices.com/blog" },
+      { "@type": "ListItem", position: 3, name: post.title, item: `https://tebaservices.com/blog/${post.slug}` },
+    ],
   }
 }
 
@@ -47,6 +116,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const relatedPosts = getRelatedPosts(slug, 3)
+  const articleSchema = generateArticleSchema(post)
+  const breadcrumbSchema = generateBreadcrumbSchema(post)
+
 
   // Parse post content into sections
   const lines = post.content.split("\n");
@@ -81,6 +153,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       <Header />
       <main className="min-h-screen bg-background pb-20 overflow-x-hidden">
 

@@ -8,9 +8,28 @@ import { Footer } from "@/components/footer"
 import { FloatingActions } from "@/components/floating-actions"
 
 export const metadata: Metadata = {
-  title: "الأسئلة الشائعة - دليلك الشامل لعزل الأسقف والخزانات بالرياض",
+  title: "الأسئلة الشائعة عن العزل - دليلك الشامل لعزل الأسقف والخزانات بالرياض | 50+ سؤال",
   description:
-    "إجابات شاملة على جميع أسئلتك حول خدمات العزل المائي والحراري، كشف التسربات، عزل الفوم، وعزل الخزانات في الرياض. أكثر من 50 سؤال وجواب من خبراء العزل.",
+    "إجابات شاملة على جميع أسئلتك حول خدمات العزل المائي والحراري، كشف التسربات، عزل الفوم، وعزل الخزانات في الرياض والخرج. أكثر من 50 سؤال وجواب من خبراء العزل مع خبرة 15+ عام.",
+  keywords: [
+    "اسئلة شائعة عن العزل",
+    "ما هو عزل الفوم",
+    "كم تكلفة عزل الأسطح",
+    "ضمان العزل",
+    "كشف تسربات بدون تكسير",
+    "عزل الخزانات",
+    "العزل المائي",
+    "العزل الحراري",
+    "توفير فاتورة الكهرباء",
+    "افضل نوع عزل للاسطح",
+    "مدة صلاحية العزل",
+    "صيانة العزل"
+  ].join(", "),
+  openGraph: {
+    title: "الأسئلة الشائعة - دليلك لعزل الأسقف والخزانات بالرياض",
+    description: "أكثر من 50 سؤال وجواب حول خدمات العزل من خبراء متخصصين",
+    type: "website",
+  },
 }
 
 const faqCategories = [
@@ -333,15 +352,68 @@ const faqCategories = [
   },
 ]
 
+// Generate FAQPage Schema dynamically
+const generateFAQSchema = () => {
+  const allQuestions = faqCategories.flatMap(category =>
+    category.questions.map(q => ({
+      "@type": "Question",
+      name: q.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: q.answer,
+      },
+    }))
+  );
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: allQuestions,
+  };
+};
+
+const faqSchema = generateFAQSchema();
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "الرئيسية",
+      item: "https://tebaservices.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "الأسئلة الشائعة",
+      item: "https://tebaservices.com/faq",
+    },
+  ],
+};
+
 export default function FAQPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       <Header />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-primary/5 to-background py-16 border-b">
-          <div className="container px-4">
-            <div className="max-w-3xl mx-auto text-center space-y-6">
+          <div className="container px-4 mx-0">
+            <div className="max-w-3xl mx-auto text-center space-y-6 ">
               <Badge className="bg-primary/10 text-primary hover:bg-primary/20 text-base px-4 py-2">
                 مركز المساعدة
               </Badge>

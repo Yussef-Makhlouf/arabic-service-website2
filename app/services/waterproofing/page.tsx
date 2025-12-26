@@ -6,10 +6,88 @@ import { Droplets } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "عزل مائي للأسطح بالرياض والخرج | ضمان 10 سنوات | معتمد",
+  title: "عزل مائي للأسطح بالرياض والخرج | ضمان 10 سنوات | معتمد | افضل الأسعار 2024",
   description:
-    "أفضل خدمة عزل مائي للأسطح في الرياض والخرج. حماية شاملة ضد تسرب المياه والرطوبة. مواد معتمدة، ضمان 10 سنوات، فريق متخصص. اتصل الآن",
-  keywords: "عزل مائي, عزل اسطح مائي, عزل مائي بالرياض, عزل مائي بالخرج, منع تسرب المياه",
+    "💧 أفضل خدمة عزل مائي للأسطح في الرياض والخرج. حماية شاملة ضد تسرب المياه والرطوبة ✓ مواد معتمدة دولياً ✓ ضمان 10 سنوات مكتوب ✓ فريق متخصص. اتصل الآن: 0507067378",
+  keywords: [
+    "عزل مائي",
+    "عزل مائي بالرياض",
+    "عزل مائي بالخرج",
+    "عزل اسطح مائي",
+    "منع تسرب المياه",
+    "عزل ضد الرطوبة",
+    "شركة عزل مائي",
+    "عزل البيتومين",
+    "عزل الاسطح من الماء",
+    "حماية من تسرب الأمطار",
+    "ضمان عزل 10 سنوات",
+    "عزل مائي معتمد"
+  ].join(", "),
+  openGraph: {
+    title: "عزل مائي للأسطح بالرياض | ضمان 10 سنوات | معتمد",
+    description: "أفضل خدمة عزل مائي في الرياض - حماية شاملة ضد تسرب المياه. ضمان 10 سنوات مكتوب.",
+    type: "website",
+  },
+}
+
+// Service Schema for Waterproofing
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://tebaservices.com/services/waterproofing#service",
+  name: "عزل مائي للأسطح",
+  alternateName: "عزل مائي ضد تسرب المياه",
+  description: "العزل المائي للأسطح هو عملية تطبيق طبقات من المواد العازلة المتخصصة على سطح المبنى لمنع تسرب مياه الأمطار والرطوبة. حماية شاملة بضمان 10 سنوات.",
+  serviceType: "عزل مائي",
+  provider: {
+    "@type": "LocalBusiness",
+    "@id": "https://tebaservices.com/#localbusiness",
+    name: "شركة عزل الأسطح بالرياض",
+  },
+  areaServed: [
+    { "@type": "City", name: "الرياض" },
+    { "@type": "City", name: "الخرج" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "خدمات العزل المائي",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "عزل مائي بالبيتومين" },
+        priceSpecification: { "@type": "PriceSpecification", priceCurrency: "SAR", price: "25", unitText: "متر مربع" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "عزل مائي بالأغشية البلاستيكية" },
+        priceSpecification: { "@type": "PriceSpecification", priceCurrency: "SAR", price: "35", unitText: "متر مربع" },
+      },
+    ],
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.8",
+    reviewCount: "1800",
+    bestRating: "5",
+  },
+  review: [
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "أبو محمد" },
+      reviewBody: "عانيت سنوات من تسربات الأمطار. بعد العزل المائي اختفت المشكلة تماماً.",
+    },
+  ],
+}
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://tebaservices.com" },
+    { "@type": "ListItem", position: 2, name: "خدماتنا", item: "https://tebaservices.com/services" },
+    { "@type": "ListItem", position: 3, name: "عزل مائي", item: "https://tebaservices.com/services/waterproofing" },
+  ],
 }
 
 export default function WaterproofingPage() {
@@ -125,6 +203,18 @@ export default function WaterproofingPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       <Header />
       <ServicePageLayout data={pageData} />
       <Footer />

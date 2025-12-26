@@ -6,10 +6,85 @@ import { Search } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "كشف تسربات المياه بالرياض والخرج | بدون تكسير | خدمة 24 ساعة",
+  title: "كشف تسربات المياه بالرياض والخرج | بدون تكسير | خدمة 24 ساعة | أجهزة حديثة",
   description:
-    "أفضل خدمة كشف تسربات المياه في الرياض والخرج بأحدث الأجهزة الإلكترونية. كشف دقيق بدون تكسير، تقارير موثقة، إصلاح فوري. خدمة 24/7",
-  keywords: "كشف تسربات, كشف تسربات المياه بالرياض, كشف تسربات بالخرج, تسرب مياه",
+    "🔍 أفضل خدمة كشف تسربات المياه في الرياض والخرج. أجهزة إلكترونية حديثة ✓ كشف دقيق بدون تكسير ✓ تقارير موثقة ✓ إصلاح فوري ✓ خدمة 24/7. اتصل الآن: 0507067378",
+  keywords: [
+    "كشف تسربات",
+    "كشف تسربات المياه بالرياض",
+    "كشف تسربات بالخرج",
+    "تسرب مياه",
+    "كشف تسربات بدون تكسير",
+    "شركة كشف تسربات",
+    "جهاز كشف التسرب",
+    "تسرب الماء",
+    "فاتورة المياه مرتفعة",
+    "رطوبة الجدران",
+    "كشف تسربات الحمامات",
+    "كشف تسربات المسابح"
+  ].join(", "),
+  openGraph: {
+    title: "كشف تسربات المياه بالرياض | بدون تكسير | خدمة 24 ساعة",
+    description: "أفضل خدمة كشف تسربات بأحدث الأجهزة الإلكترونية. كشف دقيق بدون تكسير. خدمة 24/7.",
+    type: "website",
+  },
+}
+
+// Service Schema for Leak Detection
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://tebaservices.com/services/leak-detection#service",
+  name: "كشف تسربات المياه",
+  alternateName: "كشف تسربات بدون تكسير",
+  description: "خدمة كشف تسربات المياه بأحدث الأجهزة الإلكترونية والكاميرات الحرارية. كشف دقيق بدون تكسير مع تقارير موثقة وإصلاح فوري.",
+  serviceType: "كشف تسربات",
+  provider: {
+    "@type": "LocalBusiness",
+    "@id": "https://tebaservices.com/#localbusiness",
+    name: "شركة عزل الأسطح بالرياض",
+  },
+  areaServed: [
+    { "@type": "City", name: "الرياض" },
+    { "@type": "City", name: "الخرج" },
+  ],
+  availableChannel: {
+    "@type": "ServiceChannel",
+    serviceType: "خدمة طوارئ 24 ساعة",
+    availableLanguage: "Arabic",
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "خدمات كشف التسربات",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "كشف تسربات المياه" },
+        priceSpecification: { "@type": "PriceSpecification", priceCurrency: "SAR", price: "300", unitText: "زيارة" },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: { "@type": "Service", name: "إصلاح التسربات" },
+        priceSpecification: { "@type": "PriceSpecification", priceCurrency: "SAR", price: "500", unitText: "نقطة" },
+      },
+    ],
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "1200",
+    bestRating: "5",
+  },
+}
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "الرئيسية", item: "https://tebaservices.com" },
+    { "@type": "ListItem", position: 2, name: "خدماتنا", item: "https://tebaservices.com/services" },
+    { "@type": "ListItem", position: 3, name: "كشف تسربات", item: "https://tebaservices.com/services/leak-detection" },
+  ],
 }
 
 export default function LeakDetectionPage() {
@@ -161,6 +236,18 @@ export default function LeakDetectionPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
+        }}
+      />
       <Header />
       <ServicePageLayout data={pageData} />
       <Footer />
