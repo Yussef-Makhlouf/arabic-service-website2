@@ -8,7 +8,7 @@ import { ServicesPageCTA } from "@/components/services-page/cta-section"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "خدماتنا في عزل الأسطح بالرياض | جميع خدمات العزل المائي والحراري",
+  title: "خدماتنا في عزل الأسطح بالرياض | جميع خدمات العزل المائي والحراري | 0507067378",
   description:
     "دليلك الشامل لجميع خدمات عزل الأسطح في الرياض: العزل المائي، عزل الفوم، وكشف التسربات. مواد معتمدة وضمان 10 سنوات.",
   keywords: "عزل اسطح الرياض, عزل مائي, عزل فوم, عزل حراري, كشف تسربات, شركة عزل الرياض",

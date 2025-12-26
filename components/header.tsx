@@ -16,9 +16,11 @@ export function Header() {
   ]
 
   const services = [
-    { name: "عزل فوم للأسطح", href: "/services/foam-insulation" },
-    { name: "عزل مائي للأسطح", href: "/services/waterproofing" },
-    { name: "كشف تسربات المياه", href: "/services/leak-detection" },
+    { name: "عزل فوم للأسطح بالرياض", href: "/services/foam-insulation" },
+    { name: "عزل مائي للأسطح بالرياض", href: "/services/waterproofing" },
+    { name: "كشف تسربات المياه بالرياض", href: "/services/leak-detection" },
+    { name: "عزل مائي للأسطح بالرياض", href: "/services/waterproofing" },
+    { name: "كشف تسربات المباخ بالرياض", href: "/services/leak-detection" },
   ]
 
   const secondaryNav = [
