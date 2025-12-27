@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Phone, Mail, MapPin, MessageCircle, ChevronLeft, Instagram, Facebook, Youtube, Music2 } from "lucide-react"
+import { Phone, MapPin, MessageCircle, ChevronLeft } from "lucide-react"
+import { FaInstagram, FaFacebook, FaYoutube, FaTiktok, FaSnapchat } from "react-icons/fa"
 
 export function Footer() {
   const services = [
@@ -22,11 +23,11 @@ export function Footer() {
   ]
 
   const socialMedia = [
-    { name: "Instagram", href: "https://www.instagram.com/awazelalsafrrat/?hl=ar", icon: Instagram },
-    { name: "Facebook", href: "https://www.facebook.com/Awazelalsafrat/", icon: Facebook },
-    { name: "YouTube", href: "https://www.youtube.com/@awazel343", icon: Youtube },
-    { name: "TikTok", href: "https://www.tiktok.com/@awazelalsafrrat", icon: Music2 },
-    { name: "Snapchat", href: "https://www.snapchat.com/@awazelalsafrrat?locale=ar", icon: MessageCircle },
+    { name: "Instagram", href: "https://www.instagram.com/awazelalsafrrat/?hl=ar", icon: FaInstagram },
+    { name: "Facebook", href: "https://www.facebook.com/Awazelalsafrat/", icon: FaFacebook },
+    { name: "YouTube", href: "https://www.youtube.com/@awazel343", icon: FaYoutube },
+    { name: "TikTok", href: "https://www.tiktok.com/@awazelalsafrrat", icon: FaTiktok },
+    { name: "Snapchat", href: "https://www.snapchat.com/@awazelalsafrrat?locale=ar", icon: FaSnapchat },
   ]
 
 
