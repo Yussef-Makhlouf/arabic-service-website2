@@ -74,6 +74,7 @@ const serviceSchema = {
     ratingValue: "4.9",
     reviewCount: "1200",
     bestRating: "5",
+    worstRating: "1",
   },
 }
 

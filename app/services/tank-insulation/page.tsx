@@ -68,6 +68,7 @@ const serviceSchema = {
     ratingValue: "4.8",
     reviewCount: "950",
     bestRating: "5",
+    worstRating: "1",
   },
 }
 

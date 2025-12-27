@@ -7,6 +7,7 @@ interface RatingProps {
     className?: string
     label?: string
     businessName?: string
+    serviceName?: string
     maxRating?: number
     showFormattedCount?: boolean
 }
@@ -23,7 +24,8 @@ export function Rating({
     totalReviews,
     className,
     label = "تقييمات عملائنا",
-    businessName = "Our Service",
+    businessName = "شركة النخبه لعزل الفوم بالرياض",
+    serviceName,
     maxRating = 5,
     showFormattedCount = true
 }: RatingProps) {
@@ -101,25 +103,19 @@ export function Rating({
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         "@context": "https://schema.org",
-                        "@type": "AggregateRating",
-                        "ratingValue": normalizedRating,
-                        "bestRating": "5",
-                        "worstRating": "1",
-                        "ratingCount": totalReviews,
-                        "reviewCount": totalReviews,
-                        "itemReviewed": {
-                            "@type": "Service",
-                            "name": businessName,
-                            "aggregateRating": {
-                                "@type": "AggregateRating",
-                                "ratingValue": normalizedRating,
-                                "bestRating": "5",
-                                "ratingCount": totalReviews
-                            }
-                        },
-                        "author": {
-                            "@type": "Organization",
+                        "@type": "Service",
+                        "name": serviceName || businessName,
+                        "provider": {
+                            "@type": "LocalBusiness",
                             "name": businessName
+                        },
+                        "aggregateRating": {
+                            "@type": "AggregateRating",
+                            "ratingValue": normalizedRating.toFixed(1),
+                            "bestRating": "5",
+                            "worstRating": "1",
+                            "ratingCount": totalReviews,
+                            "reviewCount": totalReviews
                         }
                     }),
                 }}
