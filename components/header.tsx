@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Phone, Menu, ChevronDown, X } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
@@ -9,6 +9,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/s
 export function Header() {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false)
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const navigation = [
     { name: "الرئيسية", href: "/" },
@@ -58,8 +59,20 @@ export function Header() {
 
             <div
               className="relative"
-              onMouseEnter={() => setIsServicesOpen(true)}
-              onMouseLeave={() => setIsServicesOpen(false)}
+              onMouseEnter={() => {
+                // Clear any pending close timeout
+                if (closeTimeoutRef.current) {
+                  clearTimeout(closeTimeoutRef.current)
+                  closeTimeoutRef.current = null
+                }
+                setIsServicesOpen(true)
+              }}
+              onMouseLeave={() => {
+                // Delay closing the dropdown to give user time to move mouse
+                closeTimeoutRef.current = setTimeout(() => {
+                  setIsServicesOpen(false)
+                }, 200) // 200ms delay before closing
+              }}
             >
               <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors">
                 الخدمات
@@ -67,7 +80,7 @@ export function Header() {
               </button>
 
               {isServicesOpen && (
-                <div className="absolute top-full right-0 mt-1 w-64 bg-background border border-border rounded-xl shadow-lg py-2 z-50">
+                <div className="absolute top-full right-0 w-64 bg-background border border-border rounded-xl shadow-lg pt-2 pb-2 z-50">
                   <Link
                     href="/services"
                     className="block px-4 py-3 text-sm font-bold text-primary hover:bg-primary/5 border-b border-border"

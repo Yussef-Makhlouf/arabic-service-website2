@@ -152,10 +152,10 @@ export function FoamInsulationSection() {
                                         يعمل عزل الفوم كحاجز حراري شديد المقاومة، حيث يمتلك معامل توصيل حراري منخفض للغاية. هذا يعني أنه يمنع انتقال الحرارة من السطح الخارجي إلى داخل المبنى.
                                     </p>
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                                        <li className="bg-secondary/50 p-4 rounded-lg">يقلل الفارق في درجات الحرارة داخل المبنى.</li>
-                                        <li className="bg-secondary/50 p-4 rounded-lg">يحمي المكيفات من العمل المستمر والمجهد.</li>
-                                        <li className="bg-secondary/50 p-4 rounded-lg">يخلق بيئة داخلية مريحة ومستقرة حرارياً.</li>
-                                        <li className="bg-secondary/50 p-4 rounded-lg">يقلل من ظاهرة "الجزر الحرارية" الحضرية.</li>
+                                        <li className="bg-secondary/10 p-4 rounded-lg text-[#111827]">يقلل الفارق في درجات الحرارة داخل المبنى.</li>
+                                        <li className="bg-secondary/10 p-4 rounded-lg text-[#111827]">يحمي المكيفات من العمل المستمر والمجهد.</li>
+                                        <li className="bg-secondary/10 p-4 rounded-lg text-[#111827]">يخلق بيئة داخلية مريحة ومستقرة حرارياً.</li>
+                                        <li className="bg-secondary/10 p-4 rounded-lg text-[#111827]">يقلل من ظاهرة "الجزر الحرارية" الحضرية.</li>
                                     </ul>
                                 </CardContent>
                             </Card>
@@ -182,10 +182,10 @@ export function FoamInsulationSection() {
                                         أغلب مشاكل تسرب المياه في الأنظمة التقليدية (مثل الرولات) تأتي من نقاط التقاء الشرائح أو الفواصل. الفوم يلغي هذه المشكلة تماماً لأنه قطعة واحدة تغطي السطح بالكامل بما في ذلك الأركان والأنابيب.
                                     </p>
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                                        <li className="bg-secondary/50 p-4 rounded-lg">يمنع وصول الرطوبة إلى حديد التسليح ويحميه من الصدأ.</li>
-                                        <li className="bg-secondary/50 p-4 rounded-lg">يمنع تكون الفطريات والعفن والروائح الكريهة.</li>
-                                        <li className="bg-secondary/50 p-4 rounded-lg">يعالج التشققات الدقيقة في الخرسانة ويغلقها.</li>
-                                        <li className="bg-secondary/50 p-4 rounded-lg">مقاوم لامتصاص الماء ولا يتأثر بالسيول.</li>
+                                        <li className="bg-secondary/10 p-4 rounded-lg text-[#111827]">يمنع وصول الرطوبة إلى حديد التسليح ويحميه من الصدأ.</li>
+                                        <li className="bg-secondary/10 p-4 rounded-lg text-[#111827]">يمنع تكون الفطريات والعفن والروائح الكريهة.</li>
+                                        <li className="bg-secondary/10 p-4 rounded-lg text-[#111827]">يعالج التشققات الدقيقة في الخرسانة ويغلقها.</li>
+                                        <li className="bg-secondary/10 p-4 rounded-lg text-[#111827]">مقاوم لامتصاص الماء ولا يتأثر بالسيول.</li>
                                     </ul>
                                 </CardContent>
                             </Card>
