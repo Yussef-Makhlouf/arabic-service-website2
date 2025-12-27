@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Phone, Mail, MapPin, MessageCircle, ChevronLeft } from "lucide-react"
+import { Phone, Mail, MapPin, MessageCircle, ChevronLeft, Instagram, Facebook, Youtube, Music2 } from "lucide-react"
 
 export function Footer() {
   const services = [
@@ -14,6 +14,19 @@ export function Footer() {
     { name: "من نحن", href: "/about" },
     { name: "المدونة", href: "/blog" },
     { name: "سياسة الخصوصية", href: "/privacy" },
+  ]
+
+  const partnerLinks = [
+    { name: "الخليج لنقل العفش بالرياض", href: "https://alkhallij.com/" },
+    { name: "الاطلال شركة شراء اثاث مستعمل بالرياض", href: "https://alatlaal.com/" },
+  ]
+
+  const socialMedia = [
+    { name: "Instagram", href: "https://www.instagram.com/awazelalsafrrat/?hl=ar", icon: Instagram },
+    { name: "Facebook", href: "https://www.facebook.com/Awazelalsafrat/", icon: Facebook },
+    { name: "YouTube", href: "https://www.youtube.com/@awazel343", icon: Youtube },
+    { name: "TikTok", href: "https://www.tiktok.com/@awazelalsafrrat", icon: Music2 },
+    { name: "Snapchat", href: "https://www.snapchat.com/@awazelalsafrrat?locale=ar", icon: MessageCircle },
   ]
 
 
@@ -93,6 +106,23 @@ export function Footer() {
                 </li>
               ))}
             </ul>
+
+            {/* Partner Links */}
+            <h3 className="font-heading text-lg font-bold mb-4 mt-6">شركاؤنا</h3>
+            <ul className="flex flex-col gap-3">
+              {partnerLinks.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Service Areas */}
@@ -144,6 +174,30 @@ export function Footer() {
           <div className="flex flex-col items-center p-6 bg-muted/30 rounded-2xl border border-border/50 text-center">
             <span className="text-2xl font-bold text-primary mb-1">100%</span>
             <span className="text-sm text-muted-foreground">تغطية شاملة</span>
+          </div>
+        </div>
+
+        {/* Social Media Section */}
+        <div className="mt-12 pt-8 border-t border-border/50">
+          <div className="flex flex-col items-center gap-6">
+            <h3 className="font-heading text-lg font-bold text-center">تابعنا على</h3>
+            <div className="flex items-center gap-4">
+              {socialMedia.map((social) => {
+                const Icon = social.icon
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-3 bg-primary/10 hover:bg-primary hover:text-primary-foreground rounded-full transition-all duration-300 group"
+                    aria-label={social.name}
+                  >
+                    <Icon className="h-5 w-5" />
+                  </a>
+                )
+              })}
+            </div>
           </div>
         </div>
       </div>
