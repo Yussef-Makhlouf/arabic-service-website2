@@ -7,8 +7,8 @@ import { Footer } from "@/components/footer"
 import { FloatingActions } from "@/components/floating-actions"
 
 export const metadata = {
-    title: "من نحن | شركة النخبة لعزل الفوم | 0507067378",
-    description: "تعرف على شركة النخبة لعزل الفوم بالرياض، خبرة سنوات في مجالات العزل المائي والحراري وكشف التسربات برؤية عصرية وتقنيات متطورة.",
+    title: "من نحن | شركة العزل المتقدم لعزل الفوم | 0507067378",
+    description: "تعرف على شركة العزل المتقدم لعزل الفوم بالرياض، خبرة سنوات في مجالات العزل المائي والحراري وكشف التسربات برؤية عصرية وتقنيات متطورة.",
 }
 
 export default function AboutPage() {
@@ -25,7 +25,7 @@ export default function AboutPage() {
                                     من نحن
                                 </h1>
                                 <p className="text-xl text-muted-foreground leading-loose max-w-[600px] text-justify">
-                                    شركة النخبة لعزل الفوم بالرياض هي وجهتك الأولى لحلول العزل المائي والحراري المتكاملة، كشف التسربات، ورش الفوم البولي يوريثان عالي الكثافة. نمتلك خبرة تمتد لأكثر من 10 سنوات في السوق السعودي، ونقدم خدماتنا للمباني السكنية، التجارية، والصناعية بجودة لا تُضاهى وضمان يصل إلى 15 عامًا.
+                                    شركة العزل المتقدم لعزل الفوم بالرياض هي وجهتك الأولى لحلول العزل المائي والحراري المتكاملة، كشف التسربات، ورش الفوم البولي يوريثان عالي الكثافة. نمتلك خبرة تمتد لأكثر من 10 سنوات في السوق السعودي، ونقدم خدماتنا للمباني السكنية، التجارية، والصناعية بجودة لا تُضاهى وضمان يصل إلى 15 عامًا.
                                 </p>
                                 <div className="flex flex-wrap gap-4 pt-4">
                                     <Button size="lg" asChild className="font-bold text-lg px-8 py-6 h-auto">
@@ -40,7 +40,7 @@ export default function AboutPage() {
                                 <div className="relative aspect-video overflow-hidden rounded-3xl shadow-2xl border-4 border-background transform rotate-2 hover:rotate-0 transition-transform duration-500">
                                     <Image
                                         src="/cover1.png"
-                                        alt="فريق عمل شركة النخبة لعزل الفوم في الرياض"
+                                        alt="فريق عمل شركة العزل المتقدم لعزل الفوم في الرياض"
                                         fill
                                         className="object-cover"
                                         priority
@@ -88,7 +88,7 @@ export default function AboutPage() {
                                 </h2>
                                 <div className="space-y-6 text-lg text-muted-foreground leading-loose text-justify">
                                     <p>
-                                        تأسست شركة النخبة في الرياض عام 2014 بهدف تقديم حلول عزل متقدمة تُواكب التحديات المناخية في المملكة العربية السعودية، حيث ترتفع درجات الحرارة صيفًا وتتعرض الأسطح والخزانات للمشاكل الناتجة عن الرطوبة والتسربات. بدأنا كفريق صغير من الفنيين المتخصصين، وسرعان ما تطورنا لنصبح واحدة من أبرز شركات العزل المعتمدة في الرياض والمنطقة الوسطى، بفضل التزامنا بمعايير الجودة العالمية ورضا عملائنا.
+                                        تأسست شركة العزل المتقدم في الرياض عام 2014 بهدف تقديم حلول عزل متقدمة تُواكب التحديات المناخية في المملكة العربية السعودية، حيث ترتفع درجات الحرارة صيفًا وتتعرض الأسطح والخزانات للمشاكل الناتجة عن الرطوبة والتسربات. بدأنا كفريق صغير من الفنيين المتخصصين، وسرعان ما تطورنا لنصبح واحدة من أبرز شركات العزل المعتمدة في الرياض والمنطقة الوسطى، بفضل التزامنا بمعايير الجودة العالمية ورضا عملائنا.
                                     </p>
                                     <p>
                                         اليوم، نُجري مئات المشاريع سنويًا، من عزل الأسطح والخزانات إلى عزل الحمامات والمطابخ، باستخدام أحدث تقنيات رش الفوم البولي يوريثان (Polyurethane Foam) الذي يُعد الأفضل عالميًا في العزل الحراري والمائي. كما نُجهّز فرقنا بأجهزة كشف تسربات حديثة تعمل بتقنية الأشعة تحت الحمراء والضغط الهوائي، مما يضمن تحديد نقطة التسرب بدقة دون تكسير أو أضرار.
@@ -145,7 +145,7 @@ export default function AboutPage() {
                                 </div>
                                 <h3 className="text-2xl font-bold mb-4 font-heading text-primary">قيمنا</h3>
                                 <p className="text-muted-foreground leading-relaxed">
-                                    في شركة النخبة، نؤمن أن النجاح لا يُقاس بالربح فقط، بل بمستوى رضا العميل. لذلك نعتمد على قيم الشفافية الكاملة في التسعير، الأمانة الفنية في التنفيذ، الالتزام الصارم بالمواعيد، والاحترافية في التعامل. هذه ليست مجرد شعارات، بل ممارسات يومية يراها العميل في كل مرحلة من مراحل الخدمة.
+                                    في شركة العزل المتقدم، نؤمن أن النجاح لا يُقاس بالربح فقط، بل بمستوى رضا العميل. لذلك نعتمد على قيم الشفافية الكاملة في التسعير، الأمانة الفنية في التنفيذ، الالتزام الصارم بالمواعيد، والاحترافية في التعامل. هذه ليست مجرد شعارات، بل ممارسات يومية يراها العميل في كل مرحلة من مراحل الخدمة.
                                 </p>
                             </div>
                         </div>
@@ -165,7 +165,7 @@ export default function AboutPage() {
                             هل تبحث عن حل نهائي لمشاكل العزل؟
                         </h2>
                         <p className="mx-auto max-w-2xl text-xl text-primary-foreground/90 mb-10 leading-relaxed">
-                            سواء كنت تعاني من تسربات في الخزان العلوي، ارتفاع فاتورة الكهرباء بسبب تسرب الحرارة، أو تشققات في السطح، فإن فريق شركة النخبة جاهز لتقديم استشارة مجانية، فحص شامل باستخدام أحدث الأجهزة، وعرض سعر دقيق دون مفاجآت.
+                            سواء كنت تعاني من تسربات في الخزان العلوي، ارتفاع فاتورة الكهرباء بسبب تسرب الحرارة، أو تشققات في السطح، فإن فريق شركة العزل المتقدم جاهز لتقديم استشارة مجانية، فحص شامل باستخدام أحدث الأجهزة، وعرض سعر دقيق دون مفاجآت.
                         </p>
                         <Button size="lg" variant="secondary" asChild className="font-bold text-xl px-10 py-6 h-auto shadow-2xl hover:scale-105 transition-transform">
                             <a href="tel:+966507067378">اتصل بنا الآن</a>
@@ -178,7 +178,7 @@ export default function AboutPage() {
                     <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-7xl">
                         <div className="flex flex-col items-center justify-center text-center space-y-6 mb-20">
                             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-heading">
-                                لماذا يختار العملاء شركة النخبة لعزل الفوم؟
+                                لماذا يختار العملاء شركة العزل المتقدم لعزل الفوم؟
                             </h2>
                             <p className="max-w-[800px] text-muted-foreground text-lg">
                                 لأننا لا نكتفي برش الفوم – نضمن لك نظام عزل متكامل يحمي ممتلكاتك من الداخل والخارج، ويتماشى مع أعلى معايير السلامة والكفاءة في المملكة.
@@ -189,7 +189,7 @@ export default function AboutPage() {
                             <div className="relative aspect-square lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-border">
                                 <Image
                                     src="/roof7.png"
-                                    alt="فريق النخبة أثناء تنفيذ عزل فوم احترافي على سطح منزل في الرياض"
+                                    alt="فريق العزل المتقدم أثناء تنفيذ عزل فوم احترافي على سطح منزل في الرياض"
                                     fill
                                     className="object-cover hover:scale-105 transition-transform duration-700"
                                 />
@@ -279,7 +279,7 @@ export default function AboutPage() {
                     <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl text-center">
                         <h2 className="text-3xl md:text-4xl font-bold mb-6 font-heading">استعد لتجربة عزل لا تُضاهى</h2>
                         <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
-                            اختر شركة النخبة لعزل الفوم في الرياض لتستمتع بمنزل بارد صيفًا، دافئ شتاءً، وخالٍ من التسربات – مع ضمان قانوني موثق.
+                            اختر شركة العزل المتقدم لعزل الفوم في الرياض لتستمتع بمنزل بارد صيفًا، دافئ شتاءً، وخالٍ من التسربات – مع ضمان قانوني موثق.
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
                             <Button size="lg" variant="secondary" asChild className="font-bold text-lg px-8 py-6 h-auto">

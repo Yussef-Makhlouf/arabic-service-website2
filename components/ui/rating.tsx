@@ -24,7 +24,7 @@ export function Rating({
     totalReviews,
     className,
     label = "تقييمات عملائنا",
-    businessName = "شركة النخبه لعزل الفوم بالرياض",
+    businessName = "شركة العزل المتقدم لعزل الفوم بالرياض",
     serviceName,
     maxRating = 5,
     showFormattedCount = true

@@ -153,7 +153,7 @@ export function Footer() {
         <div className="flex flex-col items-center gap-4 text-center md:text-right">
           <div className="flex flex-col gap-1">
             <p className="text-xs md:text-sm text-muted-foreground">
-              © {new Date().getFullYear()} شركة النخبه لعزل الاسطح . جميع الحقوق محفوظة.
+              © {new Date().getFullYear()} شركة العزل المتقدم لعزل الاسطح . جميع الحقوق محفوظة.
             </p>
             <p className="text-sm md:text-base font-medium text-muted-foreground/80">
               تصميم و تطوير بواسطة <span className="text-primary/80 font-medium">Ahmed Adham</span>
