@@ -60,7 +60,7 @@ export const blogPosts: BlogPost[] = [
 
 اختيار العزل المناسب يعتمد على ميزانيتك، نوع المبنى، واحتياجاتك الخاصة. لا تتردد في طلب استشارة مجانية من خبرائنا.
     `,
-    image: "/cover.png",
+    image: "/cover.jpg",
     imageQuery: "roof insulation materials comparison Saudi Arabia",
     category: "دليل شامل",
     date: "2024-01-15",
@@ -156,7 +156,7 @@ export const blogPosts: BlogPost[] = [
 
 العزل الحراري هو استثمارك الأذكى في منزلك. هو ليس مجرد توفير في الفاتورة، بل هو راحة لك ولعائلتك، حماية لمبناك، ومساهمة في حفظ موارد الوطن. لا تتردد في البدء الآن.
     `,
-    image: "/cover1.png",
+    image: "/cover1.jpg",
     imageQuery: "energy efficient home insulation diagram chart",
     category: "توفير الطاقة",
     date: "2024-01-10",
@@ -253,7 +253,7 @@ export const blogPosts: BlogPost[] = [
 
 منزلك هو استثمارك الأكبر. الفحص الدوري للكشف عن التسربات (مرة سنوياً) يكلفك القليل، لكنه يوفر عليك عشرات الآلاف ويحميك من كوابيس الترميم. كن سباقاً ولا تنتظر الكارثة.
     `,
-    image: "/cover3.png",
+    image: "/cover2.jpg",
     imageQuery: "water leak detection equipment infrared camera",
     category: "كشف التسربات",
     date: "2024-01-05",
@@ -353,7 +353,7 @@ export const blogPosts: BlogPost[] = [
 
 تقنية الفوم البولي يوريثان هي قمة ما وصلت إليه هندسة العزل. هي ليست الأرخص، لكنها "الأكثر قيمة" (Most Efficient). أنت تشتري نظام حماية متكامل (مائي + حراري) في منتج واحد، سريع التنفيذ، وشديد المتانة. تأكد فقط من اختيار "من يمسك المسدس" بعناية.
     `,
-    image: "/cover4.png",
+    image: "/cover3.png",
     imageQuery: "spray foam insulation machine graco reactor chemicals",
     category: "تكنولوجيا البناء",
     date: "2024-01-01",
@@ -495,7 +495,7 @@ export const blogPosts: BlogPost[] = [
 
 `,
 
-    image: "/cover3.png",
+    image: "/cover4.png",
     imageQuery: "spray foam insulation machine graco reactor chemicals",
     category: "أخطاء شائعة",
     date: "2024-01-20",
@@ -633,8 +633,8 @@ export const blogPosts: BlogPost[] = [
 > قبل تنفيذ أي عزل، اطلب فحصاً لتحديد مصدر الرطوبة الحقيقي، وليس مجرد علاج الأعراض.
 
 `,
-    // image: "/cover1.png",
-    image: "/cover1.png",
+
+    image: "/cover5.jpg",
     imageQuery: "mold humidity home walls condensation insulation problem",
     category: "مشاكل وحلول",
     date: "2024-01-22",
@@ -785,7 +785,7 @@ export const blogPosts: BlogPost[] = [
 > الفحص المبكر قد يوفر عليك عشرات الآلاف ويحمي منزلك لسنوات طويلة.
 
 `,
-    image: "/cover3.png",
+    image: "/cover6.jpg",
     imageQuery: "spray foam insulation machine graco reactor chemicals",
     category: "توعية",
     date: "2024-01-25",
@@ -914,7 +914,7 @@ export const blogPosts: BlogPost[] = [
 > لا تختَر الحل الأسهل دائماً، اختر الحل الصحيح الذي يحمي منزلك لسنوات.
 
 `,
-    image: "/cover.png",
+    image: "/cover7.jpg",
     imageQuery: "spray foam insulation machine graco reactor chemicals",
     category: "دليل عملي",
     date: "2024-01-28",

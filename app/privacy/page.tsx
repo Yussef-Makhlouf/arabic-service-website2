@@ -5,7 +5,7 @@ import { Shield, Lock, Eye, FileText, Bell, Globe } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "سياسة الخصوصية | شركة العزل المتقدم",
+    title: "سياسة الخصوصية | شركة العزل المتقدم | 0507067378",
     description: "نحن في شركة العزل المتقدم نلتزم بحماية خصوصية بياناتكم. تعرف على كيفية جمعنا واستخدامنا وحمايتنا لمعلوماتكم الشخصية.",
 }
 

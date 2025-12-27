@@ -7,7 +7,7 @@ import { Phone, MessageCircle, Mail, MapPin, Clock, ShieldCheck } from "lucide-r
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-    title: "اتصل بنا | شركة العزل المتقدم بالرياض والخرج",
+    title: "اتصل بنا | شركة العزل المتقدم بالرياض والخرج | 0507067378",
     description: "تواصل معنا للحصول على أفضل خدمات العزل وكشف التسربات بالرياض والخرج. فريقنا متاح على مدار الساعة للرد على استفساراتكم وتقديم المعاينة المجانية.",
 }
 

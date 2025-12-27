@@ -8,7 +8,7 @@ export function ServicesOverview() {
   const services = [
     {
       id: "waterproofing",
-      image: "/best-season-roof-insulation.jpg",
+      image: "/unnamed.jpg",
       icon: Droplets,
       title: "عزل مائي للأسطح",
       slug: "/services/waterproofing",
