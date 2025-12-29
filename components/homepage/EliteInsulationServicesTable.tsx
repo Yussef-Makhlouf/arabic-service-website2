@@ -6,71 +6,91 @@ export function EliteInsulationServicesTable() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center mb-10">
                     <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-                        عزل فوم الأسطح بالرياض.. أنواع ومواد نستخدمها حسب طبيعة سطحك!
+                        أنواع عزل الفوم المعتمدة لدينا
                     </h2>
                     <p className="text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                        نوفر لك أكثر من نوع وأكثر من مادة من عزل فوم الأسطح بالرياض، ونحرص دائماً على اختيار النوع الأنسب حسب طبيعة السطح، درجة التعرض للحرارة أو المياه، وحالة المبنى، وذلك بعد المعاينة لضمان أفضل نتيجة ممكنة تدوم لسنوات.
+                        نستخدم في <strong>العزل المتقدم</strong> أفضل أنواع الفوم العازل حسب طبيعة السطح ومتطلبات المشروع. نختار النوع الأمثل بعد المعاينة الدقيقة لضمان نتائج تدوم لسنوات طويلة وتوفر أقصى حماية ممكنة.
                     </p>
                 </div>
 
                 <div className="mb-6 flex items-center gap-2">
                     <div className="h-6 w-1 bg-primary rounded-full"></div>
-                    <h3 className="text-xl font-bold text-foreground">أفضل أنواع عزل الفوم واستخداماته</h3>
+                    <h3 className="text-xl font-bold text-foreground">مقارنة أنواع عزل الفوم واستخداماتها</h3>
                 </div>
 
                 <div className="overflow-x-auto rounded-lg border border-border shadow-sm">
                     <table className="w-full min-w-[800px] border-collapse bg-card text-foreground">
                         <thead>
                             <tr className="bg-muted/50 border-b border-border">
-                                <th className="p-4 text-right font-bold text-primary w-1/4 border-l border-border">نوع عزل الفوم</th>
-                                <th className="p-4 text-right font-bold text-primary w-1/3 border-l border-border">متى نستخدمه لك؟</th>
-                                <th className="p-4 text-right font-bold text-primary w-1/3">ماذا يحقق لك؟</th>
+                                <th className="p-4 text-right font-bold text-primary w-1/4 border-l border-border">نوع الفوم</th>
+                                <th className="p-4 text-right font-bold text-primary w-1/3 border-l border-border">الاستخدام الأمثل</th>
+                                <th className="p-4 text-right font-bold text-primary w-1/3">المميزات والفوائد</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-border">
                             <tr className="hover:bg-muted/20 transition-colors">
-                                <td className="p-4 font-semibold border-l border-border">الفوم الرذاذي</td>
-                                <td className="p-4 text-muted-foreground border-l border-border">
-                                    إذا كان سطحك غير مستوٍ أو يحتوي على زوايا وتفاصيل متعددة
+                                <td className="p-4 font-semibold border-l border-border">
+                                    <span className="text-primary">فوم البولي يوريثان الرذاذي</span>
+                                    <br />
+                                    <span className="text-xs text-muted-foreground">(Spray Foam)</span>
                                 </td>
-                                <td className="p-4 text-muted-foreground">
-                                    يوفر لك تغطية كاملة بدون فواصل، عزل قوي للحرارة والمياه، وسرعة في التنفيذ.
+                                <td className="p-4 text-muted-foreground border-l border-border leading-relaxed">
+                                    الأسطح ذات الأشكال غير المنتظمة والزوايا الكثيرة، الأسطح القديمة والمبلطة، المناطق التي يصعب الوصول إليها بالطرق التقليدية
                                 </td>
-                            </tr>
-                            <tr className="hover:bg-muted/20 transition-colors">
-                                <td className="p-4 font-semibold border-l border-border">فوم الخلية المغلقة</td>
-                                <td className="p-4 text-muted-foreground border-l border-border">
-                                    إذا كان السطح معرضاً للأمطار أو تسربات المياه بشكل مباشر
-                                </td>
-                                <td className="p-4 text-muted-foreground">
-                                    يوفر حماية عالية من المياه والرطوبة، وكذلك يوفر مقاومة طويلة المدى
+                                <td className="p-4 text-muted-foreground leading-relaxed">
+                                    تغطية كاملة بدون فواصل أو وصلات، عزل حراري ومائي في آن واحد، سرعة في التنفيذ (يوم واحد للأسطح المتوسطة)، التصاق قوي بأي سطح
                                 </td>
                             </tr>
                             <tr className="hover:bg-muted/20 transition-colors">
-                                <td className="p-4 font-semibold border-l border-border">فوم الخلية المفتوحة</td>
-                                <td className="p-4 text-muted-foreground border-l border-border">
-                                    عند الحاجة إلى عزل حراري داخلي أو تقليل انتقال الحرارة
+                                <td className="p-4 font-semibold border-l border-border">
+                                    <span className="text-primary">فوم الخلية المغلقة</span>
+                                    <br />
+                                    <span className="text-xs text-muted-foreground">(Closed Cell)</span>
                                 </td>
-                                <td className="p-4 text-muted-foreground">
-                                    يحسن الراحة الحرارية داخل المبنى بتكلفة أقل
+                                <td className="p-4 text-muted-foreground border-l border-border leading-relaxed">
+                                    الأسطح المعرضة للأمطار الغزيرة والسيول، المناطق الرطبة والساحلية، الأسطح التي تعاني من تسربات مائية متكررة
                                 </td>
-                            </tr>
-                            <tr className="hover:bg-muted/20 transition-colors">
-                                <td className="p-4 font-semibold border-l border-border">ألواح الفوم</td>
-                                <td className="p-4 text-muted-foreground border-l border-border">
-                                    إذا كان السطح مستوياً والمساحة منتظمة
-                                </td>
-                                <td className="p-4 text-muted-foreground">
-                                    عزل ثابت وسهل التركيب مع نتائج فعالة
+                                <td className="p-4 text-muted-foreground leading-relaxed">
+                                    مقاومة 100% للماء والرطوبة، كثافة عالية وصلابة ممتازة، عمر افتراضي يتجاوز 25 سنة، لا يمتص الماء نهائياً
                                 </td>
                             </tr>
                             <tr className="hover:bg-muted/20 transition-colors">
-                                <td className="p-4 font-semibold border-l border-border">الفوم السائل</td>
-                                <td className="p-4 text-muted-foreground border-l border-border">
-                                    لمعالجة الزوايا الدقيقة والفواصل والشقوق
+                                <td className="p-4 font-semibold border-l border-border">
+                                    <span className="text-primary">فوم الخلية المفتوحة</span>
+                                    <br />
+                                    <span className="text-xs text-muted-foreground">(Open Cell)</span>
                                 </td>
-                                <td className="p-4 text-muted-foreground">
-                                    يسدّ أي نقاط ضعف ومنع أي تسرب مستقبلي
+                                <td className="p-4 text-muted-foreground border-l border-border leading-relaxed">
+                                    العزل الحراري الداخلي للجدران والأسقف، المباني التي تحتاج عزل صوتي، الميزانيات المحدودة مع الحفاظ على الكفاءة
+                                </td>
+                                <td className="p-4 text-muted-foreground leading-relaxed">
+                                    تكلفة أقل مع أداء حراري ممتاز، عزل صوتي إضافي، مرونة عالية ولا يتشقق، صديق للبيئة
+                                </td>
+                            </tr>
+                            <tr className="hover:bg-muted/20 transition-colors">
+                                <td className="p-4 font-semibold border-l border-border">
+                                    <span className="text-primary">ألواح الفوم المضغوط</span>
+                                    <br />
+                                    <span className="text-xs text-muted-foreground">(Foam Boards)</span>
+                                </td>
+                                <td className="p-4 text-muted-foreground border-l border-border leading-relaxed">
+                                    الأسطح المستوية والمنتظمة، المشاريع الكبيرة التي تحتاج تغطية واسعة، العزل تحت البلاط أو الأرضيات
+                                </td>
+                                <td className="p-4 text-muted-foreground leading-relaxed">
+                                    سهولة وسرعة التركيب، سماكات متعددة حسب الحاجة، مقاومة ممتازة للضغط، تكلفة اقتصادية للمساحات الكبيرة
+                                </td>
+                            </tr>
+                            <tr className="hover:bg-muted/20 transition-colors">
+                                <td className="p-4 font-semibold border-l border-border">
+                                    <span className="text-primary">الفوم السائل التكميلي</span>
+                                    <br />
+                                    <span className="text-xs text-muted-foreground">(Liquid Foam)</span>
+                                </td>
+                                <td className="p-4 text-muted-foreground border-l border-border leading-relaxed">
+                                    سد الشقوق والفواصل الدقيقة، معالجة نقاط الضعف حول الأنابيب، إصلاح العزل القديم المتضرر
+                                </td>
+                                <td className="p-4 text-muted-foreground leading-relaxed">
+                                    يصل للأماكن الضيقة جداً، يسد أي فراغات بشكل كامل، مثالي للإصلاحات والصيانة، يمنع أي تسرب مستقبلي
                                 </td>
                             </tr>
                         </tbody>

@@ -6,7 +6,7 @@ export function TrustSection() {
     {
       icon: Shield,
       title: "ضمان شامل",
-      description: "نقدم ضماناً يصل إلى 10 سنوات على جميع أعمال العزل مع خدمة فحص دورية مجانية",
+      description: "نقدم ضماناً يصل إلى 15 سنه على جميع أعمال العزل مع خدمة فحص دورية مجانية",
     },
     {
       icon: Award,

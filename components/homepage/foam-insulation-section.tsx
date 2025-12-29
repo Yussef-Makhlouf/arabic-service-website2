@@ -242,10 +242,10 @@ export function FoamInsulationSection() {
                                         يمكن لفريقنا المحترف إنجاز عزل سطح فيلا كاملة (حراري ومائي) في يوم واحد فقط في كثير من الحالات. بمجرد جفاف الفوم (الذي يستغرق دقائق)، يصبح السطح جاهزاً.
                                     </p>
                                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                                        <li className="bg-secondary/50 p-4 rounded-lg">عمر افتراضي يتجاوز 20 عاماً مع الصيانة البسيطة.</li>
-                                        <li className="bg-secondary/50 p-4 rounded-lg">خفيف الوزن جداً ولا يمثل أي حمل على أساسات المبنى.</li>
-                                        <li className="bg-secondary/50 p-4 rounded-lg">مقاوم للحشرات والقوارض ولا يشكل بيئة صالحة لها.</li>
-                                        <li className="bg-secondary/50 p-4 rounded-lg">سهولة الصيانة في حال حدوث أي تلف مستقبلاً.</li>
+                                        <li className="bg-secondary/10 p-4 rounded-lg text-[#111826] ">عمر افتراضي يتجاوز 20 عاماً مع الصيانة البسيطة.</li>
+                                        <li className="bg-secondary/10 p-4 rounded-lg text-[#111826] ">خفيف الوزن جداً ولا يمثل أي حمل على أساسات المبنى.</li>
+                                        <li className="bg-secondary/10 p-4 rounded-lg text-[#111826] ">مقاوم للحشرات والقوارض ولا يشكل بيئة صالحة لها.</li>
+                                        <li className="bg-secondary/10 p-4 rounded-lg text-[#111826] ">سهولة الصيانة في حال حدوث أي تلف مستقبلاً.</li>
                                     </ul>
                                 </CardContent>
                             </Card>

@@ -196,7 +196,7 @@ export function ComparisonTable() {
                       الضمان
                     </td>
                     <td className="px-6 py-4 text-center bg-primary/5 border-l border-primary/10">
-                      <span className="font-bold text-success">10 سنوات</span>
+                      <span className="font-bold text-success">15 سنه</span>
                     </td>
                     <td className="px-6 py-4 text-center border-l border-border">
                       <span>5-7 سنوات</span>

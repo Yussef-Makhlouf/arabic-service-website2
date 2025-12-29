@@ -112,7 +112,7 @@ export default function ContactPage() {
                                 <div>
                                     <h4 className="font-bold text-lg mb-2">ضمان حقيقي</h4>
                                     <p className="text-muted-foreground text-sm leading-relaxed">
-                                        نقدم ضمانات تصل إلى 10 سنوات على جميع أعمال العزل التي نقوم بها.
+                                        نقدم ضمانات تصل إلى 15 سنه على جميع أعمال العزل التي نقوم بها.
                                     </p>
                                 </div>
                             </div>

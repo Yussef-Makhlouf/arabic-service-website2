@@ -142,7 +142,7 @@ export function AuthorityProofSection() {
               <h3 className="text-2xl font-bold text-foreground mb-4">ضمان شامل يحميك لسنوات</h3>
               <div className="space-y-3 text-foreground leading-relaxed">
                 <p>
-                  <strong>ضمان 10 سنوات</strong> على جميع أعمال العزل المائي
+                  <strong>ضمان 15 سنه</strong> على جميع أعمال العزل المائي
                 </p>
                 <p>
                   <strong>ضمان 15 سنة</strong> على عزل الفوم (البولي يوريثان)

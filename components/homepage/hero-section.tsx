@@ -1,23 +1,36 @@
 import { Button } from "@/components/ui/button"
-import { Phone, MessageCircle, Shield, Clock, CheckCircle, Award, ArrowDown } from "lucide-react"
+import { Phone, MessageCircle, Shield, Clock, CheckCircle, Award, ArrowDown, Droplets, Thermometer, Building2 } from "lucide-react"
 import Link from "next/link"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[85vh] flex flex-col justify-center items-center py-20 px-4 overflow-hidden">
+    <section className="relative min-h-[90vh] flex flex-col justify-center items-center py-16 px-4 overflow-hidden">
       {/* Background Glow Effect */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-card/20 pointer-events-none" />
 
-      <div className="container mx-auto z-10 text-center space-y-12">
-        {/* Main Headings */}
-        <div className="space-y-6 max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700">
-          <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
-            <span className="text-foreground">ثورة في عالم </span>
-            <span className="text-primary block mt-2 md:inline md:mt-0">عزل الأسطح</span>
+      <div className="container mx-auto z-10 text-center space-y-10">
+        {/* Trust Badge */}
+        <div className="inline-flex items-center rounded-full border px-4 py-1.5 text-sm font-medium border-primary/20 bg-primary/10 text-primary backdrop-blur-sm animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
+          شركة معتمدة في المملكة العربية السعودية
+        </div>
+
+        {/* Main Headings - H1 محسّن لـ SEO */}
+        <div className="space-y-6 max-w-5xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
+            <span className="text-foreground">شركة عزل أسطح بالرياض و الخرج</span>
+            <span className="text-primary block mt-3">معتمدة في السعودية</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground/90 max-w-2xl mx-auto leading-relaxed font-light">
-            نقدم تجربة عزل فريدة تجمع بين التكنولوجيا المتطورة والخبرة العميقة لحماية منزلك
-          </p>
+
+          {/* فقرة تعريفية شاملة - مهمة جداً للـ SEO */}
+          <div className="text-lg md:text-xl text-muted-foreground/90 max-w-4xl mx-auto leading-relaxed space-y-4 text-right">
+            <p>
+              نحن في <strong className="text-primary">شركة العزل المتقدم</strong> شركة متخصصة في <strong>عزل الأسطح</strong>، <strong>عزل الفوم</strong>، <strong>العزل المائي والحراري</strong>، و<strong>عزل خزانات المياه</strong> باستخدام أفضل المواد المعتمدة التي تتحمل الظروف المناخية القاسية في المملكة العربية السعودية.
+            </p>
+            <p>
+              نعمل بخبرة تزيد عن <strong>15 عاماً</strong> في مجال العزل ونقدّم حلولًا فعّالة لحماية المباني من <strong>تسربات المياه</strong>، الرطوبة، ودرجات الحرارة المرتفعة. نلتزم بأعلى معايير الجودة ونوفر <strong>ضمان يصل إلى 15 سنه</strong> على جميع أعمالنا.
+            </p>
+          </div>
         </div>
 
         {/* CTA Buttons */}
@@ -29,7 +42,7 @@ export function HeroSection() {
           >
             <a href="tel:+966507067378" className="flex items-center gap-2">
               <Phone className="h-5 w-5" />
-              <span>اتصل بنا للكشف المجاني - 0507067378</span>
+              <span>اتصل للاستشارة المجانية - 0507067378</span>
             </a>
           </Button>
 
@@ -39,62 +52,60 @@ export function HeroSection() {
             className="h-16 px-8 text-lg rounded-full bg-card/50 hover:bg-card border-white/10 text-foreground w-full sm:w-auto backdrop-blur-sm transition-all duration-300 hover:border-primary/50"
             asChild
           >
-            <Link href="/services" className="flex items-center gap-2">
-              <ArrowDown className="h-5 w-5" />
-              <span>خدمات العزل في الرياض</span>
-            </Link>
+            <a href="https://wa.me/966507067378" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-black">
+              <MessageCircle className="h-5 w-5" />
+              <span>تواصل عبر واتساب</span>
+            </a>
           </Button>
         </div>
 
-        {/* Feature Cards Grid */}
+        {/* Feature Cards Grid - خدمات رئيسية */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8 w-full max-w-6xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300 fill-mode-backwards">
           <FeatureCard
-            icon={<Shield className="h-6 w-6 text-primary" />}
-            title="ضمان شامل 10 سنوات"
-            subtitle="حماية مؤكدة"
+            icon={<Droplets className="h-6 w-6 text-primary" />}
+            title="عزل مائي للأسطح"
+            subtitle="حماية من تسرب المياه والأمطار"
             delay={0}
           />
           <FeatureCard
-            icon={<Clock className="h-6 w-6 text-primary" />}
-            title="خدمة متاحة 24/7"
-            subtitle="استجابة فورية"
+            icon={<Thermometer className="h-6 w-6 text-primary" />}
+            title="عزل الفوم الحراري"
+            subtitle="توفير 40% من فاتورة الكهرباء"
             delay={100}
-
           />
           <FeatureCard
-            icon={<CheckCircle className="h-6 w-6 text-primary" />}
-            title="مواد عزل متطورة"
-            subtitle="تقنيات حديثة"
+            icon={<Building2 className="h-6 w-6 text-primary" />}
+            title="عزل خزانات المياه"
+            subtitle="حماية نقاء المياه ومنع التلوث"
             delay={200}
           />
           <FeatureCard
-            icon={<Award className="h-6 w-6 text-primary" />}
-            title="نقل آمن ونظيف"
-            subtitle="عمالة محترفة"
+            icon={<Shield className="h-6 w-6 text-primary" />}
+            title="ضمان شامل 15 سنه"
+            subtitle="جودة مضمونة واعتماد رسمي"
             delay={300}
           />
         </div>
-      </div>
 
-      {/* Floating Action Buttons */}
-      {/* <div className="fixed bottom-6 left-6 z-50 flex flex-col gap-3 animate-in fade-in slide-in-from-left-8 duration-1000 delay-500">
-        <a
-          href="tel:+966507067378"
-          className="bg-blue-600 p-3.5 rounded-full text-white hover:scale-110 hover:shadow-lg transition-all duration-300 ring-2 ring-white/20"
-          aria-label="Call Us"
-        >
-          <Phone className="h-6 w-6" />
-        </a>
-        <a
-          href="https://wa.me/966507067378"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-[#25D366] p-3.5 rounded-full text-white hover:scale-110 hover:shadow-lg transition-all duration-300 ring-2 ring-white/20"
-          aria-label="WhatsApp"
-        >
-          <MessageCircle className="h-6 w-6" />
-        </a>
-      </div> */}
+        {/* إحصائيات سريعة */}
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8 border-t border-border/30 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-500 fill-mode-backwards">
+          <StatItem value="+15" label="سنة خبرة" />
+          <StatItem value="+5000" label="مشروع منجز" />
+          <StatItem value="24/7" label="دعم فني متواصل" />
+          <StatItem value="10" label="سنوات ضمان" />
+        </div> */}
+
+        {/* رابط للخدمات */}
+        <div className="pt-4 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-700 fill-mode-backwards">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+          >
+            <span>استكشف خدماتنا في عزل الأسطح</span>
+            <ArrowDown className="h-4 w-4 animate-bounce" />
+          </Link>
+        </div>
+      </div>
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-muted-foreground/50 hidden md:block">
@@ -117,6 +128,15 @@ function FeatureCard({ icon, title, subtitle, delay }: { icon: React.ReactNode, 
         <h3 className="text-lg font-bold text-secondary group-hover:text-primary transition-colors">{title}</h3>
         <p className="text-sm text-muted-foreground mt-1">{subtitle}</p>
       </div>
+    </div>
+  )
+}
+
+function StatItem({ value, label }: { value: string, label: string }) {
+  return (
+    <div className="text-center">
+      <div className="text-3xl md:text-4xl font-bold text-primary">{value}</div>
+      <div className="text-sm text-muted-foreground mt-1">{label}</div>
     </div>
   )
 }

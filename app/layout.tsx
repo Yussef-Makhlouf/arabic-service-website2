@@ -361,7 +361,7 @@ const localBusinessSchema = {
         itemOffered: {
           "@type": "Service",
           name: "عزل مائي للأسطح",
-          description: "حماية شاملة من تسرب المياه والرطوبة بضمان 10 سنوات",
+          description: "حماية شاملة من تسرب المياه والرطوبة بضمان 15 سنه",
         },
       },
       {

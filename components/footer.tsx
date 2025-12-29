@@ -18,8 +18,8 @@ export function Footer() {
   ]
 
   const partnerLinks = [
-    { name: "الخليج لنقل العفش بالرياض", href: "https://alkhallij.com/" },
-    { name: "الاطلال شركة شراء اثاث مستعمل بالرياض", href: "https://alatlaal.com/" },
+    { name: " شركة عزل فوم بالرياض ", href: "https://awazel-alsafrrat.com.sa/" },
+    { name: " شركة عزل اسطح بالرياض", href: "https://awazel-alsafrrat.sa/" },
   ]
 
   const socialMedia = [
@@ -40,7 +40,7 @@ export function Footer() {
             <h3 className="font-heading text-xl font-bold mb-4">شركة العزل المتقدم</h3>
             <p className="text-sm text-muted-foreground leading-relaxed mb-6">
               شركة متخصصة في عزل الأسطح والخزانات بالرياض والخرج. معتمدون من الهيئة السعودية للمهندسين مع خبرة تزيد عن
-              15 عامًا وضمان حقيقي يصل إلى 10 سنوات.
+              15 عامًا وضمان حقيقي يصل إلى 15 سنه.
             </p>
             <div className="flex flex-col gap-3">
               <a
@@ -217,7 +217,7 @@ export function Footer() {
           <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6 text-xs md:text-sm text-muted-foreground">
             <span>معتمدون من SASO</span>
             <span className="hidden sm:inline">•</span>
-            <span>ضمان 10 سنوات</span>
+            <span>ضمان 15 سنه</span>
             <span className="hidden sm:inline">•</span>
             <span>خبرة 15+ عاماً</span>
           </div>

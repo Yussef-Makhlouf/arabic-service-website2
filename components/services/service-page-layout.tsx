@@ -38,6 +38,7 @@ export interface ServicePageData {
   title: string
   subtitle: string
   breadcrumb: string
+  heroImage?: string // صورة خلفية للـ Hero
   heroContent: {
     description: string
     features: string[]
@@ -73,41 +74,124 @@ export function ServicePageLayout({ data }: { data: ServicePageData }) {
       </div>
 
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28 overflow-hidden bg-[#59478a]">
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#59478a]/90 to-[#59478a]"></div>
-        <div className="container relative mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-24 h-24 bg-white/10 backdrop-blur-sm rounded-3xl mb-8 border border-white/20 shadow-xl">
-              <Icon className="h-12 w-12 text-white" />
-            </div>
-            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white tracking-tight">
-              {data.title}
-            </h1>
-            <p className="text-xl md:text-2xl text-white/90 leading-relaxed mb-10 max-w-3xl mx-auto">
-              {data.subtitle}
-            </p>
+      <section className="relative min-h-[700px] flex items-center bg-gradient-to-br from-[#59478a] via-[#4a3a75] to-[#3d2f63] text-white overflow-hidden">
+        {/* Pattern overlay */}
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Button size="lg" variant="secondary" className="gap-2 text-lg h-14 px-8 shadow-lg hover:shadow-xl transition-all" asChild>
-                <a href="tel:+966507067378">
-                  <Phone className="h-5 w-5" />
-                  اتصل للحصول على عرض سعر- 507067378
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="gap-2 text-lg h-14 px-8 border-white/30 text-white hover:bg-white/10 bg-white/5 backdrop-blur-sm shadow-md"
-                asChild
-              >
-                <a href="https://wa.me/966507067378" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="h-5 w-5" />
-                  واتساب
-                </a>
-              </Button>
+        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* المحتوى */}
+            <div className="space-y-8 text-center lg:text-right">
+              {/* شارة الثقة */}
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2.5 rounded-full shadow-lg">
+                <Icon className="h-5 w-5 text-amber-400" />
+                <span className="text-sm md:text-base font-medium text-white/95">خدمة معتمدة بضمان 15 سنة</span>
+              </div>
+
+              {/* العنوان الرئيسي */}
+              <div>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight drop-shadow-xl mb-4">
+                  {data.title}
+                </h1>
+                <p className="text-lg md:text-xl text-white/85 leading-relaxed max-w-xl lg:max-w-none mx-auto lg:mx-0">
+                  {data.subtitle}
+                </p>
+              </div>
+
+              {/* شارات المميزات */}
+              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+                {data.heroContent.features.slice(0, 3).map((feature, i) => (
+                  <span
+                    key={i}
+                    className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg text-sm border border-white/10"
+                  >
+                    <CheckCircle className="w-4 h-4 text-emerald-400" />
+                    {feature}
+                  </span>
+                ))}
+              </div>
+
+              {/* أزرار CTA */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="gap-3 text-lg h-16 px-8 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-white text-[#59478a] hover:bg-gray-100 font-bold"
+                  asChild
+                >
+                  <a href="tel:+966507067378">
+                    <Phone className="h-6 w-6" />
+                    اتصل الآن: 0507067378
+                  </a>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="gap-3 text-lg h-16 px-8 border-white/30 text-white hover:bg-white/10 bg-white/5 backdrop-blur-md shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  asChild
+                >
+                  <a href="https://wa.me/966507067378" target="_blank" rel="noopener noreferrer">
+                    <MessageCircle className="h-6 w-6" />
+                    واتساب للاستشارة
+                  </a>
+                </Button>
+              </div>
+
+              {/* الإحصائيات */}
+              <div className="grid grid-cols-4 gap-4 pt-6 border-t border-white/20">
+                <div className="text-center p-2">
+                  <div className="text-2xl md:text-3xl font-bold text-white">+15</div>
+                  <div className="text-xs md:text-sm text-white/70">سنة خبرة</div>
+                </div>
+                <div className="text-center p-2">
+                  <div className="text-2xl md:text-3xl font-bold text-white">+5000</div>
+                  <div className="text-xs md:text-sm text-white/70">مشروع</div>
+                </div>
+                <div className="text-center p-2">
+                  <div className="text-2xl md:text-3xl font-bold text-white">15</div>
+                  <div className="text-xs md:text-sm text-white/70">سنة ضمان</div>
+                </div>
+                <div className="text-center p-2">
+                  <div className="text-2xl md:text-3xl font-bold text-white">24/7</div>
+                  <div className="text-xs md:text-sm text-white/70">دعم فني</div>
+                </div>
+              </div>
             </div>
 
+            {/* الصورة */}
+            <div className="relative hidden lg:block">
+              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10">
+                <Image
+                  src={data.heroImage || "/cover3.png"}
+                  alt={data.title}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#59478a]/60 via-transparent to-transparent"></div>
+
+                {/* بطاقة عائمة */}
+                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-xl">
+                  <div className="flex items-center gap-4">
+                    <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center">
+                      <Icon className="w-7 h-7 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-foreground text-lg">ضمان 15 سنة مكتوب</div>
+                      <div className="text-sm text-muted-foreground">على جميع أعمال العزل والمواد</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* زخرفة */}
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-amber-400/20 rounded-full blur-3xl"></div>
+              <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
+            </div>
+          </div>
+
+          {/* الوصف التفصيلي - للموبايل وأسفل الهيرو */}
+          <div className="mt-12 lg:mt-16">
             <Card className="text-right bg-white/5 backdrop-blur-md border-white/10 shadow-2xl overflow-hidden">
               <CardContent className="pt-8 pb-8 md:p-10">
                 <p className="text-lg md:text-xl text-white/95 leading-relaxed mb-8 font-light">
@@ -116,7 +200,7 @@ export function ServicePageLayout({ data }: { data: ServicePageData }) {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {data.heroContent.features.map((feature) => (
                     <div key={feature} className="flex items-center gap-3 bg-white/10 p-3 rounded-lg border border-white/5">
-                      <CheckCircle className="h-5 w-5 text-white flex-shrink-0" />
+                      <CheckCircle className="h-5 w-5 text-emerald-400 flex-shrink-0" />
                       <span className="text-base text-white font-medium">{feature}</span>
                     </div>
                   ))}
@@ -144,7 +228,7 @@ export function ServicePageLayout({ data }: { data: ServicePageData }) {
             <SummaryCard
               icon={CheckCircle}
               title="لماذا نحن؟"
-              description="خبرة 15+ عاماً، ضمان 10 سنوات، مواد معتمدة، وفريق متخصص يضمن جودة التنفيذ."
+              description="خبرة 15+ عاماً، ضمان 15 سنه، مواد معتمدة، وفريق متخصص يضمن جودة التنفيذ."
             />
           </div>
         </div>

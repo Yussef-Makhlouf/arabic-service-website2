@@ -4,6 +4,7 @@ import { FloatingActions } from "@/components/floating-actions"
 import { HeroSection } from "@/components/homepage/hero-section"
 import { ServicesOverview } from "@/components/homepage/services-overview"
 import { AboutSection } from "@/components/homepage/about-section"
+import { WhyChooseUsSection } from "@/components/homepage/why-choose-us-section"
 // import { FaqSection } from "@/components/homepage/faq-section"
 import { ServiceDecisionHelper } from "@/components/homepage/service-decision-helper"
 import { EmergencyServiceSection } from "@/components/homepage/emergency-service-section"
@@ -29,13 +30,16 @@ export default function HomePage() {
           <HeroSection />
         </section>
 
-        {/* 2. About / Why Choose Us - Build credibility */}
+        {/* 2. About - Build credibility */}
         <AboutSection />
 
-        {/* 3. Services Overview - Visual service cards */}
+        {/* 3. Why Choose Us - مميزات الشركة بالتفصيل */}
+        <WhyChooseUsSection />
+
+        {/* 4. Services Overview - Visual service cards */}
         <ServicesOverview />
 
-        {/* Foam Insulation Section - Educational content */}
+        {/* 5. Foam Insulation Section - Educational content */}
         <FoamInsulationSection />
 
         {/* 4. Comparison Table - Help decision making */}
@@ -69,7 +73,7 @@ export default function HomePage() {
           <BlogPreview />
         </section>
 
-   
+
 
         {/* New Services Table 1 */}
         <EliteInsulationServicesTable />
@@ -78,14 +82,14 @@ export default function HomePage() {
         <EliteInsulationSolutionsTable />
 
         {/* 10. Final CTA - Conversion */}
-        <section id="cta">
+        <section id="cta">  
           <EmergencyServiceSection />
         </section>
-             {/* 9. FAQ - Answer objections */}
+        {/* 9. FAQ - Answer objections */}
         <section id="faq">
           <FaqSection />
         </section>
-                <section id="testimonials">
+        <section id="testimonials">
           <TestimonialsSection />
         </section>
 

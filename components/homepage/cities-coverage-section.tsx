@@ -30,7 +30,7 @@ export function CitiesCoverageSection() {
         { name: "حي المحمدية", response: "خدمة فورية", unique: "فريق متخصص في العزل المائي" },
         { name: "حي الرحمانية", response: "40 دقيقة", unique: "خبرة في المباني الحديثة" },
         { name: "حي قرطبة", response: "خدمة فورية", unique: "أسعار تنافسية وجودة عالية" },
-        { name: "حي الفلاح", response: "30 دقيقة", unique: "ضمان مكتوب لـ 10 سنوات" },
+        { name: "حي الفلاح", response: "30 دقيقة", unique: "ضمان مكتوب لـ 15 سنه" },
         { name: "حي الوادي", response: "خدمة فورية", unique: "خدمة عملاء ممتازة" },
         { name: "حي الرمال", response: "45 دقيقة", unique: "فريق فني محترف" },
         { name: "حي الشفا", response: "خدمة فورية", unique: "استشارة مجانية قبل البدء" },
@@ -54,7 +54,7 @@ export function CitiesCoverageSection() {
         { name: "حي الشميسي", response: "35 دقيقة", unique: "متخصصون في كشف التسربات" },
         { name: "حي عتيقة", response: "خدمة فورية", unique: "فريق احترافي معتمد" },
         { name: "حي منفوحة", response: "45 دقيقة", unique: "خبرة في المباني القديمة" },
-        { name: "حي الدرعية", response: "خدمة فورية", unique: "ضمان شامل 10 سنوات" },
+        { name: "حي الدرعية", response: "خدمة فورية", unique: "ضمان شامل 15 سنه" },
         { name: "حي البديعة", response: "30 دقيقة", unique: "أحدث تقنيات العزل" },
         { name: "حي الديرة", response: "خدمة فورية", unique: "خبرة في المباني التراثية" },
         { name: "حي الوسطى", response: "40 دقيقة", unique: "خدمة سريعة ومضمونة" },
@@ -87,7 +87,7 @@ export function CitiesCoverageSection() {
         { name: "حي المونسية", response: "40 دقيقة", unique: "خدمات شاملة متكاملة" },
         { name: "حي الخزامى", response: "خدمة فورية", unique: "خبرة في العزل الحراري" },
         { name: "حي الروضة", response: "35 دقيقة", unique: "متخصصون في كشف التسربات" },
-        { name: "حي النزهة", response: "خدمة فورية", unique: "ضمان 10 سنوات مكتوب" },
+        { name: "حي النزهة", response: "خدمة فورية", unique: "ضمان 15 سنه مكتوب" },
         { name: "حي المرسلات", response: "45 دقيقة", unique: "فريق احترافي معتمد" },
         { name: "حي الفاروق", response: "خدمة فورية", unique: "خبرة في المباني التجارية" },
         { name: "حي الواحة", response: "30 دقيقة", unique: "أسعار تنافسية" },
@@ -110,7 +110,7 @@ export function CitiesCoverageSection() {
         { name: "حي المطار", response: "خدمة فورية", unique: "خدمة سريعة للطوارئ" },
         { name: "حي الصالحية", response: "40 دقيقة", unique: "فريق متخصص معتمد" },
         { name: "حي المصيف", response: "خدمة فورية", unique: "أحدث تقنيات العزل" },
-        { name: "حي الأندلس", response: "35 دقيقة", unique: "ضمان مكتوب 10 سنوات" },
+        { name: "حي الأندلس", response: "35 دقيقة", unique: "ضمان مكتوب 15 سنه" },
       ],
     },
     west: {
@@ -122,7 +122,7 @@ export function CitiesCoverageSection() {
         { name: "حي الربيع", response: "40 دقيقة", unique: "خدمات طوارئ متاحة" },
         { name: "حي العليا", response: "خدمة فورية", unique: "خبرة في المباني التجارية" },
         { name: "حي السليمانية", response: "35 دقيقة", unique: "متخصصون في العزل الحراري" },
-        { name: "حي العود", response: "خدمة فورية", unique: "ضمان شامل 10 سنوات" },
+        { name: "حي العود", response: "خدمة فورية", unique: "ضمان شامل 15 سنه" },
         { name: "حي الفيصلية", response: "45 دقيقة", unique: "فريق خبرة واسعة" },
         { name: "حي المربع", response: "خدمة فورية", unique: "تقنيات عزل متطورة" },
         { name: "حي الوزارات", response: "30 دقيقة", unique: "خدمة سريعة مضمونة" },
@@ -157,7 +157,7 @@ export function CitiesCoverageSection() {
         { name: "حي الملز", response: "40 دقيقة", unique: "خدمات طوارئ 24/7" },
         { name: "حي الفيصلية", response: "خدمة فورية", unique: "خبرة في الفنادق والمنتجعات" },
         { name: "حي العود", response: "35 دقيقة", unique: "متخصصون في المباني التراثية" },
-        { name: "حي البطحاء", response: "خدمة فورية", unique: "ضمان شامل 10 سنوات" },
+        { name: "حي البطحاء", response: "خدمة فورية", unique: "ضمان شامل 15 سنه" },
         { name: "حي الديرة", response: "45 دقيقة", unique: "فريق خبرة واسعة" },
         { name: "حي الفوطة", response: "خدمة فورية", unique: "تقنيات عزل متطورة" },
         { name: "حي جرير", response: "30 دقيقة", unique: "خدمة سريعة مضمونة" },
@@ -207,11 +207,10 @@ export function CitiesCoverageSection() {
             <button
               key={key}
               onClick={() => setActiveRegion(key)}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all ${
-                activeRegion === key
-                  ? "bg-primary text-primary-foreground shadow-lg scale-105"
-                  : "bg-background border-2 border-border hover:border-primary/50"
-              }`}
+              className={`px-6 py-3 rounded-xl font-semibold transition-all ${activeRegion === key
+                ? "bg-primary text-primary-foreground shadow-lg scale-105"
+                : "bg-background border-2 border-border hover:border-primary/50"
+                }`}
             >
               {region.name}
             </button>

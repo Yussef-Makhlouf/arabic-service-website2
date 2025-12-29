@@ -7,7 +7,7 @@ import { Search } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "كشف تسربات المياه بالرياض والخرج | 0507067378 | خدمة 24 ساعة | أجهزة حديثة",
+  title: "شركة كشف تسربات المياه بالرياض والخرج | 0507067378 |  ",
   description:
     "🔍 أفضل خدمة كشف تسربات المياه في الرياض والخرج. أجهزة إلكترونية حديثة ✓ كشف دقيق بدون تكسير ✓ تقارير موثقة ✓ إصلاح فوري ✓ خدمة 24/7. اتصل الآن: 0507067378",
   keywords: [
@@ -95,6 +95,7 @@ export default function LeakDetectionPage() {
     title: "كشف تسربات المياه بالرياض",
     subtitle: "تقنيات حديثة للكشف الدقيق عن التسربات بدون تكسير - خدمة 24 ساعة",
     breadcrumb: "خدماتنا / كشف تسربات المياه",
+    heroImage: "/cover5.png",
 
     heroContent: {
       description:
