@@ -10,7 +10,12 @@ import { getBlogs } from "@/lib/api-client"
 import { blogPosts as staticBlogPosts } from "@/lib/blog-data"
 
 export async function BlogPreview() {
-  const allPosts = await getBlogs('published')
+  let allPosts = null
+  try {
+    allPosts = await getBlogs('published')
+  } catch (error) {
+    console.error("Failed to fetch blogs for homepage:", error)
+  }
 
   let latestPosts = []
 

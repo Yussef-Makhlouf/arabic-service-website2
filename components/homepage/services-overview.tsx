@@ -9,7 +9,12 @@ import { getServices } from "@/lib/api-client"
 import { staticServices } from "@/lib/services-data"
 
 export async function ServicesOverview() {
-  const apiServices = await getServices()
+  let apiServices = null
+  try {
+    apiServices = await getServices()
+  } catch (error) {
+    console.error("Failed to fetch services for homepage:", error)
+  }
 
   let services = []
 

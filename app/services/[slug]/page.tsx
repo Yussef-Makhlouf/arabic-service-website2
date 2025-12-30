@@ -200,6 +200,7 @@ function transformApiService(apiService: any): {
 }
 
 // Fetch service data with fallback
+// Fetch service data with fallback
 async function getServiceData(slug: string) {
     try {
         const apiService = await getServiceBySlug(slug)
@@ -209,6 +210,12 @@ async function getServiceData(slug: string) {
     } catch (error) {
         console.error(`API unavailable for service ${slug}:`, error)
     }
+
+    // Fallback to static data
+    if (staticServicesData[slug]) {
+        return staticServicesData[slug]
+    }
+
     return null
 }
 
