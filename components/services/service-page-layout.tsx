@@ -468,22 +468,26 @@ function SectionRenderer({ section, index }: { section: ServiceSection; index: n
                 <div className={index % 2 === 1 ? "lg:order-2" : ""}>
                   <SectionHeader title={section.title} />
                   <div className="prose prose-lg max-w-none dark:prose-invert">
-                    {section.content?.split("\n\n").map((paragraph, i) => {
-                      if (paragraph.startsWith("**")) {
-                        const parts = paragraph.split("**")
+                    {section.content && /<[a-z][\s\S]*>/i.test(section.content) ? (
+                      <div dangerouslySetInnerHTML={{ __html: section.content }} />
+                    ) : (
+                      section.content?.split("\n\n").map((paragraph, i) => {
+                        if (paragraph.startsWith("**")) {
+                          const parts = paragraph.split("**")
+                          return (
+                            <div key={i} className="mb-4 bg-muted/30 p-4 rounded-lg border-r-4 border-primary">
+                              <h4 className="text-lg font-bold text-foreground mb-1">{parts[1]}</h4>
+                              <p className="text-muted-foreground leading-relaxed text-sm">{parts[2]}</p>
+                            </div>
+                          )
+                        }
                         return (
-                          <div key={i} className="mb-4 bg-muted/30 p-4 rounded-lg border-r-4 border-primary">
-                            <h4 className="text-lg font-bold text-foreground mb-1">{parts[1]}</h4>
-                            <p className="text-muted-foreground leading-relaxed text-sm">{parts[2]}</p>
-                          </div>
+                          <p key={i} className="text-muted-foreground leading-relaxed mb-4">
+                            {paragraph}
+                          </p>
                         )
-                      }
-                      return (
-                        <p key={i} className="text-muted-foreground leading-relaxed mb-4">
-                          {paragraph}
-                        </p>
-                      )
-                    })}
+                      })
+                    )}
                   </div>
                 </div>
                 <div

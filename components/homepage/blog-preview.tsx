@@ -5,10 +5,40 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { SectionHeader } from "@/components/ui/section-header"
-import { blogPosts } from "@/lib/blog-data"
+import { getBlogs } from "@/lib/api-client"
 
-export function BlogPreview() {
-  const latestPosts = blogPosts.slice(0, 3)
+import { blogPosts as staticBlogPosts } from "@/lib/blog-data"
+
+export async function BlogPreview() {
+  const allPosts = await getBlogs('published')
+
+  let latestPosts = []
+
+  if (Array.isArray(allPosts) && allPosts.length > 0) {
+    latestPosts = allPosts.slice(0, 3).map((post: any) => ({
+      id: post._id || post.id,
+      title: post.title,
+      excerpt: post.excerpt,
+      slug: post.slug,
+      image: post.image || '/cover.png',
+      imageQuery: '',
+      category: post.category || 'عام',
+      date: post.publishedAt || post.createdAt,
+      readTime: post.readTime || '5 دقائق'
+    }))
+  } else {
+    latestPosts = staticBlogPosts.slice(0, 3).map((post) => ({
+      id: post.id,
+      title: post.title,
+      excerpt: post.excerpt,
+      slug: post.slug,
+      image: post.image,
+      imageQuery: post.imageQuery || '',
+      category: post.category,
+      date: post.date,
+      readTime: post.readTime
+    }))
+  }
 
   return (
     <section className="py-16 md:py-24 bg-muted/30">
@@ -68,7 +98,7 @@ export function BlogPreview() {
         <div className="text-center mt-12">
           <Button size="lg" asChild variant="outline" className="group bg-transparent">
             <Link href="/blog" className="inline-flex items-center gap-2">
-              عرض جميع المقالات ({blogPosts.length} مقالة)
+              عرض جميع المقالات
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-all" />
             </Link>
           </Button>

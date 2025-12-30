@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer"
 import { FloatingActions } from "@/components/floating-actions"
 import { FaqSection } from "@/components/homepage/faq-section"
 import { ServiceAreas } from "@/components/services/service-areas"
+import { ContactForm } from "@/components/contact-form"
 import { Phone, MessageCircle, Mail, MapPin, Clock, ShieldCheck } from "lucide-react"
 import type { Metadata } from "next"
 
@@ -96,57 +97,65 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* Main Info Section */}
+            {/* Main Info Section with Form */}
             <section className="py-20 bg-muted/30">
-                <div className="container mx-auto px-4 text-right">
-                    <div className="max-w-4xl mx-auto bg-card rounded-3xl p-8 md:p-12 shadow-sm border border-border">
-                        <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
-                            <span className="w-2 h-8 bg-primary rounded-full"></span>
-                            لماذا تتواصل معنا؟
-                        </h2>
-                        <div className="grid md:grid-cols-2 gap-8">
-                            <div className="flex gap-4">
-                                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 text-primary">
-                                    <ShieldCheck className="w-6 h-6" />
+                <div className="container mx-auto px-4">
+                    <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                        {/* Contact Form */}
+                        <div>
+                            <ContactForm />
+                        </div>
+
+                        {/* Why Contact Us */}
+                        <div className="bg-card rounded-3xl p-8 md:p-12 shadow-sm border border-border h-full text-right">
+                            <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
+                                <span className="w-2 h-8 bg-primary rounded-full"></span>
+                                لماذا تتواصل معنا؟
+                            </h2>
+                            <div className="grid gap-8">
+                                <div className="flex gap-4">
+                                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 text-primary">
+                                        <ShieldCheck className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-lg mb-2">ضمان حقيقي</h4>
+                                        <p className="text-muted-foreground text-sm leading-relaxed">
+                                            نقدم ضمانات تصل إلى 15 سنه على جميع أعمال العزل التي نقوم بها.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 className="font-bold text-lg mb-2">ضمان حقيقي</h4>
-                                    <p className="text-muted-foreground text-sm leading-relaxed">
-                                        نقدم ضمانات تصل إلى 15 سنه على جميع أعمال العزل التي نقوم بها.
-                                    </p>
+                                <div className="flex gap-4">
+                                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 text-primary">
+                                        <MapPin className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-lg mb-2">تغطية شاملة</h4>
+                                        <p className="text-muted-foreground text-sm leading-relaxed">
+                                            نتواجد في جميع أحياء الرياض والخرج والمناطق المجاورة بأسرع وقت.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="flex gap-4">
-                                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 text-primary">
-                                    <MapPin className="w-6 h-6" />
+                                <div className="flex gap-4">
+                                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 text-primary">
+                                        <Clock className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-lg mb-2">سرعة التنفيذ</h4>
+                                        <p className="text-muted-foreground text-sm leading-relaxed">
+                                            نلتزم بالمواعيد المحددة وننجز العمل بدقة عالية وفي أسرع وقت ممكن.
+                                        </p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 className="font-bold text-lg mb-2">تغطية شاملة</h4>
-                                    <p className="text-muted-foreground text-sm leading-relaxed">
-                                        نتواجد في جميع أحياء الرياض والخرج والمناطق المجاورة بأسرع وقت.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex gap-4">
-                                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 text-primary">
-                                    <Clock className="w-6 h-6" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-lg mb-2">سرعة التنفيذ</h4>
-                                    <p className="text-muted-foreground text-sm leading-relaxed">
-                                        نلتزم بالمواعيد المحددة وننجز العمل بدقة عالية وفي أسرع وقت ممكن.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="flex gap-4">
-                                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 text-primary">
-                                    <Mail className="w-6 h-6" />
-                                </div>
-                                <div>
-                                    <h4 className="font-bold text-lg mb-2">أسعار تنافسية</h4>
-                                    <p className="text-muted-foreground text-sm leading-relaxed">
-                                        نقدم أفضل جودة بأفضل الأسعار مع توفير عروض وخصومات دورية.
-                                    </p>
+                                <div className="flex gap-4">
+                                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 text-primary">
+                                        <Mail className="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-lg mb-2">أسعار تنافسية</h4>
+                                        <p className="text-muted-foreground text-sm leading-relaxed">
+                                            نقدم أفضل جودة بأفضل الأسعار مع توفير عروض وخصومات دورية.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

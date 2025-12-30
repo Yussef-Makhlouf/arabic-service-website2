@@ -8,17 +8,74 @@ import { FloatingActions } from "@/components/floating-actions"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, ChevronLeft, ArrowRight } from "lucide-react"
-import { blogPosts, getBlogPostBySlug, getRelatedPosts } from "@/lib/blog-data"
+import { blogPosts, getBlogPostBySlug as getStaticBlogPost, getRelatedPosts as getStaticRelatedPosts, type BlogPost } from "@/lib/blog-data"
+import { getBlogBySlug, getRelatedBlogs, getBlogs } from "@/lib/api-client"
 import { BlogCard } from "@/components/blog/blog-card"
 import { MobileTableOfContents } from "@/components/blog/mobile-toc"
 import { Rating } from "@/components/ui/rating"
-import { Section, SectionRenderer, TableOfContents } from "@/components/blog/post-sections"
+import { Section, TableOfContents } from "@/components/blog/post-sections"
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>
 }
 
+// Transform API blog data to match frontend interface
+function transformApiBlog(apiBlog: any): BlogPost {
+  return {
+    id: apiBlog._id || apiBlog.id || 0,
+    slug: apiBlog.slug,
+    title: apiBlog.title,
+    excerpt: apiBlog.excerpt,
+    content: apiBlog.content,
+    image: apiBlog.image || '/cover.png',
+    imageQuery: apiBlog.imageQuery || '',
+    category: apiBlog.category || 'عام',
+    date: apiBlog.publishedAt || apiBlog.createdAt || new Date().toISOString(),
+    readTime: apiBlog.readTime || '5 دقائق',
+    featured: apiBlog.featured || false,
+    relatedServices: apiBlog.relatedServices || [],
+  }
+}
+
+// Fetch blog from API with fallback to static data
+async function getBlogData(slug: string): Promise<BlogPost | null> {
+  try {
+    const apiBlog = await getBlogBySlug(slug)
+    if (apiBlog) {
+      return transformApiBlog(apiBlog)
+    }
+    return null
+  } catch (error) {
+    console.error(`Failed to fetch blog ${slug}:`, error)
+    return null
+  }
+}
+
+// Fetch related blogs with fallback
+async function getRelatedBlogsData(slug: string, limit: number = 3): Promise<BlogPost[]> {
+  try {
+    const apiRelated = await getRelatedBlogs(slug, limit)
+    if (apiRelated && apiRelated.length > 0) {
+      return apiRelated.map(transformApiBlog)
+    }
+    return getStaticRelatedPosts(slug, limit)
+  } catch (error) {
+    return getStaticRelatedPosts(slug, limit)
+  }
+}
+
+// Generate static params from API + static data
 export async function generateStaticParams() {
+  try {
+    const apiBlogs = await getBlogs('published')
+    if (apiBlogs && apiBlogs.length > 0) {
+      return apiBlogs.map((blog: any) => ({ slug: blog.slug }))
+    }
+  } catch (error) {
+    console.log('Using static blog slugs for generateStaticParams')
+  }
+
+  // Fallback to static data
   return blogPosts.map((post) => ({
     slug: post.slug,
   }))
@@ -26,7 +83,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const { slug } = await params
-  const post = getBlogPostBySlug(slug)
+  const post = await getBlogData(slug)
 
   if (!post) {
     return { title: "المقال غير موجود" }
@@ -62,7 +119,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 }
 
 // Function to generate Article schema
-function generateArticleSchema(post: NonNullable<ReturnType<typeof getBlogPostBySlug>>) {
+function generateArticleSchema(post: BlogPost) {
   return {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -95,7 +152,7 @@ function generateArticleSchema(post: NonNullable<ReturnType<typeof getBlogPostBy
   }
 }
 
-function generateBreadcrumbSchema(post: NonNullable<ReturnType<typeof getBlogPostBySlug>>) {
+function generateBreadcrumbSchema(post: BlogPost) {
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -109,47 +166,48 @@ function generateBreadcrumbSchema(post: NonNullable<ReturnType<typeof getBlogPos
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params
-  const post = getBlogPostBySlug(slug)
+  const post = await getBlogData(slug)
 
   if (!post) {
     notFound()
   }
 
-  const relatedPosts = getRelatedPosts(slug, 3)
+  const relatedPosts = await getRelatedBlogsData(slug, 3)
   const articleSchema = generateArticleSchema(post)
   const breadcrumbSchema = generateBreadcrumbSchema(post)
 
 
-  // Parse post content into sections
-  const lines = post.content.split("\n");
-  const sections: Section[] = [];
-  let currentSection: Section | null = null;
+  // Process content to add IDs to headings and extract TOC
+  const processContent = (htmlContent: string) => {
+    const sections: Section[] = [];
+    let processedHtml = htmlContent;
 
-  lines.forEach(line => {
-    if (line.startsWith("## ")) {
-      if (currentSection) {
-        sections.push(currentSection);
-      }
-      const title = line.replace("## ", "").trim();
+    // Regex to match h2/h3 tags and add IDs
+    // Note: This is a simple regex and might need refinement for complex attributes
+    const headingRegex = /<(h[23])>(.*?)<\/\1>/g;
+
+    processedHtml = processedHtml.replace(headingRegex, (match, tag, content) => {
+      const title = content.replace(/<[^>]*>/g, '').trim(); // Remove inner HTML tags from title
       const id = encodeURIComponent(title.replace(/\s+/g, '-').toLowerCase());
-      let type: Section['type'] = "text";
-      if (title.includes("الأسئلة الشائعة")) type = "faq";
-      else if (title.includes("مشاكل وحلول")) type = "problems";
-      else if (title.includes("مقارنة") || title.includes("مميزات وعيوب")) type = "pros_cons";
-      else if (title.includes("دعوة للعمل") || title.includes("اتصل بنا")) type = "cta";
-      else if (title.includes("بطاقات تعريفية")) type = "intro_cards";
 
-      currentSection = { id, title, type, content: [] };
-    } else if (currentSection) {
-      currentSection.content.push(line);
-    }
-  });
+      // Only add H2s to TOC
+      if (tag === 'h2') {
+        sections.push({
+          id,
+          title,
+          type: 'text',
+          content: [] // Not used for TOC only
+        });
+      }
 
-  if (currentSection) {
-    sections.push(currentSection);
-  }
+      return `<${tag} id="${id}">${content}</${tag}>`;
+    });
 
-  const navSections = sections.filter(s => s.type === "text" || s.type === "pros_cons" || s.type === "faq" || s.type === "problems");
+    return { processedHtml, sections };
+  };
+
+  const { processedHtml, sections } = processContent(post.content);
+  const navSections = sections;
 
   return (
     <>
@@ -240,11 +298,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
 
             {/* Content Sections */}
-            <div className="space-y-4 md:space-y-6">
-              {sections.map((section, index) => (
-                <SectionRenderer key={section.id} section={section} index={index} />
-              ))}
-            </div>
+            <div
+              className="prose prose-lg dark:prose-invert max-w-none prose-headings:font-amiri prose-headings:text-foreground prose-p:text-muted-foreground prose-p:leading-relaxed prose-img:rounded-xl prose-img:shadow-lg focus:outline-none"
+              dangerouslySetInnerHTML={{ __html: processedHtml }}
+            />
 
             {/* Rating Component */}
             <div className="mt-20 md:mt-32 mb-10">

@@ -1,16 +1,16 @@
 export interface BlogPost {
-  id: number
+  id: number | string
   slug: string
   title: string
   excerpt: string
   content: string
   image: string
-  imageQuery: string
+  imageQuery?: string
   category: string
   date: string
   readTime: string
   featured: boolean
-  relatedServices: string[]
+  relatedServices?: string[]
 }
 
 export const blogPosts: BlogPost[] = [
@@ -1354,7 +1354,7 @@ export function getRelatedPosts(currentSlug: string, limit = 3): BlogPost[] {
     .filter(
       (post) =>
         post.category === currentPost.category ||
-        post.relatedServices.some((s) => currentPost.relatedServices.includes(s)),
+        (post.relatedServices || []).some((s) => (currentPost.relatedServices || []).includes(s)),
     )
     .slice(0, limit)
 }
