@@ -38,17 +38,24 @@ function transformApiBlog(apiBlog: any): BlogPost {
 }
 
 // Fetch blog from API with fallback to static data
+// Fetch blog from API with fallback to static data
 async function getBlogData(slug: string): Promise<BlogPost | null> {
   try {
     const apiBlog = await getBlogBySlug(slug)
     if (apiBlog) {
       return transformApiBlog(apiBlog)
     }
-    return null
   } catch (error) {
     console.error(`Failed to fetch blog ${slug}:`, error)
-    return null
   }
+
+  // Fallback to static data
+  const staticPost = blogPosts.find(p => p.slug === slug)
+  if (staticPost) {
+    return staticPost
+  }
+
+  return null
 }
 
 // Fetch related blogs with fallback
