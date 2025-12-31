@@ -101,7 +101,7 @@ export function ServicesPageHero() {
           <div className="relative hidden lg:block">
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10">
               <Image
-                src="/cover3.png"
+                src="/cover3.webp"
                 alt="خدمات عزل الأسطح في الرياض - عزل فوم وعزل مائي احترافي"
                 fill
                 className="object-cover"

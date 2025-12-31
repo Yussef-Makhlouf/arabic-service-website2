@@ -31,7 +31,7 @@ async function getServicesData(): Promise<Service[]> {
         description: service.subtitle,
         longDescription: service.hero?.description || service.subtitle,
         href: `/services/${service.slug}`,
-        image: service.hero?.image || '/cover.png',
+        image: service.hero?.image || '/cover.webp',
         icon: iconMap[service.icon] || Wind,
         features: service.hero?.features || [],
         keywords: service.seo?.keywords || []

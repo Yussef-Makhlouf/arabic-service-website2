@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "عزل فوم بولي يوريثان بالرياض | توفير 40% طاقة | ضمان 15 سنة",
     description: "أفضل خدمة عزل فوم في الرياض - عزل حراري ومائي معاً. توفير 40% من فاتورة الكهرباء. ضمان 15 عام.",
     type: "website",
-    images: ["/polyurethane-foam-insulation-application.jpg"],
+    images: ["/polyurethane-foam-insulation-application.webp"],
   },
 }
 
@@ -146,7 +146,7 @@ export default function FoamInsulationPage() {
     title: "شركة عزل فوم بالرياض",
     subtitle: "عزل حراري ومائي متطور بتقنية البولي يوريثان - وفّر حتى 40% من فاتورة الكهرباء",
     breadcrumb: "خدماتنا / عزل فوم",
-    heroImage: "/cover1.png",
+    heroImage: "/cover1.webp",
 
     heroContent: {
       description:
@@ -162,7 +162,7 @@ export default function FoamInsulationPage() {
     sections: [
       {
         title: "ما هو عزل الفوم بالرياض وكيف يعمل؟",
-        image: "/polyurethane-foam-insulation-application.jpg",
+        image: "/polyurethane-foam-insulation-application.webp",
         content: `عزل الفوم أو البولي يوريثان (Polyurethane Foam) بالرياض هو عبارة عن مادة عازلة متطورة يتم رشها مباشرة على الأسطح حيث تتمدد وتتصلب لتشكل طبقة عازلة متجانسة بدون أي فواصل أو وصلات. هذه التقنية تعتبر الأكثر تطوراً في مجال العزل وتستخدم على نطاق واسع في الرياض ودول الخليج نظراً لفعاليتها العالية في مواجهة الحرارة الشديدة.
 
 يتكون الفوم من مكونين كيميائيين يتم خلطهما أثناء الرش: البولي أول (Polyol) والأيزوسيانات (Isocyanate). عند اختلاطهما، يحدث تفاعل كيميائي ينتج عنه رغوة تتمدد لتصل إلى 30 ضعف حجمها الأصلي، ثم تتصلب خلال ثوانٍ لتشكل طبقة عازلة قوية ومرنة.
@@ -175,7 +175,7 @@ export default function FoamInsulationPage() {
       },
       {
         title: "أنواع عزل الفوم المستخدمة بالرياض",
-        image: "/roof-insulation-saudi-arabia.jpg",
+        image: "/roof-insulation-saudi-arabia.webp",
         content: `يوجد نوعان رئيسيان من عزل الفوم بالرياض، كل منهما له خصائص واستخدامات محددة:
 
 **1. الفوم المفتوح (Open Cell Foam):**
@@ -190,7 +190,7 @@ export default function FoamInsulationPage() {
       },
       {
         title: "عملية تطبيق عزل الفوم بالرياض",
-        image: "/roof3.png",
+        image: "/roof3.webp",
         content: `تطبيق عزل الفوم بالرياض يتطلب معدات متخصصة وخبرة عالية لضمان الجودة. فريقنا في الرياض مدرب على أعلى مستوى:
 
 التحضير:
@@ -209,7 +209,7 @@ export default function FoamInsulationPage() {
       },
       {
         title: "فوائد عزل الفوم الاقتصادية والبيئية",
-        image: "/thermal-insulation-energy-savings.jpg",
+        image: "/thermal-insulation-energy-savings.webp",
         content: `التوفير في فواتير الكهرباء:
 هذه هي الفائدة الأكبر والأكثر ملموسة. عزل الفوم يقلل استهلاك الكهرباء بنسبة 30-40% عن طريق تقليل الحمل على أجهزة التكييف. في المناخ السعودي الحار، فاتورة الكهرباء الصيفية قد تصل إلى 2000-3000 ريال شهرياً للفيلا المتوسطة. مع عزل الفوم، يمكن توفير 600-1200 ريال شهرياً، أي 7000-14000 ريال سنوياً. خلال 3-5 سنوات فقط، تسترد تكلفة العزل بالكامل من التوفير في الكهرباء.
 
@@ -256,7 +256,7 @@ export default function FoamInsulationPage() {
       },
       {
         title: "مقارنة عزل الفوم مع الطرق الأخرى",
-        image: "/roof8.jpg",
+        image: "/roof8.webp",
         content: `لاتخاذ قرار مدروس، إليك مقارنة توضيحية بين عزل الفوم والأنظمة التقليدية (مثل العزل المائي والحراري الطبقي و):
 
 الكفاءة ونوع العزل
@@ -326,7 +326,7 @@ export default function FoamInsulationPage() {
       },
       {
         title: "الخلاصة: هل عزل الفوم استثمار مربح؟",
-        image: "/roof12.png ",
+        image: "/roof12.webp ",
         content: `بكل المقاييس، نعم. تكلفة عزل الفوم تعتبر "استرداداً ذكياً" (ROI) وليس مجرد مصاريف.
 1. توفير فوري: انخفاض فاتورة الكهرباء من الشهر الأول.
 2. حماية للأصول: حماية خرسانة وحديد منزلك من الصدأ والتآكل.

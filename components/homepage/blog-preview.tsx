@@ -25,7 +25,7 @@ export async function BlogPreview() {
       title: post.title,
       excerpt: post.excerpt,
       slug: post.slug,
-      image: post.image || '/cover.png',
+      image: post.image || '/cover.webp',
       imageQuery: '',
       category: post.category || 'عام',
       date: post.publishedAt || post.createdAt,

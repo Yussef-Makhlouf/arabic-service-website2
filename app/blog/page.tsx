@@ -25,7 +25,7 @@ async function getBlogData() {
         title: blog.title,
         excerpt: blog.excerpt,
         content: blog.content,
-        image: blog.image || '/cover.png',
+        image: blog.image || '/cover.webp',
         imageQuery: '',
         category: blog.category || 'عام',
         date: new Date(blog.publishedAt || blog.createdAt).toLocaleDateString('ar-SA'),

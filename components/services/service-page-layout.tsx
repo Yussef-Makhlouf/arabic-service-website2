@@ -162,7 +162,7 @@ export function ServicePageLayout({ data }: { data: ServicePageData }) {
             <div className="relative hidden lg:block">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10">
                 <Image
-                  src={data.heroImage || "/cover3.png"}
+                  src={data.heroImage || "/cover3.webp"}
                   alt={data.title}
                   fill
                   className="object-cover"

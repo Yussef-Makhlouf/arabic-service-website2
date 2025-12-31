@@ -33,7 +33,7 @@ const staticServicesData: Record<string, {
             title: "شركة عزل فوم بالرياض",
             subtitle: "عزل حراري ومائي متطور بتقنية البولي يوريثان - وفّر حتى 40% من فاتورة الكهرباء",
             breadcrumb: "خدماتنا / عزل فوم",
-            heroImage: "/cover1.png",
+            heroImage: "/cover1.webp",
             heroContent: {
                 description: "عزل الفوم (البولي يوريثان) بالرياض هو أحدث تقنيات العزل في المملكة. يجمع بين العزل الحراري والمائي في طبقة واحدة، يعكس أشعة الشمس، يقلل استهلاك الطاقة بنسبة تصل إلى 40%، ويدوم لأكثر من 20 عاماً.",
                 features: ["عزل حراري ومائي في نفس الوقت", "توفير 30-40% من فاتورة الكهرباء", "عمر افتراضي يتجاوز 20 عاماً", "خفيف الوزن ولا يثقل السقف"],
@@ -41,7 +41,7 @@ const staticServicesData: Record<string, {
             sections: [
                 {
                     title: "ما هو عزل الفوم وكيف يعمل؟",
-                    image: "/polyurethane-foam-insulation-application.jpg",
+                    image: "/polyurethane-foam-insulation-application.webp",
                     content: "عزل الفوم أو البولي يوريثان هو عبارة عن مادة عازلة متطورة يتم رشها مباشرة على الأسطح حيث تتمدد وتتصلب لتشكل طبقة عازلة متجانسة بدون أي فواصل أو وصلات."
                 }
             ],
@@ -58,7 +58,7 @@ const staticServicesData: Record<string, {
             title: "شركة عزل فوم بالرياض والخرج 0507067378 ضمان 15 سنة ",
             description: "أفضل خدمة عزل فوم بولي يوريثان في الرياض والخرج. عزل حراري ومائي معاً ✓ توفير 40% من فاتورة الكهرباء ✓ ضمان 15 عام",
             keywords: ["عزل فوم", "عزل فوم بالرياض", "عزل حراري", "توفير الكهرباء"],
-            ogImage: "/polyurethane-foam-insulation-application.jpg"
+            ogImage: "/polyurethane-foam-insulation-application.webp"
         }
     },
     'waterproofing': {
@@ -67,7 +67,7 @@ const staticServicesData: Record<string, {
             title: "شركة عزل مائي بالرياض",
             subtitle: "حماية شاملة من تسرب المياه والرطوبة بأفضل المواد العالمية",
             breadcrumb: "خدماتنا / عزل مائي",
-            heroImage: "/cover.png",
+            heroImage: "/cover.webp",
             heroContent: {
                 description: "العزل المائي ضروري لحماية مبناك من أضرار تسرب مياه الأمطار والرطوبة. نستخدم مواد بيتومينية وأغشية معتمدة.",
                 features: ["حماية 100% من التسرب", "مواد معتمدة عالمياً", "مقاومة للحرارة والبرودة", "ضمان 15 سنة"],
@@ -84,7 +84,7 @@ const staticServicesData: Record<string, {
             title: "شركة عزل مائي بالرياض | حماية من التسربات | ضمان 15 سنة | 0507067378",
             description: "أفضل خدمة عزل مائي في الرياض - حماية شاملة من التسربات والرطوبة بمواد معتمدة وضمان 15 سنة",
             keywords: ["عزل مائي", "عزل مائي بالرياض", "حماية من التسربات"],
-            ogImage: "/cover.png"
+            ogImage: "/cover.webp"
         }
     },
     'leak-detection': {
@@ -93,7 +93,7 @@ const staticServicesData: Record<string, {
             title: "كشف تسربات المياه بالرياض",
             subtitle: "تقنيات حديثة لكشف التسربات بدقة عالية وبدون تكسير",
             breadcrumb: "خدماتنا / كشف تسربات",
-            heroImage: "/leak-detection-thermal-camera.jpg",
+            heroImage: "/leak-detection-thermal-camera.webp",
             heroContent: {
                 description: "خدمة كشف التسربات بأجهزة إلكترونية وكاميرات حرارية متطورة. نحدد موقع التسرب بدقة عالية دون تكسير.",
                 features: ["بدون تكسير", "دقة 99%", "تقرير مفصل بالصور", "إصلاح فوري"],
@@ -110,7 +110,7 @@ const staticServicesData: Record<string, {
             title: "كشف تسربات المياه بالرياض | بدون تكسير | أجهزة حديثة | 0507067378",
             description: "كشف تسربات المياه بالرياض بأحدث الأجهزة الإلكترونية والكاميرات الحرارية - بدون تكسير",
             keywords: ["كشف تسربات", "تسرب مياه", "كشف بدون تكسير"],
-            ogImage: "/leak-detection-thermal-camera.jpg"
+            ogImage: "/leak-detection-thermal-camera.webp"
         }
     },
     'tank-insulation': {
@@ -119,7 +119,7 @@ const staticServicesData: Record<string, {
             title: "عزل خزانات المياه بالرياض",
             subtitle: "حماية صحية بمواد إيبوكسي آمنة ومعتمدة من وزارة الصحة",
             breadcrumb: "خدماتنا / عزل خزانات",
-            heroImage: "/cover4.png",
+            heroImage: "/cover4.webp",
             heroContent: {
                 description: "عزل الخزانات ضروري لضمان نظافة مياه الشرب. نستخدم مواد إيبوكسي Food Grade معتمدة.",
                 features: ["مواد آمنة صحياً", "تنظيف وتعقيم شامل", "عزل داخلي وخارجي", "ضمان 15 سنة"],
@@ -136,7 +136,7 @@ const staticServicesData: Record<string, {
             title: "عزل خزانات المياه بالرياض | مواد آمنة صحياً | ضمان 15 سنة | 0507067378",
             description: "عزل خزانات المياه بالرياض بمواد إيبوكسي آمنة ومعتمدة - تنظيف وتعقيم شامل مع ضمان 15 سنة",
             keywords: ["عزل خزانات", "تنظيف خزانات", "إيبوكسي"],
-            ogImage: "/cover4.png"
+            ogImage: "/cover4.webp"
         }
     }
 }
@@ -176,7 +176,7 @@ function transformApiService(apiService: any): {
             title: apiService.title,
             subtitle: apiService.subtitle,
             breadcrumb: apiService.breadcrumb || `خدماتنا / ${apiService.title}`,
-            heroImage: apiService.hero?.image || '/cover.png',
+            heroImage: apiService.hero?.image || '/cover.webp',
             heroContent: {
                 description: apiService.hero?.description || apiService.subtitle,
                 features: apiService.hero?.features || []
@@ -193,7 +193,7 @@ function transformApiService(apiService: any): {
             title: apiService.seo?.title || `${apiService.title} | 0507067378`,
             description: apiService.seo?.description || apiService.subtitle,
             keywords: apiService.seo?.keywords || [],
-            ogImage: apiService.seo?.ogImage || apiService.hero?.image || '/cover.png'
+            ogImage: apiService.seo?.ogImage || apiService.hero?.image || '/cover.webp'
         },
         schemaOrg: apiService.schemaOrg
     }

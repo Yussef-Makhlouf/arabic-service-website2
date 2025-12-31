@@ -39,7 +39,7 @@ export default function AboutPage() {
                             <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none">
                                 <div className="relative aspect-video overflow-hidden rounded-3xl shadow-2xl border-4 border-background transform rotate-2 hover:rotate-0 transition-transform duration-500">
                                     <Image
-                                        src="/cover1.png"
+                                        src="/cover1.webp"
                                         alt="فريق عمل شركة العزل المتقدم لعزل الفوم في الرياض"
                                         fill
                                         className="object-cover"
@@ -62,7 +62,7 @@ export default function AboutPage() {
                                 <div className="relative grid grid-cols-2 gap-6">
                                     <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-xl mt-12 transform hover:-translate-y-2 transition-transform duration-300">
                                         <Image
-                                            src="/professional-roof-insulation-work-in-saudi-arabia.jpg"
+                                            src="/professional-roof-insulation-work-in-saudi-arabia.webp"
                                             alt="عزل أسطح مائي وحراري في الرياض باستخدام فوم البولي يوريثان"
                                             fill
                                             className="object-cover"
@@ -70,7 +70,7 @@ export default function AboutPage() {
                                     </div>
                                     <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
                                         <Image
-                                            src="/polyurethane-foam-insulation-application.jpg"
+                                            src="/polyurethane-foam-insulation-application.webp"
                                             alt="رش فوم عازل على الأسطح في السعودية"
                                             fill
                                             className="object-cover"
@@ -155,7 +155,7 @@ export default function AboutPage() {
                 {/* Visual Break - Banner */}
                 <section className="relative py-32 bg-primary overflow-hidden">
                     <Image
-                        src="/roof6.png"
+                        src="/roof6.webp"
                         alt="عزل فوم احترافي على الأسطح في الرياض"
                         fill
                         className="object-cover opacity-10 mix-blend-overlay"
@@ -188,7 +188,7 @@ export default function AboutPage() {
                         <div className="grid gap-16 lg:grid-cols-2 items-center">
                             <div className="relative aspect-square lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-border">
                                 <Image
-                                    src="/roof7.png"
+                                    src="/roof7.webp"
                                     alt="فريق العزل المتقدم أثناء تنفيذ عزل فوم احترافي على سطح منزل في الرياض"
                                     fill
                                     className="object-cover hover:scale-105 transition-transform duration-700"

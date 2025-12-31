@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "خدمات عزل الأسطح بالرياض | عزل فوم - عزل مائي - كشف تسربات",
     description: "دليلك الشامل لجميع خدمات عزل الأسطح في الرياض. مواد معتمدة وضمان 15 سنة.",
     type: "website",
-    images: ["/cover3.png"],
+    images: ["/cover3.webp"],
   },
 }
 

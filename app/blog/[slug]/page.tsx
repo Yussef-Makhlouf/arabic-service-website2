@@ -27,7 +27,7 @@ function transformApiBlog(apiBlog: any): BlogPost {
     title: apiBlog.title,
     excerpt: apiBlog.excerpt,
     content: apiBlog.content,
-    image: apiBlog.image || '/cover.png',
+    image: apiBlog.image || '/cover.webp',
     imageQuery: apiBlog.imageQuery || '',
     category: apiBlog.category || 'عام',
     date: apiBlog.publishedAt || apiBlog.createdAt || new Date().toISOString(),
@@ -146,7 +146,7 @@ function generateArticleSchema(post: BlogPost) {
       name: "شركة عزل الأسطح",
       logo: {
         "@type": "ImageObject",
-        url: "https://tebaservices.com/logo.png",
+        url: "https://tebaservices.com/logo.webp",
       },
     },
     mainEntityOfPage: {

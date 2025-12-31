@@ -21,7 +21,7 @@ export async function ServicesOverview() {
   if (Array.isArray(apiServices) && apiServices.length > 0) {
     services = apiServices.map((service: any) => ({
       id: service.slug,
-      image: service.hero?.image || '/cover.png',
+      image: service.hero?.image || '/cover.webp',
       icon: service.icon === 'Wind' ? Wind : service.icon === 'Droplets' ? Droplets : service.icon === 'Search' ? Search : Database,
       title: service.title,
       slug: `/services/${service.slug}`,
