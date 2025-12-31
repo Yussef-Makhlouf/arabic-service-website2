@@ -95,7 +95,7 @@ export default function LeakDetectionPage() {
     title: "كشف تسربات المياه بالرياض",
     subtitle: "تقنيات حديثة للكشف الدقيق عن التسربات بدون تكسير - خدمة 24 ساعة",
     breadcrumb: "خدماتنا / كشف تسربات المياه",
-    heroImage: "/cover5.png",
+    heroImage: "/cover5.webp",
 
     heroContent: {
       description:
@@ -111,7 +111,7 @@ export default function LeakDetectionPage() {
     sections: [
       {
         title: "لماذا الكشف المبكر مهم بالرياض؟",
-        image: "/leak-detection-thermal-camera.jpg",
+        image: "/leak-detection-thermal-camera.webp",
         content: `تسربات المياه بالرياض من أخطر المشاكل التي قد تواجه أي مبنى، وإن لم يتم اكتشافها وعلاجها مبكراً، قد تؤدي إلى أضرار جسيمة ومكلفة. نقدم خدمات كشف تسربات متخصصة في جميع أحياء الرياض والخرج.
 
 **الأضرار الإنشائية:** التسرب المستمر يؤدي إلى تآكل حديد التسليح في الخرسانة، مما يضعف البنية الإنشائية للمبنى تدريجياً. قد يستغرق هذا سنوات، لكن النتيجة النهائية قد تكون كارثية وتتطلب إصلاحات إنشائية باهظة التكلفة تصل إلى مئات الآلاف من الريالات.
@@ -128,7 +128,7 @@ export default function LeakDetectionPage() {
       },
       {
         title: "علامات وجود تسرب مياه بالرياض",
-        image: "/water-leak-detection-signs.jpg",
+        image: "/water-leak-detection-signs.webp",
         content: `معرفة علامات التسرب تساعدك على اكتشاف المشكلة مبكراً في منزلك بالرياض:
 
 **1. ارتفاع فاتورة المياه:** إذا ارتفعت فاتورتك بشكل ملحوظ دون زيادة في الاستهلاك، هذا مؤشر قوي على وجود تسرب خفي. قارن فواتير الأشهر الثلاثة الأخيرة.
@@ -153,7 +153,7 @@ export default function LeakDetectionPage() {
       },
       {
         title: "تقنيات الكشف المتطورة التي نستخدمها",
-        image: "/leak-detection-thermal-camera.jpg",
+        image: "/leak-detection-thermal-camera.webp",
         content: `نستخدم في شركتنا أحدث التقنيات العالمية للكشف عن التسربات بدقة ودون تكسير:
 
 **1. جهاز الاستشعار الإلكتروني (Acoustic Leak Detector):**
@@ -178,7 +178,7 @@ export default function LeakDetectionPage() {
       },
       {
         title: "خطوات خدمة كشف التسربات لدينا",
-        image: "/discovery.jpg",
+        image: "/discovery.webp",
         content: `عملية كشف التسربات لدينا منظمة واحترافية:
 
 **الخطوة 1 - المكالمة الأولية:**

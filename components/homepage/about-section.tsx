@@ -32,7 +32,7 @@ export function AboutSection() {
               {/* Main Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/professional-roof-insulation-work-in-saudi-arabia.jpg"
+                  src="/professional-roof-insulation-work-in-saudi-arabia.webp"
                   alt="فريق عمل شركة العزل المتقدم لخدمات العزل المعتمدة"
                   width={600}
                   height={450}

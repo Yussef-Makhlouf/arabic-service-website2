@@ -89,7 +89,7 @@ export default function TankInsulationPage() {
     title: "عزل خزانات المياه بالرياض",
     subtitle: "حماية شاملة للخزانات بمواد آمنة صحياً - ضمان نظافة مياهك",
     breadcrumb: "خدماتنا / عزل خزانات المياه",
-    heroImage: "/cover4.png",
+    heroImage: "/cover4.webp",
 
     heroContent: {
       description:
@@ -105,7 +105,7 @@ export default function TankInsulationPage() {
     sections: [
       {
         title: "أهمية عزل خزانات المياه بالرياض",
-        image: "/water-tank-insulation-maintenance.jpg",
+        image: "/water-tank-insulation-maintenance.webp",
         content: `خزانات المياه بالرياض تعتبر المصدر الأساسي للمياه المستخدمة في المنازل والمباني. سلامة ونظافة هذه المياه تعتمد بشكل كبير على جودة عزل الخزان وصيانته. بدون عزل مناسب، قد تتعرض مياه الشرب لمخاطر صحية خطيرة.
 
 **منع تلوث المياه:** الخزانات غير المعزولة معرضة لتسرب ملوثات خارجية: المياه الجوفية الملوثة قد تتسرب للخزانات الأرضية، الأتربة والحشرات قد تدخل من الشقوق، والطحالب والبكتيريا تنمو على الجدران الداخلية غير المعزولة. العزل الداخلي الصحي يمنع نمو الكائنات الدقيقة ويحافظ على نقاء المياه.
@@ -122,7 +122,7 @@ export default function TankInsulationPage() {
       },
       {
         title: "أنواع عزل خزانات المياه بالرياض",
-        image: "/cover5.png",
+        image: "/cover5.webp",
         content: `نقدم في الرياض نوعين أساسيين من العزل حسب الموقع والاحتياج:
 
 **1. العزل الداخلي للخزانات:**
@@ -147,7 +147,7 @@ export default function TankInsulationPage() {
       },
       {
         title: "خطوات خدمة عزل الخزانات لدينا",
-        image: "/cover4.png",
+        image: "/cover4.webp",
         content: `نتبع بروتوكول صارم يضمن أعلى مستوى من الجودة والسلامة:
 
 **المرحلة 1 - التفريغ والتنظيف:**
