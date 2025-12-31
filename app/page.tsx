@@ -15,6 +15,7 @@ import { CitiesDeepSEO } from "@/components/homepage/cities-deep-seo"
 import { BlogPreview } from "@/components/homepage/blog-preview"
 import { FaqSection } from "@/components/homepage/faq-section"
 import { FoamInsulationSection } from "@/components/homepage/foam-insulation-section"
+import { WaterproofingSection } from "@/components/homepage/waterproofing-section"
 import { FeaturedLocationCard } from "@/components/homepage/featured-location-card"
 import { EliteInsulationServicesTable } from "@/components/homepage/EliteInsulationServicesTable"
 import { EliteInsulationSolutionsTable } from "@/components/homepage/EliteInsulationSolutionsTable"
@@ -41,6 +42,9 @@ export default function HomePage() {
 
         {/* 5. Foam Insulation Section - Educational content */}
         <FoamInsulationSection />
+
+        {/* 6. Waterproofing Section - Technical Detail */}
+        <WaterproofingSection />
 
         {/* 4. Comparison Table - Help decision making */}
         <section id="comparison-table">
@@ -82,7 +86,7 @@ export default function HomePage() {
         <EliteInsulationSolutionsTable />
 
         {/* 10. Final CTA - Conversion */}
-        <section id="cta">  
+        <section id="cta">
           <EmergencyServiceSection />
         </section>
         {/* 9. FAQ - Answer objections */}

@@ -18,17 +18,22 @@ export function HeroSection() {
         {/* Main Headings - H1 محسّن لـ SEO */}
         <div className="space-y-6 max-w-5xl mx-auto animate-in fade-in slide-in-from-bottom-8 duration-700">
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight">
-            <span className="text-foreground">شركة عزل أسطح بالرياض و الخرج</span>
-            <span className="text-primary block mt-3">معتمدة في السعودية</span>
+            <span className="text-foreground block mb-2">شركة عزل اسطح بالرياض والخرج</span>
+            <span className="text-primary block text-2xl md:text-4xl mt-3 leading-normal">
+              الحل الهندسي المتكامل لحماية مبناك وضمان 15 سنة
+            </span>
           </h1>
 
-          {/* فقرة تعريفية شاملة - مهمة جداً للـ SEO */}
+          {/* فقرة تعريفية شاملة - كثافة عالية للكلمات المفتاحية */}
           <div className="text-lg md:text-xl text-muted-foreground/90 max-w-4xl mx-auto leading-relaxed space-y-4 text-right">
             <p>
-              نحن في <strong className="text-primary">شركة العزل المتقدم</strong> شركة متخصصة في <strong>عزل الأسطح</strong>، <strong>عزل الفوم</strong>، <strong>العزل المائي والحراري</strong>، و<strong>عزل خزانات المياه</strong> باستخدام أفضل المواد المعتمدة التي تتحمل الظروف المناخية القاسية في المملكة العربية السعودية.
+              إن قرار عزل المبنى في <strong>المملكة العربية السعودية</strong>، وتحديداً في مدن ذات مناخ قاسٍ مثل <strong>الرياض والخرج</strong>، يتجاوز كونه مجرد إجراء صيانة ليصبح <strong>استثماراً استراتيجياً</strong> في استدامة العقار وكفاءة الطاقة.
             </p>
             <p>
-              نعمل بخبرة تزيد عن <strong>15 عاماً</strong> في مجال العزل ونقدّم حلولًا فعّالة لحماية المباني من <strong>تسربات المياه</strong>، الرطوبة، ودرجات الحرارة المرتفعة. نلتزم بأعلى معايير الجودة ونوفر <strong>ضمان يصل إلى 15 سنه</strong> على جميع أعمالنا.
+              نحن في <strong className="text-primary">شركة العزل المتقدم</strong>، بخبرة تزيد عن <strong>15 عاماً</strong>، ندرك تماماً التحديات المناخية التي تواجه الهياكل الإنشائية: من درجات الحرارة التي تتجاوز الـ 50 درجة مئوية صيفاً، إلى التقلبات الجوية التي تسبب <strong>تسربات مياه</strong> مدمرة.
+            </p>
+            <p className="hidden md:block">
+              لذا، نقدم حلول <strong>عزل فوم بالرياض</strong> و<strong>عزل مائي</strong> متكاملة، مصممة خصيصاً لتحمل هذه الظروف القاسية. التزامنا بالجودة ينعكس في اعتمادنا من <strong>الهيئة السعودية للمهندسين</strong> وتقديمنا <strong>ضماناً شاملاً يصل إلى 15 سنة</strong> على جميع أعمالنا، مما يضمن لعملائنا راحة البال والجودة الموثوقة.
             </p>
           </div>
         </div>

@@ -58,53 +58,103 @@ export function FoamInsulationSection() {
                 </div>
             </div>
 
-            {/* 2. Definition & Core Concept */}
+            {/* 2. Definition & Core Concept - المحور التقني الأول: التحليل الكيميائي والفيزيائي */}
             <div className="container mx-auto py-16 px-4 md:px-6">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div className="space-y-6">
-                        <h3 className="text-3xl font-bold text-primary">ما هو عزل الفوم؟</h3>
-                        <div className="prose prose-lg dark:prose-invert text-muted-foreground">
-                            <p>
-                                عزل الفوم، أو ما يعرف علمياً بـ "رغوة البولي يوريثان" (Polyurethane Foam)، هو مادة عزل متطورة يتم تشكيلها من تفاعل كيميائي بين مادتين سائلتين. عند رش هاتين المادتين، تتفاعلان وتنتفخان لتشكل رغوة صلبة تلتصق بقوة بأي سطح يتم تطبيقها عليه.
-                            </p>
-                            <p>
-                                ما يميز عزل الفوم هو قدرته الفريدة على الوصول إلى أدق الشقوق والفراغات، مما يخلق "غلافاً" محكماً تماماً يمنع تسرب الحرارة والمياه بشكل لا يضاهى بالمواد التقليدية الأخرى. إنه ليس مجرد عازل، بل هو درع واقٍ متكامل يحمي الهيكل الخرساني للمبنى.
-                            </p>
-                            <ul className="space-y-2 mt-4">
-                                <li className="flex items-center gap-2">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500" />
-                                    <span>كثافة عالية وقوة تحمل فائقة.</span>
-                                </li>
-                                <li className="flex items-center gap-2">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500" />
-                                    <span>وزن خفيف لا يشكل عبئاً على السطح.</span>
-                                </li>
-                                <li className="flex items-center gap-2">
-                                    <CheckCircle2 className="h-5 w-5 text-green-500" />
-                                    <span>صديق للبيئة وآمن للاستخدام السكني.</span>
-                                </li>
-                            </ul>
+                <div className="space-y-12">
+                    {/* Chemical Composition */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                        <div className="space-y-6">
+                            <h3 className="text-3xl font-bold text-primary">المحور التقني: التحليل الكيميائي لعزل الفوم</h3>
+                            <div className="prose prose-lg dark:prose-invert text-muted-foreground leading-relaxed">
+                                <p>
+                                    عزل الفوم بولي يوريثان (Polyurethane Foam) هو نتاج تفاعل كيميائي طارد للحرارة (Exothermic Reaction) بين مركبين أساسيين:
+                                </p>
+                                <ul className="list-disc pr-5 space-y-2">
+                                    <li><strong>الأيزوسيانات (Isocyanate):</strong> المادة المصلبة التي تمنح الفوم هيكله المتماسك.</li>
+                                    <li><strong>البوليول (Polyol):</strong> الراتنج المسؤول عن تكوين الخلايا العازلة.</li>
+                                </ul>
+                                <p>
+                                    يتم خلط هذين المركبين بنسب دقيقة جداً (1:1 عادة) داخل غرفة خاصة في ماكينة الرش تحت ضغط وحرارة محددين. النتيجة هي تمدد المادة بمقدار 30 ضعف حجمها السائل لتشكل رغوة صلبة ذات <strong>خلايا مغلقة (Closed-Cell)</strong>.
+                                </p>
+                                <div className="bg-primary/5 p-4 rounded-xl border border-primary/20 mt-4">
+                                    <h4 className="font-bold text-primary mb-2">لماذا الخلايا المغلقة (Closed-Cell) هي الأفضل للرياض؟</h4>
+                                    <p className="text-sm">
+                                        على عكس الخلايا المفتوحة الإسفنجية، تتكون الخلايا المغلقة من فقاعات مجهرية محبوس بداخلها غاز عازل. هذا الهيكل يجعلها غير منفذة للماء تماماً وتمنحها صلابة هيكلية عالية، وهو ما نحتاجه تماماً لمواجهة الأمطار الغزيرة والحرارة الشديدة في السعودية.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Density & Specs Table */}
+                        <div className="bg-card rounded-2xl p-6 border shadow-sm h-full">
+                            <h4 className="text-xl font-bold mb-6 flex items-center gap-2">
+                                <ShieldCheck className="w-5 h-5 text-primary" />
+                                معايير الكفاءة الفنية (Technical Specs)
+                            </h4>
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-sm">
+                                    <tbody className="divide-y divide-border">
+                                        <tr className="bg-muted/50">
+                                            <td className="p-3 font-semibold">الكثافة (Density)</td>
+                                            <td className="p-3 text-primary font-bold">40 - 45 كجم/م³</td>
+                                            <td className="p-3 text-muted-foreground">المعيار المثالي لقوة التحمل</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 font-semibold">التوصيل الحراري (K-Value)</td>
+                                            <td className="p-3 font-bold">0.022 واط/م.ك</td>
+                                            <td className="p-3 text-muted-foreground">أقل معامل نقل حراري بين العوازل</td>
+                                        </tr>
+                                        <tr className="bg-muted/50">
+                                            <td className="p-3 font-semibold">المقاومة الحرارية (R-Value)</td>
+                                            <td className="p-3 font-bold">R-6.5 لكل بوصة</td>
+                                            <td className="p-3 text-muted-foreground">فائقة العزل</td>
+                                        </tr>
+                                        <tr>
+                                            <td className="p-3 font-semibold">امتصاص الماء</td>
+                                            <td className="p-3 font-bold">&lt; 2%</td>
+                                            <td className="p-3 text-muted-foreground">مقاومة شبه تامة للماء</td>
+                                        </tr>
+                                        <tr className="bg-muted/50">
+                                            <td className="p-3 font-semibold">قوة الضغط</td>
+                                            <td className="p-3 font-bold">&gt; 150 كيلو باسكال</td>
+                                            <td className="p-3 text-muted-foreground">يتحمل المشي فوقه والأحمال</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                    <div className="bg-muted rounded-2xl p-8 border shadow-sm">
-                        <h4 className="text-xl font-bold mb-4">الخصائص الفيزيائية</h4>
-                        <div className="space-y-4">
-                            <div className="flex justify-between items-center border-b pb-2">
-                                <span className="font-medium">التوصيل الحراري</span>
-                                <span className="text-primary font-bold">منخفض جداً</span>
-                            </div>
-                            <div className="flex justify-between items-center border-b pb-2">
-                                <span className="font-medium">مقاومة الماء</span>
-                                <span className="text-primary font-bold">عالية (خلايا مغلقة)</span>
-                            </div>
-                            <div className="flex justify-between items-center border-b pb-2">
-                                <span className="font-medium">الكثافة</span>
-                                <span className="text-primary font-bold">40 - 45 كجم/م3</span>
-                            </div>
-                            <div className="flex justify-between items-center border-b pb-2">
-                                <span className="font-medium">سمك التطبيق</span>
-                                <span className="text-primary font-bold">3 سم - 5 سم (حسب الحاجة)</span>
-                            </div>
+
+                    {/* Specialized Applications */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                        <div className="bg-gradient-to-br from-card to-muted p-8 rounded-2xl border hover:border-primary/50 transition-colors">
+                            <h4 className="text-xl font-bold mb-4 flex items-center gap-2 text-foreground">
+                                <Umbrella className="w-6 h-6 text-blue-500" />
+                                عزل الشينكو والأسطح المعدنية
+                            </h4>
+                            <p className="text-muted-foreground mb-4">
+                                أسطح الهناجر والمستودعات (الشينكو) تعاني من مشكلتين: الحرارة الرهيبة وصدأ الحديد.
+                            </p>
+                            <ul className="space-y-2 text-sm">
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> يلتصق الفوم بالمعدن بنسبة 100% ويمنع تلامس الاكسجين (يوقف الصدأ).</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> يعالج فك المسامير والفراغات التي تسبب الخرير.</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> يقلل صوت المطر والضوضاء الخارجية بشكل كبير.</li>
+                            </ul>
+                        </div>
+
+                        <div className="bg-gradient-to-br from-card to-muted p-8 rounded-2xl border hover:border-primary/50 transition-colors">
+                            <h4 className="text-xl font-bold mb-4 flex items-center gap-2 text-foreground">
+                                <Wrench className="w-6 h-6 text-orange-500" />
+                                العزل فوق البلاط (بدون تكسير)
+                            </h4>
+                            <p className="text-muted-foreground mb-4">
+                                للأسطح المبلطة القديمة التي تعاني من تسربات، الفوم هو الحل الاقتصادي الذكي.
+                            </p>
+                            <ul className="space-y-2 text-sm">
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> لا حاجة لإزالة البلاط أو الدفان (توفير في التكلفة والوقت).</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> يشكل طبقة واحدة تغطي الفواصل تماماً.</li>
+                                <li className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-green-500" /> خفيف الوزن لا يضيف حملاً زائداً على السقف القديم.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
