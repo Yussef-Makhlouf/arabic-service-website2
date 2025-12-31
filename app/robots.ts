@@ -5,8 +5,11 @@ export default function robots(): MetadataRoute.Robots {
         rules: {
             userAgent: '*',
             allow: '/',
-            disallow: '/private/',
+            disallow: ['/admin-dashboard/', '/admin-api/', '/private/'],
         },
-        sitemap: 'https://tebaservices.com/sitemap.xml',
+        sitemap:[
+             'https://tebaservices.com/sitemap.xml',
+              'https://www.tebaservices.com/sitemap.xml',
+        ]
     }
 }
