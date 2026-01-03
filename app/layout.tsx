@@ -1,32 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Cairo, Noto_Kufi_Arabic, Amiri, Tajawal } from "next/font/google"
+import { IBM_Plex_Sans_Arabic } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const cairo = Cairo({
+const ibmPlexArabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic"],
-  variable: "--font-cairo",
-  display: "swap",
-})
-
-const notoKufi = Noto_Kufi_Arabic({
-  subsets: ["arabic"],
-  variable: "--font-noto-kufi",
-  display: "swap",
-})
-
-// const amiri = Amiri({
-//   subsets: ["arabic"],
-//   weight: ["400", "700"],
-//   variable: "--font-amiri",
-//   display: "swap",
-// })
-
-const tajawal = Tajawal({
-  subsets: ["arabic"],
-  weight: ["300", "400", "500", "700"],
-  variable: "--font-tajawal",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-ibm-plex-arabic",
   display: "swap",
 })
 
@@ -412,7 +393,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="ar" dir="rtl" className={`${cairo.variable} ${notoKufi.variable} ${tajawal.variable}`}>
+    <html lang="ar" dir="rtl" className={`${ibmPlexArabic.variable}`}>
       <head>
         <script
           type="application/ld+json"

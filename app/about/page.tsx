@@ -39,7 +39,7 @@ export default function AboutPage() {
                             <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none">
                                 <div className="relative aspect-video overflow-hidden rounded-3xl shadow-2xl border-4 border-background transform rotate-2 hover:rotate-0 transition-transform duration-500">
                                     <Image
-                                        src="/cover1.webp"
+                                        src="/images/technician-applying-spray-foam-in-attic.webp"
                                         alt="فريق عمل شركة العزل المتقدم لعزل الفوم في الرياض"
                                         fill
                                         className="object-cover"
@@ -62,7 +62,7 @@ export default function AboutPage() {
                                 <div className="relative grid grid-cols-2 gap-6">
                                     <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-xl mt-12 transform hover:-translate-y-2 transition-transform duration-300">
                                         <Image
-                                            src="/professional-roof-insulation-work-in-saudi-arabia.webp"
+                                            src="/images/attic-with-completed-spray-foam-insulation.webp"
                                             alt="عزل أسطح مائي وحراري في الرياض باستخدام فوم البولي يوريثان"
                                             fill
                                             className="object-cover"
@@ -70,7 +70,7 @@ export default function AboutPage() {
                                     </div>
                                     <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-xl transform hover:-translate-y-2 transition-transform duration-300">
                                         <Image
-                                            src="/polyurethane-foam-insulation-application.webp"
+                                            src="/images/spray-foam-application-on-exterior-wall.webp"
                                             alt="رش فوم عازل على الأسطح في السعودية"
                                             fill
                                             className="object-cover"
@@ -155,13 +155,13 @@ export default function AboutPage() {
                 {/* Visual Break - Banner */}
                 <section className="relative py-32 bg-primary overflow-hidden">
                     <Image
-                        src="/roof6.webp"
+                        src="/images/worker-spraying-foam-insulation-on-ceiling.webp"
                         alt="عزل فوم احترافي على الأسطح في الرياض"
                         fill
                         className="object-cover opacity-10 mix-blend-overlay"
                     />
                     <div className="container mx-auto px-6 md:px-12 lg:px-20 relative z-10 text-center text-primary-foreground max-w-4xl">
-                        <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl mb-8 font-heading leading-tight">
+                        <h2 className="text-2xl font-bold tracking-tighter sm:text-5xl mb-8 font-heading leading-tight text-white">
                             هل تبحث عن حل نهائي لمشاكل العزل؟
                         </h2>
                         <p className="mx-auto max-w-2xl text-xl text-primary-foreground/90 mb-10 leading-relaxed">
@@ -188,7 +188,7 @@ export default function AboutPage() {
                         <div className="grid gap-16 lg:grid-cols-2 items-center">
                             <div className="relative aspect-square lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-border">
                                 <Image
-                                    src="/roof7.webp"
+                                    src="/images/technician-spraying-foam-in-protective-gear.webp"
                                     alt="فريق العزل المتقدم أثناء تنفيذ عزل فوم احترافي على سطح منزل في الرياض"
                                     fill
                                     className="object-cover hover:scale-105 transition-transform duration-700"
@@ -277,7 +277,7 @@ export default function AboutPage() {
                 {/* Final CTA */}
                 <section className="py-20 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground">
                     <div className="container mx-auto px-6 md:px-12 lg:px-20 max-w-5xl text-center">
-                        <h2 className="text-3xl md:text-4xl font-bold mb-6 font-heading">استعد لتجربة عزل لا تُضاهى</h2>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6 font-heading text-white">استعد لتجربة عزل لا تُضاهى</h2>
                         <p className="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
                             اختر شركة العزل المتقدم لعزل الفوم في الرياض لتستمتع بمنزل بارد صيفًا، دافئ شتاءً، وخالٍ من التسربات – مع ضمان قانوني موثق.
                         </p>

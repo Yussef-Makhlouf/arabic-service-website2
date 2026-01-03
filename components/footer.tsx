@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Phone, MapPin, MessageCircle, ChevronLeft } from "lucide-react"
+import { Phone, MapPin, MessageCircle, Clock, Shield, ChevronDown } from "lucide-react"
 import { FaInstagram, FaFacebook, FaYoutube, FaTiktok, FaSnapchat } from "react-icons/fa"
 
 export function Footer() {
@@ -11,15 +11,16 @@ export function Footer() {
 
   const links = [
     { name: "الرئيسية", href: "/" },
-    { name: "جميع الخدمات", href: "/services" },
     { name: "من نحن", href: "/about" },
+    { name: "جميع الخدمات", href: "/services" },
     { name: "المدونة", href: "/blog" },
+    { name: "اتصل بنا", href: "/contact" },
     { name: "سياسة الخصوصية", href: "/privacy" },
   ]
 
   const partnerLinks = [
-    { name: " شركة عزل فوم بالرياض ", href: "https://awazel-alsafrrat.com.sa/" },
-    { name: " شركة عزل اسطح بالرياض", href: "https://awazel-alsafrrat.sa/" },
+    { name: "شركة عزل فوم بالرياض", href: "https://awazel-alsafrrat.com.sa/" },
+    { name: "شركة عزل اسطح بالرياض", href: "https://awazel-alsafrrat.sa/" },
   ]
 
   const socialMedia = [
@@ -30,94 +31,96 @@ export function Footer() {
     { name: "Snapchat", href: "https://www.snapchat.com/@awazelalsafrrat?locale=ar", icon: FaSnapchat },
   ]
 
+  const serviceAreas = {
+    main: ["الرياض", "الخرج", "شمال الرياض", "الدرعية", "الدوادمي", "المجمعة"],
+    secondary: ["القويعية", "وادي الدواسر", "الأفلاج", "الزلفي", "شقراء", "حريملاء"],
+    tertiary: ["المزاحمية", "رماح", "ثادق", "حوطة بني تميم", "عفيف", "السليل", "الغاط", "الحريق", "ضرماء"]
+  }
 
   return (
-    <footer className="bg-card text-card-foreground border-t border-border">
+    <footer className="bg-primary text-white">
+      {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+
           {/* Company Info */}
-          <div>
-            <h3 className="font-heading text-xl font-bold mb-4">شركة العزل المتقدم</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-              شركة متخصصة في عزل الأسطح والخزانات بالرياض والخرج. معتمدون من الهيئة السعودية للمهندسين مع خبرة تزيد عن
-              15 عامًا وضمان حقيقي يصل إلى 15 سنه.
+          <div className="lg:col-span-1">
+            <div className="flex items-center gap-3 mb-6">
+              <img src="/logo.webp" alt="شركة العزل المتقدم" className="h-12 w-12 object-contain rounded-lg bg-white/10 p-1" />
+              <div>
+                <h3 className="font-heading text-xl text-white font-bold">شركة العزل المتقدم</h3>
+                <span className="text-sm text-white/70">الرياض والخرج</span>
+              </div>
+            </div>
+            <p className="text-sm text-white/80 leading-relaxed mb-6">
+              شركة متخصصة في عزل الأسطح والخزانات بالرياض والخرج. معتمدون من الهيئة السعودية للمهندسين مع خبرة تزيد عن 15 عامًا وضمان حقيقي يصل إلى 15 سنة.
             </p>
+
+            {/* Contact Info */}
             <div className="flex flex-col gap-3">
               <a
                 href="tel:+966507067378"
-                className="flex items-center gap-3 text-sm hover:text-primary transition-colors"
+                className="flex items-center gap-3 text-sm text-white/80 hover:text-secondary transition-colors group"
               >
-                <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                <div className="p-2 bg-white/10 rounded-lg group-hover:bg-secondary/20 transition-colors">
                   <Phone className="h-4 w-4" />
                 </div>
-                <span dir="ltr">0507067378</span>
+                <span dir="ltr" className="font-medium">0507067378</span>
               </a>
               <a
                 href="https://wa.me/966507067378"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-sm hover:text-primary transition-colors"
+                className="flex items-center gap-3 text-sm text-white/80 hover:text-green-400 transition-colors group"
               >
-                <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                <div className="p-2 bg-white/10 rounded-lg group-hover:bg-green-500/20 transition-colors">
                   <MessageCircle className="h-4 w-4" />
                 </div>
                 <span>واتساب</span>
               </a>
-
-              <div className="flex items-center gap-3 text-sm">
-                <div className="p-2 bg-primary/10 rounded-lg text-primary">
+              <div className="flex items-center gap-3 text-sm text-white/80">
+                <div className="p-2 bg-white/10 rounded-lg">
                   <MapPin className="h-4 w-4" />
                 </div>
-                الرياض، المملكة العربية السعودية
+                <span>الرياض، المملكة العربية السعودية</span>
               </div>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="font-heading text-lg font-bold mb-4">خدماتنا</h3>
+            <h3 className="font-heading text-lg font-bold text-white mb-5 flex items-center gap-2">
+              <span className="w-1 h-5 bg-secondary text-white rounded-full"></span>
+              خدماتنا
+            </h3>
             <ul className="flex flex-col gap-3">
               {services.map((service) => (
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-sm text-white/80 hover:text-secondary transition-colors"
                   >
                     {service.name}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/services" className="text-sm text-primary font-medium hover:underline">
+                <Link href="/services" className="text-sm text-secondary font-medium hover:underline">
                   عرض جميع الخدمات ←
                 </Link>
               </li>
             </ul>
-          </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-heading text-lg font-bold mb-4">روابط سريعة</h3>
-            <ul className="flex flex-col gap-3">
-              {links.map((link) => (
-                <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            {/* Partner Links */}
-            <h3 className="font-heading text-lg font-bold mb-4 mt-6">شركاؤنا</h3>
-            <ul className="flex flex-col gap-3">
+            {/* Partners */}
+            <h4 className="font-heading text-base font-bold text-white mt-8 mb-4 text-white/90">شركاؤنا</h4>
+            <ul className="flex flex-col gap-2">
               {partnerLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-sm text-white/70 hover:text-secondary transition-colors"
                   >
                     {link.name}
                   </a>
@@ -126,100 +129,136 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Service Areas */}
-          <div className="lg:col-span-1">
-            <h3 className="font-heading text-lg font-bold mb-4 flex items-center gap-2 text-primary">
-              <span className="w-1 h-6 bg-primary rounded-full"></span>
-              تغطية شاملة
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-heading text-lg font-bold text-white mb-5 flex items-center gap-2">
+              <span className="w-1 h-5 bg-secondary text-white rounded-full"></span>
+              روابط سريعة
             </h3>
-            <div className="space-y-6">
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                نقدم خدمات <span className="font-bold text-foreground">عزل اسطح بالرياض</span> و<span className="font-bold text-foreground">عزل اسطح بالخرج</span> وجميع محافظات ومدن منطقة الرياض بما فيها شمال الرياض من خلال أفضل <span className="font-bold text-foreground">شركات عزل خزانات شمال الرياض</span>.
-              </p>
+            <ul className="flex flex-col gap-3">
+              {links.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-white/80 hover:text-secondary transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-              <div className="grid grid-cols-2 gap-x-8 gap-y-3">
-                {[
-                  "الرياض", "الخرج",
-                  "شمال الرياض", "الدرعية",
-                  "الدوادمي", "المجمعة",
-                  "القويعية", "وادي الدواسر",
-                  "الأفلاج", "الزلفي",
-                  "شقراء", "حريملاء"
-                ].map((city) => (
-                  <div key={city} className="flex items-center justify-between text-sm group cursor-default">
-                    <span className="text-muted-foreground group-hover:text-primary transition-colors">{city}</span>
-                    <ChevronLeft className="w-4 h-4 text-primary/40 group-hover:text-primary transition-all ltr:rotate-180" />
-                  </div>
-                ))}
-              </div>
+          {/* Service Areas */}
+          <div>
+            <h3 className="font-heading text-lg font-bold mb-5 text-white/90 flex items-center gap-2">
+              <span className="w-1 h-5 bg-secondary text-white rounded-full"></span>
+              مناطق الخدمة
+            </h3>
+            <p className="text-sm text-white/70 leading-relaxed mb-4">
+              نقدم خدمات <span className="text-white font-medium">عزل اسطح بالرياض</span> و<span className="text-white font-medium">عزل اسطح بالخرج</span> وجميع محافظات منطقة الرياض.
+            </p>
 
-              <div className="flex flex-wrap gap-x-4 gap-y-2 text-[13px] text-muted-foreground/70 border-t border-border/50 pt-4">
-                {["المزاحمية", "رماح", "ثادق", "حوطة بني تميم", "عفيف", "السليل", "الغاط", "الحريق", "ضرماء"].map((city) => (
-                  <span key={city} className="hover:text-primary transition-colors">{city}</span>
-                ))}
-              </div>
+            <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-4">
+              {serviceAreas.main.map((city) => (
+                <span key={city} className="text-sm text-white/80 hover:text-secondary transition-colors cursor-default">
+                  {city}
+                </span>
+              ))}
             </div>
+
+            <details className="group">
+              <summary className="text-sm text-secondary cursor-pointer hover:underline flex items-center gap-1">
+                <span>المزيد من المناطق</span>
+                <ChevronDown className="h-4 w-4 group-open:rotate-180 transition-transform" />
+              </summary>
+              <div className="mt-3 pt-3 border-t border-white/10">
+                <div className="grid grid-cols-2 gap-x-4 gap-y-2 mb-3">
+                  {serviceAreas.secondary.map((city) => (
+                    <span key={city} className="text-sm text-white/70">
+                      {city}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs text-white/60">
+                  {serviceAreas.tertiary.map((city) => (
+                    <span key={city}>{city}</span>
+                  ))}
+                </div>
+              </div>
+            </details>
           </div>
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 pt-12 border-t border-border/50">
-          <div className="flex flex-col items-center p-6 bg-muted/30 rounded-2xl border border-border/50 text-center">
-            <span className="text-2xl font-bold text-primary mb-1">20+</span>
-            <span className="text-sm text-muted-foreground">محافظة ومدينة</span>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 pt-10 border-t border-white/10">
+          <div className="flex flex-col items-center p-4 bg-white/5 rounded-lg text-center">
+            <span className="text-2xl md:text-3xl font-bold text-secondary mb-1">15+</span>
+            <span className="text-xs md:text-sm text-white/70">سنة خبرة</span>
           </div>
-          <div className="flex flex-col items-center p-6 bg-muted/30 rounded-2xl border border-border/50 text-center">
-            <span className="text-2xl font-bold text-primary mb-1">24/7</span>
-            <span className="text-sm text-muted-foreground">خدمة على مدار الساعة</span>
+          <div className="flex flex-col items-center p-4 bg-white/5 rounded-lg text-center">
+            <span className="text-2xl md:text-3xl font-bold text-secondary mb-1">5000+</span>
+            <span className="text-xs md:text-sm text-white/70">مشروع منجز</span>
           </div>
-          <div className="flex flex-col items-center p-6 bg-muted/30 rounded-2xl border border-border/50 text-center">
-            <span className="text-2xl font-bold text-primary mb-1">100%</span>
-            <span className="text-sm text-muted-foreground">تغطية شاملة</span>
+          <div className="flex flex-col items-center p-4 bg-white/5 rounded-lg text-center">
+            <span className="text-2xl md:text-3xl font-bold text-secondary mb-1">20+</span>
+            <span className="text-xs md:text-sm text-white/70">منطقة خدمة</span>
+          </div>
+          <div className="flex flex-col items-center p-4 bg-white/5 rounded-lg text-center">
+            <span className="text-2xl md:text-3xl font-bold text-secondary mb-1">15 سنة</span>
+            <span className="text-xs md:text-sm text-white/70">ضمان شامل</span>
           </div>
         </div>
 
-        {/* Social Media Section */}
-        <div className="mt-12 pt-8 border-t border-border/50">
-          <div className="flex flex-col items-center gap-6">
-            <h3 className="font-heading text-lg font-bold text-center">تابعنا على</h3>
+        {/* Social Media */}
+        <div className="mt-10 pt-8 border-t border-white/10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
-              {socialMedia.map((social) => {
-                const Icon = social.icon
-                return (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 bg-primary/10 hover:bg-primary hover:text-primary-foreground rounded-full transition-all duration-300 group"
-                    aria-label={social.name}
-                  >
-                    <Icon className="h-5 w-5" />
-                  </a>
-                )
-              })}
+              <span className="text-sm text-white/70">تابعنا على:</span>
+              <div className="flex items-center gap-3">
+                {socialMedia.map((social) => {
+                  const Icon = social.icon
+                  return (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-white/10 hover:bg-secondary hover:text-primary rounded-lg transition-all duration-200"
+                      aria-label={social.name}
+                    >
+                      <Icon className="h-4 w-4" />
+                    </a>
+                  )
+                })}
+              </div>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-white/60">
+              <span className="flex items-center gap-1.5">
+                <Shield className="h-3.5 w-3.5" />
+                معتمدون من SASO
+              </span>
+              <span>•</span>
+              <span>ضمان 15 سنة</span>
+              <span>•</span>
+              <span>خبرة 15+ عاماً</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-border mt-8 md:mt-10 pt-6 md:pt-8">
-        <div className="flex flex-col items-center gap-4 text-center md:text-right">
-          <div className="flex flex-col gap-1">
-            <p className="text-xs md:text-sm text-muted-foreground">
-              © {new Date().getFullYear()} شركة العزل المتقدم لعزل الاسطح . جميع الحقوق محفوظة.
+      <div className="bg-primary/80 border-t border-white/10">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-center md:text-right">
+            <p className="text-xs text-white/60">
+              © {new Date().getFullYear()} شركة العزل المتقدم لعزل الاسطح - جميع الحقوق محفوظة
             </p>
-            <p className="text-sm md:text-base font-medium text-muted-foreground/80">
-              تصميم و تطوير بواسطة <span className="text-primary/80 font-medium">Ahmed Adham</span>
+            <p className="text-xs text-white/50">
+              تصميم وتطوير بواسطة <span className="text-secondary/80">Ahmed Adham</span>
             </p>
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6 text-xs md:text-sm text-muted-foreground">
-            <span>معتمدون من SASO</span>
-            <span className="hidden sm:inline">•</span>
-            <span>ضمان 15 سنه</span>
-            <span className="hidden sm:inline">•</span>
-            <span>خبرة 15+ عاماً</span>
           </div>
         </div>
       </div>

@@ -1,21 +1,30 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Badge } from "@/components/ui/badge"
 import {
   Phone,
   MessageCircle,
   CheckCircle,
-  ArrowLeft,
   ChevronLeft,
   type LucideIcon,
   HelpCircle,
-  Info,
+  Shield,
+  Award,
+  Clock,
+  Users,
+  Wrench,
+  Camera,
+  Star,
+  MapPin,
+  Zap,
+  Target,
+  ThumbsUp,
 } from "lucide-react"
-import { Rating } from "@/components/ui/rating"
 import { ServiceAreas } from "@/components/services/service-areas"
+import { StickyMobileCTA } from "@/components/services/sticky-mobile-cta"
 
 export type SectionType = "text-image" | "features-grid" | "process-timeline" | "faq-accordion" | "benefits-grid"
 
@@ -38,7 +47,7 @@ export interface ServicePageData {
   title: string
   subtitle: string
   breadcrumb: string
-  heroImage?: string // صورة خلفية للـ Hero
+  heroImage?: string
   heroContent: {
     description: string
     features: string[]
@@ -57,108 +66,113 @@ export function ServicePageLayout({ data }: { data: ServicePageData }) {
   return (
     <main className="min-h-screen bg-background dir-rtl">
       {/* Breadcrumb */}
-      <div className="bg-muted/30 border-b border-border">
-        <div className="container mx-auto px-4 py-3">
+      <div className="bg-primary/5 border-b border-border">
+        <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center gap-2 text-sm text-muted-foreground">
             <Link href="/" className="hover:text-primary transition-colors">
               الرئيسية
             </Link>
-            <ChevronLeft className="w-4 h-4 rtl:rotate-180" />
+            <ChevronLeft className="w-4 h-4" />
             <Link href="/services" className="hover:text-primary transition-colors">
               الخدمات
             </Link>
-            <ChevronLeft className="w-4 h-4 rtl:rotate-180" />
-            <span className="text-foreground font-medium">{data.title}</span>
+            <ChevronLeft className="w-4 h-4" />
+            <span className="text-primary font-medium">{data.title}</span>
           </nav>
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="relative min-h-[700px] flex items-center bg-gradient-to-br from-[#59478a] via-[#4a3a75] to-[#3d2f63] text-white overflow-hidden">
+      {/* Hero Section - Modern Design */}
+      <section className="relative bg-gradient-to-br from-primary via-primary to-primary/90 text-white overflow-hidden">
+        {/* Decorative Elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
+
         {/* Pattern overlay */}
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
+        <div className="absolute inset-0 opacity-[0.03]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z' fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'/%3E%3C/svg%3E")`,
+          }} />
+        </div>
 
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* المحتوى */}
-            <div className="space-y-8 text-center lg:text-right">
-              {/* شارة الثقة */}
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2.5 rounded-full shadow-lg">
-                <Icon className="h-5 w-5 text-amber-400" />
-                <span className="text-sm md:text-base font-medium text-white/95">خدمة معتمدة بضمان 15 سنة</span>
+            {/* Content Side */}
+            <div className="text-center lg:text-right space-y-6">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                <Award className="w-4 h-4 text-secondary" />
+                <span className="text-sm font-medium">خدمة معتمدة بضمان 15 سنة</span>
               </div>
 
-              {/* العنوان الرئيسي */}
-              <div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight drop-shadow-xl mb-4">
-                  {data.title}
-                </h1>
-                <p className="text-lg md:text-xl text-white/85 leading-relaxed max-w-xl lg:max-w-none mx-auto lg:mx-0">
-                  {data.subtitle}
-                </p>
+              {/* Title */}
+              <h1 className="text-3xl md:text-4xl text-white lg:text-5xl xl:text-6xl font-bold leading-tight font-heading">
+                {data.title}
+              </h1>
+
+              {/* Subtitle */}
+              <p className="text-lg md:text-xl text-white/85 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                {data.subtitle}
+              </p>
+
+              {/* Stats */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 py-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+                    <Clock className="w-6 h-6 text-secondary" />
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold">15+</div>
+                    <div className="text-sm text-white/70">سنة خبرة</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+                    <Users className="w-6 h-6 text-secondary" />
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold">5000+</div>
+                    <div className="text-sm text-white/70">عميل راضٍ</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
+                    <Shield className="w-6 h-6 text-secondary" />
+                  </div>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold">15</div>
+                    <div className="text-sm text-white/70">سنة ضمان</div>
+                  </div>
+                </div>
               </div>
 
-              {/* شارات المميزات */}
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                {data.heroContent.features.slice(0, 3).map((feature, i) => (
-                  <span
-                    key={i}
-                    className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg text-sm border border-white/10"
-                  >
-                    <CheckCircle className="w-4 h-4 text-emerald-400" />
-                    {feature}
-                  </span>
-                ))}
-              </div>
-
-              {/* أزرار CTA */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
                 <Button
                   size="lg"
-                  variant="secondary"
-                  className="gap-3 text-lg h-16 px-8 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-white text-[#59478a] hover:bg-gray-100 font-bold"
+                  className="gap-3 text-lg h-14 px-8 bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-xl hover:shadow-2xl transition-all font-bold"
                   asChild
                 >
                   <a href="tel:+966507067378">
-                    <Phone className="h-6 w-6" />
+                    <Phone className="h-5 w-5" />
                     اتصل الآن: 0507067378
                   </a>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="gap-3 text-lg h-16 px-8 border-white/30 text-white hover:bg-white/10 bg-white/5 backdrop-blur-md shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                  className="gap-3 text-lg h-14 px-8 border-white/30 text-white hover:bg-white/10 bg-white/5 shadow-lg"
                   asChild
                 >
                   <a href="https://wa.me/966507067378" target="_blank" rel="noopener noreferrer">
-                    <MessageCircle className="h-6 w-6" />
-                    واتساب للاستشارة
+                    <MessageCircle className="h-5 w-5" />
+                    واتساب
                   </a>
                 </Button>
               </div>
-
-              {/* الإحصائيات */}
-              <div className="grid grid-cols-4 gap-4 pt-6 border-t border-white/20">
-                <div className="text-center p-2">
-                  <div className="text-2xl md:text-3xl font-bold text-white">+15</div>
-                  <div className="text-xs md:text-sm text-white/70">سنة خبرة</div>
-                </div>
-                <div className="text-center p-2">
-                  <div className="text-2xl md:text-3xl font-bold text-white">+5000</div>
-                  <div className="text-xs md:text-sm text-white/70">مشروع</div>
-                </div>
-                <div className="text-center p-2">
-                  <div className="text-2xl md:text-3xl font-bold text-white">15</div>
-                  <div className="text-xs md:text-sm text-white/70">سنة ضمان</div>
-                </div>
-                <div className="text-center p-2">
-                  <div className="text-2xl md:text-3xl font-bold text-white">24/7</div>
-                  <div className="text-xs md:text-sm text-white/70">دعم فني</div>
-                </div>
-              </div>
             </div>
 
-            {/* الصورة */}
+            {/* Image Side */}
             <div className="relative hidden lg:block">
               <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10">
                 <Image
@@ -168,355 +182,431 @@ export function ServicePageLayout({ data }: { data: ServicePageData }) {
                   className="object-cover"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#59478a]/60 via-transparent to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
+              </div>
 
-                {/* بطاقة عائمة */}
-                <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-2xl p-5 shadow-xl">
-                  <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center">
-                      <Icon className="w-7 h-7 text-white" />
-                    </div>
-                    <div>
-                      <div className="font-bold text-foreground text-lg">ضمان 15 سنة مكتوب</div>
-                      <div className="text-sm text-muted-foreground">على جميع أعمال العزل والمواد</div>
-                    </div>
+              {/* Floating Badge */}
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-5 shadow-2xl">
+                <div className="flex items-center gap-3">
+                  <div className="w-14 h-14 rounded-xl bg-primary flex items-center justify-center">
+                    <Icon className="w-7 h-7 text-white" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-foreground text-lg">ضمان شامل</div>
+                    <div className="text-sm text-muted-foreground">15 سنة على جميع الأعمال</div>
                   </div>
                 </div>
               </div>
-
-              {/* زخرفة */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-amber-400/20 rounded-full blur-3xl"></div>
-              <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-primary/20 rounded-full blur-3xl"></div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* الوصف التفصيلي - للموبايل وأسفل الهيرو */}
-          <div className="mt-12 lg:mt-16">
-            <Card className="text-right bg-white/5 backdrop-blur-md border-white/10 shadow-2xl overflow-hidden">
-              <CardContent className="pt-8 pb-8 md:p-10">
-                <p className="text-lg md:text-xl text-white/95 leading-relaxed mb-8 font-light">
-                  {data.heroContent.description}
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {data.heroContent.features.map((feature) => (
-                    <div key={feature} className="flex items-center gap-3 bg-white/10 p-3 rounded-lg border border-white/5">
-                      <CheckCircle className="h-5 w-5 text-emerald-400 flex-shrink-0" />
-                      <span className="text-base text-white font-medium">{feature}</span>
-                    </div>
-                  ))}
+      {/* Quick Info Cards */}
+      <section className="py-12 bg-muted/30 border-b border-border">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Card className="border-border/60 hover:border-primary/30 hover:shadow-lg transition-all group">
+              <CardContent className="p-6 text-center">
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <Target className="w-7 h-7 text-primary group-hover:text-white" />
                 </div>
+                <h3 className="font-bold text-lg text-foreground mb-2">لمن هذه الخدمة؟</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  أصحاب الفلل والمباني التجارية والمستودعات الذين يريدون حماية عقاراتهم
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/60 hover:border-primary/30 hover:shadow-lg transition-all group">
+              <CardContent className="p-6 text-center">
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <Clock className="w-7 h-7 text-primary group-hover:text-white" />
+                </div>
+                <h3 className="font-bold text-lg text-foreground mb-2">متى تطلبها؟</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  قبل موسم الأمطار، عند ظهور علامات التسرب، أو كإجراء وقائي
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/60 hover:border-primary/30 hover:shadow-lg transition-all group">
+              <CardContent className="p-6 text-center">
+                <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+                  <ThumbsUp className="w-7 h-7 text-primary group-hover:text-white" />
+                </div>
+                <h3 className="font-bold text-lg text-foreground mb-2">لماذا نحن؟</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  خبرة 15+ عاماً، ضمان 15 سنة، مواد معتمدة، وفريق متخصص
+                </p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Quick Summary Section */}
-      <section className="py-16 bg-muted/30 border-b">
-        <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
-            <SummaryCard
-              icon={HelpCircle}
-              title="لمن هذه الخدمة؟"
-              description="أصحاب الفلل والمباني التجارية والمستودعات الذين يعانون من مشاكل التسرب أو يريدون الوقاية."
-            />
-            <SummaryCard
-              icon={Info}
-              title="متى تطلبها؟"
-              description="قبل موسم الأمطار، عند ظهور علامات التسرب، أو كإجراء وقائي للمباني الجديدة."
-            />
-            <SummaryCard
-              icon={CheckCircle}
-              title="لماذا نحن؟"
-              description="خبرة 15+ عاماً، ضمان 15 سنه، مواد معتمدة، وفريق متخصص يضمن جودة التنفيذ."
-            />
-          </div>
-        </div>
-      </section>
+      {/* Main Content */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid lg:grid-cols-[1fr_340px] gap-12">
 
-      <div className="bg-background">
-        {data.sections.map((section, index) => (
-          <SectionRenderer key={index} section={section} index={index} />
-        ))}
+          {/* Content Area */}
+          <div className="space-y-16 order-2 lg:order-1">
+
+            {/* About Service */}
+            <section>
+              <SectionHeader icon={Zap} title="عن الخدمة" />
+              <div className="prose prose-lg max-w-none">
+                <p className="text-muted-foreground leading-loose text-lg">
+                  {data.heroContent.description}
+                </p>
+              </div>
+
+              {data.heroContent.features.length > 0 && (
+                <div className="mt-8 grid sm:grid-cols-2 gap-4">
+                  {data.heroContent.features.map((feature, i) => (
+                    <div key={i} className="flex items-center gap-3 p-4 bg-green-50 dark:bg-green-950/20 rounded-xl border border-green-100 dark:border-green-900">
+                      <div className="w-8 h-8 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="w-4 h-4 text-green-600" />
+                      </div>
+                      <span className="text-foreground font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </section>
+
+            {/* Dynamic Sections */}
+            {data.sections.map((section, index) => (
+              <SectionRenderer key={index} section={section} index={index} />
+            ))}
+
+          </div>
+
+          {/* Sidebar */}
+          <aside className="order-1 lg:order-2">
+            <div className="lg:sticky lg:top-24 space-y-6">
+              {/* Service Card */}
+              <Card className="border-border shadow-xl overflow-hidden">
+                <div className="bg-primary p-5">
+                  <h3 className="text-lg font-bold text-white text-center">معلومات الخدمة</h3>
+                </div>
+                <CardContent className="p-6 space-y-5">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <Clock className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground">مدة التنفيذ</div>
+                        <div className="font-bold text-foreground">1-3 أيام</div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <Shield className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground">الضمان</div>
+                        <div className="font-bold text-foreground">15 سنة مكتوب</div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <MapPin className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <div className="text-sm text-muted-foreground">نطاق الخدمة</div>
+                        <div className="font-bold text-foreground">الرياض والخرج</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-border space-y-3">
+                    <Button
+                      size="lg"
+                      className="w-full gap-2 h-13 text-base font-bold bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-lg"
+                      asChild
+                    >
+                      <a href="tel:+966507067378">
+                        <Phone className="h-5 w-5" />
+                        اتصل الآن
+                      </a>
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="w-full gap-2 h-13 text-base font-bold border-green-500 text-green-600 hover:bg-green-50"
+                      asChild
+                    >
+                      <a href="https://wa.me/966507067378" target="_blank" rel="noopener noreferrer">
+                        <MessageCircle className="h-5 w-5" />
+                        واتساب
+                      </a>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Why Choose Us */}
+              <Card className="border-border shadow-lg">
+                <CardContent className="p-6">
+                  <h4 className="font-bold text-foreground mb-5 text-center">لماذا تختارنا؟</h4>
+                  <div className="space-y-3">
+                    {[
+                      "خبرة أكثر من 15 عاماً",
+                      "مواد معتمدة عالمياً",
+                      "فريق فني متخصص",
+                      "ضمان مكتوب 15 سنة",
+                      "أسعار منافسة",
+                      "خدمة سريعة"
+                    ].map((item, i) => (
+                      <div key={i} className="flex items-center gap-3 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        <span className="text-muted-foreground">{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Rating */}
+              <Card className="border-border shadow-lg bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20">
+                <CardContent className="p-6 text-center">
+                  <div className="flex items-center justify-center gap-1 mb-3">
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <Star key={i} className="w-6 h-6 fill-amber-400 text-amber-400" />
+                    ))}
+                  </div>
+                  <div className="text-2xl font-bold text-foreground">4.9/5</div>
+                  <div className="text-sm text-muted-foreground mt-1">من أكثر من 5000 عميل</div>
+                </CardContent>
+              </Card>
+            </div>
+          </aside>
+
+        </div>
       </div>
 
-      {/* Service Areas Section */}
+      {/* Gallery Section */}
+      <section className="py-16 bg-muted/30 border-y border-border">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <SectionHeader icon={Camera} title="معرض أعمالنا" centered />
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div key={i} className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                <Image
+                  src={`/cover${(i % 4) + 1}.webp`}
+                  alt={`مشروع ${i}`}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-4 right-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="font-bold">مشروع {i}</div>
+                  <div className="text-sm text-white/80">الرياض</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas */}
       <ServiceAreas serviceName={data.title} />
 
-      {/* Rating Section */}
-      <section className="py-12 bg-background border-t">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto flex justify-center">
-            <Rating
-              rating={4.9}
-              totalReviews={1250}
-              className="w-full max-w-md bg-muted/20 border-border/50"
-            />
-          </div>
-        </div>
-      </section>
+      {/* Final CTA */}
+      <section className="py-20 md:py-28 bg-gradient-to-br from-primary via-primary to-primary/90 text-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3" />
 
-      {/* Other Services Link */}
-      <section className="py-16 bg-muted/30 border-y">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h3 className="text-3xl font-bold mb-4 font-heading">هل تبحث عن خدمة أخرى؟</h3>
-            <p className="text-muted-foreground text-lg mb-8">
-              نقدم مجموعة متكاملة من خدمات العزل والكشف عن التسربات لتغطية جميع احتياجاتك
-            </p>
-            <Button asChild size="lg" variant="outline" className="gap-2 h-12 px-8 text-base">
-              <Link href="/services">
-                عرض جميع خدماتنا
-                <ArrowLeft className="w-4 h-4 rtl:rotate-180" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 rounded-2xl mb-6">
+              <Phone className="w-8 h-8 text-secondary" />
+            </div>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-[#59478a] text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5"></div>
-        <div className="container relative mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6">{data.ctaSection.title}</h2>
-            <p className="text-xl leading-relaxed mb-10 opacity-90 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 font-heading">
+              {data.ctaSection.title}
+            </h2>
+            <p className="text-lg md:text-xl text-white/85 mb-10 leading-relaxed">
               {data.ctaSection.description}
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 max-w-2xl mx-auto">
-              {data.ctaSection.benefits.map((benefit) => (
-                <div key={benefit} className="flex items-center gap-2 justify-center md:justify-start bg-white/10 p-3 rounded-lg">
-                  <CheckCircle className="h-5 w-5 flex-shrink-0 text-secondary" />
-                  <span className="text-base font-medium">{benefit}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button
                 size="lg"
-                variant="secondary"
-                className="gap-2 text-lg h-14 px-8 bg-white text-primary hover:bg-white/90 shadow-lg"
+                className="gap-3 text-lg h-16 px-10 bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-2xl font-bold"
                 asChild
               >
                 <a href="tel:+966507067378">
-                  <Phone className="h-5 w-5" />
-                  اطلب الخدمة الآن
+                  <Phone className="h-6 w-6" />
+                  اتصل الآن: 0507067378
                 </a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="gap-2 text-lg h-14 px-8 border-white/30 hover:bg-white/10 bg-transparent text-white"
+                className="gap-3 text-lg h-16 px-10 border-white/30 text-white hover:bg-white/10 bg-white/5"
                 asChild
               >
                 <a href="https://wa.me/966507067378" target="_blank" rel="noopener noreferrer">
-                  <MessageCircle className="h-5 w-5" />
-                  تواصل واتساب
+                  <MessageCircle className="h-6 w-6" />
+                  واتساب
                 </a>
               </Button>
+            </div>
+
+            <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full border border-white/20">
+              <Shield className="h-5 w-5 text-secondary" />
+              <span className="font-medium">ضمان 15 سنة مكتوب على جميع أعمالنا</span>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Sticky Mobile CTA */}
+      <StickyMobileCTA />
     </main>
   )
 }
 
-function SummaryCard({ icon: Icon, title, description }: { icon: LucideIcon; title: string; description: string }) {
+// Section Header Component
+function SectionHeader({ icon: Icon, title, centered = false }: { icon: LucideIcon; title: string; centered?: boolean }) {
   return (
-    <div className="bg-background rounded-2xl p-8 shadow-sm border border-border hover:shadow-md transition-shadow text-center">
-      <div className="inline-flex items-center justify-center w-14 h-14 bg-primary/10 rounded-full mb-4 text-primary">
-        <Icon className="h-7 w-7" />
+    <div className={`flex items-center gap-3 mb-6 ${centered ? 'justify-center' : ''}`}>
+      <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+        <Icon className="w-5 h-5 text-white" />
       </div>
-      <h3 className="text-xl font-bold text-foreground mb-3">{title}</h3>
-      <p className="text-muted-foreground leading-relaxed">{description}</p>
+      <h2 className="text-2xl md:text-3xl font-bold text-foreground font-heading">{title}</h2>
     </div>
   )
 }
 
+// Section Renderer Component
 function SectionRenderer({ section, index }: { section: ServiceSection; index: number }) {
-  const isEven = index % 2 === 0
-  const bgClass = isEven ? "bg-background" : "bg-muted/30"
-
   switch (section.type) {
     case "features-grid":
       return (
-        <section className={`py-20 ${bgClass}`}>
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <SectionHeader title={section.title} centered />
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {section.items?.map((item, i) => (
-                  <Card key={i} className="border-border/60 hover:border-primary/50 transition-colors shadow-sm hover:shadow-md">
-                    <CardHeader>
-                      <CardTitle className="flex items-start gap-3 text-lg leading-tight">
-                        <div className="mt-1 w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                        {item.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground leading-relaxed text-sm">{item.description}</p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
+        <section>
+          <SectionHeader icon={CheckCircle} title={section.title} />
+          <div className="grid sm:grid-cols-2 gap-4">
+            {section.items?.map((item, i) => (
+              <Card key={i} className="border-border/60 hover:border-primary/30 hover:shadow-md transition-all">
+                <CardContent className="p-5">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-green-100 dark:bg-green-900/30 flex items-center justify-center flex-shrink-0">
+                      <CheckCircle className="w-5 h-5 text-green-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-foreground mb-1">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </section>
       )
 
     case "benefits-grid":
       return (
-        <section className={`py-20 ${bgClass}`}>
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto">
-              <SectionHeader title={section.title} centered />
-              <div className="grid sm:grid-cols-2 gap-6">
-                {section.items?.map((item, i) => (
-                  <div key={i} className="flex gap-4 p-6 bg-background rounded-xl border border-border shadow-sm transition-hover hover:shadow-md">
-                    <div className="flex-shrink-0">
-                      <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
-                        <CheckCircle className="w-5 h-5" />
-                      </div>
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed text-sm">{item.description}</p>
-                    </div>
-                  </div>
-                ))}
+        <section>
+          <SectionHeader icon={Award} title={section.title} />
+          <div className="grid sm:grid-cols-2 gap-4">
+            {section.items?.map((item, i) => (
+              <div key={i} className="flex items-start gap-4 p-5 bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl border border-primary/10">
+                <div className="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-foreground mb-1">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </section>
       )
 
     case "process-timeline":
       return (
-        <section className={`py-20 ${bgClass} overflow-hidden`}>
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <SectionHeader title={section.title} centered />
-              <div className="relative space-y-8 sm:space-y-12">
-                {/* Timeline line - hidden on small screens */}
-                <div className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-border -translate-x-1/2 hidden sm:block"></div>
-
-                {section.items?.map((item, i) => (
-                  <div key={i} className="relative flex flex-col sm:flex-row items-center justify-between gap-8 group">
-                    {/* Content Box */}
-                    <div className={`w-full sm:w-[45%] ${i % 2 === 0 ? "sm:order-1 sm:text-left" : "sm:order-2 sm:text-right"}`}>
-                      <div className={`p-6 bg-background rounded-xl border border-border shadow-sm relative transition-transform hover:-translate-y-1 duration-300 ${i % 2 === 0 ? "sm:mr-auto" : "sm:ml-auto"}`}>
-                        {/* Connecting line */}
-                        <div className={`absolute top-6 w-8 h-px bg-border hidden sm:block ${i % 2 === 0 ? "-right-8" : "-left-8"}`}></div>
-
-                        <Badge variant="secondary" className="mb-3 w-fit">المرحلة {i + 1}</Badge>
-                        <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                        <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                      </div>
-                    </div>
-
-                    {/* Circle */}
-                    <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg shadow-lg ring-4 ring-background z-10 sm:block hidden">
-                      {i + 1}
-                    </div>
-
-                    {/* Mobile Number - only visible on mobile */}
-                    <div className="sm:hidden w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-sm mb-2">
-                      {i + 1}
-                    </div>
-
-                  </div>
-                ))}
+        <section>
+          <SectionHeader icon={Wrench} title={section.title} />
+          <div className="space-y-4">
+            {section.items?.map((item, i) => (
+              <div key={i} className="flex items-start gap-5 p-6 bg-background rounded-2xl border border-border shadow-sm hover:shadow-md transition-shadow">
+                <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center flex-shrink-0 font-bold text-xl shadow-lg">
+                  {i + 1}
+                </div>
+                <div className="flex-1 pt-1">
+                  <h3 className="font-bold text-foreground text-lg mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </section>
       )
 
     case "faq-accordion":
       return (
-        <section className={`py-20 ${bgClass}`}>
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <SectionHeader title={section.title} centered />
-              <Accordion type="single" collapsible className="w-full bg-background rounded-xl border border-border px-6 py-2 shadow-sm">
-                {section.items?.map((item, i) => (
-                  <AccordionItem key={i} value={`item-${i}`}>
-                    <AccordionTrigger className="text-right font-bold text-lg py-4 hover:no-underline hover:text-primary transition-colors">
-                      {item.title}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground leading-relaxed text-base pb-6">
-                      {item.description}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </div>
+        <section>
+          <SectionHeader icon={HelpCircle} title={section.title} />
+          <Accordion type="single" collapsible className="w-full bg-background rounded-2xl border border-border overflow-hidden shadow-sm">
+            {section.items?.map((item, i) => (
+              <AccordionItem key={i} value={`item-${i}`} className="border-b border-border/50 last:border-0">
+                <AccordionTrigger className="px-6 py-5 text-right font-bold hover:no-underline hover:bg-muted/50 transition-colors">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <HelpCircle className="w-4 h-4 text-primary" />
+                    </div>
+                    <span className="text-base">{item.title}</span>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-6 text-muted-foreground leading-relaxed">
+                  <div className="pr-11">{item.description}</div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </section>
       )
 
     case "text-image":
     default:
       return (
-        <section className={`py-20 ${bgClass} scroll-mt-20`}>
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""}`}>
-                <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                  <SectionHeader title={section.title} />
-                  <div className="prose prose-lg max-w-none dark:prose-invert">
-                    {section.content && /<[a-z][\s\S]*>/i.test(section.content) ? (
-                      <div dangerouslySetInnerHTML={{ __html: section.content }} />
-                    ) : (
-                      section.content?.split("\n\n").map((paragraph, i) => {
-                        if (paragraph.startsWith("**")) {
-                          const parts = paragraph.split("**")
-                          return (
-                            <div key={i} className="mb-4 bg-muted/30 p-4 rounded-lg border-r-4 border-primary">
-                              <h4 className="text-lg font-bold text-foreground mb-1">{parts[1]}</h4>
-                              <p className="text-muted-foreground leading-relaxed text-sm">{parts[2]}</p>
-                            </div>
-                          )
-                        }
-                        return (
-                          <p key={i} className="text-muted-foreground leading-relaxed mb-4">
-                            {paragraph}
-                          </p>
-                        )
-                      })
-                    )}
-                  </div>
-                </div>
-                <div
-                  className={`relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-border group ${index % 2 === 1 ? "lg:order-1" : ""}`}
-                >
-                  <Image
-                    src={section.image || `/placeholder.svg?height=600&width=800&query=${encodeURIComponent(section.imageQuery || section.title)}`}
-                    alt={section.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                </div>
-              </div>
+        <section>
+          <SectionHeader icon={Zap} title={section.title} />
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
+            <div className="prose prose-lg max-w-none">
+              {section.content && /<[a-z][\s\S]*>/i.test(section.content) ? (
+                <div dangerouslySetInnerHTML={{ __html: section.content }} className="text-muted-foreground" />
+              ) : (
+                section.content?.split("\n\n").map((paragraph, i) => (
+                  <p key={i} className="text-muted-foreground leading-loose mb-4">
+                    {paragraph}
+                  </p>
+                ))
+              )}
             </div>
+            {section.image && (
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src={section.image}
+                  alt={section.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            )}
           </div>
         </section>
       )
   }
-}
-
-function SectionHeader({ title, centered = false }: { title: string; centered?: boolean }) {
-  return (
-    <div className={`mb-10 ${centered ? "text-center flex flex-col items-center" : ""}`}>
-      <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground relative inline-block pb-4 z-10">
-        {title}
-        <span className="absolute bottom-0 left-0 w-full h-1 bg-primary/20 rounded-full"></span>
-        <span className="absolute bottom-0 left-0 w-1/3 h-1 bg-primary rounded-full"></span>
-      </h2>
-    </div>
-  )
 }

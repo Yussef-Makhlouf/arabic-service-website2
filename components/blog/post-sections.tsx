@@ -33,7 +33,7 @@ export function TableOfContents({ sections }: { sections: Section[] }) {
         <aside className="sticky top-24 z-10 hidden lg:block space-y-6">
             <nav className="bg-card rounded-2xl border border-border shadow-sm overflow-hidden">
                 <div className="bg-muted rounded-t-2xl p-4">
-                    <h3 className="font-bold text-secondary flex items-center gap-2 font-tajawal text-base">
+                    <h3 className="font-bold text-secondary flex items-center gap-2 font-heading text-base">
                         <Menu className="w-5 h-5 text-primary" />
                         فهرس المحتوى
                     </h3>
@@ -43,7 +43,7 @@ export function TableOfContents({ sections }: { sections: Section[] }) {
                         <a
                             key={idx}
                             href={`#${section.id}`}
-                            className="group flex items-center justify-between px-3 py-2.5 text-sm font-medium text-muted-foreground hover:text-secondary hover:bg-muted rounded-lg transition-all font-tajawal"
+                            className="group flex items-center justify-between px-3 py-2.5 text-sm font-medium text-muted-foreground hover:text-secondary hover:bg-muted rounded-lg transition-all font-sans"
                         >
                             <span className="line-clamp-2">{section.title}</span>
                             <ChevronLeft className="w-4 h-4 text-border opacity-0 group-hover:opacity-100 transition-opacity shrink-0" />
@@ -56,9 +56,9 @@ export function TableOfContents({ sections }: { sections: Section[] }) {
             <div className="bg-gradient-to-br from-secondary to-secondary/80 rounded-2xl p-6 text-white text-center shadow-xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-3xl transition-transform group-hover:scale-150 duration-700" />
                 <ShieldCheck className="w-12 h-12 mx-auto mb-4 text-primary" />
-                <h4 className="font-bold text-lg mb-2 font-amiri">ضمان ذهبي شامل</h4>
-                <p className="text-xs text-white/80 mb-6 leading-relaxed font-tajawal">نضمن لك جودة العمل والمواد المستخدمة لمدة تصل إلى 15 عاماً.</p>
-                <Button size="default" className="w-full bg-primary hover:bg-primary/90 text-white border-none font-bold rounded-xl h-10 shadow-lg font-tajawal text-sm">
+                <h4 className="font-bold text-lg mb-2 font-heading">ضمان ذهبي شامل</h4>
+                <p className="text-xs text-white/80 mb-6 leading-relaxed font-sans">نضمن لك جودة العمل والمواد المستخدمة لمدة تصل إلى 15 عاماً.</p>
+                <Button size="default" className="w-full bg-primary hover:bg-primary/90 text-white border-none font-bold rounded-xl h-10 shadow-lg font-sans text-sm">
                     اطلب الضمان الآن
                 </Button>
             </div>
@@ -81,26 +81,26 @@ export function BubbleSection({ number, title, children, isCompany = false }: { 
                 )}
 
                 {/* Title */}
-                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary mb-6 md:mb-8 font-noto-kufi border-b border-border pb-4 md:pb-6 flex items-start gap-3 md:gap-4">
-                    <span className="text-primary font-tajawal text-sm md:text-base bg-primary/10 w-8 h-8 md:w-10 md:h-10 rounded-xl flex items-center justify-center shadow-sm shrink-0 mt-1">
+                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary mb-6 md:mb-8 font-heading border-b border-border pb-4 md:pb-6 flex items-start gap-3 md:gap-4">
+                    <span className="text-primary font-bold text-sm md:text-base bg-primary/10 w-8 h-8 md:w-10 md:h-10 rounded-xl flex items-center justify-center shadow-sm shrink-0 mt-1">
                         {number}
                     </span>
                     <span className="flex-1 leading-tight pt-1 md:pt-0">{title}</span>
                 </h2>
 
                 {/* Content */}
-                <div className="text-foreground/80 font-tajawal text-sm md:text-base lg:text-lg leading-[1.8] md:leading-[2] space-y-5 md:space-y-7">
+                <div className="text-foreground/80 font-sans text-sm md:text-base lg:text-lg leading-[1.8] md:leading-[2] space-y-5 md:space-y-7">
                     {children}
                 </div>
 
                 {/* Company CTA Button */}
                 {isCompany && (
                     <div className="mt-8 md:mt-10 pt-6 md:pt-8 border-t border-border flex flex-col sm:flex-row gap-3 md:gap-4">
-                        <Button className="bg-primary hover:bg-primary/90 text-white font-bold h-12 md:h-14 px-8 rounded-2xl font-tajawal w-full sm:w-auto text-base shadow-lg shadow-primary/20 active:scale-95 transition-all">
+                        <Button className="bg-primary hover:bg-primary/90 text-white font-bold h-12 md:h-14 px-8 rounded-2xl font-bold w-full sm:w-auto text-base shadow-lg shadow-primary/20 active:scale-95 transition-all">
                             <Phone className="w-5 h-5 ml-2" />
                             اتصل الآن
                         </Button>
-                        <Button variant="outline" className="border-emerald-500 text-emerald-500 hover:bg-emerald-50 font-bold h-12 md:h-14 px-8 rounded-2xl font-tajawal w-full sm:w-auto text-base active:scale-95 transition-all">
+                        <Button variant="outline" className="border-emerald-500 text-emerald-500 hover:bg-emerald-50 font-bold h-12 md:h-14 px-8 rounded-2xl font-bold w-full sm:w-auto text-base active:scale-95 transition-all">
                             <MessageCircle className="w-5 h-5 ml-2" />
                             واتساب
                         </Button>
@@ -119,15 +119,15 @@ export function CTABlock({ variant = "primary" }: { variant?: "primary" | "secon
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full -ml-32 -mb-32 blur-3xl opacity-50" />
 
                 <div className="relative z-10 max-w-3xl mx-auto">
-                    <Badge className="mb-6 bg-primary/20 hover:bg-primary/30 text-primary border-none px-4 py-2 font-tajawal text-sm md:text-base rounded-full">خيارك الأمثل</Badge>
-                    <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 md:mb-8 leading-tight font-amiri">جاهز لتحويل منزلك لمكان أكثر راحة؟</h3>
-                    <p className="text-white/80 mb-10 md:mb-12 text-base md:text-xl lg:text-2xl leading-relaxed font-tajawal">لا تتردد في طلب استشارة مجانية. فريقنا الهندسي بانتظارك.</p>
+                    <Badge className="mb-6 bg-primary/20 hover:bg-primary/30 text-primary border-none px-4 py-2 font-medium text-sm md:text-base rounded-full">خيارك الأمثل</Badge>
+                    <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 md:mb-8 leading-tight font-heading">جاهز لتحويل منزلك لمكان أكثر راحة؟</h3>
+                    <p className="text-white/80 mb-10 md:mb-12 text-base md:text-xl lg:text-2xl leading-relaxed font-sans">لا تتردد في طلب استشارة مجانية. فريقنا الهندسي بانتظارك.</p>
                     <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-                        <Button size="lg" className="bg-primary text-white hover:bg-primary/90 font-bold h-14 md:h-18 px-8 md:px-12 text-lg md:text-2xl rounded-2xl shadow-xl shadow-primary/20 font-tajawal active:scale-95 transition-all">
+                        <Button size="lg" className="bg-primary text-white hover:bg-primary/90 font-bold h-14 md:h-18 px-8 md:px-12 text-lg md:text-2xl rounded-2xl shadow-xl shadow-primary/20 font-bold active:scale-95 transition-all">
                             <Phone className="w-6 h-6 ml-3" />
                             اتصل الآن
                         </Button>
-                        <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 md:h-18 px-8 md:px-12 text-lg md:text-xl rounded-2xl font-tajawal backdrop-blur-sm active:scale-95 transition-all">
+                        <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 h-14 md:h-18 px-8 md:px-12 text-lg md:text-xl rounded-2xl font-bold backdrop-blur-sm active:scale-95 transition-all">
                             <MessageCircle className="w-6 h-6 ml-3" />
                             واتساب
                         </Button>
@@ -145,11 +145,11 @@ export function CTABlock({ variant = "primary" }: { variant?: "primary" | "secon
                         <Lightbulb className="w-8 h-8 md:w-10 md:h-10" />
                     </div>
                     <div className="text-center md:text-right">
-                        <h4 className="text-lg md:text-2xl font-bold text-secondary mb-1 font-tajawal">هل تحتاج مساعدة فنية؟</h4>
-                        <p className="text-muted-foreground font-tajawal text-sm md:text-base">يمكنك استشارة مهندس مختص الآن مجاناً</p>
+                        <h4 className="text-lg md:text-2xl font-bold text-secondary mb-1 font-heading">هل تحتاج مساعدة فنية؟</h4>
+                        <p className="text-muted-foreground font-sans text-sm md:text-base">يمكنك استشارة مهندس مختص الآن مجاناً</p>
                     </div>
                 </div>
-                <Button className="w-full md:w-auto bg-secondary text-white hover:bg-secondary/90 h-12 md:h-16 px-8 md:px-10 rounded-2xl font-bold shadow-lg font-tajawal text-base md:text-lg active:scale-95 transition-all">
+                <Button className="w-full md:w-auto bg-secondary text-white hover:bg-secondary/90 h-12 md:h-16 px-8 md:px-10 rounded-2xl font-bold shadow-lg font-bold text-base md:text-lg active:scale-95 transition-all">
                     أطلب استشارة
                 </Button>
             </div>
@@ -167,7 +167,7 @@ export function FeatureList({ title, items, color = "blue" }: { title: string, i
 
     return (
         <div className="bg-card rounded-3xl p-6 md:p-8 lg:p-10 shadow-sm border border-border hover:shadow-md transition-all duration-300 h-full">
-            <h3 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-secondary flex items-center gap-4 font-noto-kufi">
+            <h3 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-secondary flex items-center gap-4 font-heading">
                 <span className={`w-10 h-10 md:w-12 md:h-12 rounded-2xl ${bgColor} flex items-center justify-center shadow-sm ${iconColor}`}>
                     <Icon className="w-5 h-5 md:w-6 md:h-6" />
                 </span>
@@ -177,7 +177,7 @@ export function FeatureList({ title, items, color = "blue" }: { title: string, i
                 {items.map((item, i) => (
                     <li key={i} className="flex items-start gap-4 text-foreground/80 group">
                         <div className={`mt-2.5 w-2 h-2 rounded-full ${dotColor} shrink-0 group-hover:scale-125 transition-transform`} />
-                        <span className="font-medium leading-relaxed md:leading-loose text-sm md:text-base lg:text-lg font-tajawal">{item}</span>
+                        <span className="font-medium leading-relaxed md:leading-loose text-sm md:text-base lg:text-lg font-sans">{item}</span>
                     </li>
                 ))}
             </ul>
@@ -197,8 +197,8 @@ export function IntroCards() {
                     <div className={`w-14 h-14 md:w-16 md:h-16 rounded-2xl ${card.bg} flex items-center justify-center ${card.color} mb-6 md:mb-8 group-hover:rotate-6 transition-transform duration-300`}>
                         <card.icon className="w-7 h-7 md:w-8 md:h-8" />
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-secondary mb-3 font-noto-kufi">{card.title}</h3>
-                    <p className="text-muted-foreground font-medium font-tajawal text-sm md:text-lg leading-relaxed">{card.desc}</p>
+                    <h3 className="text-xl md:text-2xl font-bold text-secondary mb-3 font-heading">{card.title}</h3>
+                    <p className="text-muted-foreground font-medium font-sans text-sm md:text-lg leading-relaxed">{card.desc}</p>
                 </div>
             ))}
         </div>
@@ -231,10 +231,10 @@ export function SectionRenderer({ section, index }: { section: Section, index: n
                     <Badge className="mb-4 bg-primary/10 text-primary hover:bg-primary/20 border-none px-6 py-2 rounded-full font-bold">
                         {section.type === "faq" ? "الأسئلة الشائعة" : "مشاكل وحلول"}
                     </Badge>
-                    <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-secondary font-amiri leading-tight">{section.title}</h2>
+                    <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-secondary font-heading leading-tight">{section.title}</h2>
                 </div>
 
-                <Accordion type="single" collapsible className="w-full grid gap-4 md:gap-6 max-w-4xl mx-auto font-tajawal">
+                <Accordion type="single" collapsible className="w-full grid gap-4 md:gap-6 max-w-4xl mx-auto font-sans">
                     {items.map((item, i) => (
                         <AccordionItem key={i} value={`val-${i}`} className="bg-card border border-border rounded-2xl px-2 shadow-sm data-[state=open]:ring-2 data-[state=open]:ring-primary/10 data-[state=open]:border-primary/30 transition-all overflow-hidden">
                             <AccordionTrigger className="text-base md:text-xl font-bold text-secondary py-5 md:py-8 px-5 md:px-8 hover:no-underline hover:text-primary text-right leading-tight">
@@ -264,7 +264,7 @@ export function SectionRenderer({ section, index }: { section: Section, index: n
         if (pros.length > 0 || cons.length > 0) {
             return (
                 <div id={section.id} className="scroll-mt-32 mb-16 md:mb-24">
-                    <h2 className="text-2xl md:text-4xl font-bold mb-10 md:mb-16 text-center text-secondary font-amiri leading-tight">{section.title}</h2>
+                    <h2 className="text-2xl md:text-4xl font-bold mb-10 md:mb-16 text-center text-secondary font-heading leading-tight">{section.title}</h2>
                     <div className="grid md:grid-cols-2 gap-6 md:gap-10">
                         {pros.length > 0 && <FeatureList title="المميزات" items={pros} color="green" />}
                         {cons.length > 0 && <FeatureList title="العيوب" items={cons} color="red" />}
@@ -308,7 +308,7 @@ export function SectionRenderer({ section, index }: { section: Section, index: n
 
                             if (line.startsWith("### ")) {
                                 elements.push(
-                                    <h3 key={i} className="text-xl md:text-2xl font-bold text-secondary pt-6 md:pt-10 font-tajawal flex items-center gap-3">
+                                    <h3 key={i} className="text-xl md:text-2xl font-bold text-secondary pt-6 md:pt-10 font-heading flex items-center gap-3">
                                         <div className="w-1.5 h-8 bg-primary rounded-full" />
                                         {line.replace("### ", "")}
                                     </h3>
@@ -324,7 +324,7 @@ export function SectionRenderer({ section, index }: { section: Section, index: n
                                             <Lightbulb className="w-7 h-7 md:w-9 md:h-9" />
                                         </div>
                                         <div>
-                                            <h4 className="font-bold text-secondary mb-2 text-lg md:text-xl font-tajawal">نصيحة الخبراء</h4>
+                                            <h4 className="font-bold text-secondary mb-2 text-lg md:text-xl font-heading">نصيحة الخبراء</h4>
                                             <p className="text-foreground/70 text-sm md:text-lg leading-relaxed">{tip}</p>
                                         </div>
                                     </div>
@@ -345,7 +345,7 @@ export function SectionRenderer({ section, index }: { section: Section, index: n
                             if (!line.trim()) continue;
 
                             elements.push(
-                                <p key={i} className="text-justify leading-[1.8] md:leading-[2] text-sm md:text-lg text-foreground/80 font-tajawal">
+                                <p key={i} className="text-justify leading-[1.8] md:leading-[2] text-sm md:text-lg text-foreground/80 font-sans">
                                     {line}
                                 </p>
                             );

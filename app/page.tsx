@@ -1,107 +1,93 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { FloatingActions } from "@/components/floating-actions"
+
+// Homepage Sections
 import { HeroSection } from "@/components/homepage/hero-section"
+import { ProblemsSection } from "@/components/homepage/problems-section"
 import { ServicesOverview } from "@/components/homepage/services-overview"
 import { AboutSection } from "@/components/homepage/about-section"
 import { WhyChooseUsSection } from "@/components/homepage/why-choose-us-section"
-// import { FaqSection } from "@/components/homepage/faq-section"
-import { ServiceDecisionHelper } from "@/components/homepage/service-decision-helper"
-import { EmergencyServiceSection } from "@/components/homepage/emergency-service-section"
-import { PricingTransparencySection } from "@/components/homepage/pricing-transparency-section"
-// import { ContentNavigation } from "@/components/homepage/content-navigation"
+import { WorkProcessSection } from "@/components/homepage/work-process-section"
+import { FoamInsulationPreview } from "@/components/homepage/foam-insulation-preview"
+import { WaterproofingPreview } from "@/components/homepage/waterproofing-preview"
 import { ComparisonTable } from "@/components/homepage/comparison-table"
-import { CitiesDeepSEO } from "@/components/homepage/cities-deep-seo"
-import { BlogPreview } from "@/components/homepage/blog-preview"
+import { ServiceDecisionHelper } from "@/components/homepage/service-decision-helper"
+import { TestimonialsSection } from "@/components/homepage/testimonials-section"
 import { FaqSection } from "@/components/homepage/faq-section"
-import { FoamInsulationSection } from "@/components/homepage/foam-insulation-section"
-import { WaterproofingSection } from "@/components/homepage/waterproofing-section"
-import { FeaturedLocationCard } from "@/components/homepage/featured-location-card"
+import { CTASection } from "@/components/homepage/cta-section"
 import { EliteInsulationServicesTable } from "@/components/homepage/EliteInsulationServicesTable"
 import { EliteInsulationSolutionsTable } from "@/components/homepage/EliteInsulationSolutionsTable"
-import { TestimonialsSection } from "@/components/homepage/testimonials-section"
+
+// New Content-Rich Sections
+import {
+  InsulationNecessitySection,
+  InsulationBasicsSection,
+  WaterproofingGuideSection,
+  FoamTechnologySection,
+  TraditionalInsulationSection,
+  SelectionGuideSection,
+  MarketChallengesSection
+} from "@/components/homepage/content-sections"
 
 export default function HomePage() {
   return (
     <>
       <Header />
       <main>
-        {/* 1. Hero - First impression with trust signals */}
-        <section id="hero">
-          <HeroSection />
-        </section>
+        {/* 1. Hero Section - Value proposition + trust signals + city SEO */}
+        <HeroSection />
 
-        {/* 2. About - Build credibility */}
+        {/* NEW: Content-Rich Educational Sections */}
+
+        <InsulationBasicsSection />
+                <InsulationNecessitySection />
+        <WaterproofingGuideSection />
+        <FoamTechnologySection />
+        <TraditionalInsulationSection />
+        <SelectionGuideSection />
+        <MarketChallengesSection />
+
+        {/* 2. About Section - Company credibility */}
         <AboutSection />
 
-        {/* 3. Why Choose Us - مميزات الشركة بالتفصيل */}
-        <WhyChooseUsSection />
+        {/* 3. Problems We Solve - Common Saudi building problems */}
+        <ProblemsSection />
 
-        {/* 4. Services Overview - Visual service cards */}
+        {/* 4. Core Services - Service cards with CTAs */}
         <ServicesOverview />
 
-        {/* 5. Foam Insulation Section - Educational content */}
-        <FoamInsulationSection />
+        {/* 5. Foam Insulation Preview - SEO + Educational */}
+        <FoamInsulationPreview />
 
-        {/* 6. Waterproofing Section - Technical Detail */}
-        <WaterproofingSection />
+        {/* 6. Waterproofing Preview - SEO + Educational */}
+        <WaterproofingPreview />
 
-        {/* 4. Comparison Table - Help decision making */}
-        <section id="comparison-table">
-          <ComparisonTable />
-        </section>
+        {/* 7. Comparison Table - Help decision making */}
+        <ComparisonTable />
 
-        {/* 5. Decision Helper - Guide users to right service */}
-        <section id="decision-helper">
-          <ServiceDecisionHelper />
-        </section>
+        {/* 8. Why Choose Us - Competitive advantages */}
+        <WhyChooseUsSection />
 
-        {/* Featured Location - Focus on specific area */}
-        <FeaturedLocationCard />
-
-        {/* 6. Cities & Neighborhoods - Local SEO */}
-        <section id="cities">
-          <CitiesDeepSEO />
-        </section>
-
-        {/* 7. Testimonials - Social Proof */}
-
-
-        {/* 8. Pricing Education - Transparency */}
-        <section id="pricing">
-          <PricingTransparencySection />
-        </section>
-
-        {/* 8. Blog Preview - Show expertise */}
-        <section id="blog-preview">
-          <BlogPreview />
-        </section>
-
-
-
-        {/* New Services Table 1 */}
+        {/* 9. Work Process - Step-by-step timeline */}
+        <WorkProcessSection />
         <EliteInsulationServicesTable />
 
-        {/* New Solutions Table 2 */}
+        {/* 10. Service Decision Helper - Interactive wizard */}
+        <ServiceDecisionHelper />
         <EliteInsulationSolutionsTable />
 
-        {/* 10. Final CTA - Conversion */}
-        <section id="cta">
-          <EmergencyServiceSection />
-        </section>
-        {/* 9. FAQ - Answer objections */}
-        <section id="faq">
-          <FaqSection />
-        </section>
-        <section id="testimonials">
-          <TestimonialsSection />
-        </section>
+        {/* 11. Testimonials - Social proof with locations */}
+        <TestimonialsSection />
 
+        {/* 12. FAQ - Answer common questions */}
+        <FaqSection />
+
+        {/* 13. Strong CTA - Final conversion section */}
+        <CTASection />
       </main>
       <Footer />
       <FloatingActions />
-
     </>
   )
 }
-

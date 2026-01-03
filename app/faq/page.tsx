@@ -117,32 +117,37 @@ export default async function FAQPage() {
       <Header />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="bg-gradient-to-b from-primary/5 to-background py-16 border-b">
-          <div className="container px-4 mx-0">
-            <div className="max-w-3xl mx-auto text-center space-y-6 ">
-              <Badge className="bg-primary/10 text-primary hover:bg-primary/20 text-base px-4 py-2">
-                مركز المساعدة
-              </Badge>
-              <h1 className="text-4xl md:text-5xl font-bold text-balance">الأسئلة الشائعة حول خدمات العزل</h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                دليلك الشامل للإجابة على جميع أسئلتك حول العزل المائي والحراري، كشف التسربات، وعزل الخزانات في الرياض.
-                خبرة 15 عاماً في خدمتك.
+        <section className="relative overflow-hidden py-20 lg:py-24 border-b bg-muted/20">
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+          <div className="container relative px-4 mx-auto">
+            <div className="max-w-3xl mx-auto text-center space-y-8">
+              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary/10 text-primary hover:bg-primary/20">
+                مركز المساعدة والدعم
+              </div>
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-foreground lg:text-7xl">
+                الأسئلة الشائعة
+                <span className="block text-primary mt-2">وإجابات الخبراء</span>
+              </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+                لقد قمنا بتجميع إجابات مفصلة لأهم الأسئلة حول خدمات العزل المائي والحراري.
+                <br className="hidden sm:inline" />
+                اكتشف كيف يمكننا حماية منزلك بأفضل الحلول.
               </p>
             </div>
           </div>
         </section>
 
         {/* FAQ Categories */}
-        <section className="py-16">
+        <section className="py-20 bg-background">
           <div className="container px-4 mx-auto">
-            <div className="max-w-4xl mx-auto space-y-12">
+            <div className="max-w-4xl mx-auto space-y-16">
               {faqCategories.map((category: any, categoryIndex: number) => (
-                <div key={category._id || categoryIndex} className="space-y-6">
-                  <div className="flex items-center gap-3 pb-4 border-b-2 border-primary/20">
-                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <HelpCircle className="w-5 h-5 text-primary" />
+                <div key={category._id || categoryIndex} className="space-y-8">
+                  <div className="flex items-center gap-4 pb-6 border-b border-primary/10">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shadow-inner">
+                      <HelpCircle className="w-6 h-6 text-primary" />
                     </div>
-                    <h2 className="text-2xl font-bold">{category.name}</h2>
+                    <h2 className="text-3xl font-bold tracking-tight">{category.name}</h2>
                   </div>
 
                   <Accordion type="single" collapsible className="space-y-4">
@@ -152,16 +157,20 @@ export default async function FAQPage() {
                         <AccordionItem
                           key={item._id || itemIndex}
                           value={`item-${categoryIndex}-${itemIndex}`}
-                          className="border rounded-lg overflow-hidden bg-card hover:shadow-md transition-shadow"
+                          className="group border border-border/50 rounded-xl overflow-hidden bg-card transition-all duration-200 hover:shadow-lg hover:border-primary/20"
                         >
-                          <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-accent/50">
-                            <div className="flex items-start gap-3 text-right">
-                              <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                              <span className="font-semibold text-lg leading-relaxed">{item.question}</span>
+                          <AccordionTrigger className="px-6 py-5 hover:no-underline hover:bg-muted/50 data-[state=open]:bg-muted/30">
+                            <div className="flex items-start gap-4 text-right w-full">
+                              <CheckCircle className="w-5 h-5 text-primary/60 mt-1 flex-shrink-0 group-hover:text-primary transition-colors" />
+                              <span className="font-semibold text-lg leading-relaxed text-foreground/90 group-hover:text-foreground transition-colors">
+                                {item.question}
+                              </span>
                             </div>
                           </AccordionTrigger>
-                          <AccordionContent className="px-6 pb-6 pt-2">
-                            <div className="pr-8 text-muted-foreground text-base leading-relaxed">{item.answer}</div>
+                          <AccordionContent className="px-16 pb-6 pt-2 bg-muted/5">
+                            <div className="text-muted-foreground text-base leading-7">
+                              {item.answer}
+                            </div>
                           </AccordionContent>
                         </AccordionItem>
                       ))}
@@ -173,35 +182,40 @@ export default async function FAQPage() {
         </section>
 
         {/* Contact CTA */}
-        <section className="py-16 border-t bg-accent/30">
-          <div className="container px-4">
-            <Card className="max-w-3xl mx-auto">
-              <CardContent className="p-8 text-center space-y-6">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
-                  <HelpCircle className="w-8 h-8 text-primary" />
-                </div>
-                <h2 className="text-3xl font-bold">لم تجد إجابة لسؤالك؟</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  فريقنا المتخصص جاهز للإجابة على جميع استفساراتك وتقديم استشارات مجانية حول احتياجاتك الخاصة
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                  <a
-                    href="tel:+966507067378"
-                    className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
-                  >
-                    <Phone className="w-5 h-5" />
-                    اتصل بنا الآن
-                  </a>
-                  <a
-                    href="https://wa.me/966507067378"
-                    className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#25D366]/90 transition-colors"
-                  >
-                    <Mail className="w-5 h-5" />
-                    واتساب
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
+        <section className="py-20 border-t bg-muted/20">
+          <div className="container px-4 mx-auto">
+            <div className="max-w-4xl mx-auto">
+              <Card className="overflow-hidden border-primary/10 shadow-xl bg-gradient-to-br from-background to-muted">
+                <CardContent className="p-10 md:p-12 text-center space-y-8">
+                  <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto ring-8 ring-primary/5">
+                    <HelpCircle className="w-10 h-10 text-primary" />
+                  </div>
+                  <div className="space-y-4">
+                    <h2 className="text-3xl md:text-4xl font-bold tracking-tight">لم تجد إجابة لسؤالك؟</h2>
+                    <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+                      فريقنا المتخصص جاهز للإجابة على جميع استفساراتك وتقديم استشارات مجانية حول احتياجاتك الخاصة.
+                      لا تتردد في التواصل معنا.
+                    </p>
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+                    <a
+                      href="tel:+966507067378"
+                      className="inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary/90 transition-all hover:scale-105 shadow-lg shadow-primary/20"
+                    >
+                      <Phone className="w-6 h-6" />
+                      اتصل بنا الآن
+                    </a>
+                    <a
+                      href="https://wa.me/966507067378"
+                      className="inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#25D366]/90 transition-all hover:scale-105 shadow-lg shadow-[#25D366]/20"
+                    >
+                      <Mail className="w-6 h-6" />
+                      محادثة واتساب
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </section>
       </main>
