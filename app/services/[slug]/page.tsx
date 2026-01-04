@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer"
 import { FloatingActions } from "@/components/floating-actions"
 import { ServicePageLayout, type SectionType, type ServicePageData, type ServiceSection } from "@/components/services/service-page-layout"
 import { TestimonialsSection, type Testimonial } from "@/components/services/testimonials-section"
+import { NeighborhoodsCompact } from "@/components/neighborhoods"
 import { getServiceBySlug, getServices } from "@/lib/api-client"
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
@@ -327,6 +328,20 @@ export default async function ServicePage({ params }: ServicePageProps) {
             {testimonials.length > 0 && (
                 <TestimonialsSection testimonials={testimonials} />
             )}
+
+            {/* Neighborhoods Section */}
+            <section className="py-16 bg-muted/30">
+                <div className="container mx-auto px-4">
+                    <div className="max-w-4xl mx-auto">
+                        <NeighborhoodsCompact
+                            title="الأحياء التي نُغطيها"
+                            maxItems={16}
+                            variant="grid"
+                        />
+                    </div>
+                </div>
+            </section>
+
             <Footer />
             <FloatingActions />
         </>

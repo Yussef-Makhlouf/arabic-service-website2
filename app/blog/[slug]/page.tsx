@@ -27,6 +27,7 @@ import { getBlogBySlug, getRelatedBlogs, getBlogs } from "@/lib/api-client"
 import { BlogCard } from "@/components/blog/blog-card"
 import { MobileTableOfContents } from "@/components/blog/mobile-toc"
 import { Section } from "@/components/blog/post-sections"
+import { NeighborhoodsCompact } from "@/components/neighborhoods"
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>
@@ -466,6 +467,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     </div>
                   </CardContent>
                 </Card>
+
+                {/* Neighborhoods Card */}
+                <NeighborhoodsCompact
+                  title="أحياء نخدمها"
+                  maxItems={8}
+                  variant="list"
+                  showLink={true}
+                />
 
               </div>
             </aside>

@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer"
 import { FloatingActions } from "@/components/floating-actions"
 import { PageHeader } from "@/components/page-header"
 import { BlogGridClient } from "@/components/blog/blog-grid-client"
+import { NeighborhoodsCompact } from "@/components/neighborhoods"
 import { getBlogs } from "@/lib/api-client"
 import { blogPosts as staticBlogPosts } from "@/lib/blog-data"
 import type { Metadata } from "next"
@@ -57,6 +58,17 @@ export default async function BlogPage() {
 
         <div className="container px-4 py-8 md:py-12 mx-auto">
           <BlogGridClient blogs={blogs} categories={categories} />
+        </div>
+
+        {/* Neighborhoods Section */}
+        <div className="container px-4 pb-12 mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <NeighborhoodsCompact
+              title="تغطية جغرافية شاملة"
+              maxItems={12}
+              variant="grid"
+            />
+          </div>
         </div>
       </main>
       <Footer />

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { FloatingActions } from "@/components/floating-actions"
+import { NeighborhoodsCompact } from "@/components/neighborhoods"
 
 export const metadata: Metadata = {
   title: "خدمات العزل وكشف التسربات | شركة العزل المتقدم",
@@ -153,6 +154,19 @@ export default function ServicesPage() {
                   </div>
                 )
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* Neighborhoods Section */}
+        <section className="section-padding bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <NeighborhoodsCompact
+                title="الأحياء التي نخدمها"
+                maxItems={16}
+                variant="grid"
+              />
             </div>
           </div>
         </section>

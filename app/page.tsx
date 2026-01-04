@@ -30,6 +30,9 @@ import {
   MarketChallengesSection
 } from "@/components/homepage/content-sections"
 
+// Neighborhoods Section
+import { NeighborhoodsSection } from "@/components/neighborhoods"
+
 export default function HomePage() {
   return (
     <>
@@ -41,7 +44,7 @@ export default function HomePage() {
         {/* NEW: Content-Rich Educational Sections */}
 
         <InsulationBasicsSection />
-                <InsulationNecessitySection />
+        <InsulationNecessitySection />
         <WaterproofingGuideSection />
         <FoamTechnologySection />
         <TraditionalInsulationSection />
@@ -83,7 +86,12 @@ export default function HomePage() {
         {/* 12. FAQ - Answer common questions */}
         <FaqSection />
 
-        {/* 13. Strong CTA - Final conversion section */}
+        {/* 13. Neighborhoods - Geographic coverage */}
+        <section id="neighborhoods">
+          <NeighborhoodsSection />
+        </section>
+
+        {/* 14. Strong CTA - Final conversion section */}
         <CTASection />
       </main>
       <Footer />
