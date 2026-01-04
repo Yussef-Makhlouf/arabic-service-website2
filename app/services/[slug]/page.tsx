@@ -7,7 +7,7 @@ import { NeighborhoodsCompact } from "@/components/neighborhoods"
 import { getServiceBySlug, getServices } from "@/lib/api-client"
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
-import { Wind, Droplets, Search, Database, type LucideIcon } from "lucide-react"
+import { Wind, Droplets, Search, Database, Warehouse, Waves, type LucideIcon } from "lucide-react"
 
 interface ServicePageProps {
     params: Promise<{ slug: string }>
@@ -19,6 +19,8 @@ const iconMap: Record<string, LucideIcon> = {
     Droplets,
     Search,
     Database,
+    Warehouse,
+    Waves,
 }
 
 // Static fallback data for popular services
@@ -114,32 +116,134 @@ const staticServicesData: Record<string, {
             ogImage: "/images/exposed-spray-foam-insulation-in-roof-structure.webp"
         }
     },
-    'tank-insulation': {
-        pageData: {
-            icon: Database,
-            title: "عزل خزانات المياه بالرياض",
-            subtitle: "حماية صحية بمواد إيبوكسي آمنة ومعتمدة من وزارة الصحة",
-            breadcrumb: "خدماتنا / عزل خزانات",
-            heroImage: "/images/thermal-acoustic-foam-insulation-on-roof.webp",
-            heroContent: {
-                description: "عزل الخزانات ضروري لضمان نظافة مياه الشرب. نستخدم مواد إيبوكسي Food Grade معتمدة.",
-                features: ["مواد آمنة صحياً", "تنظيف وتعقيم شامل", "عزل داخلي وخارجي", "ضمان 15 سنة"],
-            },
-            sections: [],
-            ctaSection: {
-                title: "مياه نظيفة وآمنة لعائلتك",
-                description: "عزل خزانات بمواد معتمدة من وزارة الصحة",
-                benefits: ["مواد Food Grade", "تنظيف وتعقيم", "ضمان شامل", "صيانة دورية"]
-            }
-        },
-        testimonials: [],
-        seo: {
-            title: "عزل خزانات المياه بالرياض | مواد آمنة صحياً | ضمان 15 سنة | 0507067378",
-            description: "عزل خزانات المياه بالرياض بمواد إيبوكسي آمنة ومعتمدة - تنظيف وتعقيم شامل مع ضمان 15 سنة",
-            keywords: ["عزل خزانات", "تنظيف خزانات", "إيبوكسي"],
-            ogImage: "/images/thermal-acoustic-foam-insulation-on-roof.webp"
-        }
-    }
+    // 'tank-insulation': {
+    //     pageData: {
+    //         icon: Database,
+    //         title: "عزل خزانات المياه بالرياض",
+    //         subtitle: "نظافة وأمان لعائلتك - عزل وتعقيم بأحدث التقنيات",
+    //         breadcrumb: "خدماتنا / عزل خزانات",
+    //         heroImage: "/images/technician-spraying-foam-in-protective-gear.webp",
+    //         heroContent: {
+    //             description: "الخزان النظيف يعني صحة أفضل. نقدم خدمة عزل خزانات المياه (الأرضية والعلوية) باستخدام مواد آمنة ومعتمدة تمنع نمو البكتيريا والطحالب وتوقف التسربات نهائياً.",
+    //             features: ["مواد صحية", "تعقيم شامل", "ضمان التسرب", "عزل حراري للخزان"],
+    //         },
+    //         sections: [
+    //             {
+    //                 title: "لماذا عزل الخزان ضروري؟",
+    //                 type: "features-grid",
+    //                 content: "إهمال الخزان قد يسبب تلوث المياه ونمو البكتيريا، بالإضافة إلى تسرب المياه الذي يضر بأساسات المبنى. العزل يحمي المبنى ويحافظ على نقاء المياه.",
+    //                 items: [
+    //                     { title: "حماية صحية", description: "منع الطحالب والبكتيريا من النمو داخل الخزان." },
+    //                     { title: "توفير المياه", description: "منع تسرب المياه الغالية وحماية الفاتورة." },
+    //                     { title: "حماية المبنى", description: "منع تسرب المياه إلى القواعد والأساسات." }
+    //                 ]
+    //             },
+    //             {
+    //                 title: "مراحل عزل الخزان",
+    //                 type: "process-timeline",
+    //                 content: "نتبع خطوات دقيقة لضمان أفضل نتيجة:",
+    //                 items: [
+    //                     { title: "سحب المياه وتنظيف الرواسب", description: "تفريغ الخزان وإزالة الطين والشوائب بالكامل." },
+    //                     { title: "معالجة التشققات", description: "استخدام مواد إسمنتية خاصة لسد الشروخ." },
+    //                     { title: "العزل المائي (الإيبوكسي)", description: "دهان الخزان بمادة الإيبوكسي الأزرق الآمنة صحياً." },
+    //                     { title: "التعقيم والاختبار", description: "تعقيم الخزان وملؤه للتأكد من سلامة العزل." }
+    //                 ]
+    //             }
+    //         ],
+    //         ctaSection: {
+    //             title: "مياه نظيفة وآمنة لعائلتك",
+    //             description: "عزل خزانات بمواد معتمدة من وزارة الصحة",
+    //             benefits: ["مواد Food Grade", "تنظيف وتعقيم", "ضمان شامل", "صيانة دورية"]
+    //         }
+    //     },
+    //     testimonials: [
+    //         { name: "عبدالله العتيبي", location: "الرياض - حي الياسمين", rating: 5, comment: "شغل نظيف ومرتب، نظفوا الخزان وعزلوه ورجعت الموية نظيفة جداً.", service: "عزل خزانات" }
+    //     ],
+    //     seo: {
+    //         title: "شركة عزل خزانات بالرياض | تنظيف وتعقيم | 0507067378",
+    //         description: "عزل خزانات المياه بالرياض بمواد إيبوكسي آمنة ومعتمدة - تنظيف وتعقيم شامل مع ضمان 10 سنوات",
+    //         keywords: ["عزل خزانات", "تنظيف خزانات", "إيبوكسي", "تعقيم خزانات بالرياض"],
+    //         ogImage: "/images/technician-spraying-foam-in-protective-gear.webp"
+    //     }
+    // },
+    // 'shinko-insulation': {
+    //     pageData: {
+    //         icon: Warehouse,
+    //         title: "عزل الأسطح الشينكو والمستودعات",
+    //         subtitle: "حماية الهناجر والمستودعات من الحرارة والصدأ والخرير",
+    //         breadcrumb: "خدماتنا / عزل شينكو",
+    //         heroImage: "/images/spray-foam-roofing-01.webp",
+    //         heroContent: {
+    //             description: "الحل الأمثل لأسطح الهناجر والمستودعات والمصانع. عزل الفوم للشينكو يوفر عزل حراري قوي، يمنع تسرب المياه من الفواصل والمسامير، ويقلل صوت المطر والضجيج.",
+    //             features: ["منع الصدأ", "عزل صوتي", "حماية الهناجر", "توفير طاقة التكييف"],
+    //         },
+    //         sections: [
+    //             {
+    //                 title: "مشاكل أسطح الشينكو وحلها",
+    //                 type: "features-grid",
+    //                 content: "تعاني أسطح الشينكو من الحرارة العالية وصدأ المسامير وتسرب المياه عند الأمطار. عزل الفوم يحل كل هذه المشاكل في خطوة واحدة.",
+    //                 items: [
+    //                     { title: "عزل حراري ممتاز", description: "يعكس الحرارة ويجعل جو المستودع بارداً." },
+    //                     { title: "منع تسرب المياه", description: "يغلق جميع الفتحات وأماكن المسامير تماماً." },
+    //                     { title: "حماية من الصدأ", description: "يمنع وصول الرطوبة للمعدن فيطيل عمره." }
+    //                 ]
+    //             }
+    //         ],
+    //         ctaSection: {
+    //             title: "احمِ مستودعك وبضائعك",
+    //             description: "عزل شينكو يضمن سلامة المخزون وتوفير في الكهرباء",
+    //             benefits: ["سرعة في التنفيذ", "مواد خفيفة الوزن", "ضمان ضد التسرب", "سعر للمتر منافس"]
+    //         }
+    //     },
+    //     testimonials: [
+    //         { name: "مصنع الرواد", location: "المدينة الصناعية الثانية", rating: 5, comment: "عزلنا سقف المصنع بالفوم، فرق كبير في الحرارة واختفى خرير المطر.", service: "عزل شينكو" }
+    //     ],
+    //     seo: {
+    //         title: "عزل اسطح شينكو بالرياض | عزل هناجر ومستودعات | 0507067378",
+    //         description: "أفضل عزل لأسطح الشينكو والمستودعات بالرياض. رغوة فوم تمنع الحرارة والصدأ وتسرب المياه. ضمان حقيقي وتنفيذ سريع.",
+    //         keywords: ["عزل شينكو", "عزل هناجر", "عزل مستودعات", "عزل اسطح معدنية"],
+    //         ogImage: "/images/spray-foam-roofing-01.webp"
+    //     }
+    // },
+    // 'pool-insulation': {
+    //     pageData: {
+    //         icon: Waves,
+    //         title: "عزل المسابح والبحيرات",
+    //         subtitle: "استمتع بمسبح نظيف وآمن خالي من التسربات",
+    //         breadcrumb: "خدماتنا / عزل مسابح",
+    //         heroImage: "/images/best-practices-spray-foam-installation-on-roof.webp",
+    //         heroContent: {
+    //             description: "تسرب المسبح ليس مجرد نقص في المياه، بل خطر يهدد البنية التحتية للمنزل. نقدم عزل مسابح متخصص يحمي الخرسانة والحديد ويحافظ على جودة المياه.",
+    //             features: ["حماية الخرسانة", "مواد مرنة", "ضمان طويل", "مقاومة للكيماويات"],
+    //         },
+    //         sections: [
+    //             {
+    //                 title: "أهمية عزل المسبح",
+    //                 type: "features-grid",
+    //                 content: "العزل الجيد للمسبح يحميه من ضغط المياه الداخلي والمياه الجوفية الخارجية، مما يمنع تآكل الحديد وتصدع البلاط.",
+    //                 items: [
+    //                     { title: "حماية الهيكل", description: "منع وصول المياه لحديد التسليح وصدأه." },
+    //                     { title: "توفير المياه والكيمياويات", description: "الحفاظ على منسوب المياه وتركيز الكلور." },
+    //                     { title: "منع الطحالب", description: "الأسطح المعزولة جيداً أسهل في التنظيف وتقاوم الطحالب." }
+    //                 ]
+    //             }
+    //         ],
+    //         ctaSection: {
+    //             title: "مسبحك في أيد أمينة",
+    //             description: "حلول عزل وإنشاء وصيانة المسابح",
+    //             benefits: ["فحص مجاني للتسرب", "مواد عزل ألمانية", "اختبار وعمان", "صيانة فلاتر ومضخات"]
+    //         }
+    //     },
+    //     testimonials: [
+    //         { name: "منتجع الخزامى", location: "الرياض", rating: 5, comment: "تم عزل المسابح الأولمبية لديكم، شغل احترافي والتزام بالوقت.", service: "عزل مسابح" }
+    //     ],
+    //     seo: {
+    //         title: "شركة عزل مسابح بالرياض | كشف تسربات المسابح | 0507067378",
+    //         description: "عزل وصيانة مسابح بالرياض. مواد عزل مائي خاصة للمسابح تمنع التسرب وتحمي البلاط والخرسانة. اتصل الآن.",
+    //         keywords: ["عزل مسابح", "عزل برك سباحة", "تسرب مسابح", "ترميم مسابح"],
+    //         ogImage: "/images/best-practices-spray-foam-installation-on-roof.webp"
+    //     }
+    // }
 }
 
 // Transform API service data to frontend format

@@ -42,20 +42,20 @@ export default function ServicesPage() {
       slug: "tank-insulation",
       highlights: ["مواد صحية", "تعقيم شامل", "ضمان التسرب"],
     },
-    {
-      title: "عزل المسابح",
-      description: "عزل مائي متخصص للمسابح يمنع تسرب المياه ويحافظ على البنية الخرسانية من التآكل.",
-      icon: Droplets,
-      slug: "pool-insulation",
-      highlights: ["حماية الخرسانة", "مواد مرنة", "ضمان طويل"],
-    },
-    {
-      title: "عزل الأسطح الشينكو",
-      description: "عزل خاص للأسطح المعدنية (الهناجر والمستودعات) يمنع الصدأ ويقلل الحرارة بشكل كبير.",
-      icon: Factory,
-      slug: "shinko-insulation",
-      highlights: ["منع الصدأ", "عزل صوتي", "حماية الهناجر"],
-    },
+    // {
+    //   title: "عزل المسابح",
+    //   description: "عزل مائي متخصص للمسابح يمنع تسرب المياه ويحافظ على البنية الخرسانية من التآكل.",
+    //   icon: Droplets,
+    //   slug: "pool-insulation",
+    //   highlights: ["حماية الخرسانة", "مواد مرنة", "ضمان طويل"],
+    // },
+    // {
+    //   title: "عزل الأسطح الشينكو",
+    //   description: "عزل خاص للأسطح المعدنية (الهناجر والمستودعات) يمنع الصدأ ويقلل الحرارة بشكل كبير.",
+    //   icon: Factory,
+    //   slug: "shinko-insulation",
+    //   highlights: ["منع الصدأ", "عزل صوتي", "حماية الهناجر"],
+    // },
   ]
 
   return (

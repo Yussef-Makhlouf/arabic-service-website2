@@ -1,4 +1,4 @@
-import { Wind, Droplets, Search, Database } from "lucide-react"
+import { Wind, Droplets, Search, Database, Warehouse, Waves } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 
 export interface Service {
@@ -55,13 +55,37 @@ export const staticServices: Service[] = [
     {
         id: "tank-insulation",
         title: "عزل خزانات المياه",
-        subtitle: "حماية صحية بمواد آمنة",
-        description: "عزل داخلي وخارجي للخزانات بمواد إيبوكسي آمنة صحياً ومعتمدة.",
-        longDescription: "عزل الخزانات ضروري لضمان نظافة مياه الشرب. نستخدم مواد إيبوكسي Food Grade معتمدة من وزارة الصحة، مع تنظيف وتعقيم شامل قبل العزل.",
+        subtitle: "حماية صحية ومياه نقية 100%",
+        description: "عزل وتنظيف وتعقيم شامل للخزانات الأرضية والعلوية بمواد آمنة.",
+        longDescription: "نقدم حلولاً متكاملة لعزل الخزانات تضمن سلامة المياه وصحة عائلتك. نستخدم مواد إيبوكسي معتمدة لا تتفاعل مع المياه، مع خدمة التنظيف والتعقيم الشامل.",
         href: "/services/tank-insulation",
-        image: "/images/thermal-acoustic-foam-insulation-on-roof.webp",
+        image: "/images/technician-spraying-foam-in-protective-gear.webp",
         icon: Database,
-        features: ["مواد آمنة صحياً", "تنظيف وتعقيم شامل", "عزل داخلي وخارجي", "ضمان 15 سنة"],
-        keywords: ["عزل خزانات", "تنظيف خزانات", "إيبوكسي", "مياه نظيفة"]
+        features: ["مواد آمنة صحياً", "تعقيم شامل", "ضمان التسرب", "صيانة دورية"],
+        keywords: ["عزل خزانات", "تنظيف خزانات", "عزل ايبوكسي", "تعقيم مياه"]
+    },
+    {
+        id: "shinko-insulation",
+        title: "عزل الأسطح الشينكو",
+        subtitle: "حماية متكاملة للهناجر والمستودعات",
+        description: "عزل مائي وحراري وعكس لأشعة الشمس للأسطح المعدنية والشينكو.",
+        longDescription: "حلول متخصصة لعزل الأسطح المعدنية (الشينكو) باستخدام الفوم (بولي يوريثان) الذي يلتصق بقوة بالمعدن، ويمنع الصدأ، ويخفض الحرارة بشكل كبير، ويمنع صوت المطر.",
+        href: "/services/shinko-insulation",
+        image: "/images/spray-foam-roofing-01.webp",
+        icon: Warehouse,
+        features: ["منع الصدأ", "عزل صوتي", "حماية الهناجر", "توفير التكييف"],
+        keywords: ["عزل شينكو", "عزل هناجر", "عزل مستودعات", "عزل اسطح معدنية"]
+    },
+    {
+        id: "pool-insulation",
+        title: "عزل المسابح",
+        subtitle: "حماية الهيكل الخرساني وجودة المياه",
+        description: "عزل مائي متخصص يمنع تسرب المياه ويحافظ على البنية الخرسانية.",
+        longDescription: "خدمة عزل المسابح بأحدث المواد التي تتحمل ضغط المياه المستمر والمواد الكيميائية. نضمن عدم نقص المياه وحماية الحديد من الصدأ والهيكل من التآكل.",
+        href: "/services/pool-insulation",
+        image: "/images/best-practices-spray-foam-installation-on-roof.webp",
+        icon: Waves,
+        features: ["حماية الخرسانة", "مواد مرنة", "ضمان طويل", "مقاومة للكيماويات"],
+        keywords: ["عزل مسابح", "عزل برك سباحة", "تسرب مسابح", "حماية مسابح"]
     },
 ]
