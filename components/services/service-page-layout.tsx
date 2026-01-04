@@ -25,6 +25,10 @@ import {
 } from "lucide-react"
 import { ServiceAreas } from "@/components/services/service-areas"
 import { StickyMobileCTA } from "@/components/services/sticky-mobile-cta"
+import { ServiceFeaturesGrid, type ServiceFeature } from "@/components/services/service-features-grid"
+import { WorkStepsTimeline, type WorkStep } from "@/components/services/work-steps-timeline"
+import { DetailedWorkSteps } from "@/components/services/detailed-work-steps"
+import { EnhancedServiceSidebar, type ServiceDetailsData, type WhyChooseUsItem } from "@/components/services/enhanced-service-sidebar"
 
 export type SectionType = "text-image" | "features-grid" | "process-timeline" | "faq-accordion" | "benefits-grid"
 
@@ -58,6 +62,12 @@ export interface ServicePageData {
     description: string
     benefits: string[]
   }
+  // New fields for enhanced sections
+  serviceFeatures?: ServiceFeature[]
+  workSteps?: WorkStep[]
+  workProcessImage?: string // New field to trigger detailed layout
+  serviceDetails?: ServiceDetailsData
+  whyChooseUs?: WhyChooseUsItem[]
 }
 
 export function ServicePageLayout({ data }: { data: ServicePageData }) {
@@ -275,123 +285,40 @@ export function ServicePageLayout({ data }: { data: ServicePageData }) {
               )}
             </section>
 
+            {/* Service Features Grid */}
+            {data.serviceFeatures && (
+              <ServiceFeaturesGrid features={data.serviceFeatures} />
+            )}
+
             {/* Dynamic Sections */}
             {data.sections.map((section, index) => (
               <SectionRenderer key={index} section={section} index={index} />
             ))}
 
+            {/* Work Steps - Always use the new Timeline Layout as requested */}
+            {data.workSteps && (
+              <WorkStepsTimeline steps={data.workSteps} />
+            )}
+
           </div>
 
           {/* Sidebar */}
           <aside className="order-1 lg:order-2">
-            <div className="lg:sticky lg:top-24 space-y-6">
-              {/* Service Card */}
-              <Card className="border-border shadow-xl overflow-hidden">
-                <div className="bg-primary p-5">
-                  <h3 className="text-lg font-bold text-white text-center">معلومات الخدمة</h3>
-                </div>
-                <CardContent className="p-6 space-y-5">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                        <Clock className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <div className="text-sm text-muted-foreground">مدة التنفيذ</div>
-                        <div className="font-bold text-foreground">1-3 أيام</div>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                        <Shield className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <div className="text-sm text-muted-foreground">الضمان</div>
-                        <div className="font-bold text-foreground">15 سنة مكتوب</div>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
-                        <MapPin className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <div className="text-sm text-muted-foreground">نطاق الخدمة</div>
-                        <div className="font-bold text-foreground">الرياض والخرج</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="pt-4 border-t border-border space-y-3">
-                    <Button
-                      size="lg"
-                      className="w-full gap-2 h-13 text-base font-bold bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-lg"
-                      asChild
-                    >
-                      <a href="tel:+966507067378">
-                        <Phone className="h-5 w-5" />
-                        اتصل الآن
-                      </a>
-                    </Button>
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="w-full gap-2 h-13 text-base font-bold border-green-500 text-green-600 hover:bg-green-50"
-                      asChild
-                    >
-                      <a href="https://wa.me/966507067378" target="_blank" rel="noopener noreferrer">
-                        <MessageCircle className="h-5 w-5" />
-                        واتساب
-                      </a>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Why Choose Us */}
-              <Card className="border-border shadow-lg">
-                <CardContent className="p-6">
-                  <h4 className="font-bold text-foreground mb-5 text-center">لماذا تختارنا؟</h4>
-                  <div className="space-y-3">
-                    {[
-                      "خبرة أكثر من 15 عاماً",
-                      "مواد معتمدة عالمياً",
-                      "فريق فني متخصص",
-                      "ضمان مكتوب 15 سنة",
-                      "أسعار منافسة",
-                      "خدمة سريعة"
-                    ].map((item, i) => (
-                      <div key={i} className="flex items-center gap-3 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                        <span className="text-muted-foreground">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Rating */}
-              <Card className="border-border shadow-lg bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20">
-                <CardContent className="p-6 text-center">
-                  <div className="flex items-center justify-center gap-1 mb-3">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <Star key={i} className="w-6 h-6 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
-                  <div className="text-2xl font-bold text-foreground">4.9/5</div>
-                  <div className="text-sm text-muted-foreground mt-1">من أكثر من 5000 عميل</div>
-                </CardContent>
-              </Card>
-            </div>
+            <EnhancedServiceSidebar
+              details={data.serviceDetails || {
+                price: "حسب المساحة",
+                warranty: "15 سنة",
+                duration: "1-3 أيام",
+                coverage: "الرياض والخرج"
+              }}
+              whyChooseUs={data.whyChooseUs}
+            />
           </aside>
-
         </div>
       </div>
 
 
-      {/* Service Areas */}
-      <ServiceAreas serviceName={data.title} />
+
 
 
       {/* Final CTA */}

@@ -257,7 +257,15 @@ export function Footer() {
               © {new Date().getFullYear()} شركة العزل المتقدم لعزل الاسطح - جميع الحقوق محفوظة
             </p>
             <p className="text-xs text-white/50">
-              تصميم وتطوير بواسطة <span className="text-secondary/80">Ahmed Adham</span>
+              تصميم وتطوير بواسطة{" "}
+              <a
+                href="https://wa.me/201145607071"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary/80 hover:text-secondary transition-colors"
+              >
+                Ahmed Adham
+              </a>
             </p>
           </div>
         </div>

@@ -26,6 +26,7 @@ export function Header() {
     { name: "المدونة", href: "/blog" },
     { name: "الأسئلة الشائعة", href: "/faq" },
     { name: "اتصل بنا", href: "/contact" },
+    {name: "سياسة الخصوصية", href: "/privacy"}
   ]
 
   return (
