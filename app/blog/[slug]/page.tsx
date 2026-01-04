@@ -28,6 +28,7 @@ import { BlogCard } from "@/components/blog/blog-card"
 import { MobileTableOfContents } from "@/components/blog/mobile-toc"
 import { Section } from "@/components/blog/post-sections"
 import { NeighborhoodsCompact } from "@/components/neighborhoods"
+import { parseMarkdownSync } from "@/lib/markdown"
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>
@@ -195,28 +196,26 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const articleSchema = generateArticleSchema(post)
   const breadcrumbSchema = generateBreadcrumbSchema(post)
 
-  // Process content to add IDs to headings and extract TOC
-  const processContent = (htmlContent: string) => {
+  // Parse markdown content and extract TOC sections
+  const processContent = (markdownContent: string) => {
     const sections: Section[] = []
-    let processedHtml = htmlContent
 
-    const headingRegex = /<(h[23])>(.*?)<\/\1>/g
+    // First, parse markdown to HTML using our custom parser
+    let processedHtml = parseMarkdownSync(markdownContent)
 
-    processedHtml = processedHtml.replace(headingRegex, (match, tag, content) => {
-      const title = content.replace(/<[^>]*>/g, '').trim()
-      const id = encodeURIComponent(title.replace(/\s+/g, '-').toLowerCase())
-
-      if (tag === 'h2') {
-        sections.push({
-          id,
-          title,
-          type: 'text',
-          content: []
-        })
-      }
-
-      return `<${tag} id="${id}">${content}</${tag}>`
-    })
+    // Extract h2 sections for TOC (headings already have IDs from markdown parser)
+    const headingRegex = /<h2[^>]*id="([^"]+)"[^>]*>([^<]*)<\/h2>/g
+    let match
+    while ((match = headingRegex.exec(processedHtml)) !== null) {
+      const id = match[1]
+      const title = match[2].replace(/<[^>]*>/g, '').trim()
+      sections.push({
+        id,
+        title,
+        type: 'text',
+        content: []
+      })
+    }
 
     return { processedHtml, sections }
   }

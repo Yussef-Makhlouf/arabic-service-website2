@@ -389,35 +389,10 @@ export function ServicePageLayout({ data }: { data: ServicePageData }) {
         </div>
       </div>
 
-      {/* Gallery Section */}
-      <section className="py-16 bg-muted/30 border-y border-border">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-10">
-            <SectionHeader icon={Camera} title="معرض أعمالنا" centered />
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <div key={i} className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
-                <Image
-                  src={`/cover${(i % 4) + 1}.webp`}
-                  alt={`مشروع ${i}`}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-4 right-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="font-bold">مشروع {i}</div>
-                  <div className="text-sm text-white/80">الرياض</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Service Areas */}
       <ServiceAreas serviceName={data.title} />
+
 
       {/* Final CTA */}
       <section className="py-20 md:py-28 bg-gradient-to-br from-primary via-primary to-primary/90 text-white relative overflow-hidden">

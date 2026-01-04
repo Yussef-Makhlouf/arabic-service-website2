@@ -1,6 +1,6 @@
 "use client"
 
-import { HelpCircle, Building2, Thermometer, Wallet, Users, CheckCircle, ArrowLeft } from "lucide-react"
+import { HelpCircle, Building2, Thermometer, Wallet, CheckCircle, ArrowLeft } from "lucide-react"
 
 export function SelectionGuideSection() {
     return (
@@ -10,13 +10,13 @@ export function SelectionGuideSection() {
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <span className="inline-flex items-center gap-2 px-4 py-2 bg-amber-100 text-amber-700 rounded-full text-sm font-medium mb-6">
                         <HelpCircle className="w-4 h-4" />
-                        دليل الاختيار
+                        إرشادات الاختيار
                     </span>
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                        كيفية الاختيار الأمثل - دليل عملي
+                        منهجية اختيار نظام العزل المناسب
                     </h2>
                     <p className="text-lg text-muted-foreground leading-relaxed">
-                        خطوات منهجية لاختيار نوع العزل المناسب لمبناك بناءً على الاحتياجات والميزانية
+                        دليل تطبيقي يساعدك على اتخاذ القرار الصائب بناءً على ظروفك ومتطلباتك
                     </p>
                 </div>
 
@@ -27,30 +27,30 @@ export function SelectionGuideSection() {
                         <div className="flex items-center gap-4 mb-6">
                             <div className="w-12 h-12 bg-primary text-primary-foreground rounded-xl flex items-center justify-center font-bold text-xl">1</div>
                             <div>
-                                <h3 className="text-xl font-bold">تحليل احتياجات المبنى</h3>
-                                <p className="text-sm text-muted-foreground">المساحة، الاستخدام، العمر</p>
+                                <h3 className="text-xl font-bold">تقييم خصائص المبنى</h3>
+                                <p className="text-sm text-muted-foreground">الحجم، الوظيفة، الحالة الراهنة</p>
                             </div>
                         </div>
                         <div className="space-y-4">
                             <div className="flex items-start gap-3 bg-muted/50 rounded-lg p-4">
                                 <Building2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                                 <div>
-                                    <strong className="text-foreground">نوع المبنى:</strong>
-                                    <span className="text-muted-foreground"> سكني، تجاري، صناعي - كل نوع له متطلبات مختلفة</span>
+                                    <strong className="text-foreground">طبيعة الاستخدام:</strong>
+                                    <span className="text-muted-foreground"> منزل، مكتب، مصنع - لكل نمط احتياجاته</span>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3 bg-muted/50 rounded-lg p-4">
                                 <Building2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                                 <div>
-                                    <strong className="text-foreground">مساحة السطح:</strong>
-                                    <span className="text-muted-foreground"> تحديد المساحة الإجمالية بالمتر المربع</span>
+                                    <strong className="text-foreground">المساحة الكلية:</strong>
+                                    <span className="text-muted-foreground"> حساب دقيق لمساحة السطح والجدران</span>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3 bg-muted/50 rounded-lg p-4">
                                 <Building2 className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                                 <div>
-                                    <strong className="text-foreground">عمر المبنى:</strong>
-                                    <span className="text-muted-foreground"> المباني القديمة قد تحتاج معالجة أولية</span>
+                                    <strong className="text-foreground">حالة البنية:</strong>
+                                    <span className="text-muted-foreground"> المنشآت القائمة قد تستلزم تحضيراً مسبقاً</span>
                                 </div>
                             </div>
                         </div>
@@ -61,30 +61,30 @@ export function SelectionGuideSection() {
                         <div className="flex items-center gap-4 mb-6">
                             <div className="w-12 h-12 bg-primary text-primary-foreground rounded-xl flex items-center justify-center font-bold text-xl">2</div>
                             <div>
-                                <h3 className="text-xl font-bold">دراسة المناخ المحلي الدقيق</h3>
-                                <p className="text-sm text-muted-foreground">الحرارة، الرطوبة، الأمطار</p>
+                                <h3 className="text-xl font-bold">تحليل العوامل المناخية</h3>
+                                <p className="text-sm text-muted-foreground">الحرارة، الهطول، الرطوبة</p>
                             </div>
                         </div>
                         <div className="space-y-4">
                             <div className="flex items-start gap-3 bg-muted/50 rounded-lg p-4">
                                 <Thermometer className="w-5 h-5 text-red-500 mt-0.5 shrink-0" />
                                 <div>
-                                    <strong className="text-foreground">درجات الحرارة:</strong>
-                                    <span className="text-muted-foreground"> المناطق الحارة جداً تحتاج عزل حراري قوي</span>
+                                    <strong className="text-foreground">معدل الحرارة:</strong>
+                                    <span className="text-muted-foreground"> المناطق شديدة الحرارة تستوجب عزلاً متميزاً</span>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3 bg-muted/50 rounded-lg p-4">
                                 <Thermometer className="w-5 h-5 text-blue-500 mt-0.5 shrink-0" />
                                 <div>
-                                    <strong className="text-foreground">معدل الأمطار:</strong>
-                                    <span className="text-muted-foreground"> المناطق الممطرة تحتاج عزل مائي متميز</span>
+                                    <strong className="text-foreground">كمية الأمطار:</strong>
+                                    <span className="text-muted-foreground"> المناطق الممطرة تتطلب حماية مائية قوية</span>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3 bg-muted/50 rounded-lg p-4">
                                 <Thermometer className="w-5 h-5 text-cyan-500 mt-0.5 shrink-0" />
                                 <div>
-                                    <strong className="text-foreground">الرطوبة:</strong>
-                                    <span className="text-muted-foreground"> المناطق الساحلية تحتاج مواد مقاومة للرطوبة</span>
+                                    <strong className="text-foreground">نسبة الرطوبة:</strong>
+                                    <span className="text-muted-foreground"> السواحل تحتاج عوازل طاردة للبلل</span>
                                 </div>
                             </div>
                         </div>
@@ -95,30 +95,30 @@ export function SelectionGuideSection() {
                         <div className="flex items-center gap-4 mb-6">
                             <div className="w-12 h-12 bg-primary text-primary-foreground rounded-xl flex items-center justify-center font-bold text-xl">3</div>
                             <div>
-                                <h3 className="text-xl font-bold">تحليل الميزانية والمرونة المالية</h3>
-                                <p className="text-sm text-muted-foreground">التكلفة الأولية مقابل التوفير</p>
+                                <h3 className="text-xl font-bold">تخطيط الموازنة المالية</h3>
+                                <p className="text-sm text-muted-foreground">الإنفاق الآني مقابل الوفر المستقبلي</p>
                             </div>
                         </div>
                         <div className="space-y-4">
                             <div className="flex items-start gap-3 bg-green-50 rounded-lg p-4 border border-green-200/50">
                                 <Wallet className="w-5 h-5 text-green-600 mt-0.5 shrink-0" />
                                 <div>
-                                    <strong className="text-green-900">ميزانية محدودة:</strong>
-                                    <span className="text-green-800"> البوليسترين أو البيتومين التقليدي</span>
+                                    <strong className="text-green-900">موازنة محدودة:</strong>
+                                    <span className="text-green-800"> ألواح البوليستيرين أو القار البسيط</span>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3 bg-blue-50 rounded-lg p-4 border border-blue-200/50">
                                 <Wallet className="w-5 h-5 text-blue-600 mt-0.5 shrink-0" />
                                 <div>
-                                    <strong className="text-blue-900">ميزانية متوسطة:</strong>
-                                    <span className="text-blue-800"> الصوف الصخري أو البيتومين المطاطي</span>
+                                    <strong className="text-blue-900">موازنة متوازنة:</strong>
+                                    <span className="text-blue-800"> الألياف البازلتية أو القار المعزز</span>
                                 </div>
                             </div>
                             <div className="flex items-start gap-3 bg-amber-50 rounded-lg p-4 border border-amber-200/50">
                                 <Wallet className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" />
                                 <div>
-                                    <strong className="text-amber-900">استثمار طويل المدى:</strong>
-                                    <span className="text-amber-800"> عزل الفوم (أعلى جودة وتوفير)</span>
+                                    <strong className="text-amber-900">استثمار بعيد المدى:</strong>
+                                    <span className="text-amber-800"> الفوم الرغوي (الأعلى جودة وعائداً)</span>
                                 </div>
                             </div>
                         </div>
@@ -129,30 +129,30 @@ export function SelectionGuideSection() {
                         <div className="flex items-center gap-4 mb-6">
                             <div className="w-12 h-12 bg-primary text-primary-foreground rounded-xl flex items-center justify-center font-bold text-xl">4</div>
                             <div>
-                                <h3 className="text-xl font-bold">استشارة الخبراء والمقاولين</h3>
-                                <p className="text-sm text-muted-foreground">الحصول على رأي متخصص</p>
+                                <h3 className="text-xl font-bold">التشاور مع المتخصصين</h3>
+                                <p className="text-sm text-muted-foreground">الاستفادة من الخبرة الفنية</p>
                             </div>
                         </div>
                         <div className="space-y-4">
                             <div className="flex items-start gap-3">
                                 <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 shrink-0" />
-                                <span className="text-muted-foreground">اطلب معاينة مجانية من شركات متخصصة</span>
+                                <span className="text-muted-foreground">استفد من خدمة الكشف الميداني المجاني</span>
                             </div>
                             <div className="flex items-start gap-3">
                                 <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 shrink-0" />
-                                <span className="text-muted-foreground">قارن بين 2-3 عروض أسعار مختلفة</span>
+                                <span className="text-muted-foreground">اجمع عروضاً من أكثر من مزود للمقارنة</span>
                             </div>
                             <div className="flex items-start gap-3">
                                 <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 shrink-0" />
-                                <span className="text-muted-foreground">تأكد من شهادات الاعتماد والضمان</span>
+                                <span className="text-muted-foreground">راجع التراخيص وصكوك الضمان</span>
                             </div>
                             <div className="flex items-start gap-3">
                                 <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 shrink-0" />
-                                <span className="text-muted-foreground">اسأل عن أعمال سابقة ومراجع العملاء</span>
+                                <span className="text-muted-foreground">استعلم عن مشاريع سابقة وآراء العملاء</span>
                             </div>
                             <div className="flex items-start gap-3">
                                 <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 shrink-0" />
-                                <span className="text-muted-foreground">تحقق من تراخيص الشركة ونظاميتها</span>
+                                <span className="text-muted-foreground">تحقق من الوضع النظامي للمنشأة</span>
                             </div>
                         </div>
                     </div>
@@ -160,15 +160,15 @@ export function SelectionGuideSection() {
 
                 {/* Final Decision Flowchart */}
                 <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl border border-primary/20 p-8">
-                    <h3 className="text-2xl font-bold text-center mb-8">الخطوات العملية لاتخاذ القرار</h3>
+                    <h3 className="text-2xl font-bold text-center mb-8">مسار اتخاذ القرار السليم</h3>
                     <div className="flex flex-wrap justify-center items-center gap-4">
                         {[
-                            "حدد المشكلة الرئيسية",
-                            "حدد الميزانية المتاحة",
-                            "اطلب 3 عروض أسعار",
-                            "قارن الضمان والجودة",
-                            "اختر المقاول المناسب",
-                            "تابع التنفيذ"
+                            "رصد المشكلة الأساسية",
+                            "تحديد الموازنة المتوفرة",
+                            "جمع عروض متعددة",
+                            "موازنة الجودة والضمان",
+                            "انتقاء المنفذ المناسب",
+                            "متابعة سير العمل"
                         ].map((step, index) => (
                             <div key={index} className="flex items-center gap-3">
                                 <div className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-bold flex items-center gap-2">

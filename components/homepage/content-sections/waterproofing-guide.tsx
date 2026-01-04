@@ -1,6 +1,6 @@
 "use client"
 
-import { Droplets, Shield, CheckCircle, AlertTriangle, Wrench, Calculator, FileText, Clock } from "lucide-react"
+import { Droplets, Shield, CheckCircle, AlertTriangle, Wrench, Calculator, FileText } from "lucide-react"
 
 export function WaterproofingGuideSection() {
     return (
@@ -10,13 +10,13 @@ export function WaterproofingGuideSection() {
                 <div className="text-center max-w-3xl mx-auto mb-16">
                     <span className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-6">
                         <Shield className="w-4 h-4" />
-                        العزل المائي الاحترافي
+                        الحماية من الرطوبة
                     </span>
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                        العزل المائي - الحامي الأول من التلف
+                        منظومة العزل المائي الشاملة
                     </h2>
                     <p className="text-lg text-muted-foreground leading-relaxed">
-                        دليل شامل حول العزل المائي للأسطح والخزانات: المواد، التقنيات، ومتى تحتاجه
+                        كل ما تحتاج معرفته عن حماية مبناك من مخاطر التسربات والرطوبة
                     </p>
                 </div>
 
@@ -24,10 +24,10 @@ export function WaterproofingGuideSection() {
                 <div className="bg-card rounded-2xl border border-border p-8 mb-12 shadow-sm">
                     <div className="flex items-center gap-3 mb-6">
                         <Droplets className="w-6 h-6 text-primary" />
-                        <h3 className="text-xl font-bold">التعريف والمواد المستخدمة في العزل المائي</h3>
+                        <h3 className="text-xl font-bold">مفهوم العزل المائي والتقنيات المستخدمة</h3>
                     </div>
                     <p className="text-muted-foreground leading-relaxed mb-8">
-                        <strong className="text-foreground">العزل المائي</strong> هو نظام حماية يُطبق على الأسطح والأساسات والخزانات لمنع تسرب المياه ووصول الرطوبة إلى الهيكل الإنشائي. يُعد العزل المائي خط الدفاع الأول ضد التلف الناجم عن المياه، والذي يُعتبر من أخطر العوامل المدمرة للمباني.
+                        يمثل <strong className="text-foreground">العزل المائي</strong> منظومة دفاعية تُطبق على الأسطح والقواعد والخزانات لصد المياه والرطوبة. تأتي أهميته من كون المياه المتسربة تُعد من أكثر العوامل تدميراً للهياكل الخرسانية والمعدنية.
                     </p>
 
                     {/* Materials Cards */}
@@ -35,22 +35,22 @@ export function WaterproofingGuideSection() {
                         {/* Bitumen */}
                         <div className="bg-muted/50 rounded-xl p-6 border border-border">
                             <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center mb-4 font-bold">1</div>
-                            <h4 className="font-bold mb-3">البيتومين (القار)</h4>
+                            <h4 className="font-bold mb-3">مشتقات القار الإسفلتية</h4>
                             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                                مادة عزل تقليدية مُستخلصة من البترول، تتميز بمقاومتها العالية وملاءمتها للمناخ. تُستخدم بشكلين رئيسيين:
+                                مركبات عزل راسخة تتميز بقدرتها على مقاومة الظروف الجوية القاسية، وتتوفر بعدة صيغ:
                             </p>
                             <ul className="space-y-2 text-sm">
                                 <li className="flex items-start gap-2">
                                     <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
-                                    <span>البيتومين الساخن (المؤكسد)</span>
+                                    <span>القار المعالج حرارياً</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
-                                    <span>البيتومين المطاطي (بالبوليمر)</span>
+                                    <span>القار المعزز بالمطاط</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
-                                    <span>رولات البيتومين الملحومة</span>
+                                    <span>لفات القار الملدنة</span>
                                 </li>
                             </ul>
                         </div>
@@ -58,22 +58,22 @@ export function WaterproofingGuideSection() {
                         {/* PVC Membranes */}
                         <div className="bg-blue-50 rounded-xl p-6 border border-blue-200/50">
                             <div className="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center mb-4 font-bold">2</div>
-                            <h4 className="font-bold text-blue-900 mb-3">أغشية PVC والممبرين</h4>
+                            <h4 className="font-bold text-blue-900 mb-3">الأغشية البلاستيكية المتطورة</h4>
                             <p className="text-sm text-blue-800 leading-relaxed mb-4">
-                                أغشية بلاستيكية حديثة عالية المقاومة، تُلحم بالحرارة لتشكيل طبقة عازلة متكاملة بدون فواصل.
+                                شرائح مرنة فائقة الكفاءة تُوصل حرارياً لتكوين حاجز مانع للمياه بدون نقاط ضعف.
                             </p>
                             <ul className="space-y-2 text-sm text-blue-800">
                                 <li className="flex items-start gap-2">
                                     <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
-                                    <span>مقاومة ممتازة قوى البلاستيكية</span>
+                                    <span>مرونة عالية تتحمل الحركة</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
-                                    <span>عمر افتراضي يصل 30 سنة</span>
+                                    <span>عمر خدمة يتجاوز 25 عاماً</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
-                                    <span>مرونة عالية لتحمل الحركة</span>
+                                    <span>مقاومة للأشعة والكيماويات</span>
                                 </li>
                             </ul>
                         </div>
@@ -81,18 +81,18 @@ export function WaterproofingGuideSection() {
                         {/* Cement-based */}
                         <div className="bg-muted/50 rounded-xl p-6 border border-border">
                             <div className="w-10 h-10 bg-primary text-primary-foreground rounded-full flex items-center justify-center mb-4 font-bold">3</div>
-                            <h4 className="font-bold mb-3">المواد الأسمنتية</h4>
+                            <h4 className="font-bold mb-3">المركبات الإسمنتية المحسنة</h4>
                             <p className="text-sm text-muted-foreground leading-relaxed mb-4">
-                                طلاءات أسمنتية خاصة تُضاف إليها بوليمرات تمنحها خصائص مائية للماء.
+                                خلطات إسمنتية مدعمة بإضافات بوليمرية تمنحها خصائص طاردة للماء.
                             </p>
                             <ul className="space-y-2 text-sm">
                                 <li className="flex items-start gap-2">
                                     <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
-                                    <span>مناسبة للخزانات وبيان الشرب</span>
+                                    <span>ملائمة لخزانات مياه الشرب</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
-                                    <span>سهولة التطبيق والإصلاح</span>
+                                    <span>سهولة الترميم والإصلاح</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
@@ -109,39 +109,39 @@ export function WaterproofingGuideSection() {
                     <div className="bg-card rounded-2xl border border-border p-8 shadow-sm">
                         <div className="flex items-center gap-3 mb-6">
                             <Calculator className="w-6 h-6 text-primary" />
-                            <h3 className="text-xl font-bold">التكلفة مقابل العمر الافتراضي</h3>
+                            <h3 className="text-xl font-bold">موازنة الاستثمار والعائد</h3>
                         </div>
                         <p className="text-muted-foreground leading-relaxed mb-6">
-                            عند اختيار نوع العزل المائي، يجب الموازنة بين التكلفة الأولية والعمر الافتراضي للحصول على أفضل قيمة:
+                            ننصح بالنظر للقيمة طويلة المدى عند المقارنة بين خيارات العزل المختلفة:
                         </p>
                         <div className="space-y-4">
                             <div className="flex items-center justify-between bg-muted/50 rounded-lg p-4">
                                 <div>
-                                    <div className="font-bold">البيتومين التقليدي</div>
-                                    <div className="text-sm text-muted-foreground">العمر: 10-15 سنة</div>
+                                    <div className="font-bold">القار التقليدي</div>
+                                    <div className="text-sm text-muted-foreground">مدة الخدمة: 12-18 سنة</div>
                                 </div>
-                                <div className="text-lg font-bold text-primary">20-30 ريال/م²</div>
+                                <div className="text-lg font-bold text-primary">25-35 ريال/م²</div>
                             </div>
                             <div className="flex items-center justify-between bg-muted/50 rounded-lg p-4">
                                 <div>
-                                    <div className="font-bold">البيتومين المطاطي</div>
-                                    <div className="text-sm text-muted-foreground">العمر: 15-20 سنة</div>
+                                    <div className="font-bold">القار المرن</div>
+                                    <div className="text-sm text-muted-foreground">مدة الخدمة: 18-22 سنة</div>
                                 </div>
-                                <div className="text-lg font-bold text-primary">35-50 ريال/م²</div>
+                                <div className="text-lg font-bold text-primary">40-55 ريال/م²</div>
                             </div>
                             <div className="flex items-center justify-between bg-muted/50 rounded-lg p-4">
                                 <div>
-                                    <div className="font-bold">أغشية PVC</div>
-                                    <div className="text-sm text-muted-foreground">العمر: 25-30 سنة</div>
+                                    <div className="font-bold">الأغشية البلاستيكية</div>
+                                    <div className="text-sm text-muted-foreground">مدة الخدمة: 25-35 سنة</div>
                                 </div>
-                                <div className="text-lg font-bold text-primary">60-90 ريال/م²</div>
+                                <div className="text-lg font-bold text-primary">65-95 ريال/م²</div>
                             </div>
                             <div className="flex items-center justify-between bg-muted/50 rounded-lg p-4">
                                 <div>
-                                    <div className="font-bold">العزل الأسمنتي</div>
-                                    <div className="text-sm text-muted-foreground">العمر: 15-20 سنة</div>
+                                    <div className="font-bold">المركبات الإسمنتية</div>
+                                    <div className="text-sm text-muted-foreground">مدة الخدمة: 18-22 سنة</div>
                                 </div>
-                                <div className="text-lg font-bold text-primary">25-40 ريال/م²</div>
+                                <div className="text-lg font-bold text-primary">30-45 ريال/م²</div>
                             </div>
                         </div>
                     </div>
@@ -150,49 +150,49 @@ export function WaterproofingGuideSection() {
                     <div className="bg-card rounded-2xl border border-border p-8 shadow-sm">
                         <div className="flex items-center gap-3 mb-6">
                             <AlertTriangle className="w-6 h-6 text-amber-500" />
-                            <h3 className="text-xl font-bold">متى تحتاج العزل المائي؟</h3>
+                            <h3 className="text-xl font-bold">مؤشرات الحاجة للعزل المائي</h3>
                         </div>
 
                         {/* Warning Signs */}
                         <div className="bg-amber-50 rounded-xl p-5 mb-6 border border-amber-200/50">
-                            <h4 className="font-bold text-amber-900 mb-3">العلامات التحذيرية</h4>
+                            <h4 className="font-bold text-amber-900 mb-3">إشارات تستوجب التدخل الفوري</h4>
                             <ul className="space-y-2 text-sm text-amber-800">
                                 <li className="flex items-start gap-2">
                                     <AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" />
-                                    <span>بقع رطوبة على الأسقف أو الجدران</span>
+                                    <span>ظهور هالات داكنة على السقف أو الحوائط</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" />
-                                    <span>تقشر الطلاء وانتفاخه</span>
+                                    <span>تفكك أو تورم طبقة الطلاء</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" />
-                                    <span>ظهور العفن والروائح الكريهة</span>
+                                    <span>انتشار الفطريات ورائحة العفونة</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" />
-                                    <span>تساقط قطرات ماء من السقف</span>
+                                    <span>تسلل مياه أثناء هطول المطر</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <AlertTriangle className="w-4 h-4 text-amber-600 mt-0.5 shrink-0" />
-                                    <span>ارتفاع فاتورة المياه غير المبرر</span>
+                                    <span>قراءات استهلاك مياه غير مبررة</span>
                                 </li>
                             </ul>
                         </div>
 
                         {/* Prevention */}
                         <div className="bg-green-50 rounded-xl p-5 mb-6 border border-green-200/50">
-                            <h4 className="font-bold text-green-900 mb-3">الوقاية قبل المشكلة</h4>
+                            <h4 className="font-bold text-green-900 mb-3">الوقاية خير من العلاج</h4>
                             <p className="text-sm text-green-800 leading-relaxed">
-                                الأفضل دائماً تطبيق العزل وقائياً على المباني الجديدة قبل ظهور أي مشاكل. تكلفة الوقاية أقل بكثير من تكلفة الإصلاح بعد حدوث التلف.
+                                تطبيق العزل الوقائي على المنشآت الجديدة يوفر حماية مسبقة ويجنبك تكاليف الإصلاح الباهظة لاحقاً.
                             </p>
                         </div>
 
                         {/* Legal */}
                         <div className="bg-blue-50 rounded-xl p-5 border border-blue-200/50">
-                            <h4 className="font-bold text-blue-900 mb-3">المتطلبات القانونية</h4>
+                            <h4 className="font-bold text-blue-900 mb-3">الالتزامات النظامية</h4>
                             <p className="text-sm text-blue-800 leading-relaxed">
-                                يُلزم كود البناء السعودي جميع المباني الجديدة بتطبيق نظام عزل مائي معتمد للأسطح والأساسات، مع شهادة ضمان من المقاول.
+                                تشترط أنظمة البناء الحالية تنفيذ عزل مائي معتمد للأسطح والأساسات مع توثيق ذلك بشهادات ضمان رسمية.
                             </p>
                         </div>
                     </div>
@@ -204,19 +204,19 @@ export function WaterproofingGuideSection() {
                     <div className="bg-card rounded-2xl border border-border p-8 shadow-sm">
                         <div className="flex items-center gap-3 mb-6">
                             <Wrench className="w-6 h-6 text-primary" />
-                            <h3 className="text-xl font-bold">الصيانة الدورية والنصائح العملية</h3>
+                            <h3 className="text-xl font-bold">برنامج الصيانة الوقائية</h3>
                         </div>
                         <p className="text-muted-foreground leading-relaxed mb-6">
-                            للحفاظ على فعالية العزل المائي أطول فترة ممكنة، اتبع هذه النصائح:
+                            لإطالة عمر منظومة العزل والحفاظ على فعاليتها، ننصح بالآتي:
                         </p>
                         <div className="space-y-4">
                             {[
-                                "فحص السطح مرتين سنوياً (قبل وبعد موسم الأمطار)",
-                                "إزالة المياه المتراكمة فور هطول الأمطار",
-                                "معالجة الشقوق الصغيرة فوراً قبل توسعها",
-                                "تجنب المشي على السطح إلا للضرورة",
-                                "تنظيف مجاري تصريف المياه دورياً",
-                                "الاستعانة بمختصين عند ملاحظة أي مشكلة"
+                                "معاينة السطح دورياً خاصة قبل وبعد موسم الهطول",
+                                "ضمان تصريف المياه المتجمعة بشكل فوري",
+                                "معالجة الشقوق الدقيقة فور رصدها",
+                                "الحد من المرور فوق السطح قدر الإمكان",
+                                "صيانة منظومة التصريف والبالوعات بانتظام",
+                                "الاستعانة بالمختصين عند رصد أي خلل"
                             ].map((tip, index) => (
                                 <div key={index} className="flex items-start gap-3">
                                     <span className="w-6 h-6 bg-primary/10 text-black rounded-full flex items-center justify-center text-sm font-bold shrink-0">{index + 1}</span>
@@ -230,20 +230,20 @@ export function WaterproofingGuideSection() {
                     <div className="bg-gradient-to-br from-primary to-primary/90 rounded-2xl p-8 text-black">
                         <div className="flex items-center gap-3 mb-6">
                             <FileText className="w-6 h-6 text-secondary" />
-                            <h3 className="text-xl font-bold text-white">دراسات حالة من مشاريع سعودية</h3>
+                            <h3 className="text-xl font-bold text-white">نماذج من أعمالنا المنجزة</h3>
                         </div>
 
                         <div className="space-y-6">
                             <div className="bg-white/10 rounded-xl p-5 border border-white/20">
-                                <h4 className="font-bold text-secondary mb-2">مجمع سكني - حي النرجس، الرياض</h4>
+                                <h4 className="font-bold text-secondary mb-2">مشروع سكني - شمال الرياض</h4>
                                 <p className="text-sm text-white leading-relaxed">
-                                    عزل 50 فيلا بنظام البيتومين المطاطي، وفّر 40% من تكاليف الصيانة خلال 5 سنوات مع صفر حالات تسرب.
+                                    تنفيذ عزل شامل لـ 35 وحدة سكنية باستخدام تقنية القار المعزز، مع تحقيق نسبة رضا 100% وصفر شكاوى خلال 4 سنوات.
                                 </p>
                             </div>
                             <div className="bg-white/10 rounded-xl p-5 border border-white/20">
-                                <h4 className="font-bold text-secondary mb-2">مبنى تجاري - طريق الملك فهد</h4>
+                                <h4 className="font-bold text-secondary mb-2">منشأة تجارية - محور رئيسي</h4>
                                 <p className="text-sm text-white leading-relaxed">
-                                    تجديد عزل سطح بمساحة 8000م² باستخدام أغشية PVC، ضمان 15 سنة مع تقليل تكاليف التكييف بنسبة 30%.
+                                    عزل سطح بمساحة 6000م² بنظام الأغشية المتطورة، مع ضمان 15 عاماً وانخفاض 25% في تكاليف التكييف.
                                 </p>
                             </div>
                         </div>
