@@ -50,49 +50,7 @@ const serviceSchema = {
     "@id": "https://tebaservices.com/#localbusiness",
     name: "شركة عزل الأسطح بالرياض",
   },
-  areaServed: [
-    { "@type": "City", name: "الرياض" },
-    { "@type": "City", name: "الخرج" },
-  ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "خدمات عزل الفوم",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "عزل فوم خلايا مغلقة 3 سم",
-        },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          priceCurrency: "SAR",
-          price: "40",
-          unitText: "متر مربع",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "عزل فوم خلايا مغلقة 5 سم",
-        },
-        priceSpecification: {
-          "@type": "PriceSpecification",
-          priceCurrency: "SAR",
-          price: "55",
-          unitText: "متر مربع",
-        },
-      },
-    ],
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "2500",
-    bestRating: "5",
-    worstRating: "1",
-  },
+
 
 }
 
