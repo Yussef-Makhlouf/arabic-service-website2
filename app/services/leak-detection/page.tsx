@@ -3,6 +3,7 @@ import { Footer } from "@/components/footer"
 import { FloatingActions } from "@/components/floating-actions"
 import { ServicePageLayout, type SectionType } from "@/components/services/service-page-layout"
 import { TestimonialsSection, type Testimonial } from "@/components/services/testimonials-section"
+import { NeighborhoodsShowcase } from "@/components/neighborhoods/neighborhoods-showcase"
 import { Search } from "lucide-react"
 import type { Metadata } from "next"
 
@@ -329,6 +330,7 @@ export default function LeakDetectionPage() {
       <Header />
       <ServicePageLayout data={pageData} />
       <TestimonialsSection testimonials={testimonials} />
+      <NeighborhoodsShowcase />
       <Footer />
       <FloatingActions />
     </>

@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer"
 import { FloatingActions } from "@/components/floating-actions"
 import { ServicePageLayout, type SectionType, type ServicePageData, type ServiceSection } from "@/components/services/service-page-layout"
 import { TestimonialsSection, type Testimonial } from "@/components/services/testimonials-section"
-import { NeighborhoodsCompact } from "@/components/neighborhoods"
+import { NeighborhoodsCompact, NeighborhoodsShowcase } from "@/components/neighborhoods"
 import { getServiceBySlug, getServices } from "@/lib/api-client"
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
@@ -507,6 +507,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
             {testimonials.length > 0 && (
                 <TestimonialsSection testimonials={testimonials} />
             )}
+
+            <NeighborhoodsShowcase />
 
 
 
