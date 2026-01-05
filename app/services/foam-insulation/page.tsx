@@ -93,20 +93,7 @@ const serviceSchema = {
     bestRating: "5",
     worstRating: "1",
   },
-  review: [
-    {
-      "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      author: { "@type": "Person", name: "سعد القحطاني" },
-      reviewBody: "فواتير الكهرباء نزلت بشكل ملحوظ من أول شهر. شغل احترافي وسريع.",
-    },
-    {
-      "@type": "Review",
-      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-      author: { "@type": "Person", name: "م. عبدالرحمن الزهراني" },
-      reviewBody: "المواد المستخدمة ممتازة وسماكة الفوم مطابقة للمواصفات.",
-    },
-  ],
+
 }
 
 const productSchema = {
