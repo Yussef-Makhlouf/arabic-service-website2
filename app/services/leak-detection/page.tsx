@@ -78,6 +78,26 @@ const serviceSchema = {
     bestRating: "5",
     worstRating: "1",
   },
+  review: [
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "أبو نايف القحطاني" },
+      reviewBody: "وصلتني فاتورة مياه بمبلغ 4000 ريال وكنت منزعجاً جداً. اتصلت بشركة العزل المتقدم، وفحصوا البيت بأجهزة حديثة وطلع التسريب في عوامة الخزان الأرضي. صلحوا المشكلة وأعطوني تقرير معتمد لشركة المياه والحمد لله الفواتير رجعت طبيعية.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "خالد العنزي" },
+      reviewBody: "شغلهم دقيق جداً وبدون أي تكسير عشوائي. حددوا مكان التسريب في الجدار بجهاز الكتروني وطلع بالضبط في كوع الحمام. صلحوه بسرعة ونظافة. أنصح بهم جداً.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "سلطان المطيري" },
+      reviewBody: "فريق محترف ومنظم. كنت متخوف من تكسير السيراميك لكنهم طمنوني وبالفعل الكشف كان كيميائي وصوتي وتم الإصلاح في مكان واحد صغير جداً. دقة واحترافية.",
+    },
+  ],
 }
 
 const breadcrumbSchema = {

@@ -72,6 +72,26 @@ const serviceSchema = {
     bestRating: "5",
     worstRating: "1",
   },
+  review: [
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "أبو خالد العتيبي" },
+      reviewBody: "كان عندي تسريب كبير في الخزان الأرضي وفاتورة المياه كانت خيالية. شركة العزل المتقدم كشفوا التسريب وعزلوا الخزان بالايبوكسي والآن الحمد لله الفاتورة نزلت والماء صار أنظف بكثير.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "صالح العنزي" },
+      reviewBody: "شغل مرتب ونظيف. الفريق محترم وبدأوا العمل في الوقت المحدد. تعقيم الخزان قبل وبعد العزل أعطاني اطمئنان كبير على مياه الشرب.",
+    },
+    {
+      "@type": "Review",
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+      author: { "@type": "Person", name: "عبدالله القحطاني" },
+      reviewBody: "شكراً لشركة العزل المتقدم على التعامل الراقي. عزلوا خزانات المسجد عندنا وكانوا متعاونين جداً والسعر كان مناسب جداً وجودة الشغل ممتازة.",
+    },
+  ],
 }
 
 const breadcrumbSchema = {
