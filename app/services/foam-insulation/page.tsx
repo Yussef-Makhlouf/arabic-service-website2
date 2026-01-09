@@ -9,13 +9,12 @@ import { Wind } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "شركة عزل فوم بالرياض والخرج | ضمان 15 سنة | 0507067378",
+  title: "شركة عزل فوم بالرياض | شركة العزل المتقدم | 0507067378",
   description:
-    "🔥 أفضل خدمة عزل فوم بولي يوريثان في الرياض والخرج. عزل حراري ومائي معاً ✓ توفير 40% من فاتورة الكهرباء ✓ مواد معتمدة من BASF ✓ ضمان 15 عام مكتوب ✓ فريق محترف. اتصل الآن: 0507067378",
+    "🔥 أفضل خدمة عزل فوم بولي يوريثان في الرياض. عزل حراري ومائي معاً ✓ توفير 40% من فاتورة الكهرباء ✓ مواد معتمدة من BASF ✓ ضمان 15 عام مكتوب ✓ فريق محترف. اتصل الآن: 0507067378",
   keywords: [
     "عزل فوم",
     "عزل فوم بالرياض",
-    "عزل فوم بالخرج",
     "عزل فوم بولي يوريثان",
     "عزل حراري",
     "توفير الكهرباء",
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
     "تقليل فاتورة الكهرباء"
   ].join(", "),
   openGraph: {
-    title: "شركة عزل فوم بالرياض والخرج | ضمان 15 سنة",
+    title: "شركة عزل فوم بالرياض | شركة العزل المتقدم | 0507067378",
     description: "أفضل خدمة عزل فوم في الرياض - عزل حراري ومائي معاً. توفير 40% من فاتورة الكهرباء. ضمان 15 عام.",
     type: "website",
     images: ["/polyurethane-foam-insulation-application.webp"],
@@ -49,6 +48,15 @@ const serviceSchema = {
     "@type": "LocalBusiness",
     "@id": "https://tebaservices.com/#localbusiness",
     name: "شركة عزل الأسطح بالرياض",
+    telephone: "0507067378",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "الرياض",
+      addressRegion: "الرياض",
+      postalCode: "11523",
+      addressCountry: "SA",
+    },
+
   },
 
 
