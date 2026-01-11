@@ -50,7 +50,7 @@ export function NeighborhoodShowcaseCard({
                         className="w-full justify-between hover:bg-primary hover:text-primary-foreground group/btn"
                         asChild
                     >
-                        <a href="tel:+966555555555"> {/* Replace with actual number if known, or keep generic */}
+                        <a href="tel:+966507067378"> {/* Replace with actual number if known, or keep generic */}
                             <span>اطلب الخدمة الآن</span>
                             <ArrowUpLeft className="h-4 w-4 transition-transform group-hover/btn:-translate-x-1 group-hover/btn:-translate-y-1" />
                         </a>
