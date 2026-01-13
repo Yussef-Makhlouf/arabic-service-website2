@@ -42,7 +42,6 @@ const serviceSchema = {
   serviceType: "عزل خزانات",
   provider: {
     "@type": "LocalBusiness",
-    "@id": "https://tebaservices.com/#localbusiness",
     name: "شركة عزل الأسطح بالرياض",
   },
   areaServed: [
@@ -64,6 +63,19 @@ const serviceSchema = {
         priceSpecification: { "@type": "PriceSpecification", priceCurrency: "SAR", price: "300", unitText: "خزان" },
       },
     ],
+  },
+}
+
+// Product Schema for Reviews (Google Requirement)
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://tebaservices.com/services/tank-insulation#product",
+  name: "خدمة عزل خزانات المياه",
+  description: "خدمة عزل خزانات المياه بمواد إيبوكسي آمنة صحياً ومعتمدة من وزارة الصحة. عزل داخلي وخارجي للخزانات الأرضية والعلوية مع ضمان 15 سنه.",
+  brand: {
+    "@type": "Brand",
+    name: "شركة عزل الأسطح بالرياض",
   },
   aggregateRating: {
     "@type": "AggregateRating",
@@ -324,6 +336,12 @@ export default function TankInsulationPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productSchema),
         }}
       />
       <script

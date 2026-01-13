@@ -70,6 +70,19 @@ const serviceSchema = {
       },
     ],
   },
+}
+
+// Product Schema for Reviews (Google Requirement)
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://tebaservices.com/services/leak-detection#product",
+  name: "خدمة كشف تسربات المياه",
+  description: "كشف تسربات المياه بأحدث الأجهزة الإلكترونية والكاميرات الحرارية. كشف دقيق بدون تكسير مع تقارير موثقة وإصلاح فوري.",
+  brand: {
+    "@type": "Brand",
+    name: "شركة عزل الأسطح بالرياض",
+  },
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
@@ -338,6 +351,12 @@ export default function LeakDetectionPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productSchema),
         }}
       />
       <script

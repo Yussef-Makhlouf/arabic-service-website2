@@ -446,13 +446,26 @@ function generateDefaultSchema(slug: string, title: string, description: string)
         description: description,
         provider: {
             "@type": "LocalBusiness",
-            "@id": "https://tebaservices.com/#localbusiness",
             name: "شركة طيبة للخدمات",
         },
         areaServed: [
             { "@type": "City", name: "الرياض" },
             { "@type": "City", name: "الخرج" },
         ],
+    }
+}
+
+function generateProductSchema(slug: string, title: string, description: string) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "@id": `https://tebaservices.com/services/${slug}#product`,
+        name: title,
+        description: description,
+        brand: {
+            "@type": "Brand",
+            name: "شركة طيبة للخدمات",
+        },
         aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "4.9",
@@ -486,6 +499,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
     const { pageData, testimonials, seo, schemaOrg } = serviceData
 
     const serviceSchema = schemaOrg || generateDefaultSchema(slug, pageData.title, seo.description)
+    const productSchema = generateProductSchema(slug, pageData.title, seo.description)
     const breadcrumbSchema = generateBreadcrumbSchema(slug, pageData.title)
 
     return (

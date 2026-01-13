@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://tebaservices.com/services/waterproofing",
+  "@id": "https://tebaservices.com/services/waterproofing#service",
   name: "عزل مائي للأسطح",
   alternateName: "عزل مائي ضد تسرب المياه",
   description: "العزل المائي للأسطح هو عملية تطبيق طبقات من المواد العازلة المتخصصة على سطح المبنى لمنع تسرب مياه الأمطار والرطوبة. حماية شاملة بضمان 15 سنه.",
@@ -64,6 +64,19 @@ const serviceSchema = {
         priceSpecification: { "@type": "PriceSpecification", priceCurrency: "SAR", price: "35", unitText: "متر مربع" },
       },
     ],
+  },
+}
+
+// Product Schema for Reviews (Google Requirement)
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "@id": "https://tebaservices.com/services/waterproofing#product",
+  name: "خدمة عزل مائي للأسطح",
+  description: "العزل المائي للأسطح هو عملية تطبيق طبقات من المواد العازلة المتخصصة على سطح المبنى لمنع تسرب مياه الأمطار والرطوبة. حماية شاملة بضمان 15 سنه.",
+  brand: {
+    "@type": "Brand",
+    name: "شركة عزل الأسطح بالرياض",
   },
   aggregateRating: {
     "@type": "AggregateRating",
@@ -306,6 +319,12 @@ export default function WaterproofingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productSchema),
         }}
       />
       <script
