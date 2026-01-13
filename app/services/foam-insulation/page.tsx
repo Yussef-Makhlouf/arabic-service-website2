@@ -40,48 +40,110 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": "https://tebaservices.com/services/foam-insulation#service",
-  name: "عزل فوم بولي يوريثان للأسطح",
-  alternateName: "عزل فوم حراري ومائي",
-  description: "خدمة عزل الفوم (البولي يوريثان) هي أحدث تقنيات العزل. تجمع بين العزل الحراري والمائي في طبقة واحدة، تعكس أشعة الشمس، تقلل استهلاك الطاقة بنسبة تصل إلى 40%، وتدوم لأكثر من 20 عاماً.",
-  serviceType: "عزل حراري ومائي",
+  name: "خدمة عزل فوم بالرياض (بولي يوريثان)",
+  alternateName: ["عزل اسطح بالفوم", "عزل شينكو بالفوم", "عزل مائي وحراري بالفوم", "رش فوم امريكي"],
+  description: "أفضل خدمة عزل فوم بالرياض والخرج. نستخدم فوم بولي يوريثان أمريكي لعزل الأسطح الخرسانية والمعدنية (شينكو). عزل مائي وحراري في طبقة واحدة مع ضمان 15 سنة وتوفير 40% من الكهرباء.",
+  serviceType: "Insulation",
   provider: {
-    "@type": "LocalBusiness",
+    "@type": "HomeAndConstructionBusiness",
     "@id": "https://tebaservices.com/#localbusiness",
-    name: "شركة عزل الأسطح بالرياض",
+    name: "شركة العزل المتقدم - عزل فوم بالرياض",
     telephone: "0507067378",
+    priceRange: "$$",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "الرياض",
-      addressRegion: "الرياض",
-      postalCode: "11523",
+      streetAddress: "طريق الملك فهد، حي الصحافة",
+      addressLocality: "الرياض",
+      addressRegion: "منطقة الرياض",
+      postalCode: "13315",
       addressCountry: "SA",
     },
-      
-    
+    image: "https://tebaservices.com/logo.webp",
   },
-
-
+  areaServed: [
+    {
+      "@type": "City",
+      name: "الرياض",
+      "@id": "https://www.wikidata.org/wiki/Q3692"
+    },
+    {
+      "@type": "City",
+      name: "الخرج"
+    },
+    {
+      "@type": "City",
+      name: "المجمعة"
+    }
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "باقات عزل الفوم",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "عزل فوم سماكة 3 سم",
+          description: "عزل حراري ومائي اقتصادي بسماكة 3 سم للأسطح الخرسانية والشينكو"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "عزل فوم سماكة 5 سم",
+          description: "عزل حراري ومائي فائق الأداء بسماكة 5 سم (موصى به لكود البناء)"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "عزل اسطح شينكو",
+          description: "رش فوم بولي يوريثان مانع للصوت والحرارة والتسربات للهناجر والمستودعات"
+        }
+      }
+    ]
+  }
 }
 
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  name: "عزل فوم بولي يوريثان",
-  description: "عزل حراري ومائي متطور بتقنية البولي يوريثان - وفّر حتى 40% من فاتورة الكهرباء",
-  brand: { "@type": "Brand", name: "شركة عزل الأسطح" },
+  name: "مادة عزل الفوم (بولي يوريثان)",
+  description: "فوم بولي يوريثان عالي الكثافة للعزل المائي والحراري. معتمد من شركة الكهرباء ومطابق للمواصفات السعودية.",
+  brand: {
+    "@type": "Brand",
+    name: "Advanced Insulation Foam"
+  },
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
     reviewCount: "2500",
     bestRating: "5",
+    worstRating: "1"
+  },
+  review: {
+    "@type": "Review",
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: "5",
+      bestRating: "5"
+    },
+    author: {
+      "@type": "Person",
+      name: "عميل مميز"
+    },
+    reviewBody: "تجربة ممتازة، العزل خفف حرارة البيت بشكل ملحوظ والفاتورة قلت."
   },
   offers: {
     "@type": "AggregateOffer",
     priceCurrency: "SAR",
-    lowPrice: "40",
-    highPrice: "70",
-    offerCount: "3",
+    lowPrice: "35",
+    highPrice: "65",
+    offerCount: "5",
     availability: "https://schema.org/InStock",
+    priceValidUntil: "2025-12-31"
   },
 }
 

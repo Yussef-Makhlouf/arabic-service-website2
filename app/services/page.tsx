@@ -8,8 +8,67 @@ import { FloatingActions } from "@/components/floating-actions"
 import { NeighborhoodsCompact } from "@/components/neighborhoods"
 
 export const metadata: Metadata = {
-  title: "خدمات العزل وكشف التسربات | شركة العزل المتقدم",
-  description: "تعرف على خدماتنا في عزل الفوم، العزل المائي والحراري، كشف تسربات المياه، وعزل الخزانات. حلول متكاملة لبيئة آمنة وموفرة للطاقة.",
+  title: "خدمات شركة العزل المتقدم | عزل فوم و اسطح | 0507067378",
+  description: "تعرف على خدمات شركة العزل المتقدم: عزل فوم بولي يوريثان، عزل اسطح، عزل مائي وحراري. جودة عالية وضمان 15 سنة. جوال: 0507067378",
+}
+
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "خدمات العزل وكشف التسربات",
+  provider: {
+    "@type": "HomeAndConstructionBusiness",
+    name: "شركة العزل المتقدم - عزل فوم بالرياض",
+    image: "https://tebaservices.com/logo.webp",
+    telephone: "0507067378",
+    priceRange: "$$"
+  },
+  areaServed: {
+    "@type": "City",
+    name: "الرياض"
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "قائمة خدمات العزل",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "عزل فوم للأسطح",
+          description: "عزل حراري ومائي مزدوج للأسطح الخرسانية والشينكو باستخدام الفوم الأمريكي.",
+          url: "https://tebaservices.com/services/foam-insulation"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "عزل مائي للأسطح",
+          description: "حماية الأسطح من التسربات والرطوبة باستخدام رولات البيتومين والمواد السائلة.",
+          url: "https://tebaservices.com/services/waterproofing"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "كشف تسربات المياه",
+          description: "فحص وكشف اماكن التسربات بأحدث الأجهزة الإلكترونية وإصلاحها مع الضمان.",
+          url: "https://tebaservices.com/services/leak-detection"
+        }
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "عزل خزانات المياه",
+          description: "تنظيف وتعقيم وعزل الخزانات الأرضية والعلوية بمواد آمنة ومعتمدة.",
+          url: "https://tebaservices.com/services/tank-insulation"
+        }
+      }
+    ]
+  }
 }
 
 export default function ServicesPage() {
@@ -60,6 +119,12 @@ export default function ServicesPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(servicesSchema),
+        }}
+      />
       <Header />
       <main className="min-h-screen bg-background font-sans">
         {/* Hero Section */}
