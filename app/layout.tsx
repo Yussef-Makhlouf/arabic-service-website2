@@ -12,9 +12,9 @@ const ibmPlexArabic = IBM_Plex_Sans_Arabic({
 })
 
 export const metadata: Metadata = {
-  title: "شركة عزل اسطح بالرياض والخرج | 0507067378 | شركة العزل المتقدم",
+  title: "شركة عزل فوم بالرياض | أفضل خدمات العزل المائي والحراري 0507067378 ",
   description:
-    "شركة عزل اسطح بالرياض معتمدة من هيئة المهندسين. متخصصون في عزل الفوم (بولي يوريثان) والعزل المائي والحراري وعزل الخزانات. نضمن الامتثال لكود البناء السعودي (SBC) وتوفير 40% من الكهرباء. حلول نهائية لتسربات المياه مع ضمان 15 عاماً.",
+    "شركة عزل فوم بالرياض معتمده. نقدم أفضل خدمات عزل الاسطح بالفوم (بولي يوريثان) وعزل مائي وحراري وعزل خزانات. حلول نهائية لتسربات المياه مع ضمان 15 عاماً.",
   keywords: [
     "شركة عزل اسطح بالرياض",
     "عزل فوم بالرياض",
@@ -33,10 +33,10 @@ export const metadata: Metadata = {
     "شركة عزل غرب الرياض"
   ].join(", "),
   generator: "Next.js",
-  applicationName: "شركة عزل الأسطح - الرياض والخرج",
-  authors: [{ name: "شركة عزل الأسطح", url: "https://tebaservices.com" }],
-  creator: "شركة عزل الأسطح",
-  publisher: "شركة عزل الأسطح",
+  applicationName: "شركة عزل فوم بالرياض - العزل المتقدم",
+  authors: [{ name: "شركة العزل المتقدم", url: "https://tebaservices.com" }],
+  creator: "شركة العزل المتقدم",
+  publisher: "شركة العزل المتقدم",
   formatDetection: {
     email: false,
     address: false,
@@ -50,10 +50,10 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "شركة عزل اسطح بالرياض والخرج | خبرة +15 عام | ضمان شامل",
-    description: "أفضل شركة عزل اسطح بالرياض - عزل فوم، عزل مائي، كشف تسربات، عزل خزانات. ضمان 15 سنة وتوفير 40% من الكهرباء. اتصل الآن!",
+    title: "شركة عزل فوم بالرياض | ضمان 15 سنة وتوفير 40% من الكهرباء",
+    description: "أفضل شركة عزل فوم بالرياض. تنفيذ عزل مائي وحراري بأحدث تقنيات البولي يوريثان. معتمدون لدى شركة الكهرباء ونقدم ضمان شامل.",
     url: "https://tebaservices.com",
-    siteName: "شركة عزل الأسطح - الرياض والخرج",
+    siteName: "شركة العزل المتقدم - خدمات عزل الفوم",
     locale: "ar_SA",
     type: "website",
     images: [
@@ -61,14 +61,14 @@ export const metadata: Metadata = {
         url: "/logo.webp",
         width: 1200,
         height: 630,
-        alt: "شركة عزل اسطح بالرياض والخرج",
+        alt: "شركة عزل فوم بالرياض",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "شركة عزل اسطح بالرياض والخرج | ضمان 15 سنة",
-    description: "أفضل شركة عزل اسطح بالرياض - عزل فوم، عزل مائي، كشف تسربات. ضمان 15 سنة. اتصل: 0507067378",
+    title: "شركة عزل فوم بالرياض | 0507067378",
+    description: "حل نهائي لمشاكل الحرارة والتسربات. عزل فوم بولي يوريثان أمريكي مع ضمان 15 سنة. اتصل الآن: 0507067378",
     images: ["/logo.webp"],
   },
   robots: {
@@ -102,7 +102,7 @@ export const metadata: Metadata = {
   verification: {
     google: "SaKRifnILeX3xHG89nlw8wo7M8gICSzz_iiaGkSdFnY",
   },
-  category: "خدمات العزل والبناء",
+  category: "خدمات العزل و عزل الفوم و الاسطح",
 }
 
 // Schema.org JSON-LD للموقع
@@ -110,8 +110,8 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://tebaservices.com/#organization",
-  name: "شركة عزل الأسطح",
-  alternateName: "شركة عزل اسطح بالرياض والخرج",
+  name: "شركة العزل المتقدم - عزل فوم بالرياض",
+  alternateName: "شركة عزل فوم بالرياض",
   url: "https://tebaservices.com",
   logo: {
     "@type": "ImageObject",
@@ -120,11 +120,11 @@ const organizationSchema = {
     height: 512,
   },
   image: "https://tebaservices.com/logo.webp",
-  description: "شركة متخصصة في عزل الأسطح والخزانات بالرياض والخرج. خبرة أكثر من 15 عاماً في مجال العزل المائي والحراري وكشف تسربات المياه.",
+  description: "الشركة الرائدة في مجال عزل الفوم (بولي يوريثان) بالرياض والخرج. نقدم حلول متكاملة للعزل المائي والحراري للأسطح والخزانات.",
   foundingDate: "2009",
   founder: {
     "@type": "Person",
-    name: "شركة عزل الأسطح",
+    name: "مؤسسة العزل المتقدم",
   },
   address: {
     "@type": "PostalAddress",
@@ -149,8 +149,8 @@ const organizationSchema = {
       hoursAvailable: {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
-        opens: "08:00",
-        closes: "22:00",
+        opens: "07:00",
+        closes: "23:00",
       },
     },
     {
@@ -162,6 +162,8 @@ const organizationSchema = {
   ],
   sameAs: [
     "https://wa.me/966507067378",
+    "https://www.instagram.com/awazelalsafrrat/?hl=ar",
+    "https://www.facebook.com/Awazelalsafrat/"
   ],
   areaServed: [
     {
@@ -203,8 +205,8 @@ const organizationSchema = {
             },
           },
         ],
-      },
-      {
+    },
+    {
         "@type": "OfferCatalog",
         name: "كشف تسربات",
         itemListElement: [
@@ -230,45 +232,45 @@ const organizationSchema = {
           },
         ],
       },
-    ],
+  ],
   },
 }
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "HomeAndConstructionBusiness",
   "@id": "https://tebaservices.com/#localbusiness",
-  name: "شركة عزل اسطح بالرياض والخرج",
+  name: "شركة عزل فوم بالرياض",
   image: "https://tebaservices.com/logo.webp",
   url: "https://tebaservices.com",
   telephone: "+966507067378",
   priceRange: "$$",
-  description: "أفضل شركة عزل اسطح بالرياض والخرج - خبرة 15+ عام في عزل الفوم والعزل المائي وكشف التسربات وعزل الخزانات. ضمان شامل 15 سنة.",
+  description: "أفضل شركة عزل فوم وعزل مائي وحراري بالرياض. خبراء في عزل الأسطح الشينكو والخرسانية بمادة الفوم الأمريكي. معتمدون وضمان 15 سنة.",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "طريق الملك فهد",
+    streetAddress: "طريق الملك فهد، حي الصحافة",
     addressLocality: "الرياض",
     addressRegion: "منطقة الرياض",
-    postalCode: "12345",
+    postalCode: "13315",
     addressCountry: "SA",
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: 24.7136,
-    longitude: 46.6753,
+    latitude: 24.7937,
+    longitude: 46.6191,
   },
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
-      opens: "08:00",
-      closes: "22:00",
+      dayOfWeek: ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "07:00",
+      closes: "23:00",
     },
   ],
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
-    reviewCount: "5000",
+    reviewCount: "854",
     bestRating: "5",
     worstRating: "1",
   },
@@ -282,9 +284,9 @@ const localBusinessSchema = {
       },
       author: {
         "@type": "Person",
-        name: "سعد القحطاني",
+        name: "خالد الشمري",
       },
-      reviewBody: "بصراحة كنت متردد في عزل الفوم، لكن بعد التعامل مع فريقكم تغيرت نظرتي. فواتير الكهرباء نزلت بشكل ملحوظ من أول شهر.",
+      reviewBody: "ما شاء الله تبارك الله، شغل احترافي وسريع. عزلت السطح عندهم بالفوم والفرق واضح في برودة البيت.",
     },
     {
       "@type": "Review",
@@ -295,9 +297,9 @@ const localBusinessSchema = {
       },
       author: {
         "@type": "Person",
-        name: "م. عبدالرحمن الزهراني",
+        name: "م. فهد السبيعي",
       },
-      reviewBody: "كمهندس، أقيم العمل بناءً على المعايير الفنية. المواد المستخدمة عندكم ممتازة وسماكة الفوم مطابقة للمواصفات.",
+      reviewBody: "تعاملت معهم في عزل مستودع هناجر (شينكو). الفوم كثافته ممتازة وسماكة منتظمة. أنصح بهم.",
     },
     {
       "@type": "Review",
@@ -308,45 +310,45 @@ const localBusinessSchema = {
       },
       author: {
         "@type": "Person",
-        name: "أبو محمد",
+        name: "أبو عبدالله",
       },
-      reviewBody: "عانيت سنوات من تسربات الأمطار في الملحق. بعد العزل المائي والحراري بالفوم، اختفت المشكلة تماماً.",
+      reviewBody: "الأفضل في الرياض من تجربة. دقة في المواعيد وأسعارهم مناسبة جداً مقارنة بالجودة.",
     },
   ],
   hasOfferCatalog: {
     "@type": "OfferCatalog",
-    name: "خدمات شركة العزل",
+    name: "خدمات عزل الفوم والعزل المائي",
     itemListElement: [
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
           name: "عزل فوم بولي يوريثان",
-          description: "عزل حراري ومائي بتقنية الفوم البولي يوريثان - توفير 40% من فاتورة الكهرباء",
+          description: "عزل مزدوج (مائي وحراري) للأسطح الخرسانية والمعدنية لتوفير الطاقة وحماية المبنى.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "عزل مائي للأسطح",
-          description: "حماية شاملة من تسرب المياه والرطوبة بضمان 15 سنه",
+          name: "عزل اسطح شينكو",
+          description: "رش فوم بولي يوريثان على الهناجر والمستودعات لمنع الحرارة وتسرب مياه الأمطار.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "كشف تسربات المياه",
-          description: "كشف التسربات بأحدث الأجهزة الإلكترونية بدون تكسير",
+          name: "عزل مائي",
+          description: "حماية الأسطح والخزانات من التسربات باستخدام أفضل المواد العازلة.",
         },
       },
       {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "عزل خزانات المياه",
-          description: "عزل خزانات أرضية وعلوية بمواد آمنة صحياً",
+          name: "عزل خزانات",
+          description: "تنظيف وعزل الخزانات بمواد إيبوكسي آمنة ومعتمدة.",
         },
       },
     ],
@@ -358,8 +360,8 @@ const websiteSchema = {
   "@type": "WebSite",
   "@id": "https://tebaservices.com/#website",
   url: "https://tebaservices.com",
-  name: "شركة عزل الأسطح - الرياض والخرج",
-  description: "الموقع الرسمي لشركة عزل الأسطح بالرياض والخرج - خدمات عزل احترافية بضمان شامل",
+  name: "شركة عزل فوم بالرياض",
+  description: "الموقع الرسمي لشركة العزل المتقدم - خدمات عزل الفوم وعزل الأسطح بالرياض بأفضل الأسعار",
   publisher: {
     "@id": "https://tebaservices.com/#organization",
   },
