@@ -43,7 +43,18 @@ const serviceSchema = {
   serviceType: "كشف تسربات",
   provider: {
     "@type": "LocalBusiness",
-    name: "شركة عزل الأسطح بالرياض",
+    name: "شركة كشف تسربات المياه بالرياض",
+    image: "https://tebaservices.com/logo.webp",
+    telephone: "0507067378",
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "طريق الملك فهد، حي الصحافة",
+      addressLocality: "الرياض",
+      addressRegion: "منطقة الرياض",
+      postalCode: "13315",
+      addressCountry: "SA",
+    },
   },
   areaServed: [
     { "@type": "City", name: "الرياض" },

@@ -447,6 +447,17 @@ function generateDefaultSchema(slug: string, title: string, description: string)
         provider: {
             "@type": "LocalBusiness",
             name: "شركة طيبة للخدمات",
+            image: "https://tebaservices.com/logo.webp",
+            telephone: "0507067378",
+            priceRange: "$$",
+            address: {
+                "@type": "PostalAddress",
+                streetAddress: "طريق الملك فهد، حي الصحافة",
+                addressLocality: "الرياض",
+                addressRegion: "منطقة الرياض",
+                postalCode: "13315",
+                addressCountry: "SA",
+            },
         },
         areaServed: [
             { "@type": "City", name: "الرياض" },

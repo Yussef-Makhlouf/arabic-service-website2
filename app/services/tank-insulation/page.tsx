@@ -42,7 +42,18 @@ const serviceSchema = {
   serviceType: "عزل خزانات",
   provider: {
     "@type": "LocalBusiness",
-    name: "شركة عزل الأسطح بالرياض",
+    name: "شركة عزل خزانات بالرياض",
+    image: "https://tebaservices.com/logo.webp",
+    telephone: "0507067378",
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "طريق الملك فهد، حي الصحافة",
+      addressLocality: "الرياض",
+      addressRegion: "منطقة الرياض",
+      postalCode: "13315",
+      addressCountry: "SA",
+    },
   },
   areaServed: [
     { "@type": "City", name: "الرياض" },
@@ -75,7 +86,7 @@ const productSchema = {
   description: "خدمة عزل خزانات المياه بمواد إيبوكسي آمنة صحياً ومعتمدة من وزارة الصحة. عزل داخلي وخارجي للخزانات الأرضية والعلوية مع ضمان 15 سنه.",
   brand: {
     "@type": "Brand",
-    name: "شركة عزل الأسطح بالرياض",
+    name: "شركة عزل خزانات بالرياض",
   },
   aggregateRating: {
     "@type": "AggregateRating",

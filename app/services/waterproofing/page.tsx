@@ -43,7 +43,18 @@ const serviceSchema = {
   serviceType: "عزل مائي",
   provider: {
     "@type": "LocalBusiness",
-    name: "شركة عزل الأسطح بالرياض",
+    name: "شركة عزل مائي بالرياض",
+    image: "https://tebaservices.com/logo.webp",
+    telephone: "0507067378",
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "طريق الملك فهد، حي الصحافة",
+      addressLocality: "الرياض",
+      addressRegion: "منطقة الرياض",
+      postalCode: "13315",
+      addressCountry: "SA",
+    },
   },
   areaServed: [
     { "@type": "City", name: "الرياض" },
@@ -76,7 +87,7 @@ const productSchema = {
   description: "العزل المائي للأسطح هو عملية تطبيق طبقات من المواد العازلة المتخصصة على سطح المبنى لمنع تسرب مياه الأمطار والرطوبة. حماية شاملة بضمان 15 سنه.",
   brand: {
     "@type": "Brand",
-    name: "شركة عزل الأسطح بالرياض",
+    name: "شركة عزل مائي بالرياض",
   },
   aggregateRating: {
     "@type": "AggregateRating",
