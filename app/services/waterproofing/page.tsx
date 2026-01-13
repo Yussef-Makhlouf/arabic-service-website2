@@ -8,7 +8,7 @@ import { Droplets } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "شركة عزل مائي للأسطح بالرياض | 0507067378",
+  title: "شركة عزل مائي بالرياض 0507067378",
   description:
     "💧 أفضل خدمة عزل مائي للأسطح في الرياض والخرج. حماية شاملة ضد تسرب المياه والرطوبة ✓ مواد معتمدة دولياً ✓ ضمان 15 سنه مكتوب ✓ فريق متخصص. اتصل الآن: 0507067378",
   keywords: [

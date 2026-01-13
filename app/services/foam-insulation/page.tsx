@@ -9,7 +9,7 @@ import { Wind } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "شركة عزل فوم بالرياض | شركة العزل المتقدم | 0507067378",
+  title: "شركة عزل فوم بالرياض 0507067378",
   description:
     "🔥 أفضل خدمة عزل فوم بولي يوريثان في الرياض. عزل حراري ومائي معاً ✓ توفير 40% من فاتورة الكهرباء ✓ مواد معتمدة من BASF ✓ ضمان 15 عام مكتوب ✓ فريق محترف. اتصل الآن: 0507067378",
   keywords: [

@@ -8,7 +8,7 @@ import { Search } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "شركة كشف تسربات المياه بالرياض والخرج | 0507067378 ",
+  title: "شركة كشف تسربات المياه بالرياض 0507067378",
   description:
     "🔍 أفضل خدمة كشف تسربات المياه في الرياض والخرج. أجهزة إلكترونية حديثة ✓ كشف دقيق بدون تكسير ✓ تقارير موثقة ✓ إصلاح فوري ✓ خدمة 24/7. اتصل الآن: 0507067378",
   keywords: [

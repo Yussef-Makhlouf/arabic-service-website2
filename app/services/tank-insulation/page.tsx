@@ -8,7 +8,7 @@ import { Database } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "شركة عزل الأسطح بالرياض والخرج | 0507067378",
+  title: "شركة عزل خزانات بالرياض 0507067378",
   description:
     "💧 أفضل خدمة عزل خزانات المياه في الرياض والخرج. عزل داخلي وخارجي بمواد آمنة صحياً معتمدة ✓ حماية من البكتيريا ✓ تنظيف وتعقيم ✓ ضمان 15 سنه. اتصل: 0507067378",
   keywords: [

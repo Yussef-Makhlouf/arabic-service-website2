@@ -424,11 +424,11 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     }
 
     return {
-        title: serviceData.seo.title,
+        title: `شركة ${serviceData.pageData.title.replace('شركة ', '')} 0507067378`,
         description: serviceData.seo.description,
         keywords: serviceData.seo.keywords.join(", "),
         openGraph: {
-            title: serviceData.seo.title,
+            title: `شركة ${serviceData.pageData.title.replace('شركة ', '')} 0507067378`,
             description: serviceData.seo.description,
             type: "website",
             images: [serviceData.seo.ogImage],
