@@ -43,7 +43,6 @@ const serviceSchema = {
   serviceType: "كشف تسربات",
   provider: {
     "@type": "LocalBusiness",
-    "@id": "https://tebaservices.com/#localbusiness",
     name: "شركة عزل الأسطح بالرياض",
   },
   areaServed: [

@@ -36,14 +36,13 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://tebaservices.com/services/waterproofing#service",
+  "@id": "https://tebaservices.com/services/waterproofing",
   name: "عزل مائي للأسطح",
   alternateName: "عزل مائي ضد تسرب المياه",
   description: "العزل المائي للأسطح هو عملية تطبيق طبقات من المواد العازلة المتخصصة على سطح المبنى لمنع تسرب مياه الأمطار والرطوبة. حماية شاملة بضمان 15 سنه.",
   serviceType: "عزل مائي",
   provider: {
     "@type": "LocalBusiness",
-    "@id": "https://tebaservices.com/#localbusiness",
     name: "شركة عزل الأسطح بالرياض",
   },
   areaServed: [

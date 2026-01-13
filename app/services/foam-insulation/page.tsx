@@ -46,7 +46,6 @@ const serviceSchema = {
   serviceType: "Insulation",
   provider: {
     "@type": "HomeAndConstructionBusiness",
-    "@id": "https://tebaservices.com/#localbusiness",
     name: "شركة العزل المتقدم - عزل فوم بالرياض",
     telephone: "0507067378",
     priceRange: "$$",
